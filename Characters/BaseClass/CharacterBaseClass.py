@@ -55,4 +55,3 @@ class Character:
     def rollInitative(self):
         # ToDo roll for number with set multipier?
         pass
-
