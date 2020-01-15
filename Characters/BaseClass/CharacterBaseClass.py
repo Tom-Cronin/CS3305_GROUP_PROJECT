@@ -34,7 +34,7 @@ class Character:
     def getDex(self):
         return self.dexterity
 
-    def setStrangth(self, newStrength):
+    def setStrength(self, newStrength):
         self.strength = newStrength
 
     def getStrenght(self):
@@ -48,6 +48,11 @@ class Character:
 
     def setInitiative(self, newInitiative):
         self.initiative = newInitiative
+
     def getInitative(self):
         return self.initiative
+
+    def rollInitative(self):
+        # ToDo roll for number with set multipier?
+        pass
 
