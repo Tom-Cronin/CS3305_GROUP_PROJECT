@@ -1,3 +1,5 @@
+import random
+
 
 class Character:
     def __init__(self):
@@ -53,5 +55,9 @@ class Character:
         return self.initiative
 
     def rollInitative(self):
-        # ToDo roll for number with set multipier?
-        pass
+        roll = random.random * 19
+        roll + 1
+        roll += self.getInitative()
+        return roll
+
+

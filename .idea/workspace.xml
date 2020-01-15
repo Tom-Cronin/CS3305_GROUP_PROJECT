@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="Made test be able to run from main directory, also updated the README.md">
+    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Characters/enemyClasses/ShadowJest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Characters/enemyClasses/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/BaseClass/CharacterBaseClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/BaseClass/CharacterBaseClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images/Shadowstest.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images/ShadowJest.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +37,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/assets/Characters/BaseClass" />
     </key>
@@ -116,7 +121,6 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests in TestSuite" />
-        <item itemvalue="Python tests.Unittests in test_CharacterBaseClass.py (2)" />
         <item itemvalue="Python tests.Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/Characters/BaseClass/test_CharacterBaseClass.py" />
         <item itemvalue="Python tests.Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/UnitTests/CharacterTests/test_CharacterBaseClass.py" />
         <item itemvalue="Python tests.Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/Characters/CharacterTests/test_Character.py" />
@@ -147,6 +151,8 @@
       <updated>1579001140461</updated>
       <workItem from="1579001148813" duration="10096000" />
       <workItem from="1579080678607" duration="250000" />
+      <workItem from="1579085203377" duration="288000" />
+      <workItem from="1579090103993" duration="1735000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -162,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579080084444</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added two enemy png files [ rough sketch only ]">
+      <created>1579085397116</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579085397116</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -171,17 +184,19 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation" />
     <MESSAGE value="Made test be able to run from main directory, also updated the README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="Made test be able to run from main directory, also updated the README.md" />
+    <MESSAGE value="Added two enemy png files [ rough sketch only ]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added two enemy png files [ rough sketch only ]" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002741848">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
-    <state x="0" y="2" key="CommitChangelistDialog2" timestamp="1579080255426">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1579085396726">
+      <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579085396726" />
     <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1579080419037">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -198,10 +213,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579080419036" />
-    <state x="317" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1579085209422">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="317" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1579090111405">
+      <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
+    <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579090111405" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
