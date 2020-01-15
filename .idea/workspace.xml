@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
-      <change afterPath="$PROJECT_DIR$/Characters/BaseClass/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/__init__.py" afterDir="false" />
+    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="Made test be able to run from main directory, also updated the README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/BaseClass/CharacterBaseClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/BaseClass/CharacterBaseClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/CharacterTest/test_CharacterBaseClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/TestSuite/CharacterTest/test_CharacterBaseClass.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +53,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_CharacterBaseClass.py (1)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/Characters/BaseClass/test_CharacterBaseClass.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -73,37 +68,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in test_CharacterBaseClass.py (2)" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="CS3306_GROUP_PROJECT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestSuite/CharacterTest" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/TestSuite/CharacterTest/test_CharacterBaseClass.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_CharacterBaseClass.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <module name="CS3306_GROUP_PROJECT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UnitTests/CharacterTests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/UnitTests/CharacterTests/test_CharacterBaseClass.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Unittests in test_Character.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/Characters/CharacterTests/test_Character.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -118,13 +83,43 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/UnitTests/CharacterTests/test_CharacterBaseClass.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UnitTests/CharacterTests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/UnitTests/CharacterTests/test_CharacterBaseClass.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in test_CharacterBaseClass.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestSuite/CharacterTest" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/TestSuite/CharacterTest/test_CharacterBaseClass.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.Unittests in TestSuite" />
         <item itemvalue="Python tests.Unittests in test_CharacterBaseClass.py (2)" />
-        <item itemvalue="Python tests.Unittests in test_CharacterBaseClass.py (1)" />
-        <item itemvalue="Python tests.Unittests in test_CharacterBaseClass.py" />
-        <item itemvalue="Python tests.Unittests in test_Character.py" />
+        <item itemvalue="Python tests.Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/Characters/BaseClass/test_CharacterBaseClass.py" />
+        <item itemvalue="Python tests.Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/UnitTests/CharacterTests/test_CharacterBaseClass.py" />
+        <item itemvalue="Python tests.Unittests in /Users/tom/workspace/ProjectT2/CS3306_GROUP_PROJECT/Characters/CharacterTests/test_Character.py" />
       </list>
     </recent_temporary>
   </component>
@@ -150,7 +145,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579001140461</updated>
-      <workItem from="1579001148813" duration="9789000" />
+      <workItem from="1579001148813" duration="10096000" />
+      <workItem from="1579080678607" duration="250000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -159,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579074871475</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Made test be able to run from main directory, also updated the README.md">
+      <created>1579080084444</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579080084444</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,33 +170,38 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation" />
+    <MESSAGE value="Made test be able to run from main directory, also updated the README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made test be able to run from main directory, also updated the README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002741848">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
-    <state x="0" y="2" key="CommitChangelistDialog2" timestamp="1579079547862">
+    <state x="0" y="2" key="CommitChangelistDialog2" timestamp="1579080255426">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579079547862" />
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1579079549182">
+    <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom" timestamp="1579080419037">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579079549182" />
-    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1579079549179">
+    <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579080419037" />
+    <state width="1238" height="212" key="GridCell.Tab.0.center" timestamp="1579080419036">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579079549179" />
-    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1579079549179">
+    <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579080419036" />
+    <state width="1238" height="212" key="GridCell.Tab.0.left" timestamp="1579080419035">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579079549179" />
-    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1579079549181">
+    <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579080419035" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right" timestamp="1579080419036">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579079549181" />
+    <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579080419036" />
+    <state x="317" y="241" key="com.intellij.ide.util.TipDialog" timestamp="1579085209422">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
