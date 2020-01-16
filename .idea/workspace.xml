@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="fixed conflicts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -152,6 +148,7 @@
       <workItem from="1579085203377" duration="288000" />
       <workItem from="1579090103993" duration="1882000" />
       <workItem from="1579093073853" duration="150000" />
+      <workItem from="1579093724297" duration="289000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -192,7 +189,8 @@
     <MESSAGE value="Made test be able to run from main directory, also updated the README.md" />
     <MESSAGE value="Added two enemy png files [ rough sketch only ]" />
     <MESSAGE value="started one monster class, need some implemntation of attacks" />
-    <option name="LAST_COMMIT_MESSAGE" value="started one monster class, need some implemntation of attacks" />
+    <MESSAGE value="fixed conflicts" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed conflicts" />
   </component>
   <component name="WindowStateProjectService">
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002741848">
@@ -224,11 +222,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579080419036" />
-    <state x="317" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1579093724407">
+    <state x="317" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1579176563139">
       <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
-    <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579093724407" />
+    <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

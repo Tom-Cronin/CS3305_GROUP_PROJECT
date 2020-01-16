@@ -8,7 +8,7 @@ class Character:
         self.constitution = 0 # health
         self.dexterity = 0 # ranged / dagger damage
         self.strength = 0 # melee damage
-        self.inteligence = 0 # spellcasting? if implemented
+        self.intelligence = 0 # intelligence? if implemented
         self.initiative = 0 # Turn order
         self.ArmorClass = 0 # gives chance to block an attack
 
@@ -43,10 +43,10 @@ class Character:
         return self.strength
 
     def setInt(self, newInt):
-        self.inteligence = newInt
+        self.intelligence = newInt
 
     def getInt(self):
-        return self.inteligence
+        return self.intelligence
 
     def setInitiative(self, newInitiative):
         self.initiative = newInitiative
