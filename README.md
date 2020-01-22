@@ -1,5 +1,9 @@
 # CS3306_GROUP_PROJECT
 
+You can run all tests by running the python file:
+    /TestSuite/RunAllTest.py
+    -This will run all tests within the directory 'TestSuite'
+
 To run all test from the the highest level of the directroy run the comand:
     python -m unittest discover -p 'test_*.py'
 
