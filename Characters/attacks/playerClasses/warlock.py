@@ -1,4 +1,6 @@
 from Characters.BaseClass.CharacterBaseClass import Character
+from Characters.attacks.playableCharacterAttacks.warlock.DevilishDefence import DevilishDefence
+from Characters.attacks.playableCharacterAttacks.warlock.eldritchBlast import EldritchBlast
 
  # will set level to 4 in dnd
  # maybe add a multiplier to health and damge outputs per level
@@ -17,8 +19,15 @@ class Warlock(Character):
 
         self.imagePath = 'none yet'
 
-# 4 attakcs
-# normal strike [common to all ]
-# eldritch blast [ will do 10 + 1 per level damage ]
-# burningFire (burning hands)
-# invisibity [ will let you skip for one round ] cooldown 3 rounds
+        self.attack1 = EldritchBlast(self.getInt())
+        self.attack2 = DevilishDefence(self.getInt())
+
+    def attack(self, attackSlotNumber):
+        attacks = {
+            1: self.attack1,
+            2: self.attack2
+        }
+        return attacks.get(attackSlotNumber)
+
+warlock  = Warlock()
+warlock.attack(1).attack()

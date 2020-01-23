@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="fixed conflicts">
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/DevilishDefence.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images/hag.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images/rat.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/images/sounds/Warlock/eldritchBlast.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/DevilishDefence.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/DevilishDefence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/attacks/playerClasses/warlock.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playerClasses/warlock.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/ShadowJest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/ShadowJest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,19 +37,24 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/assets/images/characters/Enemies" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images/characters/Enemies" />
+      <recent name="$PROJECT_DIR$/Characters/attacks" />
+      <recent name="$PROJECT_DIR$/Characters/enemyClasses" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/images/sounds/Warlock" />
       <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\TestSuite" />
       <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT" />
       <recent name="$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/assets/Characters/BaseClass" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.eldritchBlast">
+  <component name="RunManager" selected="Python.warlock">
     <configuration name="RunAllTests (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -80,7 +85,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestSuite" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -94,7 +99,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RunAllTests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="baseAttackClass" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,12 +107,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Characters/attacks" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\TestSuite\RunAllTests.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -138,19 +143,26 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in C:/Users/tom10/PycharmProjects/CS3306_GROUP_PROJECT/UnitTests/CharacterTests/test_CharacterBaseClass.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="warlock" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UnitTests/CharacterTests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Characters/attacks/playerClasses" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/UnitTests/CharacterTests/test_CharacterBaseClass.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Characters/attacks/playerClasses/warlock.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests in TestSuite" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -170,11 +182,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.warlock" />
         <item itemvalue="Python.eldritchBlast" />
+        <item itemvalue="Python.baseAttackClass" />
         <item itemvalue="Python.RunAllTests (1)" />
         <item itemvalue="Python.RunAllTests (1)" />
-        <item itemvalue="Python.RunAllTests" />
-        <item itemvalue="Python tests.Unittests in TestSuite" />
       </list>
     </recent_temporary>
   </component>
@@ -208,6 +220,7 @@
       <workItem from="1579093724297" duration="289000" />
       <workItem from="1579730342355" duration="1507000" />
       <workItem from="1579785526932" duration="3085000" />
+      <workItem from="1579799222128" duration="2125000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -256,10 +269,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="335" y="14" key="#RunAllTests_(1)/0.0.1280.800@0.0.1280.800" timestamp="1579785541158" />
-    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002741848">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="354" y="220" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579800348969">
+      <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
+    <state x="354" y="220" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1280.750@0.23.1280.750" timestamp="1579800348969" />
     <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1579093811464">
       <screen x="0" y="23" width="1280" height="750" />
     </state>
@@ -269,26 +283,30 @@
       <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1579093793728" />
-    <state width="1238" height="402" key="GridCell.Tab.0.bottom" timestamp="1579788638505">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="188" key="GridCell.Tab.0.bottom" timestamp="1579817533974">
+      <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596164" />
-    <state width="1238" height="402" key="GridCell.Tab.0.center" timestamp="1579788638504">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="188" key="GridCell.Tab.0.bottom/0.23.1280.750@0.23.1280.750" timestamp="1579817533974" />
+    <state width="1238" height="188" key="GridCell.Tab.0.center" timestamp="1579817533973">
+      <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1238" height="402" key="GridCell.Tab.0.left" timestamp="1579788638503">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="188" key="GridCell.Tab.0.center/0.23.1280.750@0.23.1280.750" timestamp="1579817533973" />
+    <state width="1238" height="188" key="GridCell.Tab.0.left" timestamp="1579817533973">
+      <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1238" height="402" key="GridCell.Tab.0.right" timestamp="1579788638505">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="188" key="GridCell.Tab.0.left/0.23.1280.750@0.23.1280.750" timestamp="1579817533973" />
+    <state width="1238" height="188" key="GridCell.Tab.0.right" timestamp="1579817533974">
+      <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
+    <state width="1238" height="188" key="GridCell.Tab.0.right/0.23.1280.750@0.23.1280.750" timestamp="1579817533974" />
     <state x="283" y="78" key="SettingsEditor" timestamp="1579785560217">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
@@ -310,9 +328,11 @@
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1579006600778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UnitTests/CharacterTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1579732038124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$baseAttackClass.coverage" NAME="baseAttackClass Coverage Results" MODIFIED="1579800534988" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1579788629794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1579800737409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$warlock.coverage" NAME="warlock Coverage Results" MODIFIED="1579817533965" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playerClasses" />
   </component>
 </project>
