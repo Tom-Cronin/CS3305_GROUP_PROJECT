@@ -2,19 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="fixed conflicts">
-      <change afterPath="$PROJECT_DIR$/TestSuite/RunAllTests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/create_map_list.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestSuite/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/test.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test1.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="CS3306_GROUP_PROJECT" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -25,6 +40,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1WNrxYIOErdcbtfK8SE83WDtRm7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -36,7 +52,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Documents/team_project/test1.py" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -48,7 +70,7 @@
       <recent name="$PROJECT_DIR$/assets/Characters/BaseClass" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.RunAllTests (1)">
+  <component name="RunManager" selected="Python.draw_map">
     <configuration name="RunAllTests (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -115,34 +137,48 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in C:/Users/tom10/PycharmProjects/CS3306_GROUP_PROJECT/Characters/BaseClass/test_CharacterBaseClass.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="create_map_list" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Characters/BaseClass" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/Characters/BaseClass/test_CharacterBaseClass.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="C:\Users\HP\PycharmProjects\CS3306_GROUP_PROJECT\create_map_list.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in C:/Users/tom10/PycharmProjects/CS3306_GROUP_PROJECT/UnitTests/CharacterTests/test_CharacterBaseClass.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="draw_map" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UnitTests/CharacterTests" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/UnitTests/CharacterTests/test_CharacterBaseClass.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/draw_map.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests in TestSuite" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -162,11 +198,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.draw_map" />
+        <item itemvalue="Python.create_map_list" />
         <item itemvalue="Python.RunAllTests (1)" />
         <item itemvalue="Python.RunAllTests (1)" />
         <item itemvalue="Python.RunAllTests" />
-        <item itemvalue="Python tests.Unittests in TestSuite" />
-        <item itemvalue="Python tests.Unittests in C:/Users/tom10/PycharmProjects/CS3306_GROUP_PROJECT/Characters/BaseClass/test_CharacterBaseClass.py" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +235,7 @@
       <workItem from="1579093073853" duration="150000" />
       <workItem from="1579093724297" duration="289000" />
       <workItem from="1579730342355" duration="1507000" />
+      <workItem from="1579781940407" duration="10355000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -256,48 +293,67 @@
       <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1579093793728" />
-    <state width="1340" height="262" key="GridCell.Tab.0.bottom" timestamp="1579732596164">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="463" y="120" width="444" height="488" key="FileChooserDialogImpl" timestamp="1579803169855">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="120" width="444" height="488" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579803169855" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1579819356331">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579080419037" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579819356331" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596164" />
-    <state width="1340" height="262" key="GridCell.Tab.0.center" timestamp="1579732596163">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1579819356331">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579080419036" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579819356331" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1340" height="262" key="GridCell.Tab.0.left" timestamp="1579732596163">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1579819356331">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579080419035" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579819356331" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1340" height="262" key="GridCell.Tab.0.right" timestamp="1579732596163">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1579819356331">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="212" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579080419036" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579819356331" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state x="483" y="192" key="SettingsEditor" timestamp="1579730353140">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="344" y="15" key="SettingsEditor" timestamp="1579803151463">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="344" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579803151463" />
     <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579730353140" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1579176563139">
       <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579819345039">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1579819345039" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579075897728" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1579818242657">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1579818242657" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$draw_map.coverage" NAME="draw_map Coverage Results" MODIFIED="1579819190568" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests__1_.coverage" NAME="RunAllTests (1) Coverage Results" MODIFIED="1579732596157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1579006600778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UnitTests/CharacterTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1579732038124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$test1.coverage" NAME="test1 Coverage Results" MODIFIED="1579807971107" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__2_.coverage" NAME="Unittests in test_CharacterBaseClass.py (2) Coverage Results" MODIFIED="1579075500621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTest" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1579732038124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
   </component>
 </project>
