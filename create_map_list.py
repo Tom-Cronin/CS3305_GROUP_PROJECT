@@ -1,5 +1,6 @@
 import random
 
+
 # node key
 # 0 = first entry node
 # 1 = battle
