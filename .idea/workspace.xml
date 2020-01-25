@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="fixed conflicts">
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/DevilishDefence.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +21,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WNrxYIOErdcbtfK8SE83WDtRm7" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -208,6 +204,7 @@
       <workItem from="1579093724297" duration="289000" />
       <workItem from="1579730342355" duration="1507000" />
       <workItem from="1579785526932" duration="3085000" />
+      <workItem from="1579960184793" duration="495000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -244,6 +241,7 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation" />
     <MESSAGE value="Made test be able to run from main directory, also updated the README.md" />
     <MESSAGE value="Added two enemy png files [ rough sketch only ]" />
@@ -289,10 +287,10 @@
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state x="283" y="78" key="SettingsEditor" timestamp="1579785560217">
+    <state x="283" y="78" key="SettingsEditor" timestamp="1579960616364">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1579785560217" />
+    <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1579960616364" />
     <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579730353140" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1579176563139">
       <screen x="0" y="23" width="1280" height="750" />
