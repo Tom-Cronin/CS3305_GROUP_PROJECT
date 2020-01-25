@@ -65,9 +65,9 @@ class DisabledStageButton(StageButton):
 
     def hover(self, display, hover):
         self.hovering = hover
-        updateRect = Rect(self.xLocation, self.yLocation+self.height, self.width, self.height/2)
+        messageRect = Rect(self.xLocation, self.yLocation+self.height, self.width, self.height/2)
         if hover is True:
-            pygame.draw.rect(display, self.textColor, updateRect)  # border
+            pygame.draw.rect(display, self.textColor, messageRect)  # border
             message = self.disabledMessage
             font = pygame.font.Font(self.font, self.disabledMessageSize)
             text = font.render(message, True, self.textColorDisabled)
@@ -78,7 +78,7 @@ class DisabledStageButton(StageButton):
         if hover is False:
             self.displayButton(display)
 
-        pygame.display.update(updateRect)
+        pygame.display.update(messageRect)
 
 
 class BaseStage:
@@ -114,7 +114,7 @@ class BaseStage:
         self.activeButtons = [self.okay, self.nevermind]  # deactivates the main menu, activates ok and nm options
         return button.buttonText
 
-    def listen(self):  # listens for hovering/clicking of buttons
+    def listenMouse(self):  # listens for hovering/clicking of mouse
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
 
@@ -124,7 +124,7 @@ class BaseStage:
                 button.hover(self.display, True)
                 if button not in self.inactiveButtons:
                     if click[0] == 1:
-                        self.buttonClick(button)
+                        self.mouseClick(button)
             else:
                 if button.hovering is True:
                     button.hover(self.display, False)
@@ -133,7 +133,25 @@ class BaseStage:
             updateRect = Rect(button.xLocation, button.yLocation, button.width, button.height)
             pygame.display.update(updateRect)
 
-    def buttonClick(self, button):  # event handler for button press
+    def listenButton(self):  # keyboard shortcuts
+        key = pygame.key.get_pressed()
+        if key[pygame.K_ESCAPE]:  # escape to quit
+            if self.quitGame in self.activeButtons:
+                self.mouseClick(self.quitGame)
+        if key[pygame.K_q]:  # escape to quit current stage
+            if self.goBack in self.activeButtons:
+                self.mouseClick(self.goBack)
+        if key[pygame.K_s]:  # s to skip
+            if self.skip in self.activeButtons:
+                self.mouseClick(self.skip)
+        if key[pygame.K_BACKSPACE]:  # backspace to say maybe not
+            if self.nevermind in self.activeButtons:
+                self.mouseClick(self.nevermind)
+        if key[pygame.K_RETURN]:  # return (enter) to say ok
+            if self.okay in self.activeButtons:
+                self.mouseClick(self.okay)
+
+    def mouseClick(self, button):  # event handler for button press
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
             self.selectedButtonName = self.warningMessage(button)
         if button.buttonText == "MAYBE NOT":
@@ -185,7 +203,8 @@ class BaseStage:
         mainLoop = True
 
         while mainLoop:
-            self.listen()
+            self.listenMouse()
+            self.listenButton()
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
