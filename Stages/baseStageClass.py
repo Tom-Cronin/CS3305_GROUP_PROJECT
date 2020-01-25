@@ -29,7 +29,8 @@ class StageButton:
         display.blit(text, textRect)
 
     def displayWarningMessage(self, display):
-        pygame.draw.rect(display, self.textColor, (200, 150, 500, 300)) # border
+        updateRect = Rect((200, 150, 500, 300))
+        pygame.draw.rect(display, self.textColor, updateRect) # border
         pygame.draw.rect(display, self.bgColour, (205, 155, 490, 290))
         y = 200
         for line in self.exitMessage.split('\n'): # allows for multiple-line output
@@ -39,6 +40,7 @@ class StageButton:
             textRect.center = (450, y)
             y += 50
             display.blit(text, textRect)
+        pygame.display.update(200, 150, 500, 300)
 
     def hover(self, display, hover):
         self.hovering = hover
@@ -63,25 +65,25 @@ class DisabledStageButton(StageButton):
 
     def hover(self, display, hover):
         self.hovering = hover
+        updateRect = Rect(self.xLocation, self.yLocation+self.height, self.width, self.height/2)
         if hover is True:
-            pygame.draw.rect(display, self.textColor, (self.xLocation, self.yLocation+self.height, self.width, self.height/2))  # border
+            pygame.draw.rect(display, self.textColor, updateRect)  # border
             message = self.disabledMessage
             font = pygame.font.Font(self.font, self.disabledMessageSize)
             text = font.render(message, True, self.textColorDisabled)
             textRect = text.get_rect()
             textRect.center = ((self.xLocation + (self.width / 2)), self.yLocation+self.height +self.height/4)
             display.blit(text, textRect)
-        if hover is False:
 
+        if hover is False:
             self.displayButton(display)
 
+        pygame.display.update(updateRect)
 
 
-class BaseStage():
+class BaseStage:
 
     def __init__(self, screen_height, screen_width):
-        #bgColour = (0, 0, 0)
-        self.bgImage = 'media/trees.png'
 
         # Buttons
         self.quitGame = StageButton("QUIT", "Are you sure you want to quit the game?\nYour data will not be saved", 10, 10)
@@ -98,6 +100,8 @@ class BaseStage():
         self.screen_height = screen_height
         self.screen_width = screen_width
         self.display = pygame.display.set_mode((screen_height, screen_width))
+
+        self.bgImage = pygame.image.load('media/trees.png').convert()
     
     def displayButton(self, button):
         button.displayButton(self.display)
@@ -126,6 +130,8 @@ class BaseStage():
                     button.hover(self.display, False)
                     if button in self.inactiveButtons:
                         self.backgroundLayer()
+            updateRect = Rect(button.xLocation, button.yLocation, button.width, button.height)
+            pygame.display.update(updateRect)
 
     def buttonClick(self, button):  # event handler for button press
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
@@ -158,7 +164,6 @@ class BaseStage():
 
     def makeGreen(self):  # A filler function to end the stage
         green = (0, 255, 0)
-        self.display.blit(pygame.image.load('media/trees.png'), (0, 0))
         self.display.fill(green)
         pygame.display.update()
         self.activeButtons = [self.quitGame, self.goBack, self.skip]
@@ -167,9 +172,11 @@ class BaseStage():
         exit(0)
 
     def backgroundLayer(self):  # creates the background of the Stage
-        self.display.blit(pygame.image.load(self.bgImage), (0, 0))
+
+        self.display.blit(self.bgImage, (0, 0))
         for button in self.activeButtons + self.inactiveButtons:
             self.displayButton(button)
+        pygame.display.update()
 
     def mainLoop(self):  # listens for events
 
@@ -183,6 +190,4 @@ class BaseStage():
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     mainLoop = False
-
-            pygame.display.update()
 
