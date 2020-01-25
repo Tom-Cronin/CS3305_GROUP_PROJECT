@@ -78,25 +78,26 @@ class DisabledStageButton(StageButton):
 
 
 class BaseStage():
-    #bgColour = (0, 0, 0)
-    bgImage = 'media/trees.png'
 
-    # Buttons
-    quitGame = StageButton("QUIT", "Are you sure you want to quit the game?\nYour data will not be saved", 10, 10)
+    def __init__(self, screen_height, screen_width):
+        #bgColour = (0, 0, 0)
+        self.bgImage = 'media/trees.png'
 
-    goBack = StageButton("BACK", "Are you sure you want to leave?\nYour data will not be saved", 300, 10)
-    skip = StageButton("SKIP", "Are you sure you want to skip?\nYou will not gain any rewards from this stage", 590, 10)
-    okay = StageButton("OK", "", (490 / 2) - 20, 450 - 100)
-    nevermind = StageButton("MAYBE NOT", "", 490 - 20, 450 - 100)
+        # Buttons
+        self.quitGame = StageButton("QUIT", "Are you sure you want to quit the game?\nYour data will not be saved", 10, 10)
+        self.goBack = StageButton("BACK", "Are you sure you want to leave?\nYour data will not be saved", 300, 10)
+        self.skip = StageButton("SKIP", "Are you sure you want to skip?\nYou will not gain any rewards from this stage", 590, 10)
+        self.okay = StageButton("OK", "", (490 / 2) - 20, 450 - 100)
+        self.nevermind = StageButton("MAYBE NOT", "", 490 - 20, 450 - 100)
 
-    activeButtons = [quitGame, goBack, skip]
-    inactiveButtons = []  # buttons that are visible but deactivated
-    selectedButtonName = None
-    
-    display = None
+        self.activeButtons = [self.quitGame, self.goBack, self.skip]
+        self.inactiveButtons = []  # buttons that are visible but deactivated
+        self.selectedButtonName = None
 
-    screen_height = 0
-    screen_width = 0
+        # init display screen
+        self.screen_height = screen_height
+        self.screen_width = screen_width
+        self.display = pygame.display.set_mode((screen_height, screen_width))
     
     def displayButton(self, button):
         button.displayButton(self.display)
@@ -153,7 +154,7 @@ class BaseStage():
     def neverMind(self):  # Resets the basic Stage background
         self.activeButtons = [self.quitGame, self.goBack, self.skip]
         self.selectedButtonName = None
-        self.mainLoop(self.screen_height, self.screen_width)
+        self.mainLoop()
 
     def makeGreen(self):  # A filler function to end the stage
         green = (0, 255, 0)
@@ -163,17 +164,14 @@ class BaseStage():
         self.activeButtons = [self.quitGame, self.goBack, self.skip]
         self.selectedButtonName = None
         pygame.quit()
+        exit(0)
 
     def backgroundLayer(self):  # creates the background of the Stage
         self.display.blit(pygame.image.load(self.bgImage), (0, 0))
         for button in self.activeButtons + self.inactiveButtons:
             self.displayButton(button)
 
-    def mainLoop(self, screen_height, screen_width):  # creates the background display screen and listens for events
-
-        self.screen_height = screen_height # ToDo: move to init?
-        self.screen_width = screen_width
-        self.display = pygame.display.set_mode((screen_height, screen_width))
+    def mainLoop(self):  # listens for events
 
         self.backgroundLayer()
 
