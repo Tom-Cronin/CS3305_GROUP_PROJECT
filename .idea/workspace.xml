@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_map_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/create_map_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/draw_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage_levels.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage_levels.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/create_map_list.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/draw_map.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage_levels.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage_map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +62,7 @@
       <recent name="$PROJECT_DIR$/assets/Characters/BaseClass" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.manage_levels">
+  <component name="RunManager" selected="Python.manage_map">
     <configuration name="RunAllTests (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -150,7 +151,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="manage_levels" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="manage_map" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -163,7 +164,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/manage_levels.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\HP\Documents\third_year\team_project\CS3306_GROUP_PROJECT\manage_map.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -189,7 +190,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.manage_levels" />
+        <item itemvalue="Python.manage_map" />
         <item itemvalue="Python.draw_map" />
         <item itemvalue="Python.eldritchBlast" />
         <item itemvalue="Python.RunAllTests (1)" />
@@ -235,7 +236,7 @@
       <workItem from="1579955963007" duration="89000" />
       <workItem from="1579977366312" duration="989000" />
       <workItem from="1579978450602" duration="794000" />
-      <workItem from="1579979674607" duration="2268000" />
+      <workItem from="1579979674607" duration="8407000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -286,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579950612703</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Map is a class with example use beneath">
+      <created>1579982190009</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1579982190009</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,7 +322,8 @@
     <MESSAGE value="Changed map from tkinter to pygame" />
     <MESSAGE value="Added current-node tracker system" />
     <MESSAGE value="Colours to make map clearer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Colours to make map clearer" />
+    <MESSAGE value="Map is a class with example use beneath" />
+    <option name="LAST_COMMIT_MESSAGE" value="Map is a class with example use beneath" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
@@ -329,11 +338,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="0" key="#manage_levels/0.0.1366.728@0.0.1366.728" timestamp="1579979904287" />
-    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1579950610053">
+    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1579982187646">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579950610053" />
+    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579982187646" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
@@ -343,29 +352,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579955323439" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1579982017015">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1579990325133">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579982017015" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579990325133" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1579982017015">
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1579990325133">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579982017015" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579990325133" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1579982017015">
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1579990325132">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579982017015" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579990325132" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1579982017015">
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1579990325133">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579982017015" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579990325133" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
     <state x="404" y="87" key="RollbackChangesDialog" timestamp="1579979960583">
       <screen x="0" y="0" width="1366" height="728" />
@@ -393,7 +402,7 @@
     <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579075897728" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_levels.coverage" NAME="manage_levels Coverage Results" MODIFIED="1579982016987" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_levels.coverage" NAME="manage_map Coverage Results" MODIFIED="1579990325112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1579788629794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$draw_map.coverage" NAME="draw_map Coverage Results" MODIFIED="1579890692953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
