@@ -79,7 +79,6 @@ def draw_level_map(list_of_nodes, screen_width, screen_height, screen, current_n
                         print("Selected node: ", current_node)
                         screen.fill(white)
                         pygame.display.update()
-                        #pygame.quit()
                         return current_node
 
 
