@@ -3,6 +3,7 @@ import pygame as pygame
 
 def draw_level_map(list_of_nodes, screen_width, screen_height, screen, current_node):
     next_nodes = []
+    next_nodes_dict = {}
     red = (255, 0, 0)
     green = (0, 255, 0)
     blue = (0, 0, 255)
@@ -37,6 +38,7 @@ def draw_level_map(list_of_nodes, screen_width, screen_height, screen, current_n
                     circle_width = 1
                     circle_width = circle_radius
                 elif (node_index+1) in next_nodes:
+                    next_nodes_dict[node_index] = node_key
                     circle_width = circle_radius
                     circle_colour = blue
                 else:
@@ -76,10 +78,11 @@ def draw_level_map(list_of_nodes, screen_width, screen_height, screen, current_n
                     click = rectangle.collidepoint(pos)
                     if click == 1:
                         current_node = next_nodes[item]-1
-                        print("Selected node: ", current_node)
+                        node_key = next_nodes_dict[current_node]
+                        #print("Selected node: ", current_node, node_key)
                         screen.fill(white)
                         pygame.display.update()
-                        return current_node
+                        return current_node, node_key
 
 
 

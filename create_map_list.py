@@ -10,9 +10,11 @@ import random
 # 5 = final battle
 # Each node is a list [node ID number, node key(as above), [list of previous nodes], [list of following nodes]]
 
-def generate_map_list(level):
+def generate_map_list(level, seed):
     nodes_per_level = 0
-    random.seed(level)
+    seed = str(level) + str(seed)
+    #print(seed, "seed")
+    random.seed(seed)
     number_of_levels = random.randint(10, 10)
     level_index = 0
     node_index = 1
