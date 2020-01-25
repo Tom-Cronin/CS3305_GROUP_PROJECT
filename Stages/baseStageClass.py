@@ -16,6 +16,7 @@ class StageButton:
         self.font = 'media/Chapaza.ttf'
         self.fontsize = 30
         self.exitMessage = exitMessage  # Message displayed when button is pressed
+        self.hovering = False
 
     def displayButton(self, display):
         pygame.draw.rect(display, self.textColor, (self.xLocation, self.yLocation, self.width, self.height))  # border
@@ -40,6 +41,7 @@ class StageButton:
             display.blit(text, textRect)
 
     def hover(self, display, hover):
+        self.hovering = hover
         if hover is True:
             self.bgColour = (0, 0, 0)
             self.displayButton(display)
@@ -47,8 +49,33 @@ class StageButton:
             self.bgColour = (255, 255, 255)
             self.displayButton(display)
 
+
 class DisabledStageButton(StageButton):
-    pass
+
+    def __init__(self, text, exitMessage, x, y):
+        super().__init__(text, exitMessage, x, y)
+
+        self.bgColour = (100, 100, 100)
+        self.textColor = (255, 255, 255)
+        self.textColorDisabled = (0, 0, 0)
+        self.disabledMessage = "You cannot "+self.buttonText+" at this stage"  # Message displayed when button is pressed
+        self.disabledMessageSize = 12
+
+    def hover(self, display, hover):
+        self.hovering = hover
+        if hover is True:
+            pygame.draw.rect(display, self.textColor, (self.xLocation, self.yLocation+self.height, self.width, self.height/2))  # border
+            message = self.disabledMessage
+            font = pygame.font.Font(self.font, self.disabledMessageSize)
+            text = font.render(message, True, self.textColorDisabled)
+            textRect = text.get_rect()
+            textRect.center = ((self.xLocation + (self.width / 2)), self.yLocation+self.height +self.height/4)
+            display.blit(text, textRect)
+        if hover is False:
+
+            self.displayButton(display)
+
+
 
 class BaseStage():
     #bgColour = (0, 0, 0)
@@ -56,15 +83,20 @@ class BaseStage():
 
     # Buttons
     quitGame = StageButton("QUIT", "Are you sure you want to quit the game?\nYour data will not be saved", 10, 10)
+
     goBack = StageButton("BACK", "Are you sure you want to leave?\nYour data will not be saved", 300, 10)
     skip = StageButton("SKIP", "Are you sure you want to skip?\nYou will not gain any rewards from this stage", 590, 10)
     okay = StageButton("OK", "", (490 / 2) - 20, 450 - 100)
     nevermind = StageButton("MAYBE NOT", "", 490 - 20, 450 - 100)
 
     activeButtons = [quitGame, goBack, skip]
+    inactiveButtons = []  # buttons that are visible but deactivated
     selectedButtonName = None
     
     display = None
+
+    screen_height = 0
+    screen_width = 0
     
     def displayButton(self, button):
         button.displayButton(self.display)
@@ -81,14 +113,18 @@ class BaseStage():
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
 
-        for button in self.activeButtons:
+        for button in self.activeButtons+self.inactiveButtons:
             if (button.xLocation + button.width) > mouse[0] > button.xLocation and (
                     button.yLocation + button.height) > mouse[1] > button.yLocation:
                 button.hover(self.display, True)
-                if click[0] == 1:
-                    self.buttonClick(button)
+                if button not in self.inactiveButtons:
+                    if click[0] == 1:
+                        self.buttonClick(button)
             else:
-                button.hover(self.display, False)
+                if button.hovering is True:
+                    button.hover(self.display, False)
+                    if button in self.inactiveButtons:
+                        self.backgroundLayer()
 
     def buttonClick(self, button):  # event handler for button press
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
@@ -111,16 +147,13 @@ class BaseStage():
     def skipStage(self):  # ToDo: Exit to map, map node skipped
         self.makeGreen()
 
-    def exitStage(self, display):  # i.e. goBack # ToDo: Exit to map, map node 'unentered'
-        self.makeGreen(display)
+    def exitStage(self):  # i.e. goBack # ToDo: Exit to map, map node 'unentered'
+        self.makeGreen()
 
-    def neverMind(self):  # Resets the basic Stage background ToDo: Layers?
-        self.displayButton(self.quitGame)
-        self.displayButton(self.goBack)
-        self.displayButton(self.skip)
-        self.display.blit(pygame.image.load('media/trees.png'), (0, 0))
+    def neverMind(self):  # Resets the basic Stage background
         self.activeButtons = [self.quitGame, self.goBack, self.skip]
         self.selectedButtonName = None
+        self.mainLoop(self.screen_height, self.screen_width)
 
     def makeGreen(self):  # A filler function to end the stage
         green = (0, 255, 0)
@@ -131,17 +164,20 @@ class BaseStage():
         self.selectedButtonName = None
         pygame.quit()
 
-    def mainLoop(self, screen_height, screen_width):
+    def backgroundLayer(self):  # creates the background of the Stage
+        self.display.blit(pygame.image.load(self.bgImage), (0, 0))
+        for button in self.activeButtons + self.inactiveButtons:
+            self.displayButton(button)
 
-        # Create a displace surface object
+    def mainLoop(self, screen_height, screen_width):  # creates the background display screen and listens for events
+
+        self.screen_height = screen_height # ToDo: move to init?
+        self.screen_width = screen_width
         self.display = pygame.display.set_mode((screen_height, screen_width))
-        self.display.blit(pygame.image.load(BaseStage.bgImage), (0, 0))
+
+        self.backgroundLayer()
 
         mainLoop = True
-
-        self.displayButton(self.quitGame)
-        self.displayButton(self.goBack)
-        self.displayButton(self.skip)
 
         while mainLoop:
             self.listen()
@@ -152,4 +188,3 @@ class BaseStage():
 
             pygame.display.update()
 
-        
