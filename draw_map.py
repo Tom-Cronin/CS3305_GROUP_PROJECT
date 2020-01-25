@@ -9,6 +9,7 @@ def draw_level_map(list_of_nodes, screen_width, screen_height, screen, current_n
     darkBlue = (0, 0, 128)
     white = (255, 255, 255)
     black = (0, 0, 0)
+    grey = (192, 192, 192)
     pink = (255, 200, 200)
     node_dict = {}
     node_index = 0
@@ -29,8 +30,12 @@ def draw_level_map(list_of_nodes, screen_width, screen_height, screen, current_n
 
                 if node_index == current_node:
                     circle_width = circle_radius
-                    circle_colour = pink
+                    circle_colour = red
                     next_nodes = list_of_nodes[level_index][i][2]
+                elif node_index < current_node:
+                    circle_colour = grey
+                    circle_width = 1
+                    circle_width = circle_radius
                 elif (node_index+1) in next_nodes:
                     circle_width = circle_radius
                     circle_colour = blue
