@@ -1,7 +1,7 @@
 from Characters.attacks.baseAttackClass import BaseAttack
 
 
-class DevilishDefence(object, BaseAttack):
+class DevilishDefence(BaseAttack):
     def __init__(self, characterIntAtribute):
         super().__init__()
         self.damageMod = characterIntAtribute

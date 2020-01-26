@@ -1,7 +1,7 @@
 from Characters.attacks.baseAttackClass import BaseAttack
 from Characters.sharedFunctions import calc_attribute_bonus
 
-class HellfireWhirlwind(object, BaseAttack):
+class HellfireWhirlwind(BaseAttack):
     def __init__(self, characterIntAtribute):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterIntAtribute)

@@ -6,11 +6,11 @@ class Shadowling(Character):
 
     def __init__(self):
         super().__init__()
-        self.setStrength(13)
-        self.setDex(15)
-        self.setConstitution(10)
-        self.setInt(7)
-        self.setInitiative(2)
+        self.strength = 13
+        self.dexterity = 15
+        self.constitution = 10
+        self.intelligence = 7
+        self.ArmorClass = 12
 
         self.setHealth(22)
 

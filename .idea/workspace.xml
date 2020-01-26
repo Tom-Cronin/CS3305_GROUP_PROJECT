@@ -2,11 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/burningSight.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/hellfireWhirlwind.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Characters/attacks/enemyAttacks/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Characters/attacks/enemyAttacks/shadowJest/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Characters/attacks/enemyAttacks/shadowJest/bite.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/DevilishDefence.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/DevilishDefence.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/burningSight.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/burningSight.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/hellfireWhirlwind.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/hellfireWhirlwind.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/ShadowJest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/ShadowJest.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/Shadowling.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/Shadowling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/rat.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/rat.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -214,7 +220,7 @@
       <workItem from="1579730342355" duration="1507000" />
       <workItem from="1579785526932" duration="3085000" />
       <workItem from="1579960184793" duration="495000" />
-      <workItem from="1580036108562" duration="8294000" />
+      <workItem from="1580036108562" duration="12480000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -251,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580042524120</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="created alpha warlock of the fiend character">
+      <created>1580044687611</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580044687611</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -265,7 +278,8 @@
     <MESSAGE value="started one monster class, need some implemntation of attacks" />
     <MESSAGE value="fixed conflicts" />
     <MESSAGE value="added a few tests and filling out attakcs and character classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a few tests and filling out attakcs and character classes" />
+    <MESSAGE value="created alpha warlock of the fiend character" />
+    <option name="LAST_COMMIT_MESSAGE" value="created alpha warlock of the fiend character" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
@@ -280,11 +294,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1580044546194">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1580044687147">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580044546194" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580044687147" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
