@@ -20,6 +20,6 @@ game_seed = "xy2z"
 
 myMap = map(screen, screen_width, screen_height, game_seed)
 
-for i in range(50):
+for i in range(5):
     node_key = myMap.get_user_selection()
 

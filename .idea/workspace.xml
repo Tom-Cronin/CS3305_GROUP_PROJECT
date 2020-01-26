@@ -2,16 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/map.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/create_map_list.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/draw_map.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage_levels.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage_map.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -236,7 +248,7 @@
       <workItem from="1579955963007" duration="89000" />
       <workItem from="1579977366312" duration="989000" />
       <workItem from="1579978450602" duration="794000" />
-      <workItem from="1579979674607" duration="8407000" />
+      <workItem from="1579979674607" duration="12697000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -294,7 +306,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579982190009</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Map class is all in map.py file, methods displayed in manage_map.py">
+      <created>1579990430167</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1579990430167</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +342,8 @@
     <MESSAGE value="Added current-node tracker system" />
     <MESSAGE value="Colours to make map clearer" />
     <MESSAGE value="Map is a class with example use beneath" />
-    <option name="LAST_COMMIT_MESSAGE" value="Map is a class with example use beneath" />
+    <MESSAGE value="Map class is all in map.py file, methods displayed in manage_map.py" />
+    <option name="LAST_COMMIT_MESSAGE" value="Map class is all in map.py file, methods displayed in manage_map.py" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
@@ -338,11 +358,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="0" key="#manage_levels/0.0.1366.728@0.0.1366.728" timestamp="1579979904287" />
-    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1579982187646">
+    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1579990427832">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579982187646" />
+    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579990427832" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
@@ -352,34 +372,34 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579955323439" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1579990325133">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1580041380815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1579990325133" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580041380815" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1579990325133">
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1580041380815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1579990325133" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580041380815" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1579990325132">
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1580041380815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1579990325132" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580041380815" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1579990325133">
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1580041380815">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1579990325133" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580041380815" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
-    <state x="404" y="87" key="RollbackChangesDialog" timestamp="1579979960583">
+    <state x="404" y="87" key="RollbackChangesDialog" timestamp="1580039488188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="404" y="87" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1579979960583" />
+    <state x="404" y="87" key="RollbackChangesDialog/0.0.1366.728@0.0.1366.728" timestamp="1580039488188" />
     <state x="483" y="192" key="SettingsEditor" timestamp="1579978478118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -392,17 +412,17 @@
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
     <state x="338" y="219" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579955962067" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
-    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579962741996">
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579990433187">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1579962741996" />
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1579990433187" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579075897728" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_levels.coverage" NAME="manage_map Coverage Results" MODIFIED="1579990325112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_levels.coverage" NAME="manage_map Coverage Results" MODIFIED="1580041380784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1579788629794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$draw_map.coverage" NAME="draw_map Coverage Results" MODIFIED="1579890692953" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

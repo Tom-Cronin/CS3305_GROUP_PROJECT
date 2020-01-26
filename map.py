@@ -3,7 +3,7 @@ import pygame
 import random
 
 
-# map() creates the map and returns a list representation of the map, but this isn't needed
+# map() creates the map and returns a map object
 # Map keeps track of the current level, and the players position within that level
 # Each time you call myMap.getUserSelection() the map will appear for the user to select their next step
 # It will automatically move the user forward to the step they chose during the previous function call
@@ -15,34 +15,34 @@ class map(object):
         self.seed = seed
         self.level = 0
         self.node = -1
-        self.selectedNode = None
-        self.selected_node_key = None
         self.map = self.generate_map_list()
         self.screen_width = screen_width
         self.screen_height = screen_height
         self.screen = screen
 
-    def check_for_end_of_map(self):
-        if self.selected_node_key == "B":
+    def generate_map_list(self):
+        random.seed(str(self.level) + str(self.seed))
+        number_of_levels = 10
+        list_of_nodes = self.generate_nodes_and_keys(number_of_levels)
+        connected_list = self.generate_node_connections(list_of_nodes)
+        return connected_list
+
+    def check_for_end_of_map(self, selected_node_key):
+        if selected_node_key == "B":
             self.node = -1
             self.level += 1
             self.map = self.generate_map_list()
 
-    def generate_map_list(self):
+    def generate_nodes_and_keys(self, number_of_levels):
         nodes_per_level = 0
-        seed = str(self.level) + str(self.seed)
-        random.seed(seed)
-        number_of_levels = random.randint(10, 10)
-        level_index = 0
         node_index = 1
         list_of_levels = []
-
-        while level_index <= number_of_levels:
+        for level_index in range(number_of_levels):
             list_of_levels.append([])
             if level_index == number_of_levels:
                 nodes_per_level = 1
             elif level_index == 0:
-                nodes_per_level = random.randint(1, 3)
+                nodes_per_level = random.randint(1, 4)
             else:
                 nodes_per_level = random.randint(1, nodes_per_level + 1)
                 while nodes_per_level > 4:
@@ -66,8 +66,9 @@ class map(object):
                         node_key = "b"
                 list_of_levels[level_index].append([node_index, node_key, []])
                 node_index += 1
-            level_index += 1
+        return list_of_levels
 
+    def generate_node_connections(self, list_of_levels):
         for level in range(len(list_of_levels) - 1):
             next_level = level + 1
             len_level = len(list_of_levels[level])
@@ -123,7 +124,6 @@ class map(object):
         next_nodes_dict = {}
         red = (255, 0, 0)
         blue = (0, 0, 255)
-        white = (255, 255, 255)
         black = (0, 0, 0)
         grey = (192, 192, 192)
         node_dict = {}
@@ -137,7 +137,7 @@ class map(object):
 
             for level_index in range(num_levels):
                 node_x = int(round(self.screen_width / len(self.map[level_index])))
-
+                current_level_nodes = []
                 for i in range(len(self.map[level_index])):
                     node_key = self.map[level_index][i][1]
                     circle_x = int(node_x * (i + 1) - (node_x / 2))
@@ -150,10 +150,11 @@ class map(object):
                     if node_index == self.node:
                         circle_width = circle_radius
                         circle_colour = red
+                        for node in range(len(self.map[level_index])):
+                            current_level_nodes.append(self.map[level_index][node][0])
                         next_nodes = self.map[level_index][i][2]
-                    elif node_index < self.node:
+                    elif node_index < self.node or node_index in current_level_nodes:
                         circle_colour = grey
-                        circle_width = 1
                         circle_width = circle_radius
                     elif (node_index + 1) in next_nodes:
                         next_nodes_dict[node_index] = node_key
@@ -187,7 +188,12 @@ class map(object):
                                                     int(self.screen_height - node_height * (
                                                             level_index + 2) +
                                                         node_height - circle_radius))], 1)
+            return node_dict, next_nodes, next_nodes_dict
 
+    def get_next_node(self):
+        white = (255, 255, 255)
+        node_dict, next_nodes, next_nodes_dict = self.draw_map()
+        while True:
             pygame.display.update()
             length_next_nodes = len(next_nodes)
 
@@ -200,12 +206,11 @@ class map(object):
                         if click == 1:
                             self.node = next_nodes[item] - 1
                             node_key = next_nodes_dict[self.node]
-                            # print("Selected node: ", self.node, node_key)
                             self.screen.fill(white)
                             pygame.display.update()
                             return node_key
 
     def get_user_selection(self):
-        self.selected_node_key = self.draw_map()
-        self.check_for_end_of_map()
-        return self.selected_node_key
+        selected_node_key = self.get_next_node()
+        self.check_for_end_of_map(selected_node_key)
+        return selected_node_key
