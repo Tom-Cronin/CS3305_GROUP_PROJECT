@@ -1,6 +1,8 @@
 from Characters.BaseClass.CharacterBaseClass import Character
 from Characters.attacks.playableCharacterAttacks.warlock.DevilishDefence import DevilishDefence
 from Characters.attacks.playableCharacterAttacks.warlock.eldritchBlast import EldritchBlast
+from Characters.attacks.playableCharacterAttacks.warlock.burningSight import BurningSight
+from Characters.attacks.playableCharacterAttacks.warlock.hellfireWhirlwind import HellfireWhirlwind
 
  # will set level to 4 in dnd
  # maybe add a multiplier to health and damge outputs per level
@@ -21,6 +23,9 @@ class Warlock(Character):
 
         self.attack_slot_1 = EldritchBlast(self.intelligence)
         self.attack_slot_2 = DevilishDefence(self.intelligence)
+        self.attack_slot_3 = BurningSight(self.intelligence)
+        self.attack_slot_4 = HellfireWhirlwind(self.intelligence)
+
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
 
@@ -36,10 +41,3 @@ class Warlock(Character):
         return self.description % (self.name, self.health, self.strength,
                                    self.dexterity, self.constitution, self.intelligence)
 
-
-
-
-warlock = Warlock()
-attack = warlock.attack1
-print(warlock)
-print(attack)

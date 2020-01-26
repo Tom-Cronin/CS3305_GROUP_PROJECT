@@ -1,18 +1,17 @@
 from Characters.attacks.baseAttackClass import BaseAttack
 from Characters.sharedFunctions import calc_attribute_bonus
 
-
-class EldritchBlast(object, BaseAttack):
+class HellfireWhirlwind(object, BaseAttack):
     def __init__(self, characterIntAtribute):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterIntAtribute)
-        self.audioPath = '../../assets/images/sounds/Warlock/eldritchBlast.mp3'
-        self.baseDamage = 5
+        self.audioPath = 'none yet'
+        self.baseDamage = 8
 
-        self.name = 'Eldritch Blast'
-        self.description = '%s:\n You create a beam of magical energy and hurl it at an enemy.\n' \
+        self.name = 'Hellfire Whirlwind'
+        self.description = '%s:\n You surround and enemy in a whirlwind of hellfire .\n' \
                            ' On hit, the target takes %i fire damage.'
-        self.cooldown = 1
+        self.cooldown = 2
 
 
 
@@ -20,9 +19,8 @@ class EldritchBlast(object, BaseAttack):
         return self.baseDamage + self.damageMod
 
     def attack(self):
-        self.playAttackSound(self.audioPath)
+        #self.playAttackSound(self.audioPath)
         print(self.getDamage())
 
     def __str__(self):
         return self.description % (self.name, self.getDamage())
-
