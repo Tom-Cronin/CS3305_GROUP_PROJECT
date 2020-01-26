@@ -17,6 +17,9 @@ class StageButton:
         self.fontsize = 30
         self.exitMessage = exitMessage  # Message displayed when button is pressed
         self.hovering = False
+        # self.buttonImage = pygame.transform.scale(pygame.image.load(buttonImage).convert(),
+        #                                               (self.height, self.width))
+
 
     def displayButton(self, display):
         pygame.draw.rect(display, self.textColor, (self.xLocation, self.yLocation, self.width, self.height))  # border
@@ -40,7 +43,7 @@ class StageButton:
             textRect.center = (450, y)
             y += 50
             display.blit(text, textRect)
-        pygame.display.update(200, 150, 500, 300)
+        pygame.display.update(updateRect)
 
     def hover(self, display, hover):
         self.hovering = hover
@@ -101,7 +104,7 @@ class BaseStage:
         self.screen_width = screen_width
         self.display = pygame.display.set_mode((screen_height, screen_width))
 
-        self.bgImage = pygame.image.load('media/trees.png').convert()
+        self.bgImage = pygame.transform.scale(pygame.image.load('media/trees.png').convert(), (self.screen_height, self.screen_width))
     
     def displayButton(self, button):
         button.displayButton(self.display)
