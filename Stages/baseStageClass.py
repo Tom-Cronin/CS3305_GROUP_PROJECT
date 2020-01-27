@@ -1,8 +1,5 @@
 import pygame, sys
-import textwrap
 from pygame.locals import *
-
-#pygame.init()
 
 class StageButton:
     def __init__(self, text, exitMessage, x, y):
