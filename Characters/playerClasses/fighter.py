@@ -1,4 +1,5 @@
 from Characters.BaseClass.CharacterBaseClass import Character
+from Characters.attacks.playableCharacterAttacks.fighter.dragonBreathAttack import BreathAttack
 
 
  # will set level to 4 in dnd
@@ -18,7 +19,7 @@ class Fighter(Character):
 
         self.imagePath = 'none yet'
 
-        self.attack_slot_1 = None
+        self.attack_slot_1 = BreathAttack()
         self.attack_slot_2 = None
         self.attack_slot_3 = None
         self.attack_slot_4 = None
