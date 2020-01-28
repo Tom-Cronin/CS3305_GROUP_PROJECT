@@ -1,37 +1,46 @@
 import pygame
+from pygame.locals import *
+import time
 from Stages.baseStageClass import BaseStage, StageButton
 
-class TreasureChestButton(StageButton):
-    def __init__(self, exitMessage, screen_width, screen_height):
-        super().__init__("TREASURE", exitMessage, 0, 0)
+class TreasureChestButton(StageButton): # Special button for the treasure box
+    def __init__(self, announcement, screen_width, screen_height, bg_image):
+        super().__init__("TREASURE", announcement, 0, 0)
+        self.bgImage = bg_image
+        self.screen_width = screen_width
+        self.screen_height = screen_height
         self.height = 300
         self.width = 400
         self.xLocation = (screen_width - self.width) / 2
         self.yLocation = (screen_height - self.height) / 2
-        self.treasureImage = pygame.transform.scale(pygame.image.load("media/treasure_chest.png").convert_alpha(),
-                                                    (self.width, self.height))
+        self.image = (pygame.image.load("media/treasure_chest.png").convert_alpha()) # loads the treasure box as a png
+        self.treasureImage = pygame.transform.scale(self.image, (self.width, self.height))
 
 
     def displayButton(self, display):
         display.blit(self.treasureImage, (self.xLocation, self.yLocation))
 
+
+
+
 class TreasureRoom(BaseStage):
     def __init__(self, screen_height, screen_width):
         super().__init__(screen_height, screen_width)
         self.prize = self.choosePrize()
-        self.treasureChest = TreasureChestButton("You have won "+self.prize+".", screen_width, screen_height)
+        self.treasureChest = TreasureChestButton("You have won "+self.prize+".", screen_width, screen_height, self.bgImage)
         self.activeButtons.append(self.treasureChest)
-        print(self.activeButtons)
+
 
     def treasureLayer(self):
         self.treasureChest.displayButton(self.display)
+
 
     def mouseClick(self, button):  # event handler for button press
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
             self.selectedButtonName = self.warningMessage(button)
         elif button.buttonText in ["TREASURE"]:
             self.selectedButtonName = self.treasureMessage()
-        if button.buttonText == "OK":
+        elif button.buttonText == "OK":
             if self.selectedButtonName == "QUIT":
                 self.exitGame()
             if self.selectedButtonName == "SKIP":
@@ -51,6 +60,7 @@ class TreasureRoom(BaseStage):
     def treasureMessage(self):
         self.treasureChest.displayWarningMessage(self.display)
         self.displayButton(self.okay)
+        time.sleep(0.3)
         self.activeButtons = [self.okay]  # deactivates the main menu and treasure box, activates ok option
         return self.treasureChest.buttonText
 
@@ -64,7 +74,6 @@ class TreasureRoom(BaseStage):
         while mainLoop:
             self.listenMouse()
             self.listenButton()
-            #self.treasureLayer()
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:

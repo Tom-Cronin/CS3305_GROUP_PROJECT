@@ -2,13 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="fixed conflicts">
-      <change afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/treasureRoom.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/treasureRoom.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -17,8 +33,22 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>hover(</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <push-targets>
+      <push-target-info target-remote="origin" target-branch="treasureRoom" repo="$PROJECT_DIR$" source="Stages" />
+    </push-targets>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="731" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectId" id="1WNrxYIOErdcbtfK8SE83WDtRm7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -31,8 +61,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$2/Languages" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -45,7 +77,7 @@
       <recent name="$PROJECT_DIR$/assets/Characters/BaseClass" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.eldritchBlast">
+  <component name="RunManager" selected="Python.treasureRoom">
     <configuration name="RunAllTests (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -76,7 +108,7 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestSuite" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -90,7 +122,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="RunAllTests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="StageDisplay" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,12 +130,34 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Stages" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\TestSuite\RunAllTests.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/StageDisplay.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="baseStageClass" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Stages" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/baseStageClass.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,19 +188,26 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in C:/Users/tom10/PycharmProjects/CS3306_GROUP_PROJECT/UnitTests/CharacterTests/test_CharacterBaseClass.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="treasureRoom" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/UnitTests/CharacterTests" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\Sinead\AppData\Local\Programs\Python\Python37\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Stages" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/UnitTests/CharacterTests/test_CharacterBaseClass.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/treasureRoom.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="Unittests in TestSuite" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
@@ -164,13 +225,18 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Python.treasureRoom" />
+      <item itemvalue="Python.RunAllTests (1)" />
+      <item itemvalue="Python.eldritchBlast" />
+      <item itemvalue="Python tests.Unittests in TestSuite" />
+      <item itemvalue="Python.baseStageClass" />
+      <item itemvalue="Python.StageDisplay" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.eldritchBlast" />
-        <item itemvalue="Python.RunAllTests (1)" />
-        <item itemvalue="Python.RunAllTests (1)" />
-        <item itemvalue="Python.RunAllTests" />
-        <item itemvalue="Python tests.Unittests in TestSuite" />
+        <item itemvalue="Python.StageDisplay" />
+        <item itemvalue="Python.baseStageClass" />
       </list>
     </recent_temporary>
   </component>
@@ -205,6 +271,8 @@
       <workItem from="1579730342355" duration="1507000" />
       <workItem from="1579785526932" duration="3085000" />
       <workItem from="1579960184793" duration="495000" />
+      <workItem from="1580148719979" duration="2848000" />
+      <workItem from="1580220296810" duration="2273000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -234,78 +302,85 @@
       <option name="project" value="LOCAL" />
       <updated>1579092965497</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Basic treasure room that does not calculate prizes yet">
+      <created>1580166895577</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1580166895578</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation" />
     <MESSAGE value="Made test be able to run from main directory, also updated the README.md" />
     <MESSAGE value="Added two enemy png files [ rough sketch only ]" />
     <MESSAGE value="started one monster class, need some implemntation of attacks" />
     <MESSAGE value="fixed conflicts" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed conflicts" />
+    <MESSAGE value="Basic treasure room that does not calculate prizes yet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Basic treasure room that does not calculate prizes yet" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1580220292610" />
+    <state x="335" y="14" key="#RunAllTests_(1)/0.0.1280.800@0.0.1280.800" timestamp="1580220292619" />
+    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580220292619" />
+    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1580220292619" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1580220292620" />
+    <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580220292620" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1580220292620" />
+    <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1580220292620" />
+    <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1580220292620" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1580225070578">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="335" y="14" key="#RunAllTests_(1)/0.0.1280.800@0.0.1280.800" timestamp="1579785541158" />
-    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002741848">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580225070578" />
+    <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1580225070578">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
-    <state x="0" y="23" key="CommitChangelistDialog2" timestamp="1579093811464">
-      <screen x="0" y="23" width="1280" height="750" />
+    <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580225070578" />
+    <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1580225070578">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
-    <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
-      <screen x="0" y="23" width="1280" height="750" />
+    <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580225070578" />
+    <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1580225070578">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1579093793728" />
-    <state width="1238" height="402" key="GridCell.Tab.0.bottom" timestamp="1579788638505">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580225070578" />
+    <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
+    <state x="302" y="15" key="SettingsEditor" timestamp="1580220436182">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596164" />
-    <state width="1238" height="402" key="GridCell.Tab.0.center" timestamp="1579788638504">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
+    <state x="302" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580220436182" />
+    <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
+    <state x="338" y="219" key="com.intellij.ide.util.TipDialog" timestamp="1580220296116">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
-    <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1238" height="402" key="GridCell.Tab.0.left" timestamp="1579788638503">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
-    <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1238" height="402" key="GridCell.Tab.0.right" timestamp="1579788638505">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state x="283" y="78" key="SettingsEditor" timestamp="1579960616364">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1579960616364" />
-    <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579730353140" />
-    <state x="317" y="249" key="com.intellij.ide.util.TipDialog" timestamp="1579176563139">
-      <screen x="0" y="23" width="1280" height="750" />
-    </state>
-    <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
-    <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
-    <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
-      <screen x="0" y="0" width="1280" height="800" />
-    </state>
-    <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579075897728" />
+    <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
+    <state x="338" y="219" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580220296116" />
+    <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1580220292620" />
+    <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1580220292620" />
+    <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$treasureRoom.coverage" NAME="treasureRoom Coverage Results" MODIFIED="1580225070548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1579732038124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$StageDisplay.coverage" NAME="StageDisplay Coverage Results" MODIFIED="1580225042169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$baseStageClass.coverage" NAME="baseStageClass Coverage Results" MODIFIED="1580220885216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1579788629794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
