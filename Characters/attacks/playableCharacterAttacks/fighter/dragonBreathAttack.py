@@ -2,17 +2,17 @@ from Characters.attacks.baseAttackClass import BaseAttack
 from Characters.sharedFunctions import calc_attribute_bonus
 
 
-class EldritchBlast(BaseAttack):
-    def __init__(self, characterIntAtribute):
+class BreathAttack(BaseAttack):
+    def __init__(self):
         super().__init__()
-        self.damageMod = calc_attribute_bonus(characterIntAtribute)
-        self.audioPath = '../../assets/images/sounds/Warlock/eldritchBlast.mp3'
-        self.baseDamage = 5
+        self.damageMod = 0
+        self.audioPath = 'none yet'
+        self.baseDamage = 4
 
-        self.name = 'Eldritch Blast'
+        self.name = 'Acid Spray'
         self.description = '%s:\n You create a beam of magical energy and hurl it at an enemy.\n' \
-                           ' On hit, the target takes %i fire damage.'
-        self.cooldown = 1
+                           ' On hit, the target takes %i acid damage.'
+        self.cooldown = 3
 
 
 
@@ -20,7 +20,7 @@ class EldritchBlast(BaseAttack):
         return self.baseDamage + self.damageMod
 
     def attack(self):
-        self.playAttackSound(self.audioPath)
+        #self.playAttackSound(self.audioPath)
         print(self.getDamage())
 
     def __str__(self):
