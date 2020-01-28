@@ -4,7 +4,7 @@ from Characters.BaseClass.CharacterBaseClass import Character
 
 
 
-class Hag(Character):
+class Rat(Character):
 
     def __init__(self):
         super().__init__()
