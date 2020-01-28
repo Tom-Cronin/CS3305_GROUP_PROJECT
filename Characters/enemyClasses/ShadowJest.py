@@ -2,7 +2,7 @@ from Characters.BaseClass.CharacterBaseClass import Character
 from Characters.attacks.enemyAttacks.shadowJest.bite import Bite
 # for stats see shadow mastiff dnd 5e
 
-class Shadowling(Character):
+class ShadowJest(Character):
 
     def __init__(self):
         super().__init__()
