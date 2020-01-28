@@ -4,7 +4,8 @@ from pygame.locals import *
 class StageButton:
     def __init__(self, text, exitMessage, x, y):
         self.buttonText = text
-        self.bgColour = (255, 255, 255)
+        self.defaultColour = (255,255,255)
+        self.bgColour = self.defaultColour
         self.width = 200
         self.height = 50
         self.xLocation = x
@@ -48,7 +49,7 @@ class StageButton:
             self.bgColour = (0, 0, 0)
             self.displayButton(display)
         else:
-            self.bgColour = (255, 255, 255)
+            self.bgColour = self.defaultColour
             self.displayButton(display)
 
 
