@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="updating enemy classes">
-      <change afterPath="$PROJECT_DIR$/CombatSystem/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/CombatSystem/encounter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stages/encounterStage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/BaseClass/CharacterBaseClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/BaseClass/CharacterBaseClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/GateGuard.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/GateGuard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/Hag.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/Hag.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/ShadowJest.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/ShadowJest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/gateGuard.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/GateGuard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/enemyClasses/rat.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/enemyClasses/Rat.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CombatSystem/encounter.py" beforeDir="false" afterPath="$PROJECT_DIR$/CombatSystem/encounter.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +75,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.StageDisplay">
+  <component name="RunManager" selected="Python.encounter">
     <configuration name="StageDisplay" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -103,7 +98,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="eldritchBlast" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="encounter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,12 +106,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CombatSystem" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CombatSystem/encounter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,11 +175,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.encounter" />
         <item itemvalue="Python.StageDisplay" />
         <item itemvalue="Python tests.Unittests in test_CharacterBaseClass.py" />
         <item itemvalue="Python tests.Unittests for test_CharacterBaseClass.TestCharacter.test_levelUpShouldIncreaseSelectedAttribute" />
         <item itemvalue="Python.warlock" />
-        <item itemvalue="Python.eldritchBlast" />
       </list>
     </recent_temporary>
   </component>
@@ -210,7 +205,8 @@
       <workItem from="1580036108562" duration="14973000" />
       <workItem from="1580221063096" duration="1194000" />
       <workItem from="1580222318404" duration="180000" />
-      <workItem from="1580224783724" duration="2171000" />
+      <workItem from="1580224783724" duration="3065000" />
+      <workItem from="1580307469249" duration="4332000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -370,6 +366,22 @@
     </state>
     <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579075897728" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CombatSystem/encounter.py</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/CombatSystem/encounter.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$StageDisplay.coverage" NAME="StageDisplay Coverage Results" MODIFIED="1580224884998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
@@ -385,5 +397,6 @@
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_healthShouldUpdateWithConstitutionBonus.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_healthShouldUpdateWithConstitutionBonus Coverage Results" MODIFIED="1580036814521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1580038288154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_healthShouldUpdateWithNoConstitutionBonus.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_healthShouldUpdateWithNoConstitutionBonus Coverage Results" MODIFIED="1580036892141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$encounter.coverage" NAME="encounter Coverage Results" MODIFIED="1580313465130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
   </component>
 </project>

@@ -20,7 +20,7 @@ class Character:
         self.health = newHealth + calc_attribute_bonus(self.constitution)
 
     def rollInitative(self):
-        return randint + calc_attribute_bonus(self.dexterity)
+        return randint(1, 20) + calc_attribute_bonus(self.dexterity)
 
     def increaseStr(self, amount):
         self.strength += amount
@@ -53,11 +53,11 @@ class Character:
         self.strength -= amount
 
     def levelUp(self, chosenAttribute):
-        atributeDict = {
+        attributeDict = {
             "str": self.increaseStr,
             "dex": self.increaseDex,
             "con": self.increaseConst,
             "int": self.increaseInt,
             "ac": self.increaseAC
         }
-        atributeDict[chosenAttribute](1)
+        attributeDict[chosenAttribute](1)
