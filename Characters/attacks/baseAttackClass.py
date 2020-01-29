@@ -1,5 +1,7 @@
 import pygame
+
 from Characters.sharedFunctions import calc_attribute_bonus
+
 
 class BaseAttack(object):
     def __init__(self):
