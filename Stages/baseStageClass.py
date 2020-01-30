@@ -11,6 +11,7 @@ class StageButton:
         self.xLocation = x
         self.yLocation = y
         self.textColor = (0, 255, 0)
+        self.hovercolour = (0,0,0)
         self.font = 'media/Chapaza.ttf'
         self.fontsize = 30
         self.exitMessage = exitMessage  # Message displayed when button is pressed
@@ -46,7 +47,7 @@ class StageButton:
     def hover(self, display, hover):
         self.hovering = hover
         if hover is True:
-            self.bgColour = (0, 0, 0)
+            self.bgColour = self.hovercolour
             self.displayButton(display)
         else:
             self.bgColour = self.defaultColour

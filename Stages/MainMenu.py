@@ -6,17 +6,24 @@ class MainMenu:
 
     def __init__(self, screen_height, screen_width):
         self.baseScreen = BaseStage(screen_height, screen_width)
+        self.baseScreen.bgImage = pygame.transform.scale(pygame.image.load('media/MainMenueBackground.png').convert(),
+                                                         (self.baseScreen.screen_height, self.baseScreen.screen_width))
 
         #buttons
         self.height = screen_width
         self.width = screen_height
-        self.startGameButton = StageButton("Start Game", "", 0, self.height/10)
-        self.quitButton = StageButton("Quit Game", "", 0, self.height/2)
-        self.leaveButton = StageButton("Quit", "", self.width/1.6, self.height/1.3)
-        self.noButton = StageButton("Go Back", "", self.width/6.4, self.height/1.3)
+        self.startGameButton = StageButton("Start Game", "", self.width/4, self.height/3.5)
+        self.quitButton = StageButton("Quit Game", "", self.width/4, self.height/1.65)
+        self.leaveButton = StageButton("Quit", "", self.width/1.6, self.height/1.2)
+        self.noButton = StageButton("Go Back", "", self.width/6.4, self.height/1.2)
         self.activeButtons = [self.startGameButton, self.quitButton]
+        self.allbuttons = [self.startGameButton, self.quitButton, self.leaveButton, self.noButton]
+        for button in self.allbuttons:
+            button.defaultColour = (120,120,120)
+            button.textColor = (102, 51, 0)
+            button.hovercolour = (40, 40, 40)
         self.startGameButton.height = 100
-        self.startGameButton.width = self.width
+        self.startGameButton.width = self.width/2
         self.quitButton.height = self.startGameButton.height
         self.quitButton.width = self.startGameButton.width
         self.leaveButton.height = self.startGameButton.height
