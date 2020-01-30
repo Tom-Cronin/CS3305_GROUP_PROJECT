@@ -12,12 +12,11 @@ class BaseAttack(object):
         self.coolDown = 0
         self.duration = 0
 
-
     def getDamage(self):
         return self.baseDamage + self.damageMod
 
-    def updateDamageMod(self, newDamageMod):
-        self.damageMod = calc_attribute_bonus(newDamageMod)
+    def updateDamageMod(self, newDamageModAttribute):
+        self.damageMod = calc_attribute_bonus(newDamageModAttribute)
 
     def playAttackSound(self, attackAudioFilePath):
         pygame.init()
