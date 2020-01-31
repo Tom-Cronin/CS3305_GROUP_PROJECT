@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/manage_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/map.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -248,7 +246,7 @@
       <workItem from="1579955963007" duration="89000" />
       <workItem from="1579977366312" duration="989000" />
       <workItem from="1579978450602" duration="794000" />
-      <workItem from="1579979674607" duration="12697000" />
+      <workItem from="1579979674607" duration="12905000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -313,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1579990430167</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Broke down functions, fixed map previous node colours">
+      <created>1580041427838</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580041427838</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -343,7 +348,8 @@
     <MESSAGE value="Colours to make map clearer" />
     <MESSAGE value="Map is a class with example use beneath" />
     <MESSAGE value="Map class is all in map.py file, methods displayed in manage_map.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Map class is all in map.py file, methods displayed in manage_map.py" />
+    <MESSAGE value="Broke down functions, fixed map previous node colours" />
+    <option name="LAST_COMMIT_MESSAGE" value="Broke down functions, fixed map previous node colours" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
@@ -358,11 +364,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="0" key="#manage_levels/0.0.1366.728@0.0.1366.728" timestamp="1579979904287" />
-    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1579990427832">
+    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1580041425678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1579990427832" />
+    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580041425678" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
@@ -372,29 +378,29 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="107" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1579955323439" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1580041380815">
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1580234752199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580041380815" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580234752199" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1580041380815">
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1580234752199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580041380815" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580234752199" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1580041380815">
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1580234752199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580041380815" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580234752199" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253700" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1580041380815">
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1580234752199">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580041380815" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580234752199" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
     <state x="404" y="87" key="RollbackChangesDialog" timestamp="1580039488188">
       <screen x="0" y="0" width="1366" height="728" />
@@ -406,16 +412,16 @@
     <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1579785560217" />
     <state x="302" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1579819649452" />
     <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579978478118" />
-    <state x="338" y="219" key="com.intellij.ide.util.TipDialog" timestamp="1579955962067">
+    <state x="338" y="219" key="com.intellij.ide.util.TipDialog" timestamp="1580487476778">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
-    <state x="338" y="219" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1579955962067" />
+    <state x="338" y="219" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1580487476778" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
-    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1579990433187">
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1580487484630">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1579990433187" />
+    <state x="492" y="282" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.728@0.0.1366.728" timestamp="1580487484630" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
