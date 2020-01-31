@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -247,6 +245,7 @@
       <workItem from="1579977366312" duration="989000" />
       <workItem from="1579978450602" duration="794000" />
       <workItem from="1579979674607" duration="12905000" />
+      <workItem from="1580487477757" duration="283000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -318,7 +317,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580041427838</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Broke down functions, fixed map previous node colours">
+      <created>1580487675662</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1580487675662</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -364,11 +370,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="0" key="#manage_levels/0.0.1366.728@0.0.1366.728" timestamp="1579979904287" />
-    <state x="392" y="0" key="CommitChangelistDialog2" timestamp="1580041425678">
+    <state x="383" y="0" key="CommitChangelistDialog2" timestamp="1580487837394">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="392" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580041425678" />
+    <state x="383" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580487837394" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
@@ -402,6 +408,10 @@
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580234752199" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579979253701" />
+    <state x="395" y="81" key="MultipleFileMergeDialog" timestamp="1580487747368">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="395" y="81" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1580487747368" />
     <state x="404" y="87" key="RollbackChangesDialog" timestamp="1580039488188">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
