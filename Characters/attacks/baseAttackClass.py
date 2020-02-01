@@ -1,21 +1,22 @@
 import pygame
+
 from Characters.sharedFunctions import calc_attribute_bonus
+
 
 class BaseAttack(object):
     def __init__(self):
         self.name = 'Base'
         self.baseDamage = 0
-        self.description = 'base class discription'
+        self.description = 'base class description'
         self.damageMod = 0
         self.coolDown = 0
         self.duration = 0
 
-
     def getDamage(self):
         return self.baseDamage + self.damageMod
 
-    def updateDamageMod(self, newDamageMod):
-        self.damageMod = calc_attribute_bonus(newDamageMod)
+    def updateDamageMod(self, newDamageModAttribute):
+        self.damageMod = calc_attribute_bonus(newDamageModAttribute)
 
     def playAttackSound(self, attackAudioFilePath):
         pygame.init()
