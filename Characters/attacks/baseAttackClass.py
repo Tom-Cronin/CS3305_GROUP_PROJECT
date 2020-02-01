@@ -7,7 +7,7 @@ class BaseAttack(object):
     def __init__(self):
         self.name = 'Base'
         self.baseDamage = 0
-        self.description = 'base class discription'
+        self.description = 'base class description'
         self.damageMod = 0
         self.coolDown = 0
         self.duration = 0
