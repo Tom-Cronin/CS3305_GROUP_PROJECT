@@ -1,6 +1,3 @@
-from Characters.enemyClasses.ShadowJest import ShadowJest
-from Characters.BaseClass.CharacterBaseClass import Character
-
 
 def turnOrder(combatList):
     turnOrderStack = []
