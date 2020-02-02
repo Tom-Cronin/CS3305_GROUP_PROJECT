@@ -6,9 +6,18 @@ enemies = []
 allies = []
 turnOrder = []
 
-def calcDamage(charTakingDamage, Damage)
+def calcDamage(charTakingDamage, Damage):
+    global enemies, turnOrder, allies
     charTakingDamage = Warlock()
     charTakingDamage.takeDamage(Damage)
+    if charTakingDamage.health <= 0:
+        if charTakingDamage.isEnemy:
+            enemies.remove(charTakingDamage)
+        else:
+            allies.remove(charTakingDamage)
+        turnOrder.remove(charTakingDamage)
+        del charTakingDamage
+
 
 
 def goThrougheachTurn():

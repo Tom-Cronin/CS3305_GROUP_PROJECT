@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CombatSystem/combat.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CombatSystem/combat.py" beforeDir="false" afterPath="$PROJECT_DIR$/CombatSystem/combat.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -203,7 +202,8 @@
       <workItem from="1580370331599" duration="655000" />
       <workItem from="1580572554322" duration="316000" />
       <workItem from="1580653718719" duration="3084000" />
-      <workItem from="1580663637653" duration="3456000" />
+      <workItem from="1580663637653" duration="3477000" />
+      <workItem from="1580667566139" duration="453000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -268,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580572816788</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="adding functionality">
+      <created>1580667377063</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1580667377063</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,7 +305,8 @@
     <MESSAGE value="created alpha warlock of the fiend character" />
     <MESSAGE value="updating enemy classes" />
     <MESSAGE value="updated the test" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated the test" />
+    <MESSAGE value="adding functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding functionality" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
@@ -313,11 +321,11 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
-    <state x="0" y="0" width="696" height="809" key="CommitChangelistDialog2" timestamp="1580572816263">
+    <state x="0" y="0" width="696" height="809" key="CommitChangelistDialog2" timestamp="1580667376386">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="0" y="0" width="696" height="809" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580572816263" />
+    <state x="0" y="0" width="696" height="809" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580667376386" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
@@ -327,26 +335,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="844" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580316812840" />
-    <state width="1860" height="279" key="GridCell.Tab.0.bottom" timestamp="1580665891385">
+    <state width="1860" height="279" key="GridCell.Tab.0.bottom" timestamp="1580667377739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1860" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580665891385" />
-    <state width="1860" height="279" key="GridCell.Tab.0.center" timestamp="1580665891385">
+    <state width="1860" height="279" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580667377739" />
+    <state width="1860" height="279" key="GridCell.Tab.0.center" timestamp="1580667377739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
-    <state width="1860" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580665891385" />
-    <state width="1860" height="279" key="GridCell.Tab.0.left" timestamp="1580665891385">
+    <state width="1860" height="279" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580667377739" />
+    <state width="1860" height="279" key="GridCell.Tab.0.left" timestamp="1580667377739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
-    <state width="1860" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580665891385" />
-    <state width="1860" height="279" key="GridCell.Tab.0.right" timestamp="1580665891385">
+    <state width="1860" height="279" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580667377739" />
+    <state width="1860" height="279" key="GridCell.Tab.0.right" timestamp="1580667377739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1860" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580665891385" />
+    <state width="1860" height="279" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580667377739" />
     <state width="1760" height="324" key="GridCell.Tab.1.bottom" timestamp="1580041315224">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -367,16 +375,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="481" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580036157412" />
-    <state x="483" y="192" key="SettingsEditor" timestamp="1580661361223">
+    <state x="483" y="192" key="SettingsEditor" timestamp="1580667626315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1579960616364" />
-    <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580661361223" />
-    <state x="476" y="313" key="com.intellij.ide.util.TipDialog" timestamp="1580371050571">
+    <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580667626315" />
+    <state x="476" y="313" key="com.intellij.ide.util.TipDialog" timestamp="1580667565982">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
-    <state x="476" y="313" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580371050571" />
+    <state x="476" y="313" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580667565982" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
