@@ -23,3 +23,4 @@ class Hag(Character):
         self.attack_slot_3 = LongSwordStrike.onoHanded(self.strength)
         self.attack_slot_4 = LongSwordStrike.twoHanded(self.strength)
 
+        self.allAttacks = [self.attack_slot_1, self.attack_slot_2,self.attack_slot_3, self.attack_slot_4]
