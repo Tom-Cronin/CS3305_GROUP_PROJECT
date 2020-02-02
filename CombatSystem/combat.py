@@ -1,4 +1,5 @@
 from CombatSystem.generateEnemies import generateEnemies
+from CombatSystem.turnOrder import turnOrder as getTurnOrder
 # only  uses while making will be removed
 from Characters.playerClasses.warlock import Warlock
 
@@ -27,7 +28,7 @@ def goThrougheachTurn():
             if character.isEnemy:
                 pass
                 # call enemy combat system
-                #calc damage
+                # calc damage
                 # if char health less than 0 del that char
             else:
                 # call player
@@ -40,10 +41,10 @@ def setUp(crChalengeLevel, listOfPlayers):
     global enemies, allies, turnOrder
     enemies = generateEnemies(crChalengeLevel)
     allies = listOfPlayers
-    # TODO get call to turn order
     turnOrder = allies + enemies
+    turnOrder = getTurnOrder(turnOrder)
 
-print(enemies)
+
 setUp(4, [Warlock(), Warlock(), Warlock(), Warlock()])
-goThrougheachTurn()
+
 
