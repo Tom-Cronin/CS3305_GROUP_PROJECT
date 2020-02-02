@@ -1,5 +1,6 @@
 from Characters.enemyClasses import Hag, Rat, ShadowJest, Shadowling
 from random import randint
+
 # currently highest cr implemented monster is CR 3
 # lowest ranking is cr 1
 CR_MAX_VALUE = 3
@@ -18,13 +19,13 @@ def createEnemyInstances(enemyCROrder):
         enemies.append(possibleEnemysOfCR[randint(0, len(possibleEnemysOfCR) - 1)]())
     return enemies
 
-def minCRValue(crTotal, spaces):
-    minVal = CR_MIN_VALUE
-    while spaces * minVal < crTotal <= spaces * CR_MAX_VALUE:
-        minVal += 1
-    return minVal
+def minCRValue(crTotal, enemySpacesRemaining):
+    minCRVal = CR_MIN_VALUE
+    while enemySpacesRemaining * minCRVal < crTotal <= enemySpacesRemaining * CR_MAX_VALUE:
+        minCRVal += 1
+    return minCRVal
 
-# only works with CR's less than the max CR
+# only works with CR's less than the max CR * 4
 def generateEnemies(totalChalenegeLevel):
     spaces = 4
     enemyCROrder = []
