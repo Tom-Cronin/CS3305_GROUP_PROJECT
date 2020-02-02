@@ -1,5 +1,5 @@
 from Characters.BaseClass.CharacterBaseClass import Character
-
+from Characters.attacks.enemyAttacks.hagAttacks import lifeDrain, Longbow, LongSwordStrike
 # for stats see Wight dnd 5e
 
 
@@ -17,3 +17,9 @@ class Hag(Character):
         self.setHealth(45)
 
         self.imagePath = 'assets/images/characters/Enemies/PNG_Images/hag.png'
+
+        self.attack_slot_1 = lifeDrain.LifeDrain(self.intelligence)
+        self.attack_slot_2 = Longbow.Longbow(self.dexterity)
+        self.attack_slot_3 = LongSwordStrike.onoHanded(self.strength)
+        self.attack_slot_4 = LongSwordStrike.twoHanded(self.strength)
+
