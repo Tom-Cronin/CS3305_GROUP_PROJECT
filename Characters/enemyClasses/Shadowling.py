@@ -1,4 +1,6 @@
 from Characters.BaseClass.CharacterBaseClass import Character
+from Characters.attacks.enemyAttacks.sharedAttacks.bite import Bite
+from Characters.attacks.enemyAttacks.sharedAttacks.Claws import Claws
 
 # for stats see ghoul dnd 5e
 
@@ -13,5 +15,11 @@ class Shadowling(Character):
         self.ArmorClass = 12
 
         self.setHealth(22)
+
+        self.attack_slot_1 = Bite(self.strength)
+        self.attack_slot_1.coolDown = 2
+
+        self.attack_slot_2 = Claws(self.strength)
+        self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
 
         self.imagePath = 'assets/images/characters/Enemies/PNG_Images/Shadowling.png'

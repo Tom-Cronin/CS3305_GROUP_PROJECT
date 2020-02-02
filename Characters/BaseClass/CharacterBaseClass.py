@@ -12,6 +12,7 @@ class Character:
         self.strength = 0 # melee damage
         self.intelligence = 0 # intelligence? if implemented
         self.ArmorClass = 0 # gives chance to block an attack
+        self.isEnemy = True
 
     def takeDamage(self, amount):
         self.health -= amount

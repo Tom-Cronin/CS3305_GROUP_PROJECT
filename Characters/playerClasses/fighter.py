@@ -15,6 +15,7 @@ class Fighter(Character):
         self.constitution = 17
         self.intelligence = 8
         self.ArmorClass = 11
+        self.isEnemy = False
 
         self.setHealth(37)
 

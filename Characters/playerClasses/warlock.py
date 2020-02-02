@@ -17,6 +17,7 @@ class Warlock(Character):
         self.constitution = 16
         self.intelligence = 17
         self.ArmorClass = 11
+        self.isEnemy = False
 
         self.setHealth(33)
 

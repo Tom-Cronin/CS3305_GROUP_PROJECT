@@ -11,6 +11,17 @@ class BaseAttack(object):
         self.damageMod = 0
         self.coolDown = 0
         self.duration = 0
+        self.onCoolDown = False
+        self.coolDownTimer = 0
+
+    def startCooldown(self):
+        self.coolDownTimer = self.coolDown
+        self.onCoolDown = True
+
+    def reduceCoolDown(self):
+        self.coolDownTimer -= 1
+        if self.coolDownTimer == 0:
+            self.onCoolDown = 0
 
     def getDamage(self):
         return self.baseDamage + self.damageMod
