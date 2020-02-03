@@ -19,6 +19,9 @@ class map(object):
         self.screen_width = screen_width
         self.screen_height = screen_height
         self.screen = screen
+        self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
+                                                                                                   self.screen_width))
+        self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/treasure.png').convert(), (35, 35))
 
     def generate_map_list(self):
         random.seed(str(self.level) + str(self.seed))
@@ -39,7 +42,7 @@ class map(object):
         list_of_levels = []
         for level_index in range(number_of_levels):
             list_of_levels.append([])
-            if level_index == number_of_levels:
+            if level_index == number_of_levels - 1:
                 nodes_per_level = 1
             elif level_index == 0:
                 nodes_per_level = random.randint(1, 4)
@@ -50,9 +53,9 @@ class map(object):
             for node in range(nodes_per_level):
                 if level_index == 0:
                     node_key = "S"
-                elif level_index == number_of_levels:
-                    node_key = "B"
                 elif level_index == number_of_levels - 1:
+                    node_key = "B"
+                elif level_index == number_of_levels - 2:
                     node_key = "T"
                 else:
                     rand = random.randint(1, 7)
@@ -125,13 +128,16 @@ class map(object):
         red = (255, 0, 0)
         blue = (0, 0, 255)
         black = (0, 0, 0)
-        grey = (192, 192, 192)
+        bronze = (205, 127, 50)
+        grey = (86, 80, 81)
         node_dict = {}
         node_index = 0
         circle_radius = 20
         pygame.font.init()
-        myfont = pygame.font.SysFont('Comic Sans MS', 10)
+        myfont = pygame.font.SysFont('media/Chapaza.ttf', 17)
         while True:
+            self.screen.blit(self.bgImage, (0, 0))
+
             num_levels = len(self.map)
             node_height = int(round(self.screen_height / num_levels))
 
@@ -147,29 +153,41 @@ class map(object):
                         next_nodes = []
                         for node in self.map[0]:
                             next_nodes.append(node[0])
+                    pygame.draw.circle(self.screen, grey, (circle_x, circle_y), 20, 20)
                     if node_index == self.node:
+                        node_key = "YOU"
                         circle_width = circle_radius
                         circle_colour = red
                         for node in range(len(self.map[level_index])):
                             current_level_nodes.append(self.map[level_index][node][0])
                         next_nodes = self.map[level_index][i][2]
                     elif node_index < self.node or node_index in current_level_nodes:
-                        circle_colour = grey
+                        circle_colour = black
                         circle_width = circle_radius
+                        pygame.draw.circle(self.screen, circle_colour, (circle_x, circle_y), circle_radius,
+                                           circle_width)
+                        circle_colour = bronze
+                        circle_width = 1
                     elif (node_index + 1) in next_nodes:
                         next_nodes_dict[node_index] = node_key
                         circle_width = circle_radius
                         circle_colour = blue
                     else:
                         circle_width = 1
-                        circle_colour = black
+                        circle_colour = bronze
+
                     circle = pygame.draw.circle(self.screen, circle_colour, (circle_x, circle_y), circle_radius,
                                                 circle_width)
                     node_dict[node_index] = circle
                     node_index += 1
-                    text = myfont.render("%s" % node_key, True, black)
-                    self.screen.blit(text, (int(node_x * (i + 1) - (node_x / 2)) - 4,
+                    text = myfont.render("%s" % node_key, True, bronze)
+                    if node_key == "YOU":
+                        self.screen.blit(text, (int(node_x * (i + 1) - (node_x / 2)) - 12,
+                                                int(self.screen_height - node_height * (level_index + 1) + 20) - 6))
+                    else:
+                        self.screen.blit(text, (int(node_x * (i + 1) - (node_x / 2)) - 4,
                                             int(self.screen_height - node_height * (level_index + 1) + 20) - 6))
+                        #self.screen.blit(self.treasureImage, (int(node_x * (i + 1) - (node_x / 2)) - 14, int(self.screen_height - node_height * (level_index + 1) + 20) - 16))
             for level_index in range(num_levels):
                 level_length = len(self.map[level_index])
                 for i in range(level_length):
@@ -180,14 +198,14 @@ class map(object):
                         for to_node_index in range(len(self.map[level_index + 1])):
                             if self.map[level_index + 1][to_node_index][0] == self.map[level_index][i][2][j]:
                                 q = to_node_index
-                                pygame.draw.lines(self.screen, black, True,
+                                pygame.draw.lines(self.screen, bronze, True,
                                                   [(int(from_node_x * (i + 1) - (from_node_x / 2)),
                                                     int(self.screen_height - node_height * (
-                                                            level_index + 1))),
+                                                            level_index + 1)) - 1),
                                                    (int(to_node_x * (q + 1) - (to_node_x / 2)),
                                                     int(self.screen_height - node_height * (
                                                             level_index + 2) +
-                                                        node_height - circle_radius))], 1)
+                                                        node_height - circle_radius) - 5)], 2)
             return node_dict, next_nodes, next_nodes_dict
 
     def get_next_node(self):

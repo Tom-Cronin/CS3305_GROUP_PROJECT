@@ -1,4 +1,4 @@
-from map import map
+from Map.map import map
 import pygame as pygame
 
 pygame.init()
