@@ -36,4 +36,10 @@ class Encounter:
             turnOrderStack.append(character)
         return turnOrderStack
 
+    def determineTurn(self):
+        for character in self.turnOrder:
+            if character in self.listOfEnemies:
+
+
+
 instance = Encounter()
