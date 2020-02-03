@@ -9,7 +9,7 @@ white = (255, 255, 255)
 screen.fill(white)
 pygame.display.update()
 
-game_seed = "xy2z"
+game_seed = "Tom is the best, and i'm going to marry him."
 
 # map() creates the map
 # Map keeps track of the current level, and the players position within that level

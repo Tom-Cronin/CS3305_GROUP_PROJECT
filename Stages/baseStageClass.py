@@ -4,12 +4,14 @@ from pygame.locals import *
 class StageButton:
     def __init__(self, text, exitMessage, x, y):
         self.buttonText = text
-        self.bgColour = (255, 255, 255)
+        self.defaultColour = (255,255,255)
+        self.bgColour = self.defaultColour
         self.width = 200
         self.height = 50
         self.xLocation = x
         self.yLocation = y
         self.textColor = (0, 255, 0)
+        self.hovercolour = (0,0,0)
         self.font = 'media/Chapaza.ttf'
         self.fontsize = 30
         self.exitMessage = exitMessage  # Message displayed when button is pressed
@@ -45,10 +47,10 @@ class StageButton:
     def hover(self, display, hover):
         self.hovering = hover
         if hover is True:
-            self.bgColour = (0, 0, 0)
+            self.bgColour = self.hovercolour
             self.displayButton(display)
         else:
-            self.bgColour = (255, 255, 255)
+            self.bgColour = self.defaultColour
             self.displayButton(display)
 
 

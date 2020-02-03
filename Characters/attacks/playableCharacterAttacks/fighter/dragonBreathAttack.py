@@ -1,5 +1,4 @@
 from Characters.attacks.baseAttackClass import BaseAttack
-from Characters.sharedFunctions import calc_attribute_bonus
 
 
 class BreathAttack(BaseAttack):
