@@ -1,4 +1,6 @@
-import random
+from random import randint
+
+from Characters.sharedFunctions import calc_attribute_bonus
 
 
 class Character:
@@ -9,55 +11,55 @@ class Character:
         self.dexterity = 0 # ranged / dagger damage
         self.strength = 0 # melee damage
         self.intelligence = 0 # intelligence? if implemented
-        self.initiative = 0 # Turn order
         self.ArmorClass = 0 # gives chance to block an attack
+        self.isEnemy = True
 
-    def setAC(self, AC):
-        self.ArmorClass = AC
+    def takeDamage(self, amount):
+        self.health -= amount
 
-    def getAC(self):
-        return self.ArmorClass
 
     def setHealth(self, newHealth):
-        self.health = newHealth + self.constitution
-
-    def getHealth(self):
-        return self.health
-
-    def setConstitution(self, newConstitution):
-        self.constitution = newConstitution
-
-    def getConstitution(self):
-        return self.constitution
-
-    def setDex(self, newDex):
-        self.dexterity = newDex
-
-    def getDex(self):
-        return self.dexterity
-
-    def setStrength(self, newStrength):
-        self.strength = newStrength
-
-    def getStrenght(self):
-        return self.strength
-
-    def setInt(self, newInt):
-        self.intelligence = newInt
-
-    def getInt(self):
-        return self.intelligence
-
-    def setInitiative(self, newInitiative):
-        self.initiative = newInitiative
-
-    def getInitative(self):
-        return self.initiative
+        self.health = newHealth + calc_attribute_bonus(self.constitution)
 
     def rollInitative(self):
-        roll = random.random * 19
-        roll + 1
-        roll += self.getInitative()
-        return roll
+        return randint(0, 20) + calc_attribute_bonus(self.dexterity)
 
+    def increaseStr(self, amount):
+        self.strength += amount
 
+    def increaseDex(self, amount):
+        self.dexterity += amount
+
+    def increaseConst(self, amount):
+        self.constitution += amount
+
+    def increaseInt(self, amount):
+        self.intelligence += amount
+
+    def increaseAC(self, amount):
+        self.ArmorClass += amount
+
+    def decreaseStr(self, amount):
+        self.strength -= amount
+
+    def decreaseDex(self, amount):
+        self.dexterity -= amount
+
+    def decreaseConst(self, amount):
+        self.constitution -= amount
+
+    def decreaseInt(self, amount):
+        self.intelligence -= amount
+
+    def decreaseAC(self, amount):
+        self.ArmorClass -= amount
+
+    def levelUp(self, chosenAttribute):
+        atributeDict = {
+            "str": self.increaseStr,
+            "dex": self.increaseDex,
+            "con": self.increaseConst,
+            "int": self.increaseInt,
+            "ac": self.increaseAC
+        }
+        atributeDict[chosenAttribute](1)
