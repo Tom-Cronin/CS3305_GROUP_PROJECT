@@ -1,10 +1,11 @@
 from Characters.BaseClass.CharacterBaseClass import Character
 from Characters.attacks.playableCharacterAttacks.warlock.DevilishDefence import DevilishDefence
-from Characters.attacks.playableCharacterAttacks.warlock.eldritchBlast import EldritchBlast
 from Characters.attacks.playableCharacterAttacks.warlock.burningSight import BurningSight
+from Characters.attacks.playableCharacterAttacks.warlock.eldritchBlast import EldritchBlast
 from Characters.attacks.playableCharacterAttacks.warlock.hellfireWhirlwind import HellfireWhirlwind
 
- # will set level to 4 in dnd
+
+# will set level to 4 in dnd
  # maybe add a multiplier to health and damge outputs per level
 
 class Warlock(Character):
@@ -16,6 +17,7 @@ class Warlock(Character):
         self.constitution = 16
         self.intelligence = 17
         self.ArmorClass = 11
+        self.isEnemy = False
 
         self.setHealth(33)
 

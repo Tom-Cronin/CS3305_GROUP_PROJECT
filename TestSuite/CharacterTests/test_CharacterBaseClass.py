@@ -26,9 +26,9 @@ class TestCharacter(TestCase):
 
     def test_levelUpShouldIncreaseSelectedAttribute(self):
         self.char = Character()
-        self.assertEqual(0, self.char.strength)
-        self.char.levelUp("str")
-        self.assertEqual(1, self.char.strength)
+        self.assertEqual(0, self.char.intelligence)
+        self.char.levelUp("int")
+        self.assertEqual(1, self.char.intelligence)
 
     def test_reduceSelectedAttributeBySpecificAmount(self):
         self.char = Character()
@@ -43,3 +43,8 @@ class TestCharacter(TestCase):
         self.assertEqual(20, self.char.health)
         self.char.takeDamage(5)
         self.assertEqual(15, self.char.health)
+
+    def test_shouldRollInitiativeWithAValueOfDexModOrHigher(self):
+        self.char = Character()
+        self.char.dexterity = 410
+        self.assertGreaterEqual(self.char.rollInitative(), 200)
