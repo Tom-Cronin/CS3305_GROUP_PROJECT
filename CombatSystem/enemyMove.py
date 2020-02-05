@@ -1,3 +1,4 @@
+import time
 
 def makeMove(enemy, listOfPlayers):
     if len(listOfPlayers):
