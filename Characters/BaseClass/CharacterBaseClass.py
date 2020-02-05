@@ -1,4 +1,5 @@
 from random import randint
+
 from Characters.sharedFunctions import calc_attribute_bonus
 
 
@@ -11,6 +12,7 @@ class Character:
         self.strength = 0 # melee damage
         self.intelligence = 0 # intelligence? if implemented
         self.ArmorClass = 0 # gives chance to block an attack
+        self.isEnemy = True
 
     def takeDamage(self, amount):
         self.health -= amount
@@ -20,37 +22,37 @@ class Character:
         self.health = newHealth + calc_attribute_bonus(self.constitution)
 
     def rollInitative(self):
-        return randint + calc_attribute_bonus(self.dexterity)
+        return randint(0, 20) + calc_attribute_bonus(self.dexterity)
 
     def increaseStr(self, amount):
         self.strength += amount
 
     def increaseDex(self, amount):
-        self.strength += amount
+        self.dexterity += amount
 
     def increaseConst(self, amount):
-        self.strength += amount
+        self.constitution += amount
 
     def increaseInt(self, amount):
-        self.strength += amount
+        self.intelligence += amount
 
     def increaseAC(self, amount):
-        self.strength += amount
+        self.ArmorClass += amount
 
     def decreaseStr(self, amount):
         self.strength -= amount
 
     def decreaseDex(self, amount):
-        self.strength -= amount
+        self.dexterity -= amount
 
     def decreaseConst(self, amount):
-        self.strength -= amount
+        self.constitution -= amount
 
     def decreaseInt(self, amount):
-        self.strength -= amount
+        self.intelligence -= amount
 
     def decreaseAC(self, amount):
-        self.strength -= amount
+        self.ArmorClass -= amount
 
     def levelUp(self, chosenAttribute):
         atributeDict = {

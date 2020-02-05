@@ -1,5 +1,5 @@
 from Characters.BaseClass.CharacterBaseClass import Character
-from Characters.attacks.enemyAttacks.shadowJest.bite import Bite
+from Characters.attacks.enemyAttacks.sharedAttacks.bite import Bite
 # for stats see shadow mastiff dnd 5e
 
 class ShadowJest(Character):
@@ -18,8 +18,5 @@ class ShadowJest(Character):
 
         self.attack_slot_1 = Bite(self.strength)
 
-        self.allAttacks = [self.attack_slot_1]
 
-    def updateAttackBonuses(self):
-        for attack in self.allAttacks:
-            attack.updateDamageMod(self.intelligence)
+        self.allAttacks = [self.attack_slot_1]
