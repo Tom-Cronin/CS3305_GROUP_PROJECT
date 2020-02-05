@@ -1,5 +1,6 @@
 from CombatSystem.generateEnemies import generateEnemies
 from CombatSystem.turnOrder import turnOrder as getTurnOrder
+from CombatSystem.enemyMove import makeMove
 # only  uses while making will be removed
 from Characters.playerClasses.warlock import Warlock
 
@@ -7,9 +8,10 @@ enemies = []
 allies = []
 turnOrder = []
 
-def calcDamage(charTakingDamage, Damage):
+def calcDamage(tupleOfdamgeAndChar):
+    Damage = tupleOfdamgeAndChar[0]
+    charTakingDamage = tupleOfdamgeAndChar[1]
     global enemies, turnOrder, allies
-    charTakingDamage = Warlock()
     charTakingDamage.takeDamage(Damage)
     if charTakingDamage.health <= 0:
         if charTakingDamage.isEnemy:
@@ -26,25 +28,34 @@ def goThrougheachTurn():
     while len(enemies) > 0 and len(allies) > 0:
         for character in turnOrder:
             if character.isEnemy:
-                pass
                 # call enemy combat system
                 # calc damage
                 # if char health less than 0 del that char
+                calcDamage(makeMove(character, allies))
+
             else:
                 # call player
                 # calc damage
                 # if char health is less than 0 del that char
-                pass
+                calcDamage(makeMove(character, enemies))
+    if len(enemies) <= 0:
+        print("Allys won")
+    else:
+        print("Enemys won")
 
 
 def setUp(crChalengeLevel, listOfPlayers):
     global enemies, allies, turnOrder
     enemies = generateEnemies(crChalengeLevel)
     allies = listOfPlayers
+    #allies = generateEnemies(crChalengeLevel)
+    #for ally in allies:
+    #    ally.isEnemy = False
     turnOrder = allies + enemies
     turnOrder = getTurnOrder(turnOrder)
+    goThrougheachTurn()
 
-
-setUp(4, [Warlock(), Warlock(), Warlock(), Warlock()])
+if __name__ == "__main__":
+    setUp(99, [Warlock(), Warlock(), Warlock(), Warlock()])
 
 
