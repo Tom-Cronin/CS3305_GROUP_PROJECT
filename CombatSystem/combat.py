@@ -15,7 +15,6 @@ def calcDamage(tupleOfdamgeAndChar, char=None):
     global enemies, turnOrder, allies
     charTakingDamage.takeDamage(Damage)
     if charTakingDamage.health <= 0:
-        print("Rest in peace: ", charTakingDamage)
         if charTakingDamage.isEnemy:
             enemies.remove(charTakingDamage)
             char.killCounter()
@@ -31,16 +30,14 @@ def goThrougheachTurn():
     while len(enemies) > 0 and len(allies) > 0:
         for character in turnOrder:
             if character.isEnemy:
-                # call enemy combat system
-                # calc damage
-                # if char health less than 0 del that char
                 calcDamage(makeMove(character, allies))
 
             else:
-                # call player
-                # calc damage
-                # if char health is less than 0 del that char
                 calcDamage(makeMove(character, enemies), character)
+        for character in turnOrder:
+            for attack in character.allAttacks:
+                attack.reduceCoolDown()
+
     if len(enemies) <= 0:
         print("Allys won\n\n")
     else:
@@ -55,15 +52,12 @@ def setUp(crChalengeLevel, listOfPlayers):
     enemies = generateEnemies(crChalengeLevel)
     print(enemies)
     allies = listOfPlayers
-    #allies = generateEnemies(crChalengeLevel)
-    #for ally in allies:
-    #    ally.isEnemy = False
     turnOrder = allies + enemies
     allCharsInFight = turnOrder
     turnOrder = getTurnOrder(turnOrder)
     goThrougheachTurn()
 
 if __name__ == "__main__":
-    setUp(6, [Warlock(), Warlock(), Warlock(), Warlock()])
+    setUp(8, [Warlock(),Warlock(),Warlock(),Warlock()])
 
 

@@ -1,7 +1,7 @@
 import time
 
 def makeMove(enemy, listOfPlayers):
-    if len(listOfPlayers):
+    if len(listOfPlayers) > 0:
         player_with_max_health = listOfPlayers[0]
         playerMaxHealth = 0
         playerLeastHealth = 9999
@@ -23,8 +23,8 @@ def makeMove(enemy, listOfPlayers):
                 maxDamage = attack.getDamage()
                 count += 1
         enemy.allAttacks[myAttack].startCooldown()
-
         if maxDamage >= playerLeastHealth:
             return maxDamage, player_with_least_health
+
         return [maxDamage, player_with_max_health]
     return [0, enemy]
