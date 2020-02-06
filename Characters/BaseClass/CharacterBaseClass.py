@@ -13,6 +13,10 @@ class Character:
         self.intelligence = 0 # intelligence? if implemented
         self.ArmorClass = 0 # gives chance to block an attack
         self.isEnemy = True
+        self.totalKills = 0
+
+    def killCounter(self):
+        self.totalKills += 1
 
     def takeDamage(self, amount):
         self.health -= amount

@@ -11,7 +11,7 @@ class BurningSight(BaseAttack):
         self.name = 'Burning Sight'
         self.description = "%s:\n You gaze into your enemy's eyes as their eyelids begin to burn.\n" \
                            " The target takes %i fire damage."
-        self.cooldown = 2
+        self.coolDown = 2
 
 
 
