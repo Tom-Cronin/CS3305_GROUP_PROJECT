@@ -19,8 +19,8 @@ class map(object):
         self.screen_width = screen_width
         self.screen_height = screen_height
         self.screen = screen
-        #self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
-        #                                                                                          self.screen_width))
+        self.bgImage = pygame.transform.scale(pygame.image.load('media/paper.jpg').convert(), (self.screen_width,
+                                                                                                  self.screen_height))
         #self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/treasure.png').convert(), (35, 35))7
 
     def generate_map_list(self):
@@ -136,7 +136,7 @@ class map(object):
         pygame.font.init()
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 17)
         while True:
-           # self.screen.blit(self.bgImage, (0, 0))
+            self.screen.blit(self.bgImage, (0, 0))
 
             num_levels = len(self.map)
             node_height = int(round(self.screen_height / num_levels))
