@@ -2,14 +2,16 @@ import pygame, sys
 from pygame.locals import *
 
 from Stages.baseStageClass import *
+from CombatSystem.combat import *
+
+
+
 
 class EncounterStage():
     def __init__(self, screen_height, screen_width, level):
         self.display_width = screen_width
         self.display_height = screen_height
         self.defaultColour = (120, 120, 120)
-        self.hoverColour = (40, 40, 40)
-        self.textColour = (102, 51, 0)
 
         self.attack1 = StageButton("ATTACK1", "", 100, 485)
         self.attack1.height = 200
@@ -27,7 +29,11 @@ class EncounterStage():
         self.base = BaseStage(self.display_height, self.display_width)
         self.base.bgImage = pygame.transform.scale(pygame.image.load(level).convert(), (self.display_height, self.display_width))
         pygame.display.update()
-        
+
+        setUp(4, [Warlock(), Warlock(), Warlock(), Warlock()])
+
+        self.turnOrder =
+
         self.enemies = []
 
     def displayBattle(self):
@@ -45,8 +51,6 @@ class EncounterStage():
         # textRect.center = ((self.xLocation + (self.width / 2)), self.yLocation + (self.height / 2))
         # display.blit(text, textRect)
 
-    def displayCharacter(self):
-
     def listenMouse(self):
         mouse = pygame.mouse.get_pos()
         click = pygame.mouse.get_pressed()
@@ -63,7 +67,6 @@ class EncounterStage():
 
     def mainLoop(self):  # listens for events
         self.displayBattle()
-        self.displayCharacter()
 
         mainLoop = True
         while (mainLoop):
