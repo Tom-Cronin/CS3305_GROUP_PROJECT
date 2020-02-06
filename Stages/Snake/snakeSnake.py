@@ -7,8 +7,8 @@ class SnakeGuy:
         self.display = display
         self.color = color
         self.squareSize = 10
-        self.positionX = 100
-        self.positionY = 100
+        self.positionX = 120
+        self.positionY = 120
         self.square1 = SnakeSquares(self.positionX, self.positionY, 1)
         self.square2 = SnakeSquares(self.positionX+10, self.positionY, 2 )
         self.square3 = SnakeSquares(self.positionX+20, self.positionY, 3)

@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stages/Snake/snakeMaze.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stages/Snake/snakeSnake.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stages/Puzzles/snake.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stages/baseStageClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/baseStageClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stages/treasureRoom.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/treasureRoom.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/Snake/snakeMaze.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake/snakeMaze.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/Snake/snakeSnake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake/snakeSnake.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,12 +38,6 @@
     <push-targets>
       <push-target-info target-remote="origin" target-branch="treasureRoom" repo="$PROJECT_DIR$" source="Stages" />
     </push-targets>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="731" />
-    <option name="height" value="735" />
   </component>
   <component name="ProjectId" id="1WNrxYIOErdcbtfK8SE83WDtRm7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -276,7 +265,7 @@
       <workItem from="1580148719979" duration="2848000" />
       <workItem from="1580220296810" duration="6731000" />
       <workItem from="1580762686754" duration="509000" />
-      <workItem from="1581000540003" duration="65000" />
+      <workItem from="1581000540003" duration="11449000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -327,7 +316,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580225794510</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Snake Guy moves correctly">
+      <created>1581000638966</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1581000638966</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +338,8 @@
     <MESSAGE value="Basic treasure room that does not calculate prizes yet" />
     <MESSAGE value="fixed &quot;ok&quot; button issue" />
     <MESSAGE value="Init puzzle folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="Init puzzle folder" />
+    <MESSAGE value="Snake Guy moves correctly" />
+    <option name="LAST_COMMIT_MESSAGE" value="Snake Guy moves correctly" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1580220292610" />
@@ -353,37 +350,37 @@
     <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1581000604116" />
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1580220292619" />
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1580220292619" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1580225791043">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1581000635180">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580225791043" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1581000635180" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1580220292620" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1580220292620" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1580220292620" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1581000606803">
+    <state width="716" height="178" key="GridCell.Tab.0.bottom" timestamp="1581013088769">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581000606803" />
+    <state width="716" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1581013088769" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1581000606802">
+    <state width="716" height="178" key="GridCell.Tab.0.center" timestamp="1581013088768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581000606802" />
+    <state width="716" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1581013088768" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1581000606802">
+    <state width="716" height="178" key="GridCell.Tab.0.left" timestamp="1581013088768">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581000606802" />
+    <state width="716" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1581013088768" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1581000606803">
+    <state width="716" height="178" key="GridCell.Tab.0.right" timestamp="1581013088769">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581000606803" />
+    <state width="716" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1581013088769" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1580762979739">
       <screen x="0" y="0" width="1366" height="728" />
@@ -407,10 +404,10 @@
     <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
     <state x="302" y="15" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1580220436182" />
     <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580220292620" />
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1580225826989">
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1581000644687">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1580225826989" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1581000644687" />
     <state x="338" y="219" key="com.intellij.ide.util.TipDialog" timestamp="1580762749536">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -419,6 +416,10 @@
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1580220292620" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1580220292620" />
     <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1580220292620" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1581005032698">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1581005032698" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -443,7 +444,7 @@
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1579732038124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$baseStageClass.coverage" NAME="baseStageClass Coverage Results" MODIFIED="1580220885216" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snake.coverage" NAME="Run Snake Coverage Results" MODIFIED="1581000606778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snake.coverage" NAME="Run Snake Coverage Results" MODIFIED="1581013088738" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests__1_.coverage" NAME="RunAllTests (1) Coverage Results" MODIFIED="1579785561617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
   </component>
 </project>

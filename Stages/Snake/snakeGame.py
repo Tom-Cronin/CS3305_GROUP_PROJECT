@@ -16,6 +16,8 @@ class SnakeGame(BaseStage):
         self.font = 'media/Chapaza.ttf'
         self.maze = Maze(screen_height, screen_width, self.display)
         self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
+        self.finished = False
+
 
     def mazeLayer(self):
         self.maze.draw()
@@ -27,6 +29,7 @@ class SnakeGame(BaseStage):
         return "nothing"
 
     def gameOver(self, win=False):  # ends the game when a win/failure occurs
+        self.finished = True
         self.maze.drawBackground()
         if win is False:
             message = "You lost!\nGame over"
@@ -63,18 +66,40 @@ class SnakeGame(BaseStage):
                 self.continueGame()
 
     def listenSnake(self):
-
+        # Checks if snake should move:
         key = pygame.key.get_pressed()
         if key[pygame.K_UP]:
             #ToDo: if in limits...
             self.snake.move("Up")
+            self.checkLocation()
         elif key[pygame.K_DOWN]:
             self.snake.move("Down")
+            self.checkLocation()
         elif key[pygame.K_RIGHT]:
             self.snake.move("Right")
+            self.checkLocation()
+
         elif key[pygame.K_LEFT]:
             self.snake.move("Left")
+            self.checkLocation()
+
         time.sleep(0.1)
+
+    def checkLocation(self):
+        # Checks if snake has crashed into wall or reached its destination:
+        """print(self.snake.head.x, self.maze.exit.x)
+        print(self.snake.head.y, self.maze.exit.y,"-", self.maze.exit.y + self.maze.exit.height)
+        print("***********")"""
+        if self.maze.exit.x == self.snake.head.x and  self.maze.exit.y <= self.snake.head.y <= (self.maze.exit.y + self.maze.exit.height):
+            self.gameOver(True)
+        else:
+            for wall in self.maze.walls:
+                """if wall.x <= self.snake.head.x < wall.x + wall.width:
+                    if wall.y <= self.snake.head.y <= wall.y + wall.width:"""
+                if wall.x <= self.snake.head.x <= (wall.x + wall.width-10):
+                    if wall.y <= self.snake.head.y <= (wall.y + wall.height-10):
+                        print("y")
+                        self.gameOver()
 
     def continueGame(self):
         self.makeGreen()
@@ -96,7 +121,8 @@ class SnakeGame(BaseStage):
         while mainLoop:
             self.listenMouse()
             self.listenButton()
-            self.listenSnake()
+            if self.finished is False:
+                self.listenSnake()
 
 
             for event in pygame.event.get():
