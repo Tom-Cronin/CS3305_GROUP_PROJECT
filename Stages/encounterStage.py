@@ -11,24 +11,25 @@ class EncounterStage():
         self.hoverColour = (40, 40, 40)
         self.textColour = (102, 51, 0)
 
-        self.quitGame = StageButton("ATTACK1", "Are you sure you want to quit the game?\nYour data will not be saved", 20,
-                                    485)
-        self.quitGame.height = 200
-        self.goBack = StageButton("ATTACK2", "Are you sure you want to leave?\nYour data will not be saved", 300, 485)
-        self.goBack.height = 200
-        self.skip = StageButton("ATTACK3", "Are you sure you want to skip?\nYou will not gain any rewards from this stage",
-                                580, 485)
-        self.skip.height = 200
-        self.okay = StageButton("ATTACK4", "", 860, 485)
-        self.okay.height = 200
-        self.allbuttons = [self.quitGame, self.goBack, self.okay, self.skip]
+        self.attack1 = StageButton("ATTACK1", "", 100, 485)
+        self.attack1.height = 200
+        self.attack2 = StageButton("ATTACK2", "", 380, 485)
+        self.attack2.height = 200
+        self.attack3 = StageButton("ATTACK3", "", 660, 485)
+        self.attack3.height = 200
+        self.attack4 = StageButton("ATTACK4", "", 940, 485)
+        self.attack4.height = 200
+        self.allbuttons = [self.attack1, self.attack2, self.attack3, self.attack4]
         for button in self.allbuttons:
-            button.defaultColour = (120,120,120)
+            button.defaultColour = (255,255,255)
             button.textColor = (102, 51, 0)
-            button.hovercolour = (40, 40, 40)
+            button.hovercolour = (200, 200, 200)
         self.base = BaseStage(self.display_height, self.display_width)
         self.base.bgImage = pygame.transform.scale(pygame.image.load(level).convert(), (self.display_height, self.display_width))
         pygame.display.update()
+        
+        self.enemies = []
+
     def displayBattle(self):
         self.base.display.blit(self.base.bgImage, (0, 0))
         pygame.draw.rect(self.base.display, self.defaultColour, (self.display_width/300, self.display_width/1.5, self.display_width*1.9, self.display_height))  # border
@@ -44,11 +45,29 @@ class EncounterStage():
         # textRect.center = ((self.xLocation + (self.width / 2)), self.yLocation + (self.height / 2))
         # display.blit(text, textRect)
 
+    def displayCharacter(self):
+
+    def listenMouse(self):
+        mouse = pygame.mouse.get_pos()
+        click = pygame.mouse.get_pressed()
+        for button in self.allbuttons:
+            if (button.xLocation + button.width) > mouse[0] > button.xLocation and (
+                    button.yLocation + button.height) > mouse[1] > button.yLocation:
+                button.hover(self.base.display, True)
+                if click[0] == 1:
+                    self.mouseClick(button)
+            else:
+                button.hover(self.base.display, False)
+            updateRect = Rect(button.xLocation, button.yLocation, button.width, button.height)
+            pygame.display.update(updateRect)
+
     def mainLoop(self):  # listens for events
         self.displayBattle()
+        self.displayCharacter()
 
         mainLoop = True
         while (mainLoop):
+            self.listenMouse()
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     mainLoop = False
