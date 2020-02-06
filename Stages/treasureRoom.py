@@ -29,6 +29,7 @@ class TreasureRoom(BaseStage):
         self.prize = self.choosePrize()
         self.treasureChest = TreasureChestButton("You have won "+self.prize+".", screen_width, screen_height, self.bgImage)
         self.activeButtons.append(self.treasureChest)
+        self.activeButtons.remove(self.goBack)
 
 
     def treasureLayer(self):

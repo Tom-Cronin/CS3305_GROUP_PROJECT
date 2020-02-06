@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame
 from pygame.locals import *
 
 class StageButton:
@@ -102,9 +102,9 @@ class BaseStage:
         self.screen_height = screen_height
         self.screen_width = screen_width
         self.display = pygame.display.set_mode((screen_height, screen_width))
+        self.bgImage = pygame.transform.scale(pygame.image.load('media/MainMenueBackground.png').convert(), (self.screen_height, self.screen_width))
 
-        self.bgImage = pygame.transform.scale(pygame.image.load('media/trees.png').convert(), (self.screen_height, self.screen_width))
-    
+
     def displayButton(self, button):
         button.displayButton(self.display)
 
@@ -152,6 +152,7 @@ class BaseStage:
         if key[pygame.K_RETURN]:  # return (enter) to say ok
             if self.okay in self.activeButtons:
                 self.mouseClick(self.okay)
+
 
     def mouseClick(self, button):  # event handler for button press
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
