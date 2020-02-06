@@ -21,5 +21,5 @@ game_seed = "Tom is the best, and i'm going to marry him."
 myMap = map(screen, screen_width, screen_height, game_seed)
 
 for i in range(5):
-    node_key = myMap.get_user_selection()
+    node_key = myMap.mainloop()
 
