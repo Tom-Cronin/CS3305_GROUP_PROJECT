@@ -3,7 +3,7 @@ import pygame
 from Characters.sharedFunctions import calc_attribute_bonus
 
 
-class BaseAttack(object):
+class BaseAttack():
     def __init__(self):
         self.name = 'Base'
         self.baseDamage = 0
@@ -20,7 +20,7 @@ class BaseAttack(object):
 
     def reduceCoolDown(self):
         self.coolDownTimer -= 1
-        if self.coolDownTimer == 0:
+        if self.coolDown == 0:
             self.onCoolDown = False
 
     def getDamage(self):

@@ -7,13 +7,13 @@ class HellfireWhirlwind(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterIntAtribute)
         self.audioPath = 'none yet'
-        self.baseDamage = 8
+        self.baseDamage = 5
 
         self.name = 'Hellfire Whirlwind'
         self.description = 'You surround and enemy in a whirlwind of hellfire.\n ' \
                            'On hit, the target takes %i fire damage.'
         self.AllDetails = '%s:\n %s' % (self.name, self.description)
-        self.cooldown = 2
+        self.coolDown = 4
 
     def calcDamage(self):
         return self.baseDamage + self.damageMod
