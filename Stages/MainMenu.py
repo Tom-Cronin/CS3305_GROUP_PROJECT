@@ -5,14 +5,14 @@ import time
 
 class MainMenu:
 
-    def __init__(self, screen_height, screen_width):
-        self.baseScreen = BaseStage(screen_height, screen_width)
+    def __init__(self, screen):
+        self.baseScreen = screen
         self.baseScreen.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground.png').convert(),
                                                          (self.baseScreen.screen_height, self.baseScreen.screen_width))
 
         #buttons
-        self.height = screen_width
-        self.width = screen_height
+        self.height = self.baseScreen.screen_width
+        self.width = self.baseScreen.screen_height
         self.startGameButton = StageButton("Start Game", "", self.width/4, self.height/3.5)
         self.quitButton = StageButton("Quit Game", "", self.width/4, self.height/1.65)
         self.leaveButton = StageButton("Quit", "", self.width/1.6, self.height/1.2)
