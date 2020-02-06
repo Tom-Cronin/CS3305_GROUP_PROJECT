@@ -10,7 +10,7 @@ import random
 # It returns the key of the users selected node:
 # P = puzzle, b = battle, ? = mystery, T = treasure, B = final battle (also indicates end of level)
 
-class map(object):
+class Map(object):
     def __init__(self, screen, screen_width, screen_height, seed):
         self.seed = seed
         self.level = 0
@@ -228,7 +228,7 @@ class map(object):
                             pygame.display.update()
                             return node_key
 
-    def get_user_selection(self):
+    def mainloop(self):
         selected_node_key = self.get_next_node()
         self.check_for_end_of_map(selected_node_key)
         return selected_node_key

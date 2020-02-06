@@ -7,8 +7,8 @@ baseScreen = BaseStage(1300, 700)
 
 pygame.init()
 mainMenu = MainMenu(baseScreen)
-mymap = Map(baseScreen, "Tyrlian")
-if mainMenu.mainLoop() == False:
+mymap = Map(baseScreen, 1300, 700, "Tyrlian")
+if not mainMenu.mainLoop():
     pygame.quit()
-elif mainMenu.mainLoop() == True:
+elif mainMenu.mainLoop():
     mymap.mainLoop()
