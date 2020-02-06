@@ -8,9 +8,10 @@ baseScreen = BaseStage(1300, 700)
 pygame.init()
 mainMenu = MainMenu(baseScreen)
 mymap = Map(baseScreen, "Best seed")
-if mainMenu.mainLoop() == False:
+loop = mainMenu.mainLoop()
+if loop == False:
     pygame.quit()
-elif mainMenu.mainLoop() == True:
+elif loop == True:
     mymap.screen.bgImage = pygame.transform.scale(pygame.image.load('Map/media/paper.jpg').convert(),
                                                   (mymap.screen.screen_height,
                                                    mymap.screen.screen_width))
