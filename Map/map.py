@@ -244,11 +244,5 @@ class Map(object):
         current_room = "b"
         while current_room != "B":
             current_room = self.get_user_selection()
-            count += 1
-            if count == 3:
-                cr += 1
-                count -= 3
-            if cr >= 12:
-                cr = 11
-            return (current_room,cr, 0)
-        return (current_room, cr, 1)
+            return (current_room, 0)
+        return (current_room, 1)
