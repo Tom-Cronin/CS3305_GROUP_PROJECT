@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/baseAttackClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/DevilishDefence.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/DevilishDefence.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/burningSight.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/burningSight.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/hellfireWhirlwind.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/hellfireWhirlwind.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/playerClasses/warlock.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/playerClasses/warlock.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CombatSystem/combat.py" beforeDir="false" afterPath="$PROJECT_DIR$/CombatSystem/combat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CombatSystem/enemyMove.py" beforeDir="false" afterPath="$PROJECT_DIR$/CombatSystem/enemyMove.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +213,7 @@
       <workItem from="1580747294683" duration="315000" />
       <workItem from="1580931724182" duration="1342000" />
       <workItem from="1580935596743" duration="866000" />
-      <workItem from="1580986950045" duration="3391000" />
+      <workItem from="1580986950045" duration="3502000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -309,7 +299,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580933056204</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fixed attack picking system">
+      <created>1580991194376</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580991194376</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -342,7 +339,8 @@
     <MESSAGE value="branch problem recominiting turnorder.py" />
     <MESSAGE value="created enemy ai  very basic" />
     <MESSAGE value="added kill counter" />
-    <option name="LAST_COMMIT_MESSAGE" value="added kill counter" />
+    <MESSAGE value="fixed attack picking system" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed attack picking system" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
@@ -361,10 +359,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="0" key="#manage_map/0.0.1366.728@0.0.1366.728" timestamp="1580747366179" />
-    <state x="0" y="0" width="696" height="809" key="CommitChangelistDialog2" timestamp="1580933055391">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="0" y="2" width="696" height="809" key="CommitChangelistDialog2" timestamp="1580991193999">
+      <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
+    <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1580991193999" />
     <state x="0" y="0" width="696" height="809" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580933055391" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1580669144622" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
@@ -376,28 +374,28 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="844" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580316812840" />
-    <state width="1238" height="294" key="GridCell.Tab.0.bottom" timestamp="1580991173793">
+    <state width="1238" height="294" key="GridCell.Tab.0.bottom" timestamp="1580991197060">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="294" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1580991173793" />
+    <state width="1238" height="294" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1580991197060" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580747753079" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580936432536" />
-    <state width="1238" height="294" key="GridCell.Tab.0.center" timestamp="1580991173791">
+    <state width="1238" height="294" key="GridCell.Tab.0.center" timestamp="1580991197059">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="294" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1580991173791" />
+    <state width="1238" height="294" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1580991197059" />
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580747753078" />
     <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580936432535" />
-    <state width="1238" height="294" key="GridCell.Tab.0.left" timestamp="1580991173791">
+    <state width="1238" height="294" key="GridCell.Tab.0.left" timestamp="1580991197058">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="294" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1580991173791" />
+    <state width="1238" height="294" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1580991197058" />
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580747753078" />
     <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580936432535" />
-    <state width="1238" height="294" key="GridCell.Tab.0.right" timestamp="1580991173792">
+    <state width="1238" height="294" key="GridCell.Tab.0.right" timestamp="1580991197059">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="294" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1580991173792" />
+    <state width="1238" height="294" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1580991197059" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580747753078" />
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580936432535" />
     <state width="1760" height="324" key="GridCell.Tab.1.bottom" timestamp="1580041315224">
