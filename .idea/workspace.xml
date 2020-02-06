@@ -424,12 +424,13 @@
     <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1580986963327" />
     <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580669786724" />
     <state x="644" y="258" key="SettingsEditor/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1580669087764" />
-    <state x="476" y="313" key="com.intellij.ide.util.TipDialog" timestamp="1580935609906">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="317" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1580995664012">
+      <screen x="0" y="23" width="1280" height="748" />
     </state>
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
     <state x="476" y="313" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580935609906" />
     <state x="635" y="421" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1580669035246" />
+    <state x="317" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.748@0.23.1280.748" timestamp="1580995664012" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
