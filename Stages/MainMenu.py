@@ -45,7 +45,7 @@ class MainMenu:
             return False
         if button.buttonText == "Go Back":
             self.activeButtons = [self.startGameButton, self.quitButton]
-            self.mainLoop()
+            self.backgroundLayer()
         if button.buttonText == "Start Game":
             return True
 
