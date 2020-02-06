@@ -1,17 +1,18 @@
 import pygame
 from pygame.locals import *
 from Stages.baseStageClass import *
+import time
 
 class MainMenu:
 
-    def __init__(self, screen_height, screen_width):
-        self.baseScreen = BaseStage(screen_height, screen_width)
-        self.baseScreen.bgImage = pygame.transform.scale(pygame.image.load('media/MainMenueBackground.png').convert(),
+    def __init__(self, screen):
+        self.baseScreen = screen
+        self.baseScreen.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground.png').convert(),
                                                          (self.baseScreen.screen_height, self.baseScreen.screen_width))
 
         #buttons
-        self.height = screen_width
-        self.width = screen_height
+        self.height = self.baseScreen.screen_width
+        self.width = self.baseScreen.screen_height
         self.startGameButton = StageButton("Start Game", "", self.width/4, self.height/3.5)
         self.quitButton = StageButton("Quit Game", "", self.width/4, self.height/1.65)
         self.leaveButton = StageButton("Quit", "", self.width/1.6, self.height/1.2)
@@ -41,13 +42,12 @@ class MainMenu:
         if button.buttonText == "Quit Game":
             self.quitting()
         if button.buttonText == "Quit":
-            pygame.quit()
-            quit(0)
+            return False
         if button.buttonText == "Go Back":
             self.activeButtons = [self.startGameButton, self.quitButton]
             self.mainLoop()
         if button.buttonText == "Start Game":
-            pass #to do when map is here
+            return True
 
     def quitting(self):
         self.baseScreen.displayButton(self.leaveButton)
@@ -62,7 +62,12 @@ class MainMenu:
                     button.yLocation + button.height) > mouse[1] > button.yLocation:
                 button.hover(self.baseScreen.display, True)
                 if click[0] == 1:
-                    self.mouseClick(button)
+                    if self.mouseClick(button) == False:
+                        return False
+                    elif self.mouseClick(button) == True:
+                        return True
+                    else:
+                        return 10
 
             else:
                 button.hover(self.baseScreen.display, False)
@@ -75,12 +80,11 @@ class MainMenu:
 
         mainLoop = True
         while (mainLoop):
-            self.listenMouse()
+            listening = self.listenMouse()
+            if listening == False:
+                return False
+            elif listening == True:
+                return True
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     mainLoop = False
-
-pygame.init()
-mainMenu = MainMenu(1300, 700)
-mainMenu.mainLoop()
-pygame.quit()
