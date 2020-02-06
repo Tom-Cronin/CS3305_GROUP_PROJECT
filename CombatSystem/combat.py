@@ -3,62 +3,62 @@ from CombatSystem.turnOrder import turnOrder as getTurnOrder
 from CombatSystem.enemyMove import makeMove
 # only  uses while making will be removed
 from Characters.playerClasses.warlock import Warlock
+class combatEncounter(object):
+    def __init__(self):
+        self.enemies = []
+        self.allies = []
+        self.turnOrder = []
+        self.allCharsInFight = []
 
-enemies = []
-allies = []
-turnOrder = []
-allCharsInFight = []
-
-def calcDamage(tupleOfdamgeAndChar, char=None):
-    Damage = tupleOfdamgeAndChar[0]
-    charTakingDamage = tupleOfdamgeAndChar[1]
-    global enemies, turnOrder, allies
-    charTakingDamage.takeDamage(Damage)
-    if charTakingDamage.health <= 0:
-        if charTakingDamage.isEnemy:
-            enemies.remove(charTakingDamage)
-            char.killCounter()
-        else:
-            allies.remove(charTakingDamage)
-        turnOrder.remove(charTakingDamage)
-        del charTakingDamage
-
-
-
-def goThrougheachTurn():
-    count = 0
-    global turnOrder, allies, enemies, allCharsInFight
-    while len(enemies) > 0 and len(allies) > 0:
-        for character in turnOrder:
-            if character.isEnemy:
-                calcDamage(makeMove(character, allies))
-
+    def calcDamage(self, tupleOfdamgeAndChar, char=None):
+        Damage = tupleOfdamgeAndChar[0]
+        charTakingDamage = tupleOfdamgeAndChar[1]
+        global enemies, turnOrder, allies
+        charTakingDamage.takeDamage(Damage)
+        if charTakingDamage.health <= 0:
+            if charTakingDamage.isEnemy:
+                self.enemies.remove(charTakingDamage)
+                char.killCounter()
             else:
-                calcDamage(makeMove(character, enemies), character)
-            for attack in character.allAttacks:
-                attack.reduceCoolDown()
-        count += 1
-
-    if len(enemies) <= 0:
-        print("Allys won\n\n")
-    else:
-        print("Enemys won\n\n")
-    print(count)
-    # for char in allCharsInFight:
-    #     print(char)
+                self.allies.remove(charTakingDamage)
+            self.turnOrder.remove(charTakingDamage)
+            del charTakingDamage
 
 
 
-def setUp(crChalengeLevel, listOfPlayers):
-    global enemies, allies, turnOrder, allCharsInFight
-    enemies = generateEnemies(crChalengeLevel)
-    allies = listOfPlayers
-    turnOrder = allies + enemies
-    allCharsInFight = turnOrder
-    turnOrder = getTurnOrder(turnOrder)
-    goThrougheachTurn()
+    def goThrougheachTurn(self):
+        count = 0
+        while len(self.enemies) > 0 and len(self.allies) > 0:
+            for character in self.turnOrder:
+                if character.isEnemy:
+                    self.calcDamage(makeMove(character, self.allies))
+
+                else:
+                    self.calcDamage(makeMove(character, self.enemies), character)
+                for attack in character.allAttacks:
+                    attack.reduceCoolDown()
+            count += 1
+
+        if len(self.enemies) <= 0:
+            print("Allys won\n\n")
+        else:
+            print("Enemys won\n\n")
+        print(count)
+        # for char in allCharsInFight:
+        #     print(char)
+
+
+
+    def setUp(self, crChalengeLevel, listOfPlayers):
+        self.enemies = generateEnemies(crChalengeLevel)
+        self.allies = listOfPlayers
+        self.turnOrder = self.allies + self.enemies
+        self.allCharsInFight = self.turnOrder
+        self.turnOrder = getTurnOrder(self.turnOrder)
+
 
 if __name__ == "__main__":
-    setUp(3, [Warlock(),Warlock(),Warlock(),Warlock()])
+    combat = combatEncounter()
+    combat.setUp(6, [Warlock(),Warlock(),Warlock(),Warlock()])
 
 
