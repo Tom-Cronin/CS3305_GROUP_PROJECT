@@ -239,6 +239,16 @@ class Map(object):
 
     def mainLoop(self):
         self.backgroundLayer()
-        while self.get_next_node() != "B":
-            self.get_user_selection()
-
+        count = 0
+        cr = 4
+        current_room = "b"
+        while current_room != "B":
+            current_room = self.get_user_selection()
+            count += 1
+            if count == 3:
+                cr += 1
+                count -= 3
+            if cr >= 12:
+                cr = 11
+            return (current_room,cr, 0)
+        return (current_room, cr, 1)
