@@ -11,6 +11,9 @@ mymap = Map(baseScreen, "Best seed")
 if mainMenu.mainLoop() == False:
     pygame.quit()
 elif mainMenu.mainLoop() == True:
+    mymap.screen.bgImage = pygame.transform.scale(pygame.image.load('Map/media/paper.jpg').convert(),
+                                                  (mymap.screen.screen_height,
+                                                   mymap.screen.screen_width))
     current_room_cr = ["b", 4, 0]
     count = 0
     cr = 4

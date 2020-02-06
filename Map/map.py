@@ -19,8 +19,6 @@ class Map(object):
         self.map = self.generate_map_list()
         self.screen_width = self.screen.screen_height
         self.screen_height = self.screen.screen_width
-        self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
-                                                                                                 self.screen_width))
         #self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/treasure.png').convert(), (35, 35))7
 
     def generate_map_list(self):
