@@ -45,4 +45,5 @@ def running():
                 pygame.quit()
             count += 1
 
-running()
+if __name__ == "__main__":
+    running()
