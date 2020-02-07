@@ -2,498 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/CombatSystem/playerAttacked.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Stages/media/BG_SignPost_Dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/_camera.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/_pygame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/_surface.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/camera.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/fastevents.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/font.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/freetype.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/mask.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/mixer.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/palette.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/pgarrinter.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/pgbufferproxy.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/pgcompat.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/pgimport.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/pgopengl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/pgplatform.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/pygame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/scrap.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Include/site/python3.8/pygame/surface.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi-2019.11.28.dist-info/DESCRIPTION.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi-2019.11.28.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi-2019.11.28.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi-2019.11.28.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi-2019.11.28.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi-2019.11.28.dist-info/metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi-2019.11.28.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi/cacert.pem" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/certifi/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet-3.0.4.dist-info/DESCRIPTION.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet-3.0.4.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet-3.0.4.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet-3.0.4.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet-3.0.4.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet-3.0.4.dist-info/entry_points.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet-3.0.4.dist-info/metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet-3.0.4.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/big5freq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/big5prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/chardistribution.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/charsetgroupprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/charsetprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/cli/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/cli/chardetect.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/codingstatemachine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/cp949prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/enums.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/escprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/escsm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/eucjpprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/euckrfreq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/euckrprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/euctwfreq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/euctwprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/gb2312freq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/gb2312prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/hebrewprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/jisfreq.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/jpcntx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/langbulgarianmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/langcyrillicmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/langgreekmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/langhebrewmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/langhungarianmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/langthaimodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/langturkishmodel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/latin1prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/mbcharsetprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/mbcsgroupprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/mbcssm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/sbcharsetprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/sbcsgroupprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/sjisprober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/universaldetector.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/utf8prober.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/chardet/version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/easy-install.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna-2.8.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna-2.8.dist-info/LICENSE.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna-2.8.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna-2.8.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna-2.8.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna-2.8.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna/codec.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna/core.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna/idnadata.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna/intranges.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna/package_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/idna/uts46data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame-2.0.0.dev6-py3.8.egg-info/PKG-INFO" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame-2.0.0.dev6-py3.8.egg-info/SOURCES.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame-2.0.0.dev6-py3.8.egg-info/dependency_links.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame-2.0.0.dev6-py3.8.egg-info/installed-files.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame-2.0.0.dev6-py3.8.egg-info/not-zip-safe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame-2.0.0.dev6-py3.8.egg-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/SDL2.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/SDL2_image.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/SDL2_mixer.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/SDL2_ttf.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_camera_opencv_highgui.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_camera_vidcapture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_dummybackend.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_freetype.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_numpysndarray.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_numpysurfarray.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_sdl2/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_sdl2/audio.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_sdl2/controller.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_sdl2/mixer.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_sdl2/sdl2.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_sdl2/touch.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_sdl2/video.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/_sprite.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/base.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/bufferproxy.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/camera.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/color.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/colordict.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/constants.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/cursors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/display.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/docs/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/docs/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/docs/logos.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/docs/pygame_logo.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/docs/pygame_powered.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/docs/pygame_small.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/docs/pygame_tiny.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/docs/ref/docscomments.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/draw.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/draw_py.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/event.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/aacircle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/aliens.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/arraydemo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/audiocapture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/blend_fill.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/blit_blends.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/camera.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/chimp.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/cursors.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/alien1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/alien1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/alien1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/alien2.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/alien2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/alien3.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/alien3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/arraydemo.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/asprite.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/background.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/blue.mpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/bomb.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/boom.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/brick.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/car_door.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/chimp.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/city.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/danger.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/explosion1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/fist.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/house_lo.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/house_lo.ogg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/house_lo.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/liquid.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/midikeys.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/oldplayer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/player1.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/punch.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/sans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/secosmic_lo.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/shot.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/static.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/whiff.wav" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/data/yuv_1.pgm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/dropevent.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/eventlist.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/fastevents.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/font_viewer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/fonty.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/freetype_misc.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/glcube.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/headless_no_windows_needed.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/liquid.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/mask.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/midi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/moveit.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/music_drop_fade.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/overlay.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/pixelarray.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/playmus.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/prevent_display_stretching.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/readme.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/scaletest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/scrap_clipboard.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/scroll.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/setmodescale.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/sound.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/sound_array_demos.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/sprite_texture.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/stars.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/testsprite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/textinput.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/vgrade.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/examples/video.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/fastevent.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/font.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/freesansbold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/freetype.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/ftfont.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/gfxdraw.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/image.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/imageext.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/joystick.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/key.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libFLAC-8.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libfreetype-6.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libjpeg-9.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libmodplug-1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libmpg123-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libogg-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libopus-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libopusfile-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libpng16-16.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libtiff-5.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libvorbis-0.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libvorbisfile-3.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/libwebp-7.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/locals.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/macosx.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/mask.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/math.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/midi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/mixer.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/mixer_music.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/mouse.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/newbuffer.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pixelarray.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pixelcopy.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pkgdata.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/portmidi.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pygame.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pygame_icon.bmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pygame_icon.icns" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pygame_icon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pygame_icon.tiff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/pypm.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/rect.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/rwobject.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/scrap.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/sndarray.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/sprite.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/surface.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/surfarray.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/surflock.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/sysfont.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/__main__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/base_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/blit_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/bufferproxy_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/camera_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/cdrom_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/cdrom_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/color_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/compat_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/constants_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/cursors_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/display_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/draw_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/event_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fastevent_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fastevent_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/fonts/A_PyGameMono-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/fonts/PyGameMono-18-100dpi.bdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/fonts/PyGameMono-18-75dpi.bdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/fonts/PyGameMono-8.bdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/fonts/PyGameMono.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/fonts/test_fixed.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/fonts/test_sans.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/fonts/u13079_PyGameMono-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/xbm_cursors/white_sizing.xbm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/fixtures/xbm_cursors/white_sizing_mask.xbm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/font_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/font_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/freetype_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/freetype_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/ftfont_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/ftfont_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/gfxdraw_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/image__save_gl_surface_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/image_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/image_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/imageext_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/imageext_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/joystick_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/key_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/mask_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/math_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/midi_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/mixer_music_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/mixer_music_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/mixer_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/mixer_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/mouse_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/overlay_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/overlay_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/pixelarray_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/pixelcopy_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/rect_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/all_ok/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/all_ok/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/all_ok/fake_3_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/all_ok/fake_4_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/all_ok/fake_5_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/all_ok/fake_6_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/all_ok/no_assertions__ret_code_of_1__test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/all_ok/zero_tests_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/everything/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/everything/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/everything/incomplete_todo_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/everything/magic_tag_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/everything/sleep_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/exclude/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/exclude/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/exclude/invisible_tag_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/exclude/magic_tag_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/failures1/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/failures1/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/failures1/fake_3_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/failures1/fake_4_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/incomplete/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/incomplete/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/incomplete/fake_3_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/incomplete_todo/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/incomplete_todo/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/incomplete_todo/fake_3_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/infinite_loop/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/infinite_loop/fake_1_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/infinite_loop/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/print_stderr/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/print_stderr/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/print_stderr/fake_3_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/print_stderr/fake_4_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/print_stdout/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/print_stdout/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/print_stdout/fake_3_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/print_stdout/fake_4_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/run_tests__test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/timeout/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/timeout/fake_2_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/run_tests__tests/timeout/sleep_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/rwobject_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/scrap_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/scrap_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/sndarray_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/sndarray_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/sprite_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/surface_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/surfarray_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/surfarray_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/surflock_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/sysfont_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_test_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/arrinter.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/async_sub.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/buftools.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/endian.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/png.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/run_tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/test_machinery.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/test_utils/test_runner.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/threads_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/time_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/touch_tags.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/touch_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/transform_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/tests/version_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/threads/Py25Queue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/threads/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/time.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/transform.cp38-win32.pyd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/version.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/pygame/zlib1.dll" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests-2.22.0.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests-2.22.0.dist-info/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests-2.22.0.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests-2.22.0.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests-2.22.0.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests-2.22.0.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/__version__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/_internal_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/adapters.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/api.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/auth.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/certs.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/compat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/cookies.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/help.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/hooks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/packages.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/sessions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/status_codes.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/structures.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/requests/utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/setuptools.pth" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3-1.25.8.dist-info/INSTALLER" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3-1.25.8.dist-info/LICENSE.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3-1.25.8.dist-info/METADATA" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3-1.25.8.dist-info/RECORD" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3-1.25.8.dist-info/WHEEL" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3-1.25.8.dist-info/top_level.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/_collections.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/connectionpool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/_appengine_environ.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/_securetransport/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/_securetransport/bindings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/_securetransport/low_level.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/appengine.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/ntlmpool.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/pyopenssl.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/securetransport.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/contrib/socks.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/exceptions.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/fields.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/filepost.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/packages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/packages/backports/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/packages/backports/makefile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/packages/six.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/packages/ssl_match_hostname/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/packages/ssl_match_hostname/_implementation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/poolmanager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/response.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/connection.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/queue.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/request.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/response.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/retry.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/ssl_.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/timeout.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/url.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Lib/site-packages/urllib3/util/wait.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/Activate.ps1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/activate" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/activate.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/chardetect.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/deactivate.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.8-script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-3.8.exe.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/easy_install-script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/easy_install.exe.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip-script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip.exe.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3-script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.8-script.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.8.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.8.exe.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pip3.exe.manifest" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/python.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/Scripts/pythonw.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/venv/pyvenv.cfg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map/manage_map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Map/manage_map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Map/map.py" beforeDir="false" afterPath="$PROJECT_DIR$/Map/map.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/encounterStage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/encounterStage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -504,71 +14,12 @@
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$main.coverage" NAME="main Coverage Results" MODIFIED="1580993255112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Stages/MainMenu.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="69" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Map/manage_map.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
-              <folding>
-                <element signature="e#0#23#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Map/map.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="242" column="37" selection-start-line="242" selection-start-column="37" selection-end-line="242" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>generate_node</find>
-      <find>check_for</find>
-      <find>white</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -583,84 +34,9 @@
       </map>
     </option>
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/Stages/MainMenu.py" />
-        <option value="$PROJECT_DIR$/Map/manage_map.py" />
-        <option value="$PROJECT_DIR$/main.py" />
-        <option value="$PROJECT_DIR$/Map/map.py" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="75" />
-    <option name="y" value="16" />
-    <option name="width" value="624" />
-    <option name="height" value="732" />
-  </component>
   <component name="ProjectId" id="1WNrxYIOErdcbtfK8SE83WDtRm7" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="CS3306_GROUP_PROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3306_GROUP_PROJECT" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS3306_GROUP_PROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3306_GROUP_PROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS3306_GROUP_PROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3306_GROUP_PROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS3306_GROUP_PROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3306_GROUP_PROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="characters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS3306_GROUP_PROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3306_GROUP_PROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="characters" type="462c0819:PsiDirectoryNode" />
-              <item name="Enemies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS3306_GROUP_PROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3306_GROUP_PROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="characters" type="462c0819:PsiDirectoryNode" />
-              <item name="Enemies" type="462c0819:PsiDirectoryNode" />
-              <item name="PNG_Images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CS3306_GROUP_PROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CS3306_GROUP_PROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="Stages" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -689,8 +65,42 @@
       <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\Characters\attacks\playableCharacterAttacks\fighter" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main">
-    <configuration name="MainMenu" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Python.encounterStage">
+    <configuration name="combat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CombatSystem/combat.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="encounterStage" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -703,25 +113,9 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/MainMenu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/encounterStage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="combat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="CS3306_GROUP_PROJECT" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CombatSystem/combat.py" />
-      <option name="PARAMETERS" value="" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
@@ -796,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.encounterStage" />
         <item itemvalue="Python.main" />
         <item itemvalue="Python.manage_map" />
         <item itemvalue="Python.combat" />
         <item itemvalue="Python.enemyMove" />
-        <item itemvalue="Python.MainMenu" />
       </list>
     </recent_temporary>
   </component>
@@ -838,6 +232,7 @@
       <workItem from="1580935596743" duration="866000" />
       <workItem from="1580986950045" duration="3502000" />
       <workItem from="1580997749644" duration="463000" />
+      <workItem from="1581078961115" duration="9359000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -940,37 +335,6 @@
     <option name="localTasksCounter" value="15" />
     <servers />
   </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5575000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1303" height="780" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25737053" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32868218" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info anchor="bottom" id="Messages" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32868218" />
-      <window_info anchor="bottom" id="Python Console" order="13" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
@@ -980,12 +344,6 @@
         <entry key="MAIN">
           <value>
             <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
               <option name="COLUMN_ORDER" />
             </State>
           </value>
@@ -1129,86 +487,33 @@
     <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579075897728" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$warlock.coverage" NAME="warlock Coverage Results" MODIFIED="1580039435314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/playerClasses" />
-    <SUITE FILE_PATH="coverage/project$MainMenu.coverage" NAME="MainMenu Coverage Results" MODIFIED="1580654019186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580997771885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$hellfireWhirlwind.coverage" NAME="hellfireWhirlwind Coverage Results" MODIFIED="1580315432555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$StageDisplay.coverage" NAME="StageDisplay Coverage Results" MODIFIED="1580224884998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$encounterStage.coverage" NAME="encounterStage Coverage Results" MODIFIED="1581088272469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__2_.coverage" NAME="Unittests in test_CharacterBaseClass.py (2) Coverage Results" MODIFIED="1579075500621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTest" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$main.coverage" NAME="main Coverage Results" MODIFIED="1580998135367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack_test_update_damage_mod.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack.test_update_damage_mod Coverage Results" MODIFIED="1580317143749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
-    <SUITE FILE_PATH="coverage/projectV2$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580936432531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
-    <SUITE FILE_PATH="coverage/v2$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580991173781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
     <SUITE FILE_PATH="coverage/v2$enemyMove.coverage" NAME="enemyMove Coverage Results" MODIFIED="1580989304578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_map.coverage" NAME="manage_map Coverage Results" MODIFIED="1580998040199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Map" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1580221116909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
+    <SUITE FILE_PATH="coverage/projectV2$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580936432531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_healthShouldUpdateWithConstitutionBonus.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_healthShouldUpdateWithConstitutionBonus Coverage Results" MODIFIED="1580036814521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/project$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580670077704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_shouldRollInitiativeWithAValueOfDexModOrHigher.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_shouldRollInitiativeWithAValueOfDexModOrHigher Coverage Results" MODIFIED="1580315710301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1580038288154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_shouldRollInitiativeWithAValueOfDexModOrHigher.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_shouldRollInitiativeWithAValueOfDexModOrHigher Coverage Results" MODIFIED="1580315710301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580997771885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack_test_get_damage.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack.test_get_damage Coverage Results" MODIFIED="1580316967898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack_test_update_damage_mod.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack.test_update_damage_mod Coverage Results" MODIFIED="1580317143749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
+    <SUITE FILE_PATH="coverage/v2$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580991173781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/project$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580670077704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/project$MainMenu.coverage" NAME="MainMenu Coverage Results" MODIFIED="1580654019186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$hellfireWhirlwind.coverage" NAME="hellfireWhirlwind Coverage Results" MODIFIED="1580315432555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1580572571498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_levelUpShouldIncreaseSelectedAttribute.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_levelUpShouldIncreaseSelectedAttribute Coverage Results" MODIFIED="1580042097476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$main.coverage" NAME="main Coverage Results" MODIFIED="1580998135367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests__1_.coverage" NAME="RunAllTests (1) Coverage Results" MODIFIED="1580036930142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_levelUpShouldIncreaseSelectedAttribute.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_levelUpShouldIncreaseSelectedAttribute Coverage Results" MODIFIED="1580042097476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$StageDisplay.coverage" NAME="StageDisplay Coverage Results" MODIFIED="1580224884998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1580572571498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack Coverage Results" MODIFIED="1580316953266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_map.coverage" NAME="manage_map Coverage Results" MODIFIED="1580998040199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Map" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$warlock.coverage" NAME="warlock Coverage Results" MODIFIED="1580039435314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/playerClasses" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_healthShouldUpdateWithNoConstitutionBonus.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_healthShouldUpdateWithNoConstitutionBonus Coverage Results" MODIFIED="1580036892141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1580221116909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack_test_get_damage.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack.test_get_damage Coverage Results" MODIFIED="1580316967898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Map/manage_map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#23#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Stages/MainMenu.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="69" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Map/map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="242" column="37" selection-start-line="242" selection-start-column="37" selection-end-line="242" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images/hag.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images/shadowling.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images/ShadowJest.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images/rat.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack Coverage Results" MODIFIED="1580316953266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
   </component>
 </project>
