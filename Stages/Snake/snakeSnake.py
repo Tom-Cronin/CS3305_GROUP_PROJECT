@@ -16,12 +16,32 @@ class SnakeGuy:
         self.head = self.square3
         self.mazeColor = (34, 139, 34)
         self.currentPos = 1
+        self.direction = "R"
 
     def draw(self):
         x = 255
-        for square in self.squares:
-            pygame.draw.rect(self.display, (x, 0, 0), square.Rect)
-            x -= 70
+        head = pygame.transform.scale((pygame.image.load("Stages/media/snakeHead.png").convert_alpha()), (10, 10))
+        body = pygame.transform.scale((pygame.image.load("Stages/media/SnakeBody.png").convert_alpha()), (10, 10))
+        tail = pygame.transform.scale((pygame.image.load("Stages/media/SnakeTail.png").convert_alpha()), (10, 10))
+        imageList = [head, body, tail]
+        x = 0
+        if self.direction == "R":
+            x = 270
+        elif self.direction == "L":
+            x = 90
+        elif self.direction == "D":
+            x = 180
+        head = pygame.transform.rotate(head, x)
+        body = pygame.transform.rotate(body, x)
+        tail = pygame.transform.rotate(tail, x)
+
+        self.display.blit(body, (self.square2.x, self.square2.y))
+        if self.head.num == self.square3.num:
+            self.display.blit(head, (self.square3.x, self.square3.y))
+            self.display.blit(tail, (self.square1.x, self.square1.y))
+        else:
+            self.display.blit(head, (self.square1.x, self.square1.y))
+            self.display.blit(tail, (self.square3.x, self.square3.y))
 
     def erase(self, squareRect):
             pygame.draw.rect(self.display, self.mazeColor, squareRect)
@@ -45,15 +65,19 @@ class SnakeGuy:
 
         # Moves the head square in the correct direction
         if direction == "Right":
+            self.direction = "R"
             self.head.x += 10
             self.head.xUpdate(self.head.x)
         elif direction == "Left":
+            self.direction = "L"
             self.head.x -= 10
             self.head.xUpdate(self.head.x)
         elif direction == "Up":
+            self.direction = "U"
             self.head.y -= 10
             self.head.yUpdate(self.head.y)
         elif direction == "Down":
+            self.direction = "D"
             self.head.y += 10
             self.head.yUpdate(self.head.y)
 

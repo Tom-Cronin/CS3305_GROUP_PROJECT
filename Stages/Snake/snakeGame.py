@@ -87,18 +87,12 @@ class SnakeGame(BaseStage):
 
     def checkLocation(self):
         # Checks if snake has crashed into wall or reached its destination:
-        """print(self.snake.head.x, self.maze.exit.x)
-        print(self.snake.head.y, self.maze.exit.y,"-", self.maze.exit.y + self.maze.exit.height)
-        print("***********")"""
         if self.maze.exit.x == self.snake.head.x and  self.maze.exit.y <= self.snake.head.y <= (self.maze.exit.y + self.maze.exit.height):
             self.gameOver(True)
         else:
             for wall in self.maze.walls:
-                """if wall.x <= self.snake.head.x < wall.x + wall.width:
-                    if wall.y <= self.snake.head.y <= wall.y + wall.width:"""
                 if wall.x <= self.snake.head.x <= (wall.x + wall.width-10):
                     if wall.y <= self.snake.head.y <= (wall.y + wall.height-10):
-                        print("y")
                         self.gameOver()
 
     def continueGame(self):

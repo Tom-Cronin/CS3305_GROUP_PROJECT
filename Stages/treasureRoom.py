@@ -56,7 +56,7 @@ class TreasureRoom(BaseStage):
         return "nothing"
 
     def openTreasure(self):
-        self.makeGreen() # ToDo: exit map, give/save prize
+        self.makeGreen()  # ToDo: exit map, give/save prize
 
     def treasureMessage(self):
         self.treasureChest.displayWarningMessage(self.display)
