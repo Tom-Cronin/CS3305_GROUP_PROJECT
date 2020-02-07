@@ -16,7 +16,8 @@ class SnakeGuy:
         self.head = self.square3
         self.mazeColor = (34, 139, 34)
         self.currentPos = 1
-        self.direction = "R"
+        self.direction = "R" # for image rotation
+        self.prevDirection = "R"
 
     def draw(self):
         x = 255
@@ -31,11 +32,23 @@ class SnakeGuy:
             x = 90
         elif self.direction == "D":
             x = 180
+
         head = pygame.transform.rotate(head, x)
         body = pygame.transform.rotate(body, x)
-        tail = pygame.transform.rotate(tail, x)
 
+        x = 0
+        if self.prevDirection == "R":
+            x = 270
+        elif self.prevDirection == "L":
+            x = 90
+        elif self.prevDirection == "D":
+            x = 180
+
+        tail = pygame.transform.rotate(tail, x)
+        self.erase(self.square2.Rect)
         self.display.blit(body, (self.square2.x, self.square2.y))
+        self.erase(self.square1.Rect)
+        self.erase(self.square3.Rect)
         if self.head.num == self.square3.num:
             self.display.blit(head, (self.square3.x, self.square3.y))
             self.display.blit(tail, (self.square1.x, self.square1.y))
@@ -64,6 +77,7 @@ class SnakeGuy:
         self.erase(oldRect)
 
         # Moves the head square in the correct direction
+        self.prevDirection = self.direction
         if direction == "Right":
             self.direction = "R"
             self.head.x += 10
