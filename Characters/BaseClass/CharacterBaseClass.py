@@ -15,6 +15,8 @@ class Character:
         self.isEnemy = True
         self.totalKills = 0
 
+        self.imagePath = None
+
     def killCounter(self):
         self.totalKills += 1
 

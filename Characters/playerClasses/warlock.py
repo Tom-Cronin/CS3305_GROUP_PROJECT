@@ -21,7 +21,7 @@ class Warlock(Character):
 
         self.setHealth(33)
 
-        self.imagePath = 'none yet'
+        self.imagePath = '../assets/images/characters/Enemies/PNG_Images/hag.png'
 
         self.attack_slot_1 = EldritchBlast(self.intelligence)
         self.attack_slot_2 = DevilishDefence(self.intelligence)

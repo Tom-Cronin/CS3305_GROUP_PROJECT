@@ -1,4 +1,4 @@
-import pygame, sys
+import pygame, sys, os
 from pygame.locals import *
 
 from Stages.baseStageClass import *
@@ -8,37 +8,38 @@ from CombatSystem.combat import *
 
 
 class EncounterStage():
-    def __init__(self, screen_height, screen_width, level):
+    def __init__(self, screen_height, screen_width, levelImage, crLevel, listOfPlayers):
         self.display_width = screen_width
         self.display_height = screen_height
         self.defaultColour = (120, 120, 120)
 
-        self.attack1 = StageButton("ATTACK1", "", 100, 485)
-        self.attack1.height = 200
-        self.attack2 = StageButton("ATTACK2", "", 380, 485)
-        self.attack2.height = 200
-        self.attack3 = StageButton("ATTACK3", "", 660, 485)
-        self.attack3.height = 200
-        self.attack4 = StageButton("ATTACK4", "", 940, 485)
-        self.attack4.height = 200
+        self.attack1 = StageButton("ATTACK1", "", 25, 592)
+        self.attack1.height = 50
+        self.attack2 = StageButton("ATTACK2", "", 25, 642)
+        self.attack2.height = 50
+        self.attack3 = StageButton("ATTACK3", "", 225, 592)
+        self.attack3.height = 50
+        self.attack4 = StageButton("ATTACK4", "", 225, 642)
+        self.attack4.height = 50
         self.allbuttons = [self.attack1, self.attack2, self.attack3, self.attack4]
         for button in self.allbuttons:
-            button.defaultColour = (255,255,255)
+            button.defaultColour = (155, 155, 155)
             button.textColor = (102, 51, 0)
-            button.hovercolour = (200, 200, 200)
+            button.hovercolour = (155, 155, 155)
         self.base = BaseStage(self.display_height, self.display_width)
-        self.base.bgImage = pygame.transform.scale(pygame.image.load(level).convert(), (self.display_height, self.display_width))
+        self.base.bgImage = pygame.transform.scale(pygame.image.load(levelImage).convert(), (self.display_height, self.display_width))
         pygame.display.update()
 
-        setUp(4, [Warlock(), Warlock(), Warlock(), Warlock()])
+        self.combat = combatEncounter()
+        self.combat.setUp(crLevel, listOfPlayers)
 
-        self.turnOrder =
+        self.turnOrder = self.combat.turnOrder
 
         self.enemies = []
 
     def displayBattle(self):
         self.base.display.blit(self.base.bgImage, (0, 0))
-        pygame.draw.rect(self.base.display, self.defaultColour, (self.display_width/300, self.display_width/1.5, self.display_width*1.9, self.display_height))  # border
+        pygame.draw.rect(self.base.display, self.defaultColour, (self.display_width/300, self.display_width/1.2, self.display_width*1.9, self.display_height))  # border
         for button in self.allbuttons:
             self.base.displayButton(button)
         pygame.display.update()
@@ -50,6 +51,35 @@ class EncounterStage():
         # textRect = text.get_rect()
         # textRect.center = ((self.xLocation + (self.width / 2)), self.yLocation + (self.height / 2))
         # display.blit(text, textRect)
+
+    def displayCharacter(self):
+        positionEnemy = 600
+        positionAlly = -80
+        for character in self.turnOrder:
+            if character.isEnemy:
+                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionEnemy, 255))
+                positionEnemy += 150
+            else:
+                self.attack1 = StageButton(character.attack_slot_1.name, "", 25, 592)
+                self.attack1.height = 50
+                self.attack1.fontsize = 20
+                self.attack2 = StageButton(character.attack_slot_2.name, "", 25, 642)
+                self.attack2.height = 50
+                self.attack2.fontsize = 20
+                self.attack3 = StageButton(character.attack_slot_3.name, "", 225, 592)
+                self.attack3.height = 50
+                self.attack3.fontsize = 20
+                self.attack4 = StageButton(character.attack_slot_4.name, "", 225, 642)
+                self.attack4.height = 50
+                self.attack4.fontsize = 20
+                self.allbuttons = [self.attack1, self.attack2, self.attack3, self.attack4]
+                for button in self.allbuttons:
+                    button.defaultColour = (255, 255, 255)
+                    button.textColor = (102, 51, 0)
+                    button.hovercolour = (200, 200, 200)
+                self.base.display.blit(pygame.transform.scale(pygame.transform.flip(pygame.image.load(character.imagePath), True, False).convert_alpha(), (330, 330)), (positionAlly, 255))
+                positionAlly += 150
+        pygame.display.update()
 
     def listenMouse(self):
         mouse = pygame.mouse.get_pos()
@@ -65,8 +95,13 @@ class EncounterStage():
             updateRect = Rect(button.xLocation, button.yLocation, button.width, button.height)
             pygame.display.update(updateRect)
 
+    def mouseClick(self, button, character):
+
+
+
     def mainLoop(self):  # listens for events
         self.displayBattle()
+        self.displayCharacter()
 
         mainLoop = True
         while (mainLoop):
@@ -77,6 +112,6 @@ class EncounterStage():
 
 
 pygame.init()
-mainMenu = EncounterStage(1300, 700, "media/MainMenueBackground.png")
+mainMenu = EncounterStage(1300, 700, "media/MainMenueBackground.png", 12, [Warlock(), Warlock(), Warlock(), Warlock()])
 mainMenu.mainLoop()
 pygame.quit()
