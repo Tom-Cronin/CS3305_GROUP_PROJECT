@@ -7,7 +7,7 @@ class EldritchBlast(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterIntAtribute)
         self.audioPath = '../../assets/images/sounds/Warlock/eldritchBlast.mp3'
-        self.baseDamage = 99
+        self.baseDamage = 2
 
         self.name = 'Eldritch Blast'
         self.description = '%s:\n You create a beam of magical energy and hurl it at an enemy.\n' \
