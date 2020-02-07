@@ -66,18 +66,18 @@ class EncounterStage():
     def displayHealth(self, character, position):
         health = str(character.health) + "/" + str(character.maxHealth)
         font = pygame.font.Font(self.font, self.fontsize)
-        text = font.render(health, True, self.white, (102, 51, 0))
+        text = font.render(health, True, self.white)
         if character.isEnemy:
             self.base.display.blit(text, (position + 100, 175))
         else:
-            self.base.display.blit(text, (position + 100, 175))
+            self.base.display.blit(text, (position + 155, 175))
 
     def displayCharacter(self):
         positionEnemy = 600
         positionAlly = -80
         for character in self.turnOrder:
             if character.isEnemy:
-                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionEnemy, 200))
+                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionEnemy, 250))
                 self.displayHealth(character, positionEnemy)
                 positionEnemy += 150
             else:
@@ -98,7 +98,7 @@ class EncounterStage():
                     button.defaultColour = (255, 255, 255)
                     button.textColor = (0, 0, 0)
                     button.hovercolour = (200, 200, 200)
-                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionAlly, 200))
+                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionAlly, 250))
                 self.displayHealth(character, positionAlly)
                 positionAlly += 150
         pygame.display.update()
