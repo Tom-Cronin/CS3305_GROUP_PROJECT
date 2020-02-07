@@ -10,6 +10,7 @@ class EncounterStage():
         self.display_width = screen_width
         self.display_height = screen_height
         self.defaultColour = (120, 120, 120)
+        self.white = (255, 255, 255)
         self.font = '../Stages/media/Chapaza.ttf'
         self.fontsize = 20
         self.enemy = None
@@ -49,7 +50,6 @@ class EncounterStage():
 
     def displayBattle(self):
         self.base.display.blit(self.base.bgImage, (0, 0))
-        pygame.draw.rect(self.base.display, self.defaultColour, (self.display_width/300, self.display_width/1.2, self.display_width*1.9, self.display_height))  # border
         self.base.display.blit(self.combatBoard, (0, 300))
         for button in self.allbuttons:
             self.base.displayButton(button)
@@ -63,11 +63,14 @@ class EncounterStage():
         # textRect.center = ((self.xLocation + (self.width / 2)), self.yLocation + (self.height / 2))
         # display.blit(text, textRect)
 
-    '''def displayHealth(self, character):
-        health = character.health
+    def displayHealth(self, character, position):
+        health = str(character.health) + "/" + str(character.maxHealth)
         font = pygame.font.Font(self.font, self.fontsize)
-        text = font.render(health, True, self.defaultColour)
-        self.base.display.blit(text)'''
+        text = font.render(health, True, self.white, (102, 51, 0))
+        if character.isEnemy:
+            self.base.display.blit(text, (position + 100, 175))
+        else:
+            self.base.display.blit(text, (position + 100, 175))
 
     def displayCharacter(self):
         positionEnemy = 600
@@ -75,7 +78,7 @@ class EncounterStage():
         for character in self.turnOrder:
             if character.isEnemy:
                 self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionEnemy, 200))
-                #self.displayHealth(character)
+                self.displayHealth(character, positionEnemy)
                 positionEnemy += 150
             else:
                 self.attack1 = StageButton(character.attack_slot_1.name, "1", 25, 592)
@@ -95,7 +98,8 @@ class EncounterStage():
                     button.defaultColour = (255, 255, 255)
                     button.textColor = (0, 0, 0)
                     button.hovercolour = (200, 200, 200)
-                self.base.display.blit(pygame.transform.scale(pygame.transform.flip(pygame.image.load(character.imagePath), True, False).convert_alpha(), (330, 330)), (positionAlly, 200))
+                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionAlly, 200))
+                self.displayHealth(character, positionAlly)
                 positionAlly += 150
         pygame.display.update()
 

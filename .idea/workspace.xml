@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/BaseClass/CharacterBaseClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/BaseClass/CharacterBaseClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Characters/playerClasses/warlock.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/playerClasses/warlock.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stages/encounterStage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/encounterStage.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -232,7 +234,7 @@
       <workItem from="1580935596743" duration="866000" />
       <workItem from="1580986950045" duration="3502000" />
       <workItem from="1580997749644" duration="463000" />
-      <workItem from="1581078961115" duration="9359000" />
+      <workItem from="1581078961115" duration="13788000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -488,7 +490,7 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$StageDisplay.coverage" NAME="StageDisplay Coverage Results" MODIFIED="1580224884998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$encounterStage.coverage" NAME="encounterStage Coverage Results" MODIFIED="1581088272469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$encounterStage.coverage" NAME="encounterStage Coverage Results" MODIFIED="1581098540563" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__2_.coverage" NAME="Unittests in test_CharacterBaseClass.py (2) Coverage Results" MODIFIED="1579075500621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTest" />
     <SUITE FILE_PATH="coverage/v2$enemyMove.coverage" NAME="enemyMove Coverage Results" MODIFIED="1580989304578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_map.coverage" NAME="manage_map Coverage Results" MODIFIED="1580998040199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Map" />
