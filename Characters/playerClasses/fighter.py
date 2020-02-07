@@ -19,7 +19,7 @@ class Fighter(Character):
 
         self.setHealth(37)
 
-        self.imagePath = 'none yet'
+        self.imagePath = '../assets/images/characters/Enemies/PNG_Images/hag.png'
 
         self.attack_slot_1 = BreathAttack()
         self.attack_slot_2 = tempAttack()

@@ -3,6 +3,9 @@ from CombatSystem.turnOrder import turnOrder as getTurnOrder
 from CombatSystem.enemyMove import makeMove
 # only  uses while making will be removed
 from Characters.playerClasses.warlock import Warlock
+from Characters.enemyClasses.Hag import Hag
+
+
 class combatEncounter(object):
     def __init__(self):
         self.enemies = []
@@ -50,9 +53,12 @@ class combatEncounter(object):
 
 
     def setUp(self, crChalengeLevel, listOfPlayers):
+        print(listOfPlayers)
         self.enemies = generateEnemies(crChalengeLevel)
         self.allies = listOfPlayers
         self.turnOrder = self.allies + self.enemies
+        print(self.turnOrder)
+        print(self.allies)
         self.allCharsInFight = self.turnOrder
         self.turnOrder = getTurnOrder(self.turnOrder)
 

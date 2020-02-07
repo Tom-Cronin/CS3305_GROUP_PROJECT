@@ -5,7 +5,8 @@ from Characters.sharedFunctions import calc_attribute_bonus
 
 class Character:
     def __init__(self):
-        self.health = 0
+        self.maxHealth = 0
+        self.health = self.maxHealth
 
         self.constitution = 0 # health
         self.dexterity = 0 # ranged / dagger damage
@@ -15,6 +16,8 @@ class Character:
         self.isEnemy = True
         self.totalKills = 0
 
+        self.imagePath = None
+
     def killCounter(self):
         self.totalKills += 1
 
@@ -23,7 +26,8 @@ class Character:
 
 
     def setHealth(self, newHealth):
-        self.health = newHealth + calc_attribute_bonus(self.constitution)
+        self.maxHealth = newHealth + calc_attribute_bonus(self.constitution)
+        self.health = self.maxHealth
 
     def rollInitative(self):
         return randint(0, 20) + calc_attribute_bonus(self.dexterity)
@@ -59,11 +63,11 @@ class Character:
         self.ArmorClass -= amount
 
     def levelUp(self, chosenAttribute):
-        atributeDict = {
+        attributeDict = {
             "str": self.increaseStr,
             "dex": self.increaseDex,
             "con": self.increaseConst,
             "int": self.increaseInt,
             "ac": self.increaseAC
         }
-        atributeDict[chosenAttribute](1)
+        attributeDict[chosenAttribute](1)
