@@ -17,13 +17,13 @@ class EncounterStage():
         self.attack = None
         self.attackToPick = False
 
-        self.attack1 = StageButton("ATTACK1", "", 25, 592)
+        self.attack1 = StageButton("ATTACK1", "attack 0", 25, 592)
         self.attack1.height = 50
-        self.attack2 = StageButton("ATTACK2", "", 25, 642)
+        self.attack2 = StageButton("ATTACK2", "attack 0", 25, 642)
         self.attack2.height = 50
-        self.attack3 = StageButton("ATTACK3", "", 225, 592)
+        self.attack3 = StageButton("ATTACK3", "attack 0", 225, 592)
         self.attack3.height = 50
-        self.attack4 = StageButton("ATTACK4", "", 225, 642)
+        self.attack4 = StageButton("ATTACK4", "attack 3", 225, 642)
         self.attack4.height = 50
         self.allbuttons = [self.attack1, self.attack2, self.attack3, self.attack4]
         for button in self.allbuttons:
@@ -125,8 +125,7 @@ class EncounterStage():
                 if character.isEnemy:
                     combatEncounterInstance.calcDamage(makeMove(character, combatEncounterInstance.allies))
                 else:
-                    while not clicked:
-                        for event in pygame.event.get():
+                    while not self.enemy and not self.attack:
                             self.listenMouse()
                     #combatEncounterInstance.calcDamage(makeMove(character, combatEncounterInstance.enemies), character)
                 for attack in character.allAttacks:
@@ -142,8 +141,8 @@ class EncounterStage():
         #     print(char)
 
     def mouseClick(self, button):
-        messageType, number = button.exitMessage.split()[0],[1]
-        print(messageType)
+        print(button.exitMessage.split())
+
 
 
 

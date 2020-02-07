@@ -53,12 +53,9 @@ class combatEncounter(object):
 
 
     def setUp(self, crChalengeLevel, listOfPlayers):
-        print(listOfPlayers)
         self.enemies = generateEnemies(crChalengeLevel)
         self.allies = listOfPlayers
         self.turnOrder = self.allies + self.enemies
-        print(self.turnOrder)
-        print(self.allies)
         self.allCharsInFight = self.turnOrder
         self.turnOrder = getTurnOrder(self.turnOrder)
 
