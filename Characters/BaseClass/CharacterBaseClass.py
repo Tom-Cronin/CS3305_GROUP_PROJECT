@@ -1,6 +1,7 @@
 from random import randint
-
+import pygame
 from Characters.sharedFunctions import calc_attribute_bonus
+from time import sleep
 
 
 class Character:
@@ -18,6 +19,9 @@ class Character:
 
         self.imagePath = None
 
+        self.combatPos = 0
+
+        self.attackSoundPath = "blank"
     def killCounter(self):
         self.totalKills += 1
 
@@ -71,3 +75,11 @@ class Character:
             "ac": self.increaseAC
         }
         attributeDict[chosenAttribute](1)
+
+    def attackSound(self):
+        if self.attackSoundPath != "black":
+            pygame.mixer.init()
+            attackSound = pygame.mixer.Sound(self.attackSoundPath)
+            attackSound.set_volume(0.025)
+            attackSound.play()
+            sleep(attackSound.get_length())
