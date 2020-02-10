@@ -3,7 +3,7 @@ from pygame.locals import *
 
 from Stages.baseStageClass import *
 from CombatSystem.combat import *
-from time import  sleep
+
 
 
 class EncounterStage():
@@ -21,24 +21,16 @@ class EncounterStage():
         self.enemyToPick = False
         self.attack = None
         self.attackToPick = False
-
         self.selectedEnemyButton = None
         self.selectedAttackButton = None
-
         self.hoverColour = (255, 184, 148)
-
-        #     button.hovercolour = (155, 155, 155)
         self.base = BaseStage(self.display_height, self.display_width)
-
         self.drawBackground(levelImage)
-
         self.combat = combatEncounter()
         self.combat.setUp(crLevel, listOfPlayers)
         self.turnOrder = self.combat.turnOrder
         self.displayCharacter()
-
         self.mainLoop(levelImage)
-
         self.enemies = []
 
     def drawBackground(self, img):
