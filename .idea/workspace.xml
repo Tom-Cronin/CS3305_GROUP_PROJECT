@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,32 +51,22 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="H:\workspace\projectV2\CombatSystem" />
-      <recent name="H:\workspace\projectV2" />
-      <recent name="C:\Users\hurry\PycharmProjects\21\CombatSystem" />
-      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\Characters" />
-      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\TestSuite" />
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\Stages\media" />
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\assets\images\characters\Players\PNG_Images" />
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\assets\sounds\battleMusic" />
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\assets\sounds\Warlock" />
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\assets" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT" />
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\assets\sounds\Warlock" />
       <recent name="H:\workspace\project" />
       <recent name="H:\workspace\project\CombatSystem" />
       <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\Characters\attacks\playableCharacterAttacks\fighter" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="Python.encounterStage">
-    <configuration name="combat" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="baseStageClass" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -83,12 +74,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Stages" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CombatSystem/combat.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/baseStageClass.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -119,7 +110,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="enemyMove" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="generateEnemies" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -127,12 +118,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Stages" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/CombatSystem" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CombatSystem/enemyMove.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/CombatSystem/generateEnemies.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -163,20 +154,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="manage_map" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="main2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\Users\HP\AppData\Local\Programs\Python\Python36-32\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Map" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Map/manage_map.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,10 +179,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.encounterStage" />
+        <item itemvalue="Python.generateEnemies" />
+        <item itemvalue="Python.main2" />
+        <item itemvalue="Python.baseStageClass" />
         <item itemvalue="Python.main" />
-        <item itemvalue="Python.manage_map" />
-        <item itemvalue="Python.combat" />
-        <item itemvalue="Python.enemyMove" />
       </list>
     </recent_temporary>
   </component>
@@ -232,7 +223,13 @@
       <workItem from="1581078961115" duration="13788000" />
       <workItem from="1581098816038" duration="634000" />
       <workItem from="1581099857175" duration="6591000" />
-      <workItem from="1581630635823" duration="599000" />
+      <workItem from="1581158615879" duration="6000" />
+      <workItem from="1581158629104" duration="142000" />
+      <workItem from="1581158851546" duration="11214000" />
+      <workItem from="1581255499503" duration="424000" />
+      <workItem from="1581256135046" duration="600000" />
+      <workItem from="1581263801852" duration="2455000" />
+      <workItem from="1581371028497" duration="1110000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -332,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580997833592</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fixing bug">
+      <created>1581371192286</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1581371192286</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -380,7 +384,8 @@
     <MESSAGE value="added kill counter" />
     <MESSAGE value="fixed attack picking system" />
     <MESSAGE value="Merge branch 'develop' of https://github.com/FumoDraconis/CS3306_GROUP_PROJECT into map&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Map/map.py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'develop' of https://github.com/FumoDraconis/CS3306_GROUP_PROJECT into map&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;Map/map.py" />
+    <MESSAGE value="fixing bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixing bug" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
@@ -391,10 +396,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="223" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580036904692" />
-    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002741848">
-      <screen x="0" y="0" width="1280" height="800" />
+    <state x="531" y="273" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1581166377831">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
+    <state x="531" y="273" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1581166377830" />
     <state x="402" y="0" key="#combat" timestamp="1580997761291">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -407,12 +413,12 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="402" y="0" key="#manage_map/0.0.1366.728@0.0.1366.728" timestamp="1580747366179" />
-    <state x="0" y="0" width="743" height="728" key="CommitChangelistDialog2" timestamp="1580997831270">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state x="0" y="0" width="743" height="728" key="CommitChangelistDialog2" timestamp="1581371191455">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1580991193999" />
     <state x="0" y="0" width="743" height="728" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1580997831270" />
-    <state x="0" y="0" width="696" height="809" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1580933055391" />
+    <state x="0" y="0" width="696" height="809" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1581371191455" />
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1580669144622" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
@@ -423,33 +429,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="844" y="286" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1580316812840" />
-    <state width="2517" height="399" key="GridCell.Tab.0.bottom" timestamp="1581099576251">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom" timestamp="1581542059997">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="294" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1580991197060" />
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1580998135393" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1580936432536" />
+    <state width="1877" height="266" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1581542059997" />
     <state width="2517" height="399" key="GridCell.Tab.0.bottom/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1581099576251" />
-    <state width="2517" height="399" key="GridCell.Tab.0.center" timestamp="1581099576251">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center" timestamp="1581542059997">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="294" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1580991197059" />
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1580998135393" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1580936432535" />
+    <state width="1877" height="266" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1581542059997" />
     <state width="2517" height="399" key="GridCell.Tab.0.center/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1581099576251" />
-    <state width="2517" height="399" key="GridCell.Tab.0.left" timestamp="1581099576251">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left" timestamp="1581542059997">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="294" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1580991197058" />
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1580998135392" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1580936432535" />
+    <state width="1877" height="266" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1581542059997" />
     <state width="2517" height="399" key="GridCell.Tab.0.left/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1581099576251" />
-    <state width="2517" height="399" key="GridCell.Tab.0.right" timestamp="1581099576251">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right" timestamp="1581542059997">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1238" height="294" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1580991197059" />
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1580998135393" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1580936432535" />
+    <state width="1877" height="266" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1581542059997" />
     <state width="2517" height="399" key="GridCell.Tab.0.right/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1581099576251" />
     <state width="1760" height="324" key="GridCell.Tab.1.bottom" timestamp="1580041315224">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -471,17 +477,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="481" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580036157412" />
-    <state x="644" y="258" key="SettingsEditor" timestamp="1581098867374">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="483" y="192" key="SettingsEditor" timestamp="1581158908930">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1580986963327" />
-    <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1580669786724" />
+    <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1581158908930" />
     <state x="644" y="258" key="SettingsEditor/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1581098867374" />
-    <state x="317" y="248" key="com.intellij.ide.util.TipDialog" timestamp="1580995664012">
-      <screen x="0" y="23" width="1280" height="748" />
+    <state x="476" y="313" key="com.intellij.ide.util.TipDialog" timestamp="1581542034737">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
-    <state x="476" y="313" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1580935609906" />
+    <state x="476" y="313" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1581542034737" />
     <state x="635" y="421" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/3840.0.1280.984@0.0.2560.1400" timestamp="1580669035246" />
     <state x="317" y="248" key="com.intellij.ide.util.TipDialog/0.23.1280.748@0.23.1280.748" timestamp="1580995664012" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
@@ -491,34 +497,37 @@
     <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579075897728" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$StageDisplay.coverage" NAME="StageDisplay Coverage Results" MODIFIED="1580224884998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$encounterStage.coverage" NAME="encounterStage Coverage Results" MODIFIED="1581106457493" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__2_.coverage" NAME="Unittests in test_CharacterBaseClass.py (2) Coverage Results" MODIFIED="1579075500621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTest" />
-    <SUITE FILE_PATH="coverage/v2$enemyMove.coverage" NAME="enemyMove Coverage Results" MODIFIED="1580989304578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1580221116909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_map.coverage" NAME="manage_map Coverage Results" MODIFIED="1580998040199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Map" />
-    <SUITE FILE_PATH="coverage/projectV2$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580936432531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_healthShouldUpdateWithConstitutionBonus.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_healthShouldUpdateWithConstitutionBonus Coverage Results" MODIFIED="1580036814521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1580038288154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_shouldRollInitiativeWithAValueOfDexModOrHigher.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_shouldRollInitiativeWithAValueOfDexModOrHigher Coverage Results" MODIFIED="1580315710301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack_test_get_damage.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack.test_get_damage Coverage Results" MODIFIED="1580316967898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580997771885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack_test_update_damage_mod.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack.test_update_damage_mod Coverage Results" MODIFIED="1580317143749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
     <SUITE FILE_PATH="coverage/project$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580670077704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests__1_.coverage" NAME="RunAllTests (1) Coverage Results" MODIFIED="1580036930142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/v2$enemyMove.coverage" NAME="enemyMove Coverage Results" MODIFIED="1580989304578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$generateEnemies.coverage" NAME="generateEnemies Coverage Results" MODIFIED="1581542055038" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_shouldRollInitiativeWithAValueOfDexModOrHigher.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_shouldRollInitiativeWithAValueOfDexModOrHigher Coverage Results" MODIFIED="1580315710301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
     <SUITE FILE_PATH="coverage/v2$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580991173781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
-    <SUITE FILE_PATH="coverage/project$MainMenu.coverage" NAME="MainMenu Coverage Results" MODIFIED="1580654019186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__2_.coverage" NAME="Unittests in test_CharacterBaseClass.py (2) Coverage Results" MODIFIED="1579075500621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTest" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$hellfireWhirlwind.coverage" NAME="hellfireWhirlwind Coverage Results" MODIFIED="1580315432555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$StageDisplay.coverage" NAME="StageDisplay Coverage Results" MODIFIED="1580224884998" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$manage_map.coverage" NAME="manage_map Coverage Results" MODIFIED="1580998040199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Map" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$encounterStage.coverage" NAME="encounterStage Coverage Results" MODIFIED="1581542059990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_healthShouldUpdateWithNoConstitutionBonus.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_healthShouldUpdateWithNoConstitutionBonus Coverage Results" MODIFIED="1580036892141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580997771885" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$warlock.coverage" NAME="warlock Coverage Results" MODIFIED="1580039435314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/playerClasses" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$main2.coverage" NAME="main2 Coverage Results" MODIFIED="1581255835149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack Coverage Results" MODIFIED="1580316953266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
+    <SUITE FILE_PATH="coverage/project$MainMenu.coverage" NAME="MainMenu Coverage Results" MODIFIED="1580654019186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack_test_update_damage_mod.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack.test_update_damage_mod Coverage Results" MODIFIED="1580317143749" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack_test_get_damage.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack.test_get_damage Coverage Results" MODIFIED="1580316967898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1580572571498" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$main.coverage" NAME="main Coverage Results" MODIFIED="1580998135367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$hellfireWhirlwind.coverage" NAME="hellfireWhirlwind Coverage Results" MODIFIED="1580315432555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1580038288154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1580221116909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
     <SUITE FILE_PATH="coverage/workspace$encounterStage.coverage" NAME="encounterStage Coverage Results" MODIFIED="1581099576245" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_levelUpShouldIncreaseSelectedAttribute.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_levelUpShouldIncreaseSelectedAttribute Coverage Results" MODIFIED="1580042097476" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$main.coverage" NAME="main Coverage Results" MODIFIED="1580998135367" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests__1_.coverage" NAME="RunAllTests (1) Coverage Results" MODIFIED="1580036930142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$warlock.coverage" NAME="warlock Coverage Results" MODIFIED="1580039435314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/playerClasses" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_healthShouldUpdateWithNoConstitutionBonus.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_healthShouldUpdateWithNoConstitutionBonus Coverage Results" MODIFIED="1580036892141" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_baseAttackClass_TestBaseAttack.coverage" NAME="Unittests for test_baseAttackClass.TestBaseAttack Coverage Results" MODIFIED="1580316953266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/AttackClassTests" />
+    <SUITE FILE_PATH="coverage/projectV2$combat.coverage" NAME="combat Coverage Results" MODIFIED="1580936432531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/CombatSystem" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$baseStageClass.coverage" NAME="baseStageClass Coverage Results" MODIFIED="1581255829088" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Stages" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_for_test_CharacterBaseClass_TestCharacter_test_healthShouldUpdateWithConstitutionBonus.coverage" NAME="Unittests for test_CharacterBaseClass.TestCharacter.test_healthShouldUpdateWithConstitutionBonus Coverage Results" MODIFIED="1580036814521" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTests" />
   </component>
 </project>
