@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CS3306_GROUP_PROJECT.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" beforeDir="false" afterPath="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stages/encounterStage.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/encounterStage.py" afterDir="false" />
-    </list>
+    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,6 +232,7 @@
       <workItem from="1581078961115" duration="13788000" />
       <workItem from="1581098816038" duration="634000" />
       <workItem from="1581099857175" duration="6591000" />
+      <workItem from="1581630635823" duration="599000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
