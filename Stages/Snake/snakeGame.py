@@ -69,18 +69,17 @@ class SnakeGame(BaseStage):
         # Checks if snake should move:
         key = pygame.key.get_pressed()
         if key[pygame.K_UP]:
-            #ToDo: if in limits...
-            self.snake.move("Up")
+            self.snake.move("U")
             self.checkLocation()
         elif key[pygame.K_DOWN]:
-            self.snake.move("Down")
+            self.snake.move("D")
             self.checkLocation()
         elif key[pygame.K_RIGHT]:
-            self.snake.move("Right")
+            self.snake.move("R")
             self.checkLocation()
 
         elif key[pygame.K_LEFT]:
-            self.snake.move("Left")
+            self.snake.move("L")
             self.checkLocation()
 
         time.sleep(0.1)
