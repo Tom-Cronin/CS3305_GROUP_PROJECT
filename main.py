@@ -2,12 +2,14 @@ from Stages.baseStageClass import BaseStage
 from Stages.MainMenu import MainMenu
 import pygame
 from Map.map import Map
+from Stages.LoadingScreen import *
 
 baseScreen = BaseStage(1300, 700)
 
 pygame.init()
 mainMenu = MainMenu(baseScreen)
 mymap = Map(baseScreen, "Best seed")
+loadingScreen = LoadingScreen(baseScreen)
 loop = mainMenu.mainLoop()
 if not loop:
     pygame.quit()
@@ -22,7 +24,7 @@ elif loop:
         if count >= 3:
             cr += 1
             count -= 3
-        print("Loading screen")
+        loadingScreen.mainloop()
         print("map")
         current_room_cr = mymap.mainLoop()
         if current_room_cr[0] == "b":
