@@ -9,6 +9,7 @@ class SnakeGame(BaseStage):
     def __init__(self, screen_height, screen_width):
 
         super().__init__(screen_height, screen_width)
+        self.disabled = False
         self.snakeColor = (0, 0, 0)  # black
         self.wallColor = (0, 0, 0)  # black
         self.textColor = (0, 0, 0)
@@ -20,7 +21,6 @@ class SnakeGame(BaseStage):
                    "If you hit a wall, you will die"
         self.hint = StageButton("HINT", gameHint, self.goBack.xLocation, self.goBack.yLocation)
         self.activeButtons = [self.quitGame, self.hint]
-
 
     def mazeLayer(self):
         self.maze.draw()
@@ -54,6 +54,7 @@ class SnakeGame(BaseStage):
         pygame.display.update()
 
     def mouseClick(self, button):  # event handler for button press
+        self.disabled = True
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
             self.selectedButtonName = self.warningMessage(button)
         if button.buttonText == "HINT":
@@ -74,6 +75,7 @@ class SnakeGame(BaseStage):
                 self.neverMind()
 
     def neverMind(self):  # Resets the basic Stage background
+        self.disabled = False
         self.activeButtons = [self.quitGame, self.hint]
         self.selectedButtonName = None
         self.mainLoop()
@@ -132,7 +134,7 @@ class SnakeGame(BaseStage):
         while mainLoop:
             self.listenMouse()
             self.listenButton()
-            if self.finished is False:
+            if self.finished is False and self.disabled is False:
                 self.listenSnake()
 
 
