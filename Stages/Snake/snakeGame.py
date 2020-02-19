@@ -1,4 +1,4 @@
-from Stages.baseStageClass import BaseStage
+from Stages.baseStageClass import BaseStage, StageButton
 from Stages.Snake.snakeMaze import Maze
 from Stages.Snake.snakeSnake import SnakeGuy
 import pygame
@@ -9,7 +9,6 @@ class SnakeGame(BaseStage):
     def __init__(self, screen_height, screen_width):
 
         super().__init__(screen_height, screen_width)
-        self.activeButtons = [self.quitGame]
         self.snakeColor = (0, 0, 0)  # black
         self.wallColor = (0, 0, 0)  # black
         self.textColor = (0, 0, 0)
@@ -17,6 +16,10 @@ class SnakeGame(BaseStage):
         self.maze = Maze(screen_height, screen_width, self.display)
         self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
         self.finished = False
+        gameHint = "Try and get the snake to the end of the maze\nUse the arrow keys to move\n" \
+                   "If you hit a wall, you will die"
+        self.hint = StageButton("HINT", gameHint, self.goBack.xLocation, self.goBack.yLocation)
+        self.activeButtons = [self.quitGame, self.hint]
 
 
     def mazeLayer(self):
@@ -53,6 +56,9 @@ class SnakeGame(BaseStage):
     def mouseClick(self, button):  # event handler for button press
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
             self.selectedButtonName = self.warningMessage(button)
+        if button.buttonText == "HINT":
+            self.howToPlay()
+            self.selectedButtonName = "HINT"
         if button.buttonText == "MAYBE NOT":
             self.neverMind()
         if button.buttonText == "OK":
@@ -64,6 +70,13 @@ class SnakeGame(BaseStage):
                 self.exitStage()
             if self.selectedButtonName == "ENDGAME":
                 self.continueGame()
+            if self.selectedButtonName == "HINT":
+                self.neverMind()
+
+    def neverMind(self):  # Resets the basic Stage background
+        self.activeButtons = [self.quitGame, self.hint]
+        self.selectedButtonName = None
+        self.mainLoop()
 
     def listenSnake(self):
         # Checks if snake should move:
@@ -77,7 +90,6 @@ class SnakeGame(BaseStage):
         elif key[pygame.K_RIGHT]:
             self.snake.move("R")
             self.checkLocation()
-
         elif key[pygame.K_LEFT]:
             self.snake.move("L")
             self.checkLocation()
@@ -98,16 +110,22 @@ class SnakeGame(BaseStage):
         self.makeGreen()
         # ToDo: return to map
 
+    def howToPlay(self):
+        self.hint.displayWarningMessage(self.display)
+        self.displayButton(self.okay)
+        time.sleep(0.3)
+        self.activeButtons = [self.okay]  # deactivates the main menu and treasure box, activates ok option
+        return self.hint.buttonText
+
 
     def mainLoop(self):  # listens for events
 
         self.backgroundLayer()
         self.mazeLayer()
         self.snakeLayer()
-        #self.gameOver(True)
+
 
         pygame.display.update()
-        #time.sleep(5)
 
         mainLoop = True
 
