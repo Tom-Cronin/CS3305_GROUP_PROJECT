@@ -9,7 +9,7 @@ class SnakeGame(BaseStage):
     def __init__(self, screen_height, screen_width):
 
         super().__init__(screen_height, screen_width)
-        self.disabled = False
+        self.disabled = False  # snake movement is disabled while message is displayed
         self.snakeColor = (0, 0, 0)  # black
         self.wallColor = (0, 0, 0)  # black
         self.textColor = (0, 0, 0)
@@ -126,6 +126,9 @@ class SnakeGame(BaseStage):
         self.mazeLayer()
         self.snakeLayer()
 
+        self.snake.move("R")
+        self.snake.move("R")
+        self.snake.move("R")  # This technically solves the moving/snake image break at the start of the game
 
         pygame.display.update()
 
@@ -137,11 +140,9 @@ class SnakeGame(BaseStage):
             if self.finished is False and self.disabled is False:
                 self.listenSnake()
 
-
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     mainLoop = False
-
 
 
 pygame.init()

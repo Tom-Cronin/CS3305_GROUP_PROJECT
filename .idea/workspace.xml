@@ -4,12 +4,26 @@
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stages/baseStageClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/baseStageClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/Snake/snakeSnake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake/snakeSnake.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -33,6 +47,7 @@
     <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -263,7 +278,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582140828446</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Can no longer move snake while a message is being displayed">
+      <created>1582141337944</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582141337944</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +299,8 @@
     <MESSAGE value="fixed conflicts" />
     <MESSAGE value="Resolved issue #39: Tail overwriting head during a 180 degree turn" />
     <MESSAGE value="Added snake images to git" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added snake images to git" />
+    <MESSAGE value="Can no longer move snake while a message is being displayed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Can no longer move snake while a message is being displayed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
@@ -292,39 +315,39 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1582140825867">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1582141335318">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582140825867" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582141335318" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1579093793728" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1582141281760">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1582142466279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582141281760" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582142466279" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596164" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1582141281760">
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1582142466279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582141281760" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582142466279" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1582141281760">
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1582142466279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582141281760" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582142466279" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1582141281760">
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1582142466279">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582141281760" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582142466279" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
     <state x="283" y="78" key="SettingsEditor" timestamp="1579785560217">
       <screen x="0" y="0" width="1280" height="800" />
@@ -349,7 +372,7 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snakeGame.coverage" NAME="snakeGame Coverage Results" MODIFIED="1582141281729" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snakeGame.coverage" NAME="snakeGame Coverage Results" MODIFIED="1582142466248" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1579732038124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />

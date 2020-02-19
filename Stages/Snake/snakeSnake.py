@@ -10,12 +10,11 @@ class SnakeGuy:
         self.positionX = 120
         self.positionY = 120
         self.square1 = SnakeSquares(self.positionX, self.positionY, 1)
-        self.square2 = SnakeSquares(self.positionX+10, self.positionY, 2 )
+        self.square2 = SnakeSquares(self.positionX+10, self.positionY, 2)
         self.square3 = SnakeSquares(self.positionX+20, self.positionY, 3)
         self.squares = [self.square1, self.square2, self.square3]
         self.head = self.square3
         self.mazeColor = (34, 139, 34)
-        self.currentPos = 1
         self.direction = "R"   # for image rotation
         self.prevDirection = "R"
 
@@ -24,13 +23,12 @@ class SnakeGuy:
         head = pygame.transform.scale((pygame.image.load("Stages/media/snakeHead.png").convert_alpha()), (10, 10))
         body = pygame.transform.scale((pygame.image.load("Stages/media/SnakeBody.png").convert_alpha()), (10, 10))
         tail = pygame.transform.scale((pygame.image.load("Stages/media/SnakeTail.png").convert_alpha()), (10, 10))
-        imageList = [head, body, tail]
         x = 0
-        if self.direction == "R":
+        if self.head.direction == "R":
             x = 270
-        elif self.direction == "L":
+        elif self.head.direction == "L":
             x = 90
-        elif self.direction == "D":
+        elif self.head.direction == "D":
             x = 180
 
         head = pygame.transform.rotate(head, x)
@@ -45,6 +43,7 @@ class SnakeGuy:
             x = 180
 
         tail = pygame.transform.rotate(tail, x)
+
         self.erase(self.square2.Rect)
         self.display.blit(body, (self.square2.x, self.square2.y))
         self.erase(self.square1.Rect)
@@ -88,12 +87,14 @@ class SnakeGuy:
         while i < len(squares):
             squares[i-1].xUpdate(squares[i].x)
             squares[i - 1].yUpdate(squares[i].y)
+            squares[i - 1].direction = squares[i].direction
             i += 1
 
         self.erase(oldRect)
 
         # Moves the head square in the correct direction
         self.prevDirection = self.direction
+        self.head.direction = direction
         if direction == "R":
             self.head.x += 10
             self.head.xUpdate(self.head.x)
@@ -124,6 +125,7 @@ class SnakeSquares:
         self.Rect = None
         self.buildRect()
         self.num = num
+        self.direction = "R"
 
     def buildRect(self):
         self.Rect = Rect((self.x, self.y, self.size, self.size))
