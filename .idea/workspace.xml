@@ -61,7 +61,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.SnakeGame1">
+  <component name="RunManager" selected="Python.snakeGame2">
     <configuration name="RunAllTests (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="CS3306_GROUP_PROJECT" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -203,8 +203,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.SnakeGame1" />
         <item itemvalue="Python.snakeGame2" />
+        <item itemvalue="Python.SnakeGame1" />
         <item itemvalue="Python.snakeGame" />
         <item itemvalue="Python.eldritchBlast" />
         <item itemvalue="Python.RunAllTests (1)" />
@@ -307,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582199732630</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created base for second snake game">
+      <created>1582201397975</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582201397975</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,54 +331,55 @@
     <MESSAGE value="Can no longer move snake while a message is being displayed" />
     <MESSAGE value="Made a quick fix for the bug where the snake breaks during its first few moves and never again" />
     <MESSAGE value="Refactored code to allow reuse of SnakeGame logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored code to allow reuse of SnakeGame logic" />
+    <MESSAGE value="Created base for second snake game" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created base for second snake game" />
   </component>
   <component name="WindowStateProjectService">
     <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="335" y="14" key="#RunAllTests_(1)/0.0.1280.800@0.0.1280.800" timestamp="1579785541158" />
-    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582199672668">
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582202672062">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582199672668" />
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582202672062" />
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002741848">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1582199729452">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1582201394732">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582199729452" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582201394732" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1579093793728" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1582201320292">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1582203644611">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582201320292" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582203644611" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596164" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1582201320292">
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1582203644611">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582201320292" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582203644611" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1582201320292">
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1582203644611">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582201320292" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582203644611" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1582201320292">
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1582203644611">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582201320292" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582203644611" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1582148987771">
       <screen x="0" y="0" width="1366" height="728" />
@@ -421,10 +429,10 @@
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1579788629794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$SnakeGame1.coverage" NAME="SnakeGame1 Coverage Results" MODIFIED="1582201320277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$SnakeGame1.coverage" NAME="SnakeGame1 Coverage Results" MODIFIED="1582202638270" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1579006600778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UnitTests/CharacterTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests__1_.coverage" NAME="RunAllTests (1) Coverage Results" MODIFIED="1579785561617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__2_.coverage" NAME="Unittests in test_CharacterBaseClass.py (2) Coverage Results" MODIFIED="1579075500621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTest" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snakeGame2.coverage" NAME="snakeGame2 Coverage Results" MODIFIED="1582199557534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snakeGame2.coverage" NAME="snakeGame2 Coverage Results" MODIFIED="1582203644595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

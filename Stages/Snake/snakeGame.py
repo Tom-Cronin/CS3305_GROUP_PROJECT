@@ -14,13 +14,14 @@ class SnakeGame(BaseStage):
         self.wallColor = (0, 0, 0)  # black
         self.textColor = (0, 0, 0)
         self.font = 'Stages/media/Chapaza.ttf'
+        #self.maze = None
+        #self.snake = None
         self.maze = Maze(self.screen_height, self.screen_width, self.display)
         self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
-        self.maze = None
-        self.snake = None
         self.finished = False
         self.hint = StageButton("HINT", hint, self.goBack.xLocation, self.goBack.yLocation)
         self.activeButtons = [self.quitGame, self.hint]
+
 
     def mazeLayer(self):
         self.maze.draw()
@@ -125,16 +126,12 @@ class SnakeGame(BaseStage):
 
 
     def mainLoop(self):  # listens for events
-        """if self.maze == None:
-            self.setUp()"""
 
         self.backgroundLayer()
         self.mazeLayer()
         self.snakeLayer()
 
-        self.snake.move("R")
-        self.snake.move("R")
-        self.snake.move("R")  # This technically solves the moving/snake image break at the start of the game
+
 
         pygame.display.update()
 

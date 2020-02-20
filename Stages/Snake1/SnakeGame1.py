@@ -10,8 +10,11 @@ class SnakeGame1(SnakeGame):
         gameHint = "Try and get the snake to the end of the maze\nUse the arrow keys to move\n" \
                    "If you hit a wall, you will die"
         super().__init__(screen_height, screen_width, gameHint)
-        self.maze = Maze(screen_height, screen_width, self.display, 2)
+        self.maze = Maze(screen_height, screen_width, self.display)
         self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
+        self.snake.move("R")
+        self.snake.move("R")
+        self.snake.move("R")  # This technically solves the moving/snake image break at the start of the game
 
 pygame.init()
 puzzle = SnakeGame1(800, 600)
