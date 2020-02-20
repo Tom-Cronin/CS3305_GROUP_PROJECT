@@ -22,10 +22,6 @@ class SnakeGame(BaseStage):
         self.hint = StageButton("HINT", hint, self.goBack.xLocation, self.goBack.yLocation)
         self.activeButtons = [self.quitGame, self.hint]
 
-    """def setUp(self):
-        self.maze = Maze(self.screen_height, self.screen_width, self.display)
-        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)"""
-
     def mazeLayer(self):
         self.maze.draw()
 
@@ -88,17 +84,21 @@ class SnakeGame(BaseStage):
         # Checks if snake should move:
         key = pygame.key.get_pressed()
         if key[pygame.K_UP]:
-            self.snake.move("U")
-            self.checkLocation()
+            if self.snake.check180("U") is False:
+                self.snake.move("U")
+                self.checkLocation()
         elif key[pygame.K_DOWN]:
-            self.snake.move("D")
-            self.checkLocation()
+            if self.snake.check180("D") is False:
+                self.snake.move("D")
+                self.checkLocation()
         elif key[pygame.K_RIGHT]:
-            self.snake.move("R")
-            self.checkLocation()
+            if self.snake.check180("R") is False:
+                self.snake.move("R")
+                self.checkLocation()
         elif key[pygame.K_LEFT]:
-            self.snake.move("L")
-            self.checkLocation()
+            if self.snake.check180("L") is False:
+                self.snake.move("L")
+                self.checkLocation()
 
         time.sleep(0.1)
 
