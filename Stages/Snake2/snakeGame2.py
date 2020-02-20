@@ -4,27 +4,26 @@ from Stages.Snake.snakeSnake import SnakeGuy
 import pygame
 import time
 
-class SnakeGame(BaseStage):
+class Maze2(Maze):
+    def __init__(self, screen_height, screen_width, display):
+        super().__init__(screen_height, screen_width, display, 2)
 
-    def __init__(self, screen_height, screen_width, hint):
+class SnakeGame2(BaseStage):
 
+    def __init__(self, screen_height, screen_width):
         super().__init__(screen_height, screen_width)
         self.disabled = False  # snake movement is disabled while message is displayed
         self.snakeColor = (0, 0, 0)  # black
         self.wallColor = (0, 0, 0)  # black
         self.textColor = (0, 0, 0)
         self.font = 'Stages/media/Chapaza.ttf'
-        self.maze = Maze(self.screen_height, self.screen_width, self.display)
+        self.maze = Maze(screen_height, screen_width, self.display, 2)
         self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
-        self.maze = None
-        self.snake = None
         self.finished = False
-        self.hint = StageButton("HINT", hint, self.goBack.xLocation, self.goBack.yLocation)
+        gameHint = "Try and get the snake to the end of the maze\nUse the arrow keys to move\n" \
+                   "If you hit a wall, you will die"
+        self.hint = StageButton("HINT", gameHint, self.goBack.xLocation, self.goBack.yLocation)
         self.activeButtons = [self.quitGame, self.hint]
-
-    """def setUp(self):
-        self.maze = Maze(self.screen_height, self.screen_width, self.display)
-        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)"""
 
     def mazeLayer(self):
         self.maze.draw()
@@ -125,8 +124,6 @@ class SnakeGame(BaseStage):
 
 
     def mainLoop(self):  # listens for events
-        """if self.maze == None:
-            self.setUp()"""
 
         self.backgroundLayer()
         self.mazeLayer()
@@ -149,3 +146,9 @@ class SnakeGame(BaseStage):
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     mainLoop = False
+
+
+pygame.init()
+puzzle = SnakeGame2(800, 600)
+puzzle.mainLoop()
+pygame.quit()
