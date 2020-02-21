@@ -48,6 +48,8 @@ class Map(object):
             if level_index == number_of_levels - 1:
                 nodes_per_level = 1
             elif level_index == 0:
+                nodes_per_level = random.randint(1, 3)
+            elif level_index == 0:
                 nodes_per_level = random.randint(1, 4)
             else:
                 nodes_per_level = random.randint(1, nodes_per_level + 1)
@@ -132,6 +134,7 @@ class Map(object):
         black = (0, 0, 0)
         bronze = (205, 127, 50)
         grey = (86, 80, 81)
+        white = (255, 255, 255)
         node_dict = {}
         node_index = 0
         circle_radius = 30
@@ -149,7 +152,7 @@ class Map(object):
                     if self.map[level_index][i][0] == self.node+1:
                         line_width = 3
                         line_color = black
-                        print(self.map[level_index][i][0], self.node)
+                        #print(self.map[level_index][i][0], self.node)
                     from_node_x = self.screen_width / len(self.map[level_index])
                     number_of_to_nodes = len(self.map[level_index][i][2])
                     for j in range(number_of_to_nodes):
@@ -157,7 +160,7 @@ class Map(object):
                         for to_node_index in range(len(self.map[level_index + 1])):
                             if self.map[level_index + 1][to_node_index][0] == self.map[level_index][i][2][j]:
                                 q = to_node_index
-                                pygame.draw.lines(self.screen.display, line_color, True,
+                                pygame.draw.lines(self.screen.display, line_color, False,
                                                   [(int(from_node_x * (i + 1) - (from_node_x / 2)),
                                                     int(self.screen_height - node_height * (
                                                             level_index + 1)) - 1),
@@ -182,7 +185,7 @@ class Map(object):
                     if node_index == self.node:
                         node_key = "YOU"
                         circle_width = circle_radius
-                        circle_colour = red
+                        circle_colour = black
                         for node in range(len(self.map[level_index])):
                             current_level_nodes.append(self.map[level_index][node][0])
                         next_nodes = self.map[level_index][i][2]
@@ -205,9 +208,11 @@ class Map(object):
                     node_index += 1
                     text = myfont.render("%s" % node_key, True, black)
                     if node_key == "YOU":
-                        self.screen.display.blit(text, (int(node_x * (i + 1) - (node_x / 2)) - 12,
+                        font = pygame.font.SysFont('media/Chapaza.ttf', 23)
+                        text = font.render("%s" % node_key, True, white)
+                        self.screen.display.blit(text, (int(node_x * (i + 1) - (node_x / 2))-15,
                                                         int(self.screen_height - node_height * (
-                                                                level_index + 1) + 20) - 6))
+                                                                level_index + 1) + 20) -8))
                     elif node_key == "T":
                         self.screen.display.blit(self.treasureImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
                                                                       int(self.screen_height - node_height * (
@@ -263,8 +268,17 @@ class Map(object):
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 37)
         self.screen.display.blit(self.screen.bgImage, (0, 0))
         self.screen.displayButton(self.quitButton)
-        display_level = myfont.render( "Level: %i" % self.level, True, black)
-        self.screen.display.blit(display_level, (10, 10))
+        display_level = myfont.render("Level: %i" % self.level, True, black)
+        myfont = pygame.font.SysFont('media/Chapaza.ttf', 27)
+        display_instructions1 = myfont.render("Hint: Choose your", True, black)
+        display_instructions2 = myfont.render("     next step by", True, black)
+        display_instructions3 = myfont.render("    clicking on a", True, black)
+        display_instructions4 = myfont.render("     blue circle!", True, black)
+        self.screen.display.blit(display_level, (10, 20))
+        self.screen.display.blit(display_instructions1, (10, 190))
+        self.screen.display.blit(display_instructions2, (10, 210))
+        self.screen.display.blit(display_instructions3, (10, 230))
+        self.screen.display.blit(display_instructions4, (10, 250))
         pygame.display.update()
 
     def mainLoop(self):
