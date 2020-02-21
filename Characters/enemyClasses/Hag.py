@@ -16,7 +16,7 @@ class Hag(Character):
 
         self.setHealth(45)
 
-        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/hag.png'
+        self.imagePath = '../assets/images/characters/Enemies/PNG_Images/hag.png'
 
         self.attack_slot_1 = lifeDrain.LifeDrain(self.intelligence)
         self.attack_slot_2 = Longbow.Longbow(self.dexterity)
