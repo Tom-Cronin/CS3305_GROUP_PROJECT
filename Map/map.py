@@ -13,12 +13,12 @@ class Map(object):
     def __init__(self, screen, seed):
         self.seed = seed
         self.screen = screen
-        self.level = 0
+        self.level = 1
         self.node = -1
         self.map = self.generate_map_list()
         self.screen_width = self.screen.screen_height
         self.screen_height = self.screen.screen_width
-        self.quitButton = StageButton("Quit", "", self.screen_width - 210, 10)
+        self.quitButton = StageButton("Quit", "", self.screen_width - 205, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
                                                                                                    self.screen_width))
         self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/Treasure.png').convert(), (35, 35))
@@ -79,7 +79,6 @@ class Map(object):
             next_level = level + 1
             len_level = len(list_of_levels[level])
             len_next_level = len(list_of_levels[next_level])
-            # print(len_level, len_next_level)
             if len_next_level > len_level:
                 average = len_next_level / len_level
                 if average.is_integer():
@@ -95,7 +94,7 @@ class Map(object):
                         rand_node = random.randint(0, len_level - 1)
                         list_of_levels[level][rand_node][2].append(list_of_levels[next_level][i][0])
                     for i in range(len(list_of_levels[level])):
-                        if list_of_levels[level][i][2] == []:
+                        if not list_of_levels[level][i][2]:
                             rand_node = random.randint(0, len_next_level - 1)
                             list_of_levels[level][i][2].append(list_of_levels[next_level][rand_node][0])
 
@@ -113,7 +112,7 @@ class Map(object):
                         rand_node = random.randint(0, len_level - 1)
                         list_of_levels[level][rand_node][2].append(list_of_levels[next_level][i][0])
                     for i in range(len(list_of_levels[level])):
-                        if list_of_levels[level][i][2] == []:
+                        if not list_of_levels[level][i][2]:
                             rand_node = random.randint(0, len_next_level - 1)
                             list_of_levels[level][i][2].append(list_of_levels[next_level][rand_node][0])
             elif len_next_level == len_level:
@@ -145,6 +144,12 @@ class Map(object):
             for level_index in range(num_levels):
                 level_length = len(self.map[level_index])
                 for i in range(level_length):
+                    line_width = 1
+                    line_color = grey
+                    if self.map[level_index][i][0] == self.node+1:
+                        line_width = 3
+                        line_color = black
+                        print(self.map[level_index][i][0], self.node)
                     from_node_x = self.screen_width / len(self.map[level_index])
                     number_of_to_nodes = len(self.map[level_index][i][2])
                     for j in range(number_of_to_nodes):
@@ -152,14 +157,14 @@ class Map(object):
                         for to_node_index in range(len(self.map[level_index + 1])):
                             if self.map[level_index + 1][to_node_index][0] == self.map[level_index][i][2][j]:
                                 q = to_node_index
-                                pygame.draw.lines(self.screen.display, bronze, True,
+                                pygame.draw.lines(self.screen.display, line_color, True,
                                                   [(int(from_node_x * (i + 1) - (from_node_x / 2)),
                                                     int(self.screen_height - node_height * (
                                                             level_index + 1)) - 1),
                                                    (int(to_node_x * (q + 1) - (to_node_x / 2)),
                                                     int(self.screen_height - node_height * (
                                                             level_index + 2) +
-                                                        node_height - circle_radius) - 5)], 2)
+                                                        node_height - circle_radius) - 5)], line_width)
 
             for level_index in range(num_levels):
                 node_x = int(round(self.screen_width / len(self.map[level_index])))
@@ -192,7 +197,7 @@ class Map(object):
                         circle_colour = blue
                     else:
                         circle_width = 1
-                        circle_colour = bronze
+                        circle_colour = grey
 
                     circle = pygame.draw.circle(self.screen.display, circle_colour, (circle_x, circle_y),
                                                 circle_radius, )
@@ -254,23 +259,16 @@ class Map(object):
         return selected_node_key
 
     def backgroundLayer(self):
+        black = (0, 0, 0)
+        myfont = pygame.font.SysFont('media/Chapaza.ttf', 37)
         self.screen.display.blit(self.screen.bgImage, (0, 0))
         self.screen.displayButton(self.quitButton)
-        pygame.display.update()
-
-    def mouselisten(self, button):
-        mouse = pygame.mouse.get_pos()
-        click = pygame.mouse.get_pressed()
-
-        if (button.xLocation + button.width) > mouse[0] > button.xLocation and (
-                button.yLocation + button.height) > mouse[1] > button.yLocation:
-            button.hover(self.screen.display, True)
+        display_level = myfont.render( "Level: %i" % self.level, True, black)
+        self.screen.display.blit(display_level, (10, 10))
         pygame.display.update()
 
     def mainLoop(self):
         self.backgroundLayer()
-        count = 0
-        cr = 4
         current_room = "b"
         while current_room != "B":
             current_room = self.get_user_selection()
