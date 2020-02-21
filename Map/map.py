@@ -1,5 +1,3 @@
-import time
-import pygame
 import random
 from Stages.baseStageClass import *
 
@@ -20,10 +18,13 @@ class Map(object):
         self.map = self.generate_map_list()
         self.screen_width = self.screen.screen_height
         self.screen_height = self.screen.screen_width
-        self.quitButton = StageButton("Quit", "", self.screen_width-210, 10)
+        self.quitButton = StageButton("Quit", "", self.screen_width - 210, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
-                                                                                                 self.screen_width))
-        #self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/treasure.png').convert(), (35, 35))7
+                                                                                                   self.screen_width))
+        self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/Treasure.png').convert(), (35, 35))
+        self.mysteryImage = pygame.transform.scale(pygame.image.load('Map/media/Mystery.png').convert(), (35, 35))
+        self.bossBattleImage = pygame.transform.scale(pygame.image.load('Map/media/BossSkull.png').convert(), (35, 35))
+        self.battleImage = pygame.transform.scale(pygame.image.load('Map/media/NormalBattle.png').convert(), (35, 35))
 
     def generate_map_list(self):
         random.seed(str(self.level) + str(self.seed))
@@ -134,15 +135,31 @@ class Map(object):
         grey = (86, 80, 81)
         node_dict = {}
         node_index = 0
-        circle_radius = 20
+        circle_radius = 30
         pygame.font.init()
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 17)
         while True:
-            self.screen.display.blit(self.screen.bgImage, (0, 0))
-            self.screen.displayButton(self.quitButton)
-
             num_levels = len(self.map)
             node_height = int(round(self.screen_height / num_levels))
+
+            for level_index in range(num_levels):
+                level_length = len(self.map[level_index])
+                for i in range(level_length):
+                    from_node_x = self.screen_width / len(self.map[level_index])
+                    number_of_to_nodes = len(self.map[level_index][i][2])
+                    for j in range(number_of_to_nodes):
+                        to_node_x = self.screen_width / len(self.map[level_index + 1])
+                        for to_node_index in range(len(self.map[level_index + 1])):
+                            if self.map[level_index + 1][to_node_index][0] == self.map[level_index][i][2][j]:
+                                q = to_node_index
+                                pygame.draw.lines(self.screen.display, bronze, True,
+                                                  [(int(from_node_x * (i + 1) - (from_node_x / 2)),
+                                                    int(self.screen_height - node_height * (
+                                                            level_index + 1)) - 1),
+                                                   (int(to_node_x * (q + 1) - (to_node_x / 2)),
+                                                    int(self.screen_height - node_height * (
+                                                            level_index + 2) +
+                                                        node_height - circle_radius) - 5)], 2)
 
             for level_index in range(num_levels):
                 node_x = int(round(self.screen_width / len(self.map[level_index])))
@@ -167,8 +184,7 @@ class Map(object):
                     elif node_index < self.node or node_index in current_level_nodes:
                         circle_colour = black
                         circle_width = circle_radius
-                        pygame.draw.circle(self.screen.display, circle_colour, (circle_x, circle_y), circle_radius,)
-                        circle_colour = bronze
+                        pygame.draw.circle(self.screen.display, circle_colour, (circle_x, circle_y), circle_radius, )
                         circle_width = 1
                     elif (node_index + 1) in next_nodes:
                         next_nodes_dict[node_index] = node_key
@@ -178,39 +194,39 @@ class Map(object):
                         circle_width = 1
                         circle_colour = bronze
 
-                    circle = pygame.draw.circle(self.screen.display, circle_colour, (circle_x, circle_y), circle_radius,)
+                    circle = pygame.draw.circle(self.screen.display, circle_colour, (circle_x, circle_y),
+                                                circle_radius, )
                     node_dict[node_index] = circle
                     node_index += 1
-                    text = myfont.render("%s" % node_key, True, bronze)
+                    text = myfont.render("%s" % node_key, True, black)
                     if node_key == "YOU":
                         self.screen.display.blit(text, (int(node_x * (i + 1) - (node_x / 2)) - 12,
-                                                int(self.screen_height - node_height * (level_index + 1) + 20) - 6))
+                                                        int(self.screen_height - node_height * (
+                                                                level_index + 1) + 20) - 6))
+                    elif node_key == "T":
+                        self.screen.display.blit(self.treasureImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                                                                      int(self.screen_height - node_height * (
+                                                                              level_index + 1) + 20) - 18))
+                    elif node_key == "?":
+                        self.screen.display.blit(self.mysteryImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                                                                     int(self.screen_height - node_height * (
+                                                                             level_index + 1) + 20) - 18))
+                    elif node_key == "b":
+                        self.screen.display.blit(self.battleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                                                                    int(self.screen_height - node_height * (
+                                                                            level_index + 1) + 20) - 18))
+                    elif node_key == "B":
+                        self.screen.display.blit(self.bossBattleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                                                                        int(self.screen_height - node_height * (
+                                                                                level_index + 1) + 20) - 18))
                     else:
                         self.screen.display.blit(text, (int(node_x * (i + 1) - (node_x / 2)) - 4,
-                                            int(self.screen_height - node_height * (level_index + 1) + 20) - 6))
-                        #self.screen.blit(self.treasureImage, (int(node_x * (i + 1) - (node_x / 2)) - 14, int(self.screen_height - node_height * (level_index + 1) + 20) - 16))
-            for level_index in range(num_levels):
-                level_length = len(self.map[level_index])
-                for i in range(level_length):
-                    from_node_x = self.screen_width / len(self.map[level_index])
-                    number_of_to_nodes = len(self.map[level_index][i][2])
-                    for j in range(number_of_to_nodes):
-                        to_node_x = self.screen_width / len(self.map[level_index + 1])
-                        for to_node_index in range(len(self.map[level_index + 1])):
-                            if self.map[level_index + 1][to_node_index][0] == self.map[level_index][i][2][j]:
-                                q = to_node_index
-                                pygame.draw.lines(self.screen.display, bronze, True,
-                                                  [(int(from_node_x * (i + 1) - (from_node_x / 2)),
-                                                    int(self.screen_height - node_height * (
-                                                            level_index + 1)) - 1),
-                                                   (int(to_node_x * (q + 1) - (to_node_x / 2)),
-                                                    int(self.screen_height - node_height * (
-                                                            level_index + 2) +
-                                                        node_height - circle_radius) - 5)], 2)
+                                                        int(self.screen_height - node_height * (
+                                                                level_index + 1) + 20) - 6))
+
             return node_dict, next_nodes, next_nodes_dict
 
     def get_next_node(self):
-        white = (255, 255, 255)
         node_dict, next_nodes, next_nodes_dict = self.draw_map()
         while True:
             pygame.display.update()
@@ -229,7 +245,6 @@ class Map(object):
                         if click == 1:
                             self.node = next_nodes[item] - 1
                             node_key = next_nodes_dict[self.node]
-                            #self.screen.display.fill(white)
                             pygame.display.update()
                             return node_key
 
@@ -239,8 +254,7 @@ class Map(object):
         return selected_node_key
 
     def backgroundLayer(self):
-        #self.screen.display.fill((255, 255, 255))
-        self.draw_map()
+        self.screen.display.blit(self.screen.bgImage, (0, 0))
         self.screen.displayButton(self.quitButton)
         pygame.display.update()
 
@@ -257,8 +271,8 @@ class Map(object):
         self.backgroundLayer()
         count = 0
         cr = 4
-        self.current_room = "b"
-        while self.current_room != "B":
-            self.current_room = self.get_user_selection()
-            return (self.current_room, 0)
-        return (self.current_room, 1)
+        current_room = "b"
+        while current_room != "B":
+            current_room = self.get_user_selection()
+            return current_room, 0
+        return current_room, 1
