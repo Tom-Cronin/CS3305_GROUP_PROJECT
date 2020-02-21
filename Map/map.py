@@ -1,5 +1,3 @@
-import time
-import pygame
 import random
 from Stages.baseStageClass import *
 
@@ -27,7 +25,6 @@ class Map(object):
         self.mysteryImage = pygame.transform.scale(pygame.image.load('Map/media/Mystery.png').convert(), (35, 35))
         self.bossBattleImage = pygame.transform.scale(pygame.image.load('Map/media/BossSkull.png').convert(), (35, 35))
         self.battleImage = pygame.transform.scale(pygame.image.load('Map/media/NormalBattle.png').convert(), (35, 35))
-
 
     def generate_map_list(self):
         random.seed(str(self.level) + str(self.seed))
@@ -208,29 +205,28 @@ class Map(object):
                                                                 level_index + 1) + 20) - 6))
                     elif node_key == "T":
                         self.screen.display.blit(self.treasureImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
-                                                        int(self.screen_height - node_height * (
-                                                                level_index + 1) + 20) - 18))
+                                                                      int(self.screen_height - node_height * (
+                                                                              level_index + 1) + 20) - 18))
                     elif node_key == "?":
                         self.screen.display.blit(self.mysteryImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
-                                                        int(self.screen_height - node_height * (
-                                                                level_index + 1) + 20) - 18))
+                                                                     int(self.screen_height - node_height * (
+                                                                             level_index + 1) + 20) - 18))
                     elif node_key == "b":
                         self.screen.display.blit(self.battleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
-                                                        int(self.screen_height - node_height * (
-                                                                level_index + 1) + 20) - 18))
+                                                                    int(self.screen_height - node_height * (
+                                                                            level_index + 1) + 20) - 18))
                     elif node_key == "B":
                         self.screen.display.blit(self.bossBattleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
-                                                        int(self.screen_height - node_height * (
-                                                                level_index + 1) + 20) - 18))
+                                                                        int(self.screen_height - node_height * (
+                                                                                level_index + 1) + 20) - 18))
                     else:
                         self.screen.display.blit(text, (int(node_x * (i + 1) - (node_x / 2)) - 4,
                                                         int(self.screen_height - node_height * (
-                                                                    level_index + 1) + 20) - 6))
+                                                                level_index + 1) + 20) - 6))
 
             return node_dict, next_nodes, next_nodes_dict
 
     def get_next_node(self):
-        white = (255, 255, 255)
         node_dict, next_nodes, next_nodes_dict = self.draw_map()
         while True:
             pygame.display.update()
@@ -249,7 +245,6 @@ class Map(object):
                         if click == 1:
                             self.node = next_nodes[item] - 1
                             node_key = next_nodes_dict[self.node]
-                            # self.screen.display.fill(white)
                             pygame.display.update()
                             return node_key
 
@@ -261,7 +256,6 @@ class Map(object):
     def backgroundLayer(self):
         self.screen.display.blit(self.screen.bgImage, (0, 0))
         self.screen.displayButton(self.quitButton)
-        self.draw_map()
         pygame.display.update()
 
     def mouselisten(self, button):
