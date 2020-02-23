@@ -14,8 +14,6 @@ class SnakeGame(BaseStage):
         self.wallColor = (0, 0, 0)  # black
         self.textColor = (0, 0, 0)
         self.font = 'Stages/media/Chapaza.ttf'
-        #self.maze = None
-        #self.snake = None
         self.maze = Maze(self.screen_height, self.screen_width, self.display)
         self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
         self.finished = False

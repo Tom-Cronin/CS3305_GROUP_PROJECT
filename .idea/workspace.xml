@@ -4,7 +4,6 @@
     <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Stages/Snake1/SnakeGame1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake1/SnakeGame1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Stages/Snake2/snakeGame2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake2/snakeGame2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,6 +194,7 @@
       <method v="2" />
     </configuration>
     <list>
+      <item itemvalue="Python.RunAllTests" />
       <item itemvalue="Python.eldritchBlast" />
       <item itemvalue="Python.RunAllTests (1)" />
       <item itemvalue="Python.snakeGame" />
@@ -243,6 +243,7 @@
       <workItem from="1579785526932" duration="3085000" />
       <workItem from="1581779692523" duration="5348000" />
       <workItem from="1582138676919" duration="1590000" />
+      <workItem from="1582456848170" duration="7145000" />
     </task>
     <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
       <created>1579074871475</created>
@@ -347,39 +348,39 @@
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1582201394732">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1582458500354">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582201394732" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582458500354" />
     <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
       <screen x="0" y="23" width="1280" height="750" />
     </state>
     <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1579093793728" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1582203644611">
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1582463774806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582203644611" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582463774806" />
     <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596164" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1582203644611">
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1582463774806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
-    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582203644611" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582463774806" />
     <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1582203644611">
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1582463774806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
-    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582203644611" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582463774806" />
     <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1582203644611">
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1582463774806">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
-    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582203644611" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582463774806" />
     <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
     <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1582148987771">
       <screen x="0" y="0" width="1366" height="728" />
@@ -406,11 +407,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582148569921" />
-    <state x="338" y="219" key="com.intellij.ide.util.TipDialog" timestamp="1582138678016">
+    <state x="338" y="219" key="com.intellij.ide.util.TipDialog" timestamp="1582456853802">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
-    <state x="338" y="219" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582138678016" />
+    <state x="338" y="219" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582456853802" />
     <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
     <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
       <screen x="0" y="0" width="1280" height="800" />
@@ -433,6 +434,6 @@
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1579006600778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UnitTests/CharacterTests" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests__1_.coverage" NAME="RunAllTests (1) Coverage Results" MODIFIED="1579785561617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
     <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__2_.coverage" NAME="Unittests in test_CharacterBaseClass.py (2) Coverage Results" MODIFIED="1579075500621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTest" />
-    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snakeGame2.coverage" NAME="snakeGame2 Coverage Results" MODIFIED="1582203644595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snakeGame2.coverage" NAME="snakeGame2 Coverage Results" MODIFIED="1582463774775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
