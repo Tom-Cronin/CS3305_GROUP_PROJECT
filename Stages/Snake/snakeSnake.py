@@ -79,6 +79,7 @@ class SnakeGuy:
             squares[i - 1].direction = squares[i].direction
             i += 1
             print(squares[i-1].num, ":", squares[i-1].direction)
+        squares[len(squares)-2].direction = direction
 
         self.erase(oldRect)
 
@@ -96,8 +97,6 @@ class SnakeGuy:
         elif direction == "D":
             self.head.y += 10
             self.head.yUpdate(self.head.y)
-
-        self.square2.direction = self.head.direction
 
         self.head = self.square1  # Updates the head of the snake
         self.tail = self.square3

@@ -66,7 +66,7 @@ class SnakeGame2(SnakeGame):
         gameHint = "Eat 10 squares\nUse the arrow keys to move\nIf you eat yourself, you will die\n" \
                    "If you hit a wall you will die"
         super().__init__(screen_height, screen_width, gameHint)
-        self.maze = Maze(screen_height, screen_width, self.display, 2)
+        self.maze = Maze(screen_height, screen_width, self.display, 2)  # ToDo: reduce maze size to increase difficulty?
         self.snake = SnakeGuy2(self.display, self.snakeColor, self.maze.mazeRect)
         self.food = SnakeFood(self.maze.width, self.maze.height)
         self.food_color = (0, 0, 0)  # black
@@ -114,7 +114,11 @@ class SnakeGame2(SnakeGame):
 
     def checkLocation(self):
         # Checks if snake has crashed into wall or reached its destination:
-
+        # if head crashes into another square: die
+        x = len(self.snake.squares)-1
+        for square in self.snake.squares[:x]:
+            if self.snake.head.x == square.x and self.snake.head.y == square.y:
+                self.gameOver()
         if self.food.x-9 <= self.snake.head.x <= (self.food.x+9):
             if self.food.y-9 <= self.snake.head.y <= (self.food.y+9):
                 self.eraseRect(self.score.scoreBox)
