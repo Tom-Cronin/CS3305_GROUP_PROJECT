@@ -15,7 +15,7 @@ class SnakeGame(BaseStage):
         self.textColor = (0, 0, 0)
         self.font = 'Stages/media/Chapaza.ttf'
         self.maze = Maze(self.screen_height, self.screen_width, self.display)
-        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
+        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze)
         self.finished = False
         self.hint = StageButton("HINT", hint, self.goBack.xLocation, self.goBack.yLocation)
         self.activeButtons = [self.quitGame, self.hint]

@@ -8,9 +8,8 @@ from pygame.locals import *
 import random
 
 class SnakeFood():
-    def __init__(self, maze_width, maze_height):
-        self.maze_width = maze_width
-        self.maze_height = maze_height
+    def __init__(self, maze):
+        self.maze = maze
         self.x = None
         self.y = None
         self.size = 10
@@ -18,8 +17,8 @@ class SnakeFood():
         self.setXY()
 
     def setXY(self):
-        self.y = random.randint(110, self.maze_height+80)
-        self.x = random.randint(110, self.maze_width +80)
+        self.y = random.randint(self.maze.x+10, self.maze.height+80)
+        self.x = random.randint(self.maze.y+10, self.maze.width +80)
         self.Rect = Rect((self.x, self.y, self.size, self.size))
 
 class ScoreBox():
@@ -29,7 +28,7 @@ class ScoreBox():
         self.y = maze.x+20
         self.size = 20
         self.scoreBox = Rect((self.x, self.y, self.size, self.size))
-        print(self.scoreBox)  # ToDo: prevent food from appearing in scorebox
+        #print(self.scoreBox)  # ToDo: prevent food from appearing in scorebox
         self.font = 'Stages/media/Chapaza.ttf'
         self.color = (255, 255, 255)  # white
         self.display = maze.display
@@ -60,15 +59,27 @@ class SnakeGuy2(SnakeGuy):
         self.squares.append(tail)
 
 
+class Maze2(Maze):
+    def __init__(self, screen_height, screen_width, display):
+        super().__init__(screen_height, screen_width, display, 2)
+        self.y = 230
+        self.height = screen_height - 580
+        self.x = 230
+        self.width = screen_width - 260
+        self.mazeRect = Rect(self.x, self.y, self.width, self.height)
+        self.walls = []
+        self.generateMaze()
+
 class SnakeGame2(SnakeGame):
 
     def __init__(self, screen_height, screen_width):
         gameHint = "Eat 10 squares\nUse the arrow keys to move\nIf you eat yourself, you will die\n" \
                    "If you hit a wall you will die"
         super().__init__(screen_height, screen_width, gameHint)
-        self.maze = Maze(screen_height, screen_width, self.display, 2)  # ToDo: reduce maze size to increase difficulty?
-        self.snake = SnakeGuy2(self.display, self.snakeColor, self.maze.mazeRect)
-        self.food = SnakeFood(self.maze.width, self.maze.height)
+        self.maze = Maze2(screen_height, screen_width, self.display)
+        self.snake = SnakeGuy2(self.display, self.snakeColor, self.maze)
+        self.food = SnakeFood(self.maze)
+
         self.food_color = (0, 0, 0)  # black
         self.score = ScoreBox(self.maze)
         self.snake.move("R")
@@ -118,6 +129,7 @@ class SnakeGame2(SnakeGame):
         x = len(self.snake.squares)-1
         for square in self.snake.squares[:x]:
             if self.snake.head.x == square.x and self.snake.head.y == square.y:
+                print("head")
                 self.gameOver()
         if self.food.x-9 <= self.snake.head.x <= (self.food.x+9):
             if self.food.y-9 <= self.snake.head.y <= (self.food.y+9):
@@ -130,12 +142,12 @@ class SnakeGame2(SnakeGame):
                     self.dropFood()
         else:
             for wall in self.maze.walls:
-                if wall.x <= self.snake.head.x <= (wall.x + wall.width):
-                    if wall.y <= self.snake.head.y <= (wall.y + wall.height):
+                if wall.x <= self.snake.head.x <= (wall.x + wall.width-1):
+                    if wall.y <= self.snake.head.y <= (wall.y + wall.height-1):
                         self.gameOver()
 
     def mainLoop(self):  # listens for events
-
+        # ToDo: keep snake moving continuously to increase difficulty?
         self.backgroundLayer()
         self.mazeLayer()
         self.foodLayer()

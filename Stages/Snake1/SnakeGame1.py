@@ -11,7 +11,7 @@ class SnakeGame1(SnakeGame):
                    "If you hit a wall, you will die"
         super().__init__(screen_height, screen_width, gameHint)
         self.maze = Maze(screen_height, screen_width, self.display)
-        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
+        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze)
         self.snake.move("R")
         self.snake.move("R")
         self.snake.move("R")  # This technically solves the moving/snake image break at the start of the game

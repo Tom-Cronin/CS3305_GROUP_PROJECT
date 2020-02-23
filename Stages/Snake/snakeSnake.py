@@ -2,13 +2,14 @@ import pygame
 from pygame.locals import *
 
 class SnakeGuy:
-    def __init__(self, display, color, mazeRect):
-        self.mazeRect = mazeRect
+    def __init__(self, display, color, maze):
+        self.mazeRect = maze.mazeRect
+        self.mazeRect = maze.mazeRect
         self.display = display
         self.color = color
         self.squareSize = 10
-        self.positionX = 120
-        self.positionY = 120
+        self.positionX = maze.x + 10
+        self.positionY = maze.y + 10
         self.square1 = SnakeSquares(self.positionX, self.positionY, 1)
         self.square2 = SnakeSquares(self.positionX+10, self.positionY, 2)
         self.square3 = SnakeSquares(self.positionX+20, self.positionY, 3)
@@ -78,7 +79,7 @@ class SnakeGuy:
             squares[i - 1].yUpdate(squares[i].y)
             squares[i - 1].direction = squares[i].direction
             i += 1
-            print(squares[i-1].num, ":", squares[i-1].direction)
+
         squares[len(squares)-2].direction = direction
 
         self.erase(oldRect)
