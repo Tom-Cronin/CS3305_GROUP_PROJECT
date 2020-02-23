@@ -18,11 +18,12 @@ class SnakeGuy:
         self.direction = "R"   # for image rotation
         self.prevDirection = "R"
 
-    def draw(self, turn180 = False):
-        x = 255
+    def draw(self, turn180=False):
+        #ToDO: Use self.direction and a loop to determine the rotation of each square, print head, a loop for body, tail
         head = pygame.transform.scale((pygame.image.load("Stages/media/snakeHead.png").convert_alpha()), (10, 10))
         body = pygame.transform.scale((pygame.image.load("Stages/media/SnakeBody.png").convert_alpha()), (10, 10))
         tail = pygame.transform.scale((pygame.image.load("Stages/media/SnakeTail.png").convert_alpha()), (10, 10))
+
         x = 0
         if self.head.direction == "R":
             x = 270
@@ -32,7 +33,6 @@ class SnakeGuy:
             x = 180
 
         head = pygame.transform.rotate(head, x)
-        body = pygame.transform.rotate(body, x)
 
         x = 0
         if self.prevDirection == "R":
@@ -44,8 +44,11 @@ class SnakeGuy:
 
         tail = pygame.transform.rotate(tail, x)
 
-        self.erase(self.square2.Rect)
-        self.display.blit(body, (self.square2.x, self.square2.y))
+        for i in range(1, len(self.squares)-1):
+            self.erase(self.squares[i].Rect)
+            body = pygame.transform.rotate(body, x)
+            self.display.blit(body, (self.squares[i].x, self.squares[i].y))
+
         self.erase(self.square1.Rect)
         self.erase(self.square3.Rect)
         if self.head.num == self.square3.num:
@@ -73,13 +76,16 @@ class SnakeGuy:
         if self.check180(direction) is True:
             # If making a 180 degree turn, the tail will NOT be put on top of the head
             turn180 = True
-
+        squares = self.squares
         if self.head.num == 3:
             oldRect = self.square1.Rect  # square to be erased
-            squares = [self.square1, self.square2, self.head]  # sets order of movement for squares
+            squares[0] = self.square1
+            squares[len(squares)-1] = self.square3 # sets order of movement for squares
+
         else:
             oldRect = self.square3.Rect
-            squares = [self.square3, self.square2, self.head]
+            squares[0] = self.square3
+            squares[len(squares)-1] = self.square1
 
         # each square (other than the head square) follows the square in front of it
 

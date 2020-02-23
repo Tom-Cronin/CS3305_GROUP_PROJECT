@@ -1,6 +1,6 @@
 from Stages.baseStageClass import BaseStage, StageButton
 from Stages.Snake.snakeMaze import Maze
-from Stages.Snake.snakeSnake import SnakeGuy
+from Stages.Snake.snakeSnake import SnakeGuy, SnakeSquares
 from Stages.Snake.snakeGame import SnakeGame
 import pygame
 import time
@@ -29,7 +29,7 @@ class ScoreBox():
         self.y = maze.x+20
         self.size = 20
         self.scoreBox = Rect((self.x, self.y, self.size, self.size))
-        print(self.scoreBox)
+        print(self.scoreBox)  # ToDo: prevent food from appearing in scorebox
         self.font = 'Stages/media/Chapaza.ttf'
         self.color = (255, 255, 255)  # white
         self.display = maze.display
@@ -49,7 +49,14 @@ class ScoreBox():
 class SnakeGuy2(SnakeGuy):
     def __init__(self, display, color, mazeRect):
         super().__init__(display, color, mazeRect)
-        self.bodyLength = 1  # number of middle body squares, excludes head and tail
+        self.bodyLength = 3  # number of body squares
+
+    def eat(self):
+        self.bodyLength += 1
+        tail = self.squares[len(self.squares)-1]
+        self.squares[len(self.squares) - 1] = SnakeSquares(tail.x, tail.y, self.bodyLength)
+        self.squares.append(tail)
+
 
 class SnakeGame2(SnakeGame):
 
@@ -58,7 +65,7 @@ class SnakeGame2(SnakeGame):
                    "If you hit a wall you will die"
         super().__init__(screen_height, screen_width, gameHint)
         self.maze = Maze(screen_height, screen_width, self.display, 2)
-        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
+        self.snake = SnakeGuy2(self.display, self.snakeColor, self.maze.mazeRect)
         self.food = SnakeFood(self.maze.width, self.maze.height)
         self.food_color = (0, 0, 0)  # black
         self.score = ScoreBox(self.maze)
@@ -110,6 +117,7 @@ class SnakeGame2(SnakeGame):
             if self.food.y-9 <= self.snake.head.y <= (self.food.y+9):
                 self.eraseRect(self.score.scoreBox)
                 self.score.updateScore()
+                self.snake.eat()
                 if self.score.score == 10:
                     self.gameOver(True)
                 else:

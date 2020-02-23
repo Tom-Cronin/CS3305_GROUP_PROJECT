@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="Refactored original SnakeGuy to allow for increase in snake length, SnakeGame now increases the size of the snake with each item of food eaten">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake/snakeGame.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/Snake/snakeSnake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake/snakeSnake.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Stages/Snake2/snakeGame2.py" beforeDir="false" afterPath="$PROJECT_DIR$/Stages/Snake2/snakeGame2.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1WNrxYIOErdcbtfK8SE83WDtRm7" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Git.Branch.Popup.ShowAllRemotes" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Sinead\PycharmProjects\CS3306_GROUP_PROJECT\Stages" />
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\TestSuite" />
+      <recent name="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT" />
+      <recent name="$PROJECT_DIR$/assets/images/characters/Enemies/PNG_Images" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.snakeGame2">
+    <configuration name="RunAllTests (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TestSuite" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TestSuite/RunAllTests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="RunAllTests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\tom10\PycharmProjects\CS3306_GROUP_PROJECT\TestSuite\RunAllTests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="SnakeGame1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/Snake1/SnakeGame1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="eldritchBlast" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock/eldritchBlast.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="snakeGame" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/Snake/snakeGame.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="snakeGame2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="CS3306_GROUP_PROJECT" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Stages/Snake2/snakeGame2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.RunAllTests (1)" />
+      <item itemvalue="Python.RunAllTests" />
+      <item itemvalue="Python.SnakeGame1" />
+      <item itemvalue="Python.eldritchBlast" />
+      <item itemvalue="Python.snakeGame2" />
+      <item itemvalue="Python.snakeGame" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.snakeGame2" />
+        <item itemvalue="Python.SnakeGame1" />
+        <item itemvalue="Python.snakeGame" />
+        <item itemvalue="Python.eldritchBlast" />
+        <item itemvalue="Python.RunAllTests (1)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8031f68b-7430-4ede-ae59-637a94c8226d" name="Default Changelist" comment="" />
+      <created>1579001140461</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1579001140461</updated>
+      <workItem from="1579001148813" duration="10096000" />
+      <workItem from="1579080678607" duration="250000" />
+      <workItem from="1579085203377" duration="288000" />
+      <workItem from="1579090103993" duration="1882000" />
+      <workItem from="1579093073853" duration="150000" />
+      <workItem from="1579093724297" duration="289000" />
+      <workItem from="1579730342355" duration="1507000" />
+      <workItem from="1579785526932" duration="3085000" />
+      <workItem from="1581779692523" duration="5348000" />
+      <workItem from="1582138676919" duration="1590000" />
+      <workItem from="1582456848170" duration="7406000" />
+      <workItem from="1582466606010" duration="2977000" />
+    </task>
+    <task id="LOCAL-00001" summary="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation">
+      <created>1579074871475</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1579074871475</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Made test be able to run from main directory, also updated the README.md">
+      <created>1579080084444</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1579080084444</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Added two enemy png files [ rough sketch only ]">
+      <created>1579085397116</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1579085397116</updated>
+    </task>
+    <task id="LOCAL-00004" summary="started one monster class, need some implemntation of attacks">
+      <created>1579092965497</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1579092965497</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Resolved issue #39: Tail overwriting head during a 180 degree turn">
+      <created>1581782542221</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581782542221</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added snake images to git">
+      <created>1582140828446</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582140828446</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Can no longer move snake while a message is being displayed">
+      <created>1582141337944</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582141337944</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Made a quick fix for the bug where the snake breaks during its first few moves and never again">
+      <created>1582142611385</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582142611385</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Refactored code to allow reuse of SnakeGame logic">
+      <created>1582199732630</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582199732630</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Created base for second snake game">
+      <created>1582201397975</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582201397975</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Snake game 2: Snake can eat food, scores increments with each food item eaten, game ends when score = 10">
+      <created>1582466244375</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582466244375</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="added more tests (all the getters and setters should be added now), Also added a function to roll initiative however didnt gave any implementation" />
+    <MESSAGE value="Made test be able to run from main directory, also updated the README.md" />
+    <MESSAGE value="Added two enemy png files [ rough sketch only ]" />
+    <MESSAGE value="started one monster class, need some implemntation of attacks" />
+    <MESSAGE value="fixed conflicts" />
+    <MESSAGE value="Resolved issue #39: Tail overwriting head during a 180 degree turn" />
+    <MESSAGE value="Added snake images to git" />
+    <MESSAGE value="Can no longer move snake while a message is being displayed" />
+    <MESSAGE value="Made a quick fix for the bug where the snake breaks during its first few moves and never again" />
+    <MESSAGE value="Refactored code to allow reuse of SnakeGame logic" />
+    <MESSAGE value="Created base for second snake game" />
+    <MESSAGE value="Snake game 2: Snake can eat food, scores increments with each food item eaten, game ends when score = 10" />
+    <MESSAGE value="Refactored original SnakeGuy to allow for increase in snake length, SnakeGame now increases the size of the snake with each item of food eaten" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored original SnakeGuy to allow for increase in snake length, SnakeGame now increases the size of the snake with each item of food eaten" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="335" y="14" key="#RunAllTests_(1)" timestamp="1579785541158">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="335" y="14" key="#RunAllTests_(1)/0.0.1280.800@0.0.1280.800" timestamp="1579785541158" />
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1582202672062">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="137" y="20" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1582202672062" />
+    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579002741848">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="354" y="210" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1280.800@0.0.1280.800" timestamp="1579002741848" />
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1582479656587">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="2" key="CommitChangelistDialog2/0.0.1280.800@0.0.1280.800" timestamp="1579080255426" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1582479656587" />
+    <state x="0" y="23" key="CommitChangelistDialog2/0.23.1280.750@0.23.1280.750" timestamp="1579093811464" />
+    <state x="12" y="87" width="1268" height="622" key="DiffContextDialog" timestamp="1579093793728">
+      <screen x="0" y="23" width="1280" height="750" />
+    </state>
+    <state x="12" y="87" width="1268" height="622" key="DiffContextDialog/0.23.1280.750@0.23.1280.750" timestamp="1579093793728" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom" timestamp="1582479162455">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1238" height="402" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
+    <state width="1323" height="178" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582479162455" />
+    <state width="1340" height="262" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596164" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center" timestamp="1582479162455">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1238" height="402" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1579788638504" />
+    <state width="1323" height="178" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1582479162455" />
+    <state width="1340" height="262" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left" timestamp="1582479162455">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1238" height="402" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1579788638503" />
+    <state width="1323" height="178" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1582479162455" />
+    <state width="1340" height="262" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right" timestamp="1582479162455">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1238" height="402" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1579788638505" />
+    <state width="1323" height="178" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1582479162455" />
+    <state width="1340" height="262" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1579732596163" />
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1582148987771">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1582148987771" />
+    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1582148987771">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1582148987771" />
+    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1582148987771">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1582148987771" />
+    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1582148987771">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1582148987771" />
+    <state x="395" y="81" key="MultipleFileMergeDialog" timestamp="1582479678796">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="395" y="81" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1582479678796" />
+    <state x="283" y="78" key="SettingsEditor" timestamp="1579785560217">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="283" y="78" key="SettingsEditor/0.0.1280.800@0.0.1280.800" timestamp="1579785560217" />
+    <state x="483" y="192" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1579730353140" />
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2" timestamp="1582466629997">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="98" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1582466629997" />
+    <state x="338" y="219" key="com.intellij.ide.util.TipDialog" timestamp="1582456853802">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="317" y="241" key="com.intellij.ide.util.TipDialog/0.0.1280.800@0.0.1280.800" timestamp="1579085209422" />
+    <state x="338" y="219" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1582456853802" />
+    <state x="317" y="249" key="com.intellij.ide.util.TipDialog/0.23.1280.750@0.23.1280.750" timestamp="1579176563139" />
+    <state x="0" y="0" width="837" height="800" key="find.popup" timestamp="1579075897728">
+      <screen x="0" y="0" width="1280" height="800" />
+    </state>
+    <state x="0" y="0" width="837" height="800" key="find.popup/0.0.1280.800@0.0.1280.800" timestamp="1579075897728" />
+    <state x="452" y="78" key="git4idea.branch.GitSmartOperationDialog" timestamp="1582466318881">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="452" y="78" key="git4idea.branch.GitSmartOperationDialog/0.0.1366.728@0.0.1366.728" timestamp="1582466318881" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Character.coverage" NAME="Character Coverage Results" MODIFIED="1579002710429" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterBaseClass" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_Character_py.coverage" NAME="Unittests in test_Character.py Coverage Results" MODIFIED="1579003702673" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snakeGame.coverage" NAME="snakeGame Coverage Results" MODIFIED="1582149082631" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests.coverage" NAME="RunAllTests Coverage Results" MODIFIED="1579732038124" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_TestSuite.coverage" NAME="Unittests in TestSuite Coverage Results" MODIFIED="1579079539951" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__1_.coverage" NAME="Unittests in test_CharacterBaseClass.py (1) Coverage Results" MODIFIED="1579006823010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/BaseClass" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$eldritchBlast.coverage" NAME="eldritchBlast Coverage Results" MODIFIED="1579788629794" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Characters/attacks/playableCharacterAttacks/warlock" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$SnakeGame1.coverage" NAME="SnakeGame1 Coverage Results" MODIFIED="1582478933706" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py.coverage" NAME="Unittests in test_CharacterBaseClass.py Coverage Results" MODIFIED="1579006600778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/UnitTests/CharacterTests" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$RunAllTests__1_.coverage" NAME="RunAllTests (1) Coverage Results" MODIFIED="1579785561617" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$Unittests_in_test_CharacterBaseClass_py__2_.coverage" NAME="Unittests in test_CharacterBaseClass.py (2) Coverage Results" MODIFIED="1579075500621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/TestSuite/CharacterTest" />
+    <SUITE FILE_PATH="coverage/CS3306_GROUP_PROJECT$snakeGame2.coverage" NAME="snakeGame2 Coverage Results" MODIFIED="1582479162439" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+</project>
