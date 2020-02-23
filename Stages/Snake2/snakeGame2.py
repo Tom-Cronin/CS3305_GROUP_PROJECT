@@ -126,11 +126,6 @@ class SnakeGame2(SnakeGame):
     def checkLocation(self):
         # Checks if snake has crashed into wall or reached its destination:
         # if head crashes into another square: die
-        x = len(self.snake.squares)-1
-        for square in self.snake.squares[:x]:
-            if self.snake.head.x == square.x and self.snake.head.y == square.y:
-                print("head")
-                self.gameOver()
         if self.food.x-9 <= self.snake.head.x <= (self.food.x+9):
             if self.food.y-9 <= self.snake.head.y <= (self.food.y+9):
                 self.eraseRect(self.score.scoreBox)
@@ -141,13 +136,16 @@ class SnakeGame2(SnakeGame):
                 else:
                     self.dropFood()
         else:
+            x = len(self.snake.squares) - 1
+            for square in self.snake.squares[:x]:
+                if self.snake.head.x == square.x and self.snake.head.y == square.y:
+                    return self.gameOver()
             for wall in self.maze.walls:
                 if wall.x <= self.snake.head.x <= (wall.x + wall.width-1):
                     if wall.y <= self.snake.head.y <= (wall.y + wall.height-1):
-                        self.gameOver()
+                        return self.gameOver()
 
     def mainLoop(self):  # listens for events
-        # ToDo: keep snake moving continuously to increase difficulty?
         self.backgroundLayer()
         self.mazeLayer()
         self.foodLayer()
@@ -163,7 +161,9 @@ class SnakeGame2(SnakeGame):
             self.listenButton()
             if self.finished is False and self.disabled is False:
                 self.listenSnake()
-
+                self.snake.move(self.snake.direction)  # keeps snake moving
+                self.checkLocation()
+                time.sleep(0.2)  # Can reduce time to increase difficulty level
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     mainLoop = False
