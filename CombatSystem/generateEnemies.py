@@ -1,16 +1,10 @@
-from Characters.enemyClasses import Hag, Rat, ShadowJest, Shadowling
+from CombatSystem.MonsterDictionary import CR_MAX_VALUE as CR_Max,CR_MIN_VALUE as CR_Min, dictionaryOfMonsters as DM
 from random import randint
 
-# currently highest cr implemented monster is CR 3
-# lowest ranking is cr 1
-CR_MAX_VALUE = 3
-CR_MIN_VALUE = 1
 
-dictionaryOfMonsters = {
-    1: [Shadowling.Shadowling, Rat.Rat],
-    2: [ShadowJest.ShadowJest],
-    3: [Hag.Hag]
-}
+dictionaryOfMonsters = DM
+CR_MAX_VALUE = CR_Max
+CR_MIN_VALUE = CR_Min
 
 def createEnemyInstances(enemyCROrder):
     enemies = []
@@ -21,14 +15,15 @@ def createEnemyInstances(enemyCROrder):
         enemy.combatPos = count
         count += 1
         enemies.append(enemy)
-
     return enemies
+
 
 def minCRValue(crTotal, enemySpacesRemaining):
     minCRVal = CR_MIN_VALUE
     while enemySpacesRemaining * minCRVal < crTotal <= enemySpacesRemaining * CR_MAX_VALUE:
         minCRVal += 1
     return minCRVal
+
 
 # only works with CR's less than the max CR * 4
 def generateEnemies(totalChalenegeLevel):

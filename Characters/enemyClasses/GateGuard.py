@@ -16,4 +16,4 @@ class GateGuard(Character):
 
         self.setHealth(45)
 
-        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/hag.png'
+        self.imagePath = None
