@@ -55,6 +55,8 @@ class SnakeGuy2(SnakeGuy):
         self.bodyLength += 1
         tail = self.squares[len(self.squares)-1]
         self.squares[len(self.squares) - 1] = SnakeSquares(tail.x, tail.y, self.bodyLength)
+        self.squares[len(self.squares) - 1].direction = self.penultimateSquare.direction
+        self.penultimateSquare = self.squares[len(self.squares) - 1]
         self.squares.append(tail)
 
 

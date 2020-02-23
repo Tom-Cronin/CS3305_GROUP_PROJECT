@@ -16,49 +16,38 @@ class SnakeGuy:
         self.head = self.square3
         self.mazeColor = (34, 139, 34)
         self.direction = "R"   # for image rotation
-        self.prevDirection = "R"
+        self.penultimateSquare = self.square2
+        self.tail = self.square1
 
     def draw(self, turn180=False):
-        #ToDO: Use self.direction and a loop to determine the rotation of each square, print head, a loop for body, tail
         head = pygame.transform.scale((pygame.image.load("Stages/media/snakeHead.png").convert_alpha()), (10, 10))
-        body = pygame.transform.scale((pygame.image.load("Stages/media/SnakeBody.png").convert_alpha()), (10, 10))
+        bodyImage = pygame.transform.scale((pygame.image.load("Stages/media/SnakeBody.png").convert_alpha()), (10, 10))
         tail = pygame.transform.scale((pygame.image.load("Stages/media/SnakeTail.png").convert_alpha()), (10, 10))
 
-        x = 0
-        if self.head.direction == "R":
-            x = 270
-        elif self.head.direction == "L":
-            x = 90
-        elif self.head.direction == "D":
-            x = 180
+        for square in self.squares:
+            x = 0
+            if square.direction == "R":
+                x = 270
+            elif square.direction == "L":
+                x = 90
+            elif square.direction == "D":
+                x = 180
 
-        head = pygame.transform.rotate(head, x)
+            self.erase(square.Rect)
 
-        x = 0
-        if self.prevDirection == "R":
-            x = 270
-        elif self.prevDirection == "L":
-            x = 90
-        elif self.prevDirection == "D":
-            x = 180
+            if square.num == self.head.num:
+                head = pygame.transform.rotate(head, x)
+                self.display.blit(head, (square.x, square.y))
 
-        tail = pygame.transform.rotate(tail, x)
+            elif square.num == self.tail.num:
+                tail = pygame.transform.rotate(tail, x)
+                if turn180 is False:
+                    self.display.blit(tail, (square.x, square.y))
 
-        for i in range(1, len(self.squares)-1):
-            self.erase(self.squares[i].Rect)
-            body = pygame.transform.rotate(body, x)
-            self.display.blit(body, (self.squares[i].x, self.squares[i].y))
-
-        self.erase(self.square1.Rect)
-        self.erase(self.square3.Rect)
-        if self.head.num == self.square3.num:
-            self.display.blit(head, (self.square3.x, self.square3.y))
-            if turn180 is False:
-                self.display.blit(tail, (self.square1.x, self.square1.y))
-        else:
-            self.display.blit(head, (self.square1.x, self.square1.y))
-            if turn180 is False:
-                self.display.blit(tail, (self.square3.x, self.square3.y))
+            else:
+                body = bodyImage
+                body = pygame.transform.rotate(body, x)
+                self.display.blit(body, (square.x, square.y))
 
     def erase(self, squareRect):
             pygame.draw.rect(self.display, self.mazeColor, squareRect)
@@ -77,15 +66,9 @@ class SnakeGuy:
             # If making a 180 degree turn, the tail will NOT be put on top of the head
             turn180 = True
         squares = self.squares
-        if self.head.num == 3:
-            oldRect = self.square1.Rect  # square to be erased
-            squares[0] = self.square1
-            squares[len(squares)-1] = self.square3 # sets order of movement for squares
-
-        else:
-            oldRect = self.square3.Rect
-            squares[0] = self.square3
-            squares[len(squares)-1] = self.square1
+        oldRect = self.tail.Rect  # square to be erased
+        squares[0] = self.tail
+        squares[len(squares)-1] = self.head  # sets order of movement for squares
 
         # each square (other than the head square) follows the square in front of it
 
@@ -95,11 +78,11 @@ class SnakeGuy:
             squares[i - 1].yUpdate(squares[i].y)
             squares[i - 1].direction = squares[i].direction
             i += 1
+            print(squares[i-1].num, ":", squares[i-1].direction)
 
         self.erase(oldRect)
 
         # Moves the head square in the correct direction
-        self.prevDirection = self.direction
         self.head.direction = direction
         if direction == "R":
             self.head.x += 10
@@ -114,14 +97,15 @@ class SnakeGuy:
             self.head.y += 10
             self.head.yUpdate(self.head.y)
 
+        self.square2.direction = self.head.direction
+
         self.head = self.square1  # Updates the head of the snake
+        self.tail = self.square3
 
         self.direction = direction
         # Update positions of squares in maze
         self.draw(turn180)
         pygame.display.update(self.mazeRect)
-
-
 
 class SnakeSquares:
     def __init__(self, x, y, num):
