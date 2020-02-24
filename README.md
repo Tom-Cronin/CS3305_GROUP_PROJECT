@@ -1,5 +1,9 @@
 # CS3306_GROUP_PROJECT
 
+You can runn the game by running the pything file:
+    /main.py
+    This will run the game, starting at the main menu
+
 You can run all tests by running the python file:
     /TestSuite/RunAllTest.py
     -This will run all tests within the directory 'TestSuite'
