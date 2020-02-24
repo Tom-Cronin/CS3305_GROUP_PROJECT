@@ -21,10 +21,11 @@ class Map(object):
         self.quitButton = StageButton("Quit", "", self.screen_width - 205, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
                                                                                                    self.screen_width))
-        self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/Treasure.png').convert(), (35, 35))
-        self.mysteryImage = pygame.transform.scale(pygame.image.load('Map/media/Mystery.png').convert(), (35, 35))
-        self.bossBattleImage = pygame.transform.scale(pygame.image.load('Map/media/BossSkull.png').convert(), (35, 35))
-        self.battleImage = pygame.transform.scale(pygame.image.load('Map/media/NormalBattle.png').convert(), (35, 35))
+        self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/Treasure.png').convert_alpha(), (35, 35))
+        self.mysteryImage = pygame.transform.scale(pygame.image.load('Map/media/Mystery.png').convert_alpha(), (35, 35))
+        self.bossBattleImage = pygame.transform.scale(pygame.image.load('Map/media/BossSkull.png').convert_alpha(), (35, 35))
+        self.battleImage = pygame.transform.scale(pygame.image.load('Map/media/NormalBattle.png').convert_alpha(), (35, 35))
+        self.puzzleImage = pygame.transform.scale(pygame.image.load('Map/media/Puzzle.png').convert_alpha(), (35, 35))
 
     def generate_map_list(self):
         random.seed(str(self.level) + str(self.seed))
@@ -137,7 +138,7 @@ class Map(object):
         white = (255, 255, 255)
         node_dict = {}
         node_index = 0
-        circle_radius = 30
+        circle_radius = 24
         pygame.font.init()
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 17)
         while True:
@@ -230,9 +231,9 @@ class Map(object):
                                                                         int(self.screen_height - node_height * (
                                                                                 level_index + 1) + 20) - 18))
                     else:
-                        self.screen.display.blit(text, (int(node_x * (i + 1) - (node_x / 2)) - 4,
-                                                        int(self.screen_height - node_height * (
-                                                                level_index + 1) + 20) - 6))
+                        self.screen.display.blit(self.puzzleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                                                                        int(self.screen_height - node_height * (
+                                                                                level_index + 1) + 20) - 18))
 
             return node_dict, next_nodes, next_nodes_dict
 
