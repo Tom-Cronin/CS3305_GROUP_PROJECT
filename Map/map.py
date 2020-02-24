@@ -1,6 +1,7 @@
 import time
 import pygame
 import random
+from Stages.baseStageClass import *
 
 
 # map() creates the map and returns a map object
@@ -19,6 +20,7 @@ class Map(object):
         self.map = self.generate_map_list()
         self.screen_width = self.screen.screen_height
         self.screen_height = self.screen.screen_width
+        self.quitButton = StageButton("Quit", "", self.screen_width-210, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
                                                                                                  self.screen_width))
         #self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/treasure.png').convert(), (35, 35))7
@@ -137,6 +139,7 @@ class Map(object):
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 17)
         while True:
             self.screen.display.blit(self.screen.bgImage, (0, 0))
+            self.screen.displayButton(self.quitButton)
 
             num_levels = len(self.map)
             node_height = int(round(self.screen_height / num_levels))
@@ -216,6 +219,10 @@ class Map(object):
             for event in pygame.event.get():
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     pos = pygame.mouse.get_pos()
+                    if (self.quitButton.xLocation + self.quitButton.width) > pos[0] > self.quitButton.xLocation and (
+                            self.quitButton.yLocation + self.quitButton.height) > pos[1] > self.quitButton.yLocation:
+                        node_key = "m"
+                        return node_key
                     for item in range(length_next_nodes):
                         rectangle = node_dict[next_nodes[item] - 1]
                         click = rectangle.collidepoint(pos)
@@ -234,11 +241,24 @@ class Map(object):
     def backgroundLayer(self):
         #self.screen.display.fill((255, 255, 255))
         self.draw_map()
+        self.screen.displayButton(self.quitButton)
         pygame.display.update()
 
+    def mouselisten(self, button):
+        mouse = pygame.mouse.get_pos()
+        click = pygame.mouse.get_pressed()
+
+        if (button.xLocation + button.width) > mouse[0] > button.xLocation and (
+                button.yLocation + button.height) > mouse[1] > button.yLocation:
+            button.hover(self.screen.display, True)
+        pygame.display.update()
 
     def mainLoop(self):
         self.backgroundLayer()
-        while self.get_next_node() != "B":
-            self.get_user_selection()
-
+        count = 0
+        cr = 4
+        self.current_room = "b"
+        while self.current_room != "B":
+            self.current_room = self.get_user_selection()
+            return (self.current_room, 0)
+        return (self.current_room, 1)
