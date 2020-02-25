@@ -17,7 +17,7 @@ class Map(object):
         self.node = -1
         self.map = self.generate_map_list()
         self.screen_width = self.screen.screen_height-400
-        self.screen_height = self.screen.screen_width
+        self.screen_height = self.screen.screen_width +10
         self.quitButton = StageButton("Quit", "", self.screen_width + 180, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
                                                                                                    self.screen_width))
@@ -266,9 +266,11 @@ class Map(object):
 
     def backgroundLayer(self):
         pygame.font.init()
+        red = (53,36,26)
+        grey = (51, 61, 51)
         black = (0, 0, 0)
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 37)
-        self.screen.display.blit(self.screen.bgImage, (300, 0))
+        self.screen.display.blit(self.screen.bgImage, (275, 0))
         self.screen.displayButton(self.quitButton)
         display_level = myfont.render("Level: %i" % self.level, True, black)
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 27)
@@ -276,11 +278,15 @@ class Map(object):
         display_instructions2 = myfont.render("     next step by", True, black)
         display_instructions3 = myfont.render("    clicking on a", True, black)
         display_instructions4 = myfont.render("     blue circle!", True, black)
+        hintRect = Rect(100, 588, 170, 100)
+        levelRect = Rect(129, 119, 100, 40)
+        pygame.draw.rect(self.screen.display, red, hintRect)
+        pygame.draw.rect(self.screen.display, grey, levelRect)
         self.screen.display.blit(display_level, (130, 120))
-        self.screen.display.blit(display_instructions1, (110, 250))
-        self.screen.display.blit(display_instructions2, (110, 270))
-        self.screen.display.blit(display_instructions3, (110, 290))
-        self.screen.display.blit(display_instructions4, (110, 310))
+        self.screen.display.blit(display_instructions1, (102, 590))
+        self.screen.display.blit(display_instructions2, (102, 610))
+        self.screen.display.blit(display_instructions3, (102, 630))
+        self.screen.display.blit(display_instructions4, (102, 650))
         pygame.display.update()
 
     def mainLoop(self):

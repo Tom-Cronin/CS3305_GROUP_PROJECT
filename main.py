@@ -13,7 +13,7 @@ def running():
         pygame.quit()
     elif loop:
         mymap.screen.bgImage = pygame.transform.scale(pygame.image.load('Map/media/paper.jpg').convert(),
-                                                      (mymap.screen.screen_height-600,
+                                                      (mymap.screen.screen_height-550,
                                                        mymap.screen.screen_width))
         current_room_cr = ["b", 4, 0]
         count = 0
