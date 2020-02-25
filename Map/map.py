@@ -16,9 +16,9 @@ class Map(object):
         self.level = 1
         self.node = -1
         self.map = self.generate_map_list()
-        self.screen_width = self.screen.screen_height
+        self.screen_width = self.screen.screen_height-400
         self.screen_height = self.screen.screen_width
-        self.quitButton = StageButton("Quit", "", self.screen_width - 205, 10)
+        self.quitButton = StageButton("Quit", "", self.screen_width + 180, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
                                                                                                    self.screen_width))
         self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/Treasure.png').convert_alpha(), (35, 35))
@@ -139,7 +139,7 @@ class Map(object):
         node_dict = {}
         node_index = 0
         circle_radius = 24
-        pygame.font.init()
+
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 17)
         while True:
             num_levels = len(self.map)
@@ -162,10 +162,10 @@ class Map(object):
                             if self.map[level_index + 1][to_node_index][0] == self.map[level_index][i][2][j]:
                                 q = to_node_index
                                 pygame.draw.lines(self.screen.display, line_color, False,
-                                                  [(int(from_node_x * (i + 1) - (from_node_x / 2)),
+                                                  [(int(from_node_x * (i + 1) - (from_node_x / 2))+200,
                                                     int(self.screen_height - node_height * (
                                                             level_index + 1)) - 1),
-                                                   (int(to_node_x * (q + 1) - (to_node_x / 2)),
+                                                   (int(to_node_x * (q + 1) - (to_node_x / 2))+200,
                                                     int(self.screen_height - node_height * (
                                                             level_index + 2) +
                                                         node_height - circle_radius) - 5)], line_width)
@@ -175,7 +175,7 @@ class Map(object):
                 current_level_nodes = []
                 for i in range(len(self.map[level_index])):
                     node_key = self.map[level_index][i][1]
-                    circle_x = int(node_x * (i + 1) - (node_x / 2))
+                    circle_x = int(node_x * (i + 1) - (node_x / 2))+200
                     circle_y = int(self.screen_height - node_height * (level_index + 1) + 20)
 
                     if self.node == -1:
@@ -211,27 +211,27 @@ class Map(object):
                     if node_key == "YOU":
                         font = pygame.font.SysFont('media/Chapaza.ttf', 23)
                         text = font.render("%s" % node_key, True, white)
-                        self.screen.display.blit(text, (int(node_x * (i + 1) - (node_x / 2))-15,
+                        self.screen.display.blit(text, (int(node_x * (i + 1) - (node_x / 2))-15+200,
                                                         int(self.screen_height - node_height * (
                                                                 level_index + 1) + 20) -8))
                     elif node_key == "T":
-                        self.screen.display.blit(self.treasureImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                        self.screen.display.blit(self.treasureImage, (int(node_x * (i + 1) - (node_x / 2)) - 18+200,
                                                                       int(self.screen_height - node_height * (
                                                                               level_index + 1) + 20) - 18))
                     elif node_key == "?":
-                        self.screen.display.blit(self.mysteryImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                        self.screen.display.blit(self.mysteryImage, (int(node_x * (i + 1) - (node_x / 2)) - 18+200,
                                                                      int(self.screen_height - node_height * (
                                                                              level_index + 1) + 20) - 18))
                     elif node_key == "b":
-                        self.screen.display.blit(self.battleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                        self.screen.display.blit(self.battleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18+200,
                                                                     int(self.screen_height - node_height * (
                                                                             level_index + 1) + 20) - 18))
                     elif node_key == "B":
-                        self.screen.display.blit(self.bossBattleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                        self.screen.display.blit(self.bossBattleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18+200,
                                                                         int(self.screen_height - node_height * (
                                                                                 level_index + 1) + 20) - 18))
                     else:
-                        self.screen.display.blit(self.puzzleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18,
+                        self.screen.display.blit(self.puzzleImage, (int(node_x * (i + 1) - (node_x / 2)) - 18+200,
                                                                         int(self.screen_height - node_height * (
                                                                                 level_index + 1) + 20) - 18))
 
@@ -265,9 +265,10 @@ class Map(object):
         return selected_node_key
 
     def backgroundLayer(self):
+        pygame.font.init()
         black = (0, 0, 0)
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 37)
-        self.screen.display.blit(self.screen.bgImage, (0, 0))
+        self.screen.display.blit(self.screen.bgImage, (300, 0))
         self.screen.displayButton(self.quitButton)
         display_level = myfont.render("Level: %i" % self.level, True, black)
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 27)
@@ -275,11 +276,11 @@ class Map(object):
         display_instructions2 = myfont.render("     next step by", True, black)
         display_instructions3 = myfont.render("    clicking on a", True, black)
         display_instructions4 = myfont.render("     blue circle!", True, black)
-        self.screen.display.blit(display_level, (10, 20))
-        self.screen.display.blit(display_instructions1, (10, 190))
-        self.screen.display.blit(display_instructions2, (10, 210))
-        self.screen.display.blit(display_instructions3, (10, 230))
-        self.screen.display.blit(display_instructions4, (10, 250))
+        self.screen.display.blit(display_level, (130, 120))
+        self.screen.display.blit(display_instructions1,( 110, 250))
+        self.screen.display.blit(display_instructions2, (110, 270))
+        self.screen.display.blit(display_instructions3, (110, 290))
+        self.screen.display.blit(display_instructions4, (110, 310))
         pygame.display.update()
 
     def mainLoop(self):
