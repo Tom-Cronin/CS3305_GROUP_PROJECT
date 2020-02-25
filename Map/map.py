@@ -277,7 +277,7 @@ class Map(object):
         display_instructions3 = myfont.render("    clicking on a", True, black)
         display_instructions4 = myfont.render("     blue circle!", True, black)
         self.screen.display.blit(display_level, (130, 120))
-        self.screen.display.blit(display_instructions1,( 110, 250))
+        self.screen.display.blit(display_instructions1, (110, 250))
         self.screen.display.blit(display_instructions2, (110, 270))
         self.screen.display.blit(display_instructions3, (110, 290))
         self.screen.display.blit(display_instructions4, (110, 310))
