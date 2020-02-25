@@ -14,9 +14,14 @@ dictionaryOfMonsters = {
 
 def createEnemyInstances(enemyCROrder):
     enemies = []
+    count = 1
     for enemyCR in enemyCROrder:
         possibleEnemysOfCR = dictionaryOfMonsters.get(enemyCR)
-        enemies.append(possibleEnemysOfCR[randint(0, len(possibleEnemysOfCR) - 1)]())
+        enemy = possibleEnemysOfCR[randint(0, len(possibleEnemysOfCR) - 1)]()
+        enemy.combatPos = count
+        count += 1
+        enemies.append(enemy)
+
     return enemies
 
 def minCRValue(crTotal, enemySpacesRemaining):
