@@ -10,8 +10,8 @@ class StageButton:
         self.height = 50
         self.xLocation = x
         self.yLocation = y
-        self.textColor = (0, 255, 0)
-        self.hovercolour = (0,0,0)
+        self.textColor = (0, 0, 0)
+        self.hovercolour = (0, 0, 0)
         self.font = 'Stages/media/Chapaza.ttf'
         self.fontsize = 30
         self.exitMessage = exitMessage  # Message displayed when button is pressed

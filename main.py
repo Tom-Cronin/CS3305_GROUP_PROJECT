@@ -12,6 +12,7 @@ def running():
     if not loop:
         pygame.quit()
     elif loop:
+        print("BG thingy")
         mymap.screen.bgImage = pygame.transform.scale(pygame.image.load('Map/media/paper.jpg').convert(),
                                                       (mymap.screen.screen_height-550,
                                                        mymap.screen.screen_width))

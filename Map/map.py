@@ -41,6 +41,7 @@ class Map(object):
             self.map = self.generate_map_list()
 
     def generate_nodes_and_keys(self, number_of_levels):
+        print("CREATE MAP")
         nodes_per_level = 0
         node_index = 1
         list_of_levels = []
@@ -64,15 +65,17 @@ class Map(object):
                 elif level_index == number_of_levels - 2:
                     node_key = "T"
                 else:
-                    rand = random.randint(1, 7)
-                    if rand == 1:
-                        node_key = "T"
-                    elif rand == 2 or rand == 3:
-                        node_key = "P"
-                    elif rand == 4:
-                        node_key = "?"
-                    else:
+                    rand = random.randint(1, 10)
+                    #print(rand)
+                    if rand in [1, 2, 3, 4]:
                         node_key = "b"
+                    elif rand in [5, 6, 7]:
+                        node_key = "?"
+                    elif rand in [8, 9]:
+                        node_key = "P"
+                    else:
+                        node_key = "T"
+                    #print(node_key)
                 list_of_levels[level_index].append([node_index, node_key, []])
                 node_index += 1
         return list_of_levels
@@ -105,9 +108,8 @@ class Map(object):
                 average = len_level / len_next_level
                 if average.is_integer():
                     count = 1
-                    from_nodes = 0
                     for i in range(len_next_level):
-                        for j in range(int(average) * (count - 1), int(average) * (count), 1):
+                        for j in range(int(average) * (count - 1), int(average) * count, 1):
                             list_of_levels[level][j][2].append(list_of_levels[next_level][i][0])
                         count += 1
                 else:
@@ -130,10 +132,8 @@ class Map(object):
     def draw_map(self):
         next_nodes = []
         next_nodes_dict = {}
-        red = (255, 0, 0)
         blue = (0, 0, 255)
         black = (0, 0, 0)
-        bronze = (205, 127, 50)
         grey = (86, 80, 81)
         white = (255, 255, 255)
         node_dict = {}
@@ -153,7 +153,6 @@ class Map(object):
                     if self.map[level_index][i][0] == self.node+1:
                         line_width = 3
                         line_color = black
-                        #print(self.map[level_index][i][0], self.node)
                     from_node_x = self.screen_width / len(self.map[level_index])
                     number_of_to_nodes = len(self.map[level_index][i][2])
                     for j in range(number_of_to_nodes):
@@ -185,29 +184,23 @@ class Map(object):
                     pygame.draw.circle(self.screen.display, grey, (circle_x, circle_y), 20)
                     if node_index == self.node:
                         node_key = "YOU"
-                        circle_width = circle_radius
                         circle_colour = black
                         for node in range(len(self.map[level_index])):
                             current_level_nodes.append(self.map[level_index][node][0])
                         next_nodes = self.map[level_index][i][2]
                     elif node_index < self.node or node_index in current_level_nodes:
                         circle_colour = black
-                        circle_width = circle_radius
                         pygame.draw.circle(self.screen.display, circle_colour, (circle_x, circle_y), circle_radius, )
-                        circle_width = 1
                     elif (node_index + 1) in next_nodes:
                         next_nodes_dict[node_index] = node_key
-                        circle_width = circle_radius
                         circle_colour = blue
                     else:
-                        circle_width = 1
                         circle_colour = grey
 
                     circle = pygame.draw.circle(self.screen.display, circle_colour, (circle_x, circle_y),
                                                 circle_radius, )
                     node_dict[node_index] = circle
                     node_index += 1
-                    text = myfont.render("%s" % node_key, True, black)
                     if node_key == "YOU":
                         font = pygame.font.SysFont('media/Chapaza.ttf', 23)
                         text = font.render("%s" % node_key, True, white)
