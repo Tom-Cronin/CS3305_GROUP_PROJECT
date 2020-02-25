@@ -7,9 +7,7 @@ from CombatSystem.combat import *
 
 
 class EncounterStage():
-    def __init__(self, screen_height, screen_width, levelImage, crLevel, listOfPlayers):
-        self.display_width = screen_width
-        self.display_height = screen_height
+    def __init__(self, screen, levelImage, crLevel, listOfPlayers):
         self.defaultColour = (120, 120, 120)
         self.white = (255, 255, 255)
         self.black = (0, 0, 0)
@@ -24,7 +22,7 @@ class EncounterStage():
         self.selectedEnemyButton = None
         self.selectedAttackButton = None
         self.hoverColour = (255, 184, 148)
-        self.base = BaseStage(self.display_height, self.display_width)
+        self.base = screen
         self.drawBackground(levelImage)
         self.combat = combatEncounter()
         self.combat.setUp(crLevel, listOfPlayers)
@@ -35,7 +33,7 @@ class EncounterStage():
 
     def drawBackground(self, img):
         self.base.bgImage = pygame.transform.scale(pygame.image.load(img).convert(),
-                                                   (self.display_height, self.display_width))
+                                                   (self.base.display_height, self.base.display_width))
         pygame.display.update()
 
         self.combatBoard = pygame.transform.scale(pygame.image.load("media/combatBoard.png").convert_alpha(),
@@ -214,13 +212,15 @@ class EncounterStage():
         self.goThrougheachTurn(self.combat, img)
 
 
-pygame.init()
-pygame.mixer.init()
 
-battleMusic = pygame.mixer.Sound("../assets/sounds/battleMusic/BlackNight.mp3")
-battleMusic.set_volume(.01)
-battleMusic.play(-1)
+if __name__ == "__main__":
+    pygame.init()
+    pygame.mixer.init()
 
-EncounterStage(1300, 700, "media/MainMenueBackground2.png", 12, [Warlock()])
-battleMusic.stop()
-pygame.quit()
+    battleMusic = pygame.mixer.Sound("../assets/sounds/battleMusic/BlackNight.mp3")
+    battleMusic.set_volume(.01)
+    battleMusic.play(-1)
+
+    EncounterStage("media/MainMenueBackground2.png", 12, [Warlock()])
+    battleMusic.stop()
+    pygame.quit()
