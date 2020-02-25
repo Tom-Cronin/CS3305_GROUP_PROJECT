@@ -12,7 +12,7 @@ class StageButton:
         self.yLocation = y
         self.textColor = (0, 255, 0)
         self.hovercolour = (0,0,0)
-        self.font = '../Stages/media/Chapaza.ttf'
+        self.font = 'Stages/media/Chapaza.ttf'
         self.fontsize = 30
         self.exitMessage = exitMessage  # Message displayed when button is pressed
         self.hovering = False
@@ -103,7 +103,7 @@ class BaseStage:
         self.screen_width = screen_width
         self.display = pygame.display.set_mode((screen_height, screen_width))
 
-        self.bgImage = pygame.transform.scale(pygame.image.load('../Stages/media/trees.png').convert(), (self.screen_height, self.screen_width))
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(), (self.screen_height, self.screen_width))
     
     def displayButton(self, button):
         button.displayButton(self.display)
