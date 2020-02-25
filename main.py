@@ -14,7 +14,6 @@ def running():
     if not loop:
         pygame.quit()
     elif loop:
-        print("BG thingy")
         mymap.screen.bgImage = pygame.transform.scale(pygame.image.load('Map/media/paper.jpg').convert(),
                                                       (mymap.screen.screen_height - 550,
                                                        mymap.screen.screen_width))
@@ -27,7 +26,7 @@ def running():
                 count -= 3
             print("Loading screen")
             print("map")
-            current_room_cr = mymap.mainLoop()
+            current_room_cr = mymap.mainloop()
             if current_room_cr == "b":
                 print("Loading screen")
                 print("It's a battle room and the current cr is " + str(cr))
