@@ -17,7 +17,7 @@ class twoHanded(BaseAttack):
         return self.baseDamage + self.damageMod
 
 
-class onoHanded(BaseAttack):
+class oneHanded(BaseAttack):
     def __init__(self, characterStrength):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrength)
