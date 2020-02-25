@@ -16,8 +16,8 @@ class Map(object):
         self.level = 1
         self.node = -1
         self.map = self.generate_map_list()
-        self.screen_width = self.screen.screen_height-400
-        self.screen_height = self.screen.screen_width +10
+        self.screen_width = self.screen.screen_height - 400
+        self.screen_height = self.screen.screen_width + 10
         self.quitButton = StageButton("Quit", "", self.screen_width + 180, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
                                                                                                    self.screen_width))
@@ -284,8 +284,6 @@ class Map(object):
 
     def mainLoop(self):
         self.backgroundLayer()
-        current_room = "b"
-        while current_room != "B":
-            current_room = self.get_user_selection()
-            return current_room, 0
-        return current_room, 1
+        current_room = self.get_user_selection()
+        return current_room
+
