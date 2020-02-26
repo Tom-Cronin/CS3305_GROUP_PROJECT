@@ -112,7 +112,7 @@ class SnakeGame(BaseStage):
         # ToDo: return to map
 
     def howToPlay(self):
-        self.hint.displayWarningMessage(self.display)
+        self.hint.displayWarningMessage(self.display, self.screen_width, self.screen_height)
         self.displayButton(self.okay)
         time.sleep(0.3)
         self.activeButtons = [self.okay]  # deactivates the main menu and treasure box, activates ok option

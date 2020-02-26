@@ -38,8 +38,8 @@ class TreasureRoom(BaseStage):
         self.quitGame = screen.quitGame
         self.treasureChest = TreasureChestButton("You have won " + self.prize + ".", self.screen_width,
                                                  self.screen_height, self.bgImage)
-        self.okay = StageButton("OK", "", (490 / 2) - 20, 450 - 100)
-        self.nevermind = StageButton("MAYBE NOT", "", 490 - 20, 450 - 100)
+        self.okay = StageButton("OK", "", self.screen_height/2 - (self.quitGame.width + 50), self.screen_width/2)
+        self.nevermind = StageButton("MAYBE NOT", "", self.screen_height/2 +50, self.screen_width/2)
 
         self.activeButtons = [self.quitGame, self.treasureChest]
         self.inactiveButtons = []
@@ -75,7 +75,7 @@ class TreasureRoom(BaseStage):
         self.makeGreen()  # ToDo: exit map, give/save prize
 
     def treasureMessage(self):
-        self.treasureChest.displayWarningMessage(self.display)
+        self.treasureChest.displayWarningMessage(self.display, self.screen_width, self.screen_height)
         self.displayButton(self.okay)
         time.sleep(0.3)
         self.activeButtons = [self.okay]  # deactivates the main menu and treasure box, activates ok option
