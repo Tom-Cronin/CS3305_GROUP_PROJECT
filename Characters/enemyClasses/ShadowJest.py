@@ -14,9 +14,8 @@ class ShadowJest(Character):
 
         self.setHealth(33)
 
-        self.imagePath = '../../assets/images/characters/Enemies/PNG_Images/ShadowJest.png'
-
         self.attack_slot_1 = Bite(self.strength)
 
-
         self.allAttacks = [self.attack_slot_1]
+
+        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/ShadowJest.png'

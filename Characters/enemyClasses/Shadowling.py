@@ -17,9 +17,9 @@ class Shadowling(Character):
         self.setHealth(22)
 
         self.attack_slot_1 = Bite(self.strength)
-        self.attack_slot_1.coolDown = 2
 
         self.attack_slot_2 = Claws(self.strength)
+
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
 
         self.imagePath = 'assets/images/characters/Enemies/PNG_Images/Shadowling.png'
