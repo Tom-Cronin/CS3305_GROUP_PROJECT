@@ -165,8 +165,6 @@ class BaseStage:
                 self.skipStage()
             if self.selectedButtonName == "BACK":
                 self.exitStage()
-            else:
-                pass  # ToDo: Error Message?
 
     def exitGame(self):  # ToDo: Exit to main menu
         self.makeGreen()

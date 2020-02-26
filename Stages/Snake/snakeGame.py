@@ -1,4 +1,4 @@
-from Stages.baseStageClass import BaseStage
+from Stages.baseStageClass import BaseStage, StageButton
 from Stages.Snake.snakeMaze import Maze
 from Stages.Snake.snakeSnake import SnakeGuy
 import pygame
@@ -6,17 +6,19 @@ import time
 
 class SnakeGame(BaseStage):
 
-    def __init__(self, screen_height, screen_width):
+    def __init__(self, screen_height, screen_width, hint):
 
         super().__init__(screen_height, screen_width)
-        self.activeButtons = [self.quitGame]
+        self.disabled = False  # snake movement is disabled while message is displayed
         self.snakeColor = (0, 0, 0)  # black
         self.wallColor = (0, 0, 0)  # black
         self.textColor = (0, 0, 0)
         self.font = 'Stages/media/Chapaza.ttf'
-        self.maze = Maze(screen_height, screen_width, self.display)
-        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
+        self.maze = Maze(self.screen_height, self.screen_width, self.display)
+        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze)
         self.finished = False
+        self.hint = StageButton("HINT", hint, self.goBack.xLocation, self.goBack.yLocation)
+        self.activeButtons = [self.quitGame, self.hint]
 
 
     def mazeLayer(self):
@@ -51,8 +53,12 @@ class SnakeGame(BaseStage):
         pygame.display.update()
 
     def mouseClick(self, button):  # event handler for button press
+        self.disabled = True
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
             self.selectedButtonName = self.warningMessage(button)
+        if button.buttonText == "HINT":
+            self.howToPlay()
+            self.selectedButtonName = "HINT"
         if button.buttonText == "MAYBE NOT":
             self.neverMind()
         if button.buttonText == "OK":
@@ -64,23 +70,29 @@ class SnakeGame(BaseStage):
                 self.exitStage()
             if self.selectedButtonName == "ENDGAME":
                 self.continueGame()
+            if self.selectedButtonName == "HINT":
+                self.neverMind()
+
+    def neverMind(self):  # Resets the basic Stage background
+        self.disabled = False
+        self.activeButtons = [self.quitGame, self.hint]
+        self.selectedButtonName = None
+        self.mainLoop()
 
     def listenSnake(self):
         # Checks if snake should move:
         key = pygame.key.get_pressed()
         if key[pygame.K_UP]:
-            #ToDo: if in limits...
-            self.snake.move("Up")
+            self.snake.move("U")
             self.checkLocation()
         elif key[pygame.K_DOWN]:
-            self.snake.move("Down")
+            self.snake.move("D")
             self.checkLocation()
         elif key[pygame.K_RIGHT]:
-            self.snake.move("Right")
+            self.snake.move("R")
             self.checkLocation()
-
         elif key[pygame.K_LEFT]:
-            self.snake.move("Left")
+            self.snake.move("L")
             self.checkLocation()
 
         time.sleep(0.1)
@@ -99,33 +111,32 @@ class SnakeGame(BaseStage):
         self.makeGreen()
         # ToDo: return to map
 
+    def howToPlay(self):
+        self.hint.displayWarningMessage(self.display)
+        self.displayButton(self.okay)
+        time.sleep(0.3)
+        self.activeButtons = [self.okay]  # deactivates the main menu and treasure box, activates ok option
+        return self.hint.buttonText
+
 
     def mainLoop(self):  # listens for events
 
         self.backgroundLayer()
         self.mazeLayer()
         self.snakeLayer()
-        #self.gameOver(True)
+
+
 
         pygame.display.update()
-        #time.sleep(5)
 
         mainLoop = True
 
         while mainLoop:
             self.listenMouse()
             self.listenButton()
-            if self.finished is False:
+            if self.finished is False and self.disabled is False:
                 self.listenSnake()
-
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     mainLoop = False
-
-
-
-pygame.init()
-puzzle = SnakeGame(800, 600)
-puzzle.mainLoop()
-pygame.quit()
