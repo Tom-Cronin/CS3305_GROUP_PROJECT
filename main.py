@@ -33,13 +33,13 @@ def running():
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
                 #encounter takes the screen and the current challange rating as input
-                encounterStage = EncounterStage(baseScreen, cr)
-                encounterStage.mainLoop()
+                """encounterStage = EncounterStage(baseScreen, cr)
+                encounterStage.mainLoop()"""
             elif current_room_cr[0] == "T":
                 #LoadingScreen.mainLoop()
                 #the treasure room takes the screen as input
                 treasureRoom = TreasureRoom(baseScreen)
-                treasureRoom.mainloop()
+                treasureRoom.mainLoop()
             elif current_room_cr[0] == "P":
                 #LoadingScreen.mainLoop()
                 #the puzzle room takes the screen as input
