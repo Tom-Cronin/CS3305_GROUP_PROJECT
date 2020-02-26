@@ -1,6 +1,7 @@
 import pygame, sys, os
 from pygame.locals import *
 
+from CombatSystem.enemyMove import *
 from Stages.baseStageClass import *
 from CombatSystem.combat import *
 
