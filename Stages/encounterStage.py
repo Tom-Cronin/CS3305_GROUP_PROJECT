@@ -163,7 +163,7 @@ class EncounterStage():
                         self.selectedEnemyButton = None
                         character.allAttacks[self.attack].startCooldown()
                         character.attackSound()
-                        death = combatEncounterInstance.calcDamage([character.allAttacks[self.attack].getDamage(), combatEncounterInstance.enemies[self.enemy]], character)
+                        death = combatEncounterInstance.calcDamage([character.allAttacks[self.attack].calcDamage(), combatEncounterInstance.enemies[self.enemy]], character)
 
                         if death == True:
                             self.redraw(img)
