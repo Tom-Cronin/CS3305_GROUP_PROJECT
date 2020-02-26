@@ -28,5 +28,3 @@ class oneHanded(BaseAttack):
         self.cooldown = 3
 
 
-    def calcDamage(self):
-        return self.baseDamage + self.damageMod

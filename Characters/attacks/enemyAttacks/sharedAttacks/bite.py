@@ -13,5 +13,3 @@ class Bite(BaseAttack):
 
         self.cooldown = 1
 
-    def calcDamage(self):
-        return self.baseDamage + self.damageMod
