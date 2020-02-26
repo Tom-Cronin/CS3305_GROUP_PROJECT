@@ -214,9 +214,3 @@ class EncounterStage():
     def mainLoop(self, img):
         self.goThrougheachTurn(self.combat, img)
 
-
-if __name__ == "__main__":
-    pygame.init()
-    pygame.mixer.init()
-    EncounterStage(1300, 700, "Stages/media/MainMenueBackground.png", 12, [Warlock()])
-    pygame.quit()
