@@ -22,6 +22,7 @@ class Character:
         self.combatPos = 0
 
         self.attackSoundPath = "blank"
+
     def killCounter(self):
         self.totalKills += 1
 
@@ -51,21 +52,6 @@ class Character:
     def increaseAC(self, amount):
         self.ArmorClass += amount
 
-    def decreaseStr(self, amount):
-        self.strength -= amount
-
-    def decreaseDex(self, amount):
-        self.dexterity -= amount
-
-    def decreaseConst(self, amount):
-        self.constitution -= amount
-
-    def decreaseInt(self, amount):
-        self.intelligence -= amount
-
-    def decreaseAC(self, amount):
-        self.ArmorClass -= amount
-
     def levelUp(self, chosenAttribute):
         attributeDict = {
             "str": self.increaseStr,
@@ -77,9 +63,10 @@ class Character:
         attributeDict[chosenAttribute](1)
 
     def attackSound(self):
-        if self.attackSoundPath != "black":
-            pygame.mixer.init()
-            attackSound = pygame.mixer.Sound(self.attackSoundPath)
-            attackSound.set_volume(0.025)
-            attackSound.play()
-            sleep(attackSound.get_length())
+        # if self.attackSoundPath != "blank":
+        #     pygame.mixer.init()
+        #     attackSound = pygame.mixer.Sound(self.attackSoundPath)
+        #     attackSound.set_volume(0.025)
+        #     attackSound.play()
+        #     sleep(attackSound.get_length())
+        pass

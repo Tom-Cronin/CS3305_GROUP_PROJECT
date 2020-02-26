@@ -23,7 +23,7 @@ class BaseAttack():
         if self.coolDown == 0:
             self.onCoolDown = False
 
-    def getDamage(self):
+    def calcDamage(self):
         return self.baseDamage + self.damageMod
 
     def updateDamageMod(self, newDamageModAttribute):
