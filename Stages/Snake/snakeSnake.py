@@ -4,7 +4,6 @@ from pygame.locals import *
 class SnakeGuy:
     def __init__(self, display, color, maze):
         self.mazeRect = maze.mazeRect
-        self.mazeRect = maze.mazeRect
         self.display = display
         self.color = color
         self.squareSize = 10

@@ -28,7 +28,6 @@ class ScoreBox():
         self.y = maze.x+20
         self.size = 20
         self.scoreBox = Rect((self.x, self.y, self.size, self.size))
-        #print(self.scoreBox)  # ToDo: prevent food from appearing in scorebox
         self.font = 'Stages/media/Chapaza.ttf'
         self.color = (255, 255, 255)  # white
         self.display = maze.display
@@ -116,6 +115,7 @@ class SnakeGame2(SnakeGame):
         pygame.draw.rect(self.display, self.food_color, self.food.Rect)
         pygame.display.update(self.food.Rect)
         self.snakeLayer()
+        # ToDo: prevent food from appearing in scorebox
 
     def foodLayer(self):
         pygame.draw.rect(self.display, self.food_color, self.food.Rect)
