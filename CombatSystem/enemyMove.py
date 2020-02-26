@@ -12,7 +12,7 @@ def getPlayersToAttack(listOfPlayers):
         if player.health < playerLeastHealth:
             playerWithLeastHealth = player
             playerLeastHealth = player.health
-    return playerWithLeastHealth, playerWithMaxHealth, playerLeastHealth, playerMaxHealth
+    return playerWithLeastHealth, playerWithMaxHealth
 
 def getMaxDamageAttack(enemy):
     count = 0
@@ -27,11 +27,10 @@ def getMaxDamageAttack(enemy):
 
 def makeMove(enemy, listOfPlayers):
     if len(listOfPlayers) > 0:
-        playerWithLeastHealth, playerWithMaxHealth, playerLeastHealth, playerMaxHealth = getPlayersToAttack(
-            listOfPlayers)
-        myAttack, maxDamage = getMaxDamageAttack(enemy)
-        enemy.allAttacks[myAttack].startCooldown()
-        if maxDamage >= playerLeastHealth:
+        playerWithLeastHealth, playerWithMaxHealth = getPlayersToAttack(listOfPlayers)
+        myAttackIndex, maxDamage = getMaxDamageAttack(enemy)
+        enemy.allAttacks[myAttackIndex].startCooldown()
+        if maxDamage >= playerWithLeastHealth.health:
             return [maxDamage, playerWithLeastHealth]
         return [maxDamage, playerWithMaxHealth]
     return [0, enemy]
