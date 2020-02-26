@@ -18,4 +18,6 @@ class ShadowJest(Character):
 
         self.allAttacks = [self.attack_slot_1]
 
-        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/ShadowJest.png'
+        self.scale = (30, 30)
+        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/rat.png'
+        # self.imagePath = 'assets/images/characters/Enemies/PNG_Images/ShadowJest.png'

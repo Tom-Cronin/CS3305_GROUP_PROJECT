@@ -25,6 +25,7 @@ class EncounterStage():
         self.selectedEnemyButton = None
         self.selectedAttackButton = None
         self.hoverColour = (255, 184, 148)
+        self.selectColour = (152, 204, 148)
         self.base = BaseStage(self.display_height, self.display_width)
         self.drawBackground(levelImage)
         self.combat = combatEncounter()
@@ -51,21 +52,18 @@ class EncounterStage():
 
 
     def displayHealth(self, character, position=None):
+
         percentHealth = character.health / character.maxHealth
         health = str(character.health) + "/" + str(character.maxHealth)
         font = pygame.font.Font(self.font, self.fontsize)
         text = font.render(health, True, self.black)
 
-        if character.isEnemy:
-            percentHealthDisplay = int(50 * (percentHealth))
-            pygame.draw.rect(self.base.display, (255, 255, 255), (position + 100, 255, 50, 10))
-            pygame.draw.rect(self.base.display, (138,7,7),(position + 100, 255, percentHealthDisplay,10))
 
-        else:
-            percentHealthDisplay = int(200 * (percentHealth))
-            pygame.draw.rect(self.base.display, (255, 255, 255), (425, 600, 200, 50))
-            pygame.draw.rect(self.base.display, (138, 7, 7), (425, 600, percentHealthDisplay, 50))
-            self.base.display.blit(text, (490, 613))
+
+        percentHealthDisplay = int(190 * (percentHealth))
+        pygame.draw.rect(self.base.display, (255, 255, 255), (435, 647, 190, 50))
+        pygame.draw.rect(self.base.display, (138, 7, 7), (435, 647, percentHealthDisplay, 50))
+        self.base.display.blit(text, (490, 663))
 
 
     def displayButtons(self, character):
@@ -74,32 +72,44 @@ class EncounterStage():
         count = 0
         position = {
             0: [25, 592],
-            1: [25, 642],
-            2: [225, 592],
-            3: [225, 642]
+            1: [25, 647],
+            2: [230, 592],
+            3: [230, 647]
         }
         for attack in character.allAttacks:
 
             button = StageButton(attack.name, "attack %i"% count, position[count][0], position[count][1])
             button.height = 50
             button.fontsize = 20
+
             count += 1
             self.allbuttons.append(button)
+        self.displayHealth(character)
         count = 0
 
         position = {
             0: [625, 592],
-            2: [625, 642],
-            1: [825, 592],
-            3: [825, 642]
+            2: [625, 647],
+            1: [830, 592],
+            3: [830, 647]
         }
 
         for enemy in self.combat.enemies:
             button = StageButton("Enemy %i" % enemy.combatPos, "e %i" % count, position[count][0], position[count][1])
-            button.height = 50
+            button.height = 40
             button.fontsize = 20
-            count += 1
+
             self.allbuttons.append(button)
+
+            percentHealth = enemy.health / enemy.maxHealth
+            percentHealthDisplay = int(198 * (percentHealth))
+            pygame.draw.rect(self.base.display, (0, 0, 0), (position[count][0], position[count][1] - 10, 200, 10))
+            pygame.draw.rect(self.base.display, (255, 255, 255), (position[count][0]+1, position[count][1] -9, 198, 9))
+
+            pygame.draw.rect(self.base.display, (138, 7, 7),
+                                  (position[count][0]+1, position[count][1]- 9, percentHealthDisplay, 9))
+
+            count += 1
 
         for button in self.allbuttons:
             button.defaultColour = (255, 255, 255)
@@ -113,7 +123,12 @@ class EncounterStage():
         positionAlly = 370
         for character in self.combat.allCharsInFight:
             if character.isEnemy:
-                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionEnemy, 250))
+                character.CurrentBattlePos = positionEnemy + character.stagePositionX
+                self.base.display.blit(
+                    pygame.transform.scale(
+                        pygame.image.load(character.imagePath).convert_alpha(), character.scale),
+                    (character.CurrentBattlePos, character.stagePositionY)
+                )
                 self.positionDict[character] = positionEnemy
                 self.displayHealth(character, self.positionDict[character])
                 positionEnemy += 150
@@ -167,8 +182,8 @@ class EncounterStage():
 
                         if death == True:
                             self.redraw(img)
-
-                        self.displayHealth(combatEncounterInstance.enemies[self.enemy], self.positionDict[combatEncounterInstance.enemies[self.enemy]])
+                        if len(combatEncounterInstance.enemies) > 0:
+                            self.displayHealth(combatEncounterInstance.enemies[self.enemy], self.positionDict[combatEncounterInstance.enemies[self.enemy]])
 
 
                         clicked = False
@@ -193,12 +208,11 @@ class EncounterStage():
         pygame.display.update()
 
     def mouseClick(self, button):
-
         messageType, number = button.exitMessage.split()[0], button.exitMessage.split()[1]
         if messageType == "attack":
             if self.selectedAttackButton != None:
                 self.selectedAttackButton.defaultColour = self.white
-            button.defaultColour = self.hoverColour
+            button.defaultColour = self.selectColour
             self.attackToPick = True
             self.attack = int(number)
             self.selectedAttackButton = button
@@ -206,7 +220,7 @@ class EncounterStage():
         elif messageType == "e":
             if self.selectedEnemyButton != None:
                 self.selectedEnemyButton.defaultColour = self.white
-            button.defaultColour = self.hoverColour
+            button.defaultColour = self.selectColour
             self.enemyToPick = True
             self.enemy = int(number)
             self.selectedEnemyButton = button
@@ -214,3 +228,9 @@ class EncounterStage():
     def mainLoop(self, img):
         self.goThrougheachTurn(self.combat, img)
 
+
+if __name__ == "__main__":
+    pygame.init()
+    pygame.mixer.init()
+    EncounterStage(1300, 700, "Stages/media/MainMenueBackground2.png", 4, [Warlock()])
+    pygame.quit()

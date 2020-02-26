@@ -22,6 +22,11 @@ class Character:
         self.combatPos = 0
 
         self.attackSoundPath = "blank"
+        self.scale = (0,0)
+        self.stagePositionY = 250
+        self.stagePositionX = 0
+
+        self.CurrentBattlePos = 0
 
     def killCounter(self):
         self.totalKills += 1
