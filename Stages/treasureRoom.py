@@ -112,9 +112,9 @@ class TreasureRoom(BaseStage):
                 if event.type == pygame.QUIT:
                     mainLoop = False
 
-# Can be uncommented For testing purposes:
-pygame.init()
+# Can be uncommented For testing purposes but must be comment to stop overriding of main:
+"""pygame.init()
 s = BaseStage(1300, 700)
 baseStage = TreasureRoom(s)
 baseStage.mainLoop()
-pygame.quit()
+pygame.quit()"""
