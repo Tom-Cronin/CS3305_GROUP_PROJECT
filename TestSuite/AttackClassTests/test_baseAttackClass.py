@@ -14,3 +14,4 @@ class TestBaseAttack(TestCase):
         attack.updateDamageMod(20)
         self.assertEqual(5, attack.damageMod)
 
+#x - 10 /2
