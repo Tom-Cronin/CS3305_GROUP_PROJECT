@@ -45,6 +45,8 @@ class TreasureRoom(BaseStage):
         self.inactiveButtons = []
         self.selectedButtonName = None
 
+        self.enabled = True # allows the treasure chest button to be pressed
+
     def treasureLayer(self):
         self.treasureChest.displayButton(self.display)
 
@@ -64,6 +66,7 @@ class TreasureRoom(BaseStage):
                 self.openTreasure()
         elif button.buttonText == "MAYBE NOT":
             self.selectedButtonName = None
+            self.enabled = False
             self.activeButtons = [self.quitGame, self.treasureChest]
             self.mainLoop()
 
@@ -98,8 +101,12 @@ class TreasureRoom(BaseStage):
         mainLoop = True
 
         while mainLoop:
-            self.listenMouse()
-            self.listenButton()
+            if self.enabled:
+                self.listenMouse()
+                self.listenButton()
+            else:
+                time.sleep(0.3)  # Delay before reactivating the treasure, to prevent accidental opening of chest
+                self.enabled = True
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
