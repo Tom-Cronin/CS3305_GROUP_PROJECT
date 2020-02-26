@@ -33,7 +33,7 @@ class StageButton:
     def displayWarningMessage(self, display, height, width):
         updateRect = Rect((width/4, height/4, width/2, height/2))
         pygame.draw.rect(display, self.textColor, updateRect)  # border
-        pygame.draw.rect(display, self.bgColour, ((width/4)+5, (height/4)-5, (width/2)-10, (height/2)+10))
+        pygame.draw.rect(display, self.bgColour, ((width/4)+5, (height/4)+5, (width/2)-10, (height/2)-10))
         y = (height/4 + 50)
         for line in self.exitMessage.split('\n'):  # allows for multiple-line output
             font = pygame.font.Font(self.font, 20)
