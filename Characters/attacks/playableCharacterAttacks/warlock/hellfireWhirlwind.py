@@ -20,4 +20,4 @@ class HellfireWhirlwind(BaseAttack):
 
 
     def __str__(self):
-        return self.AllDetails % (self.getDamage())
+        return self.AllDetails % (self.calcDamage())
