@@ -1,16 +1,13 @@
 import pygame, sys, os
 from pygame.locals import *
 
-from Characters.playerClasses.warlock import Warlock
-from CombatSystem.enemyMove import makeMove
 from Stages.baseStageClass import *
 from CombatSystem.combat import *
 
 
+
 class EncounterStage():
-    def __init__(self, screen_height, screen_width, levelImage, crLevel, listOfPlayers):
-        self.display_width = screen_width
-        self.display_height = screen_height
+    def __init__(self, screen, levelImage, crLevel, listOfPlayers):
         self.defaultColour = (120, 120, 120)
         self.white = (255, 255, 255)
         self.black = (0, 0, 0)
@@ -25,7 +22,7 @@ class EncounterStage():
         self.selectedEnemyButton = None
         self.selectedAttackButton = None
         self.hoverColour = (255, 184, 148)
-        self.base = BaseStage(self.display_height, self.display_width)
+        self.base = screen
         self.drawBackground(levelImage)
         self.combat = combatEncounter()
         self.combat.setUp(crLevel, listOfPlayers)
@@ -36,7 +33,7 @@ class EncounterStage():
 
     def drawBackground(self, img):
         self.base.bgImage = pygame.transform.scale(pygame.image.load(img).convert(),
-                                                   (self.display_height, self.display_width))
+                                                   (self.base.display_height, self.base.display_width))
         pygame.display.update()
 
         self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
