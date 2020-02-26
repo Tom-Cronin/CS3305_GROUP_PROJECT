@@ -13,7 +13,7 @@ class TreasureChestButton(StageButton): # Special button for the treasure box
         self.width = 400
         self.xLocation = (screen_width - self.width) / 2
         self.yLocation = (screen_height - self.height) / 2
-        self.image = (pygame.image.load("media/treasure_chest.png").convert_alpha()) # loads the treasure box as a png
+        self.image = (pygame.image.load("Stages/media/treasure_chest.png").convert_alpha()) # loads the treasure box as a png
         self.treasureImage = pygame.transform.scale(self.image, (self.width, self.height))
 
 
