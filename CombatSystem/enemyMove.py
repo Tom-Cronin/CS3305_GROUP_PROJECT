@@ -19,9 +19,9 @@ def getMaxDamageAttack(enemy):
     maxDamage = 0
     myAttack = 0
     for attack in enemy.allAttacks:
-        if not attack.onCoolDown and attack.getDamage() > maxDamage:
+        if not attack.onCoolDown and attack.calcDamage() > maxDamage:
             myAttack = count
-            maxDamage = attack.getDamage()
+            maxDamage = attack.calcDamage()
         count += 1
     return myAttack, maxDamage
 

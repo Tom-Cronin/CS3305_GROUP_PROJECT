@@ -56,7 +56,7 @@ class TestEnemyMove(unittest.TestCase):
         fourthWarlock.health = 10
 
         playerList = [firstWarlock,secondWarlock,thirdWarlock,fourthWarlock]
-        playerWithLeastHealth, playerWithMaxHealth, playerLeastHealth, playerMaxHealth = getPlayersToAttack(playerList)
+        playerWithLeastHealth, playerWithMaxHealth = getPlayersToAttack(playerList)
         self.assertEqual(firstWarlock, playerWithLeastHealth)
         self.assertEqual(firstWarlock, playerWithMaxHealth)
 
@@ -71,11 +71,9 @@ class TestEnemyMove(unittest.TestCase):
         Warlock2.health = 10
 
         playerList = [Warlock1,MaxHPWarlock,MinHPWarlock,Warlock2]
-        playerWithLeastHealth, playerWithMaxHealth, playerLeastHealth, playerMaxHealth = getPlayersToAttack(playerList)
+        playerWithLeastHealth, playerWithMaxHealth, = getPlayersToAttack(playerList)
         self.assertEqual(MinHPWarlock, playerWithLeastHealth)
         self.assertEqual(MaxHPWarlock, playerWithMaxHealth)
-        self.assertEqual(MaxHPWarlock.health, playerMaxHealth)
-        self.assertEqual(MinHPWarlock.health, playerLeastHealth)
 
     def test_makeMoveShouldPrioritiseKillingAPlayerOverDamagingOtherPlayers(self):
         MaxHPWarlock = Warlock()
