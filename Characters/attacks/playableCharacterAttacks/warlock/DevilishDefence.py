@@ -13,4 +13,4 @@ class DevilishDefence(BaseAttack):
 
 
     def __str__(self):
-        return self.description % (self.name, self.getDamage())
+        return self.description % (self.name, self.calcDamage())

@@ -11,12 +11,3 @@ class LifeDrain(BaseAttack):
 
         self.name = 'Life Drain'
         self.cooldown = 1
-
-
-
-    def calcDamage(self):
-        return self.baseDamage + self.damageMod
-
-    def attack(self):
-        #self.playAttackSound(self.audioPath)
-        print(self.getDamage())
