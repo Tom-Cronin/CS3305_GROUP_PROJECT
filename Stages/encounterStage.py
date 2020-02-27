@@ -33,24 +33,19 @@ class EncounterStage():
         self.displayCharacter()
         self.mainLoop(levelImage)
         self.enemies = []
+        self.combatBoard=""
 
     def drawBackground(self, img):
-        self.base.bgImage = pygame.transform.scale(pygame.image.load(img).convert(),
+        self.base.bgImage = pygame.transform.scale(pygame.image.load(img).convert_alpha(),
                                                    (self.base.screen_height,self.base.screen_width))
-        pygame.display.update()
-
         self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
                                                   (1300, 400))
-
-        self.displayBattle()
-
-    def displayBattle(self):
         self.base.display.blit(self.base.bgImage, (0, 0))
         self.base.display.blit(self.combatBoard, (0, 300))
         pygame.display.update()
 
 
-    def displayHealth(self, character, position=None):
+    def displayHealth(self, character):
 
 
 
@@ -64,7 +59,6 @@ class EncounterStage():
 
         pygame.draw.rect(self.base.display, (0, 0, 0), (455, 592, 150, 50))
         pygame.draw.rect(self.base.display, (255, 255, 255), (460, 597, 140, 40))
-        pygame.display.set_caption("Traylian")
         self.base.display.blit(name, (490, 608))
 
         percentHealthDisplay = int(180 * (percentHealth))
@@ -96,10 +90,10 @@ class EncounterStage():
         count = 0
 
         position = {
-            0: [625, 592],
-            2: [625, 647],
-            1: [830, 592],
-            3: [830, 647]
+            0: [630, 602],
+            2: [630, 657],
+            1: [835, 602],
+            3: [835, 657]
         }
 
         for enemy in self.combat.enemies:
@@ -117,6 +111,7 @@ class EncounterStage():
 
             pygame.draw.rect(self.base.display, (138, 7, 7),
                                   (position[count][0]+1, position[count][1]- 9, percentHealthDisplay, 9))
+            pygame.display.update()
 
             count += 1
 
@@ -139,12 +134,12 @@ class EncounterStage():
                     (character.CurrentBattlePos, character.stagePositionY)
                 )
                 self.positionDict[character] = positionEnemy
-                self.displayHealth(character, self.positionDict[character])
+                self.displayHealth(character)
                 positionEnemy += 150
             else:
                 self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionAlly, 250))
                 self.positionDict[character] = positionAlly
-                self.displayHealth(character, self.positionDict[character])
+                self.displayHealth(character)
                 positionAlly -= 150
         pygame.display.update()
 
@@ -191,9 +186,6 @@ class EncounterStage():
 
                         if death == True:
                             self.redraw(img)
-                        if len(combatEncounterInstance.enemies) > 0:
-                            self.displayHealth(combatEncounterInstance.enemies[self.enemy], self.positionDict[combatEncounterInstance.enemies[self.enemy]])
-
 
                         clicked = False
                         self.attackToPick = False
@@ -242,5 +234,5 @@ if __name__ == "__main__":
     baseScreen = BaseStage(1300, 700)
     pygame.init()
     pygame.mixer.init()
-    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 4, [Warlock(), Warlock()])
+    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 12, [Warlock(), Warlock()])
     pygame.quit()
