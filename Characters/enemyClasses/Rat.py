@@ -30,5 +30,6 @@ class Rat(Character):
         self.stagePositionY = 370 + (220 - self.scale[1])
         self.stagePositionX = 100
 
+        self.name = "Rat"
 
         self.imagePath = 'assets/images/characters/Enemies/PNG_Images/rat.png'

@@ -14,6 +14,8 @@ class Hag(Character):
         self.intelligence = 10
         self.ArmorClass = 14
 
+        self.name = "Hag"
+
         self.setHealth(45)
 
         self.attack_slot_1 = lifeDrain.LifeDrain(self.intelligence)

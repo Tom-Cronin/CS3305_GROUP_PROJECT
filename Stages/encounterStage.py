@@ -35,6 +35,27 @@ class EncounterStage():
         self.enemies = []
         self.combatBoard=""
 
+
+    def redrawAttackBar(self):
+        self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
+                                                  (1300, 400))
+        self.base.display.blit(self.combatBoard, (0, 300))
+        pygame.display.update()
+
+    def drawAttackBarEnemy(self, enemy):
+        self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
+                                                  (1300, 400))
+        self.base.display.blit(self.combatBoard, (0, 300))
+
+        font = pygame.font.Font(self.font, self.fontsize)
+        name = font.render("Its " + enemy.name+ " turn!", True, self.black)
+
+
+        pygame.draw.rect(self.base.display, (0, 0, 0), (455, 592, 250, 50))
+        pygame.draw.rect(self.base.display, (255, 255, 255), (460, 597, 240, 40))
+        self.base.display.blit(name, (490, 608))
+
+        pygame.display.update()
     def drawBackground(self, img):
         self.base.bgImage = pygame.transform.scale(pygame.image.load(img).convert_alpha(),
                                                    (self.base.screen_height,self.base.screen_width))
@@ -96,24 +117,25 @@ class EncounterStage():
             3: [835, 657]
         }
 
-        for enemy in self.combat.enemies:
-            button = StageButton("Enemy %i" % enemy.combatPos, "e %i" % count, position[count][0], position[count][1])
-            button.height = 40
-            button.fontsize = 20
+        for enemy in self.combat.turnOrder:
+            if enemy.isEnemy:
+                button = StageButton(enemy.name , "e %i" % count, position[count][0], position[count][1])
+                button.height = 40
+                button.fontsize = 20
 
-            self.allbuttons.append(button)
+                self.allbuttons.append(button)
 
-            percentHealth = enemy.health / enemy.maxHealth
-            percentHealthDisplay = int(198 * (percentHealth))
+                percentHealth = enemy.health / enemy.maxHealth
+                percentHealthDisplay = int(198 * (percentHealth))
 
-            pygame.draw.rect(self.base.display, (0, 0, 0), (position[count][0], position[count][1] - 10, 200, 10))
-            pygame.draw.rect(self.base.display, (255, 255, 255), (position[count][0]+1, position[count][1] -9, 198, 9))
+                pygame.draw.rect(self.base.display, (0, 0, 0), (position[count][0], position[count][1] - 10, 200, 10))
+                pygame.draw.rect(self.base.display, (255, 255, 255), (position[count][0]+1, position[count][1] -9, 198, 9))
 
-            pygame.draw.rect(self.base.display, (138, 7, 7),
-                                  (position[count][0]+1, position[count][1]- 9, percentHealthDisplay, 9))
-            pygame.display.update()
+                pygame.draw.rect(self.base.display, (138, 7, 7),
+                                      (position[count][0]+1, position[count][1]- 9, percentHealthDisplay, 9))
+                pygame.display.update()
 
-            count += 1
+                count += 1
 
         for button in self.allbuttons:
             button.defaultColour = (255, 255, 255)
@@ -125,7 +147,7 @@ class EncounterStage():
     def displayCharacter(self):
         positionEnemy = 600
         positionAlly = 370
-        for character in self.combat.allCharsInFight:
+        for character in self.combat.turnOrder:
             if character.isEnemy:
                 character.CurrentBattlePos = positionEnemy + character.stagePositionX
                 self.base.display.blit(
@@ -158,13 +180,15 @@ class EncounterStage():
             pygame.display.update(updateRect)
 
     def goThrougheachTurn(self, combatEncounterInstance, img):
-        count = 0
+
         clicked = False
         while len(combatEncounterInstance.enemies) > 0 and len(combatEncounterInstance.allies) > 0:
             for character in combatEncounterInstance.turnOrder:
                 if character.isEnemy:
+                    self.drawAttackBarEnemy(character)
                     move = makeMove(character, combatEncounterInstance.allies)
                     death = combatEncounterInstance.calcDamage(move)
+                    self.redrawAttackBar()
 
                 else:
                     if len(combatEncounterInstance.enemies) > 0:
@@ -194,7 +218,6 @@ class EncounterStage():
                         break
                 for attack in character.allAttacks:
                     attack.reduceCoolDown()
-            count += 1
 
         if len(combatEncounterInstance.enemies) <= 0:
             print("Allys won\n\n")
@@ -234,5 +257,5 @@ if __name__ == "__main__":
     baseScreen = BaseStage(1300, 700)
     pygame.init()
     pygame.mixer.init()
-    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 12, [Warlock(), Warlock()])
+    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 7, [Warlock(), Warlock()])
     pygame.quit()
