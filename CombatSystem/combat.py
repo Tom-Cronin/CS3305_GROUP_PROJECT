@@ -1,10 +1,5 @@
 from CombatSystem.generateEnemies import generateEnemies
 from CombatSystem.turnOrder import turnOrder as getTurnOrder
-from CombatSystem.enemyMove import makeMove
-# only  uses while making will be removed
-from Characters.playerClasses.warlock import Warlock
-from Characters.enemyClasses.Hag import Hag
-
 
 class combatEncounter(object):
     def __init__(self):
@@ -40,8 +35,5 @@ class combatEncounter(object):
         self.turnOrder = getTurnOrder(self.turnOrder)
 
 
-if __name__ == "__main__":
-    combat = combatEncounter()
-    combat.setUp(6, [Warlock(),Warlock(),Warlock(),Warlock()])
 
 

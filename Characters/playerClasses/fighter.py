@@ -19,7 +19,7 @@ class Fighter(Character):
 
         self.setHealth(37)
 
-        self.imagePath = '../assets/images/characters/Enemies/PNG_Images/hag.png'
+        self.imagePath = None
 
         self.attack_slot_1 = BreathAttack()
         self.attack_slot_2 = tempAttack()
@@ -35,7 +35,6 @@ class Fighter(Character):
     def updateAttackBonuses(self):
         for attack in self.allAttacks:
             attack.updateDamageMod(self.strength)
-
 
     def __str__(self):
         return self.description % (self.name, self.health, self.strength,

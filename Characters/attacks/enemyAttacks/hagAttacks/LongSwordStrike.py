@@ -16,11 +16,8 @@ class twoHanded(BaseAttack):
     def calcDamage(self):
         return self.baseDamage + self.damageMod
 
-    def attack(self):
-        #self.playAttackSound(self.audioPath)
-        print(self.getDamage())
 
-class onoHanded(BaseAttack):
+class oneHanded(BaseAttack):
     def __init__(self, characterStrength):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrength)
@@ -31,9 +28,3 @@ class onoHanded(BaseAttack):
         self.cooldown = 3
 
 
-    def calcDamage(self):
-        return self.baseDamage + self.damageMod
-
-    def attack(self):
-        #self.playAttackSound(self.audioPath)
-        print(self.getDamage())
