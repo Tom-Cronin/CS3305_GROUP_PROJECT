@@ -6,9 +6,23 @@ import time
 
 class SnakeGame(BaseStage):
 
-    def __init__(self, screen_height, screen_width, hint):
+    def __init__(self, screen, hint):
+        # init display screen
+        self.screen_height = screen.screen_height
+        self.screen_width = screen.screen_width
+        self.display = screen.display
 
-        super().__init__(screen_height, screen_width)
+        # Buttons
+        self.quitGame = screen.quitGame
+        self.okay = screen.okay
+        self.nevermind = screen.nevermind
+
+        self.inactiveButtons = []  # buttons that are visible but deactivated
+        self.selectedButtonName = None
+
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(),
+                                              (self.screen_height, self.screen_width))
+
         self.disabled = False  # snake movement is disabled while message is displayed
         self.snakeColor = (0, 0, 0)  # black
         self.wallColor = (0, 0, 0)  # black
@@ -17,7 +31,7 @@ class SnakeGame(BaseStage):
         self.maze = Maze(self.screen_height, self.screen_width, self.display)
         self.snake = SnakeGuy(self.display, self.snakeColor, self.maze)
         self.finished = False
-        self.hint = StageButton("HINT", hint, self.goBack.xLocation, self.goBack.yLocation)
+        self.hint = StageButton("HINT", hint, screen.goBack.xLocation, screen.goBack.yLocation)
         self.activeButtons = [self.quitGame, self.hint]
 
 

@@ -71,11 +71,11 @@ class Maze2(Maze):
 
 class SnakeGame2(SnakeGame):
 
-    def __init__(self, screen_height, screen_width):
+    def __init__(self, screen):
         gameHint = "Eat 10 squares\nUse the arrow keys to move\nIf you eat yourself, you will die\n" \
                    "If you hit a wall you will die"
-        super().__init__(screen_height, screen_width, gameHint)
-        self.maze = Maze2(screen_height, screen_width, self.display)
+        super().__init__(screen, gameHint)
+        self.maze = Maze2(screen.screen_height, screen.screen_width, self.display)
         self.snake = SnakeGuy2(self.display, self.snakeColor, self.maze)
         self.food = SnakeFood(self.maze)
 
@@ -168,7 +168,9 @@ class SnakeGame2(SnakeGame):
                 if event.type == pygame.QUIT:
                     mainLoop = False
 
+# Can be uncommented For testing purposes but must be commented to stop overriding of main:
 pygame.init()
-puzzle = SnakeGame2(800, 600)
+s = BaseStage(1300, 700)
+puzzle = SnakeGame2(s)
 puzzle.mainLoop()
 pygame.quit()
