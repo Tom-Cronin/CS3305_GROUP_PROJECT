@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, choice as RChoice
 import pygame
 from Characters.sharedFunctions import calc_attribute_bonus
 from time import sleep
@@ -8,6 +8,7 @@ class Character:
     def __init__(self):
         self.maxHealth = 0
         self.health = self.maxHealth
+        self.name = self.generateName()
 
         self.constitution = 0 # health
         self.dexterity = 0 # ranged / dagger damage
@@ -22,6 +23,11 @@ class Character:
         self.combatPos = 0
 
         self.attackSoundPath = "blank"
+        self.scale = (0,0)
+        self.stagePositionY = 250
+        self.stagePositionX = 0
+
+        self.CurrentBattlePos = 0
 
     def killCounter(self):
         self.totalKills += 1
@@ -70,3 +76,7 @@ class Character:
         #     attackSound.play()
         #     sleep(attackSound.get_length())
         pass
+
+    def generateName(self):
+
+        return RChoice(open('Characters/BaseClass/nameLists.txt').read().splitlines())
