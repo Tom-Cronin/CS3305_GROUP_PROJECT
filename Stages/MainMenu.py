@@ -3,6 +3,7 @@ from pygame.locals import *
 from Stages.baseStageClass import *
 import time
 
+
 class MainMenu:
 
     def __init__(self, screen):
