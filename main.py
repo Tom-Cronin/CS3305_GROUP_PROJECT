@@ -31,7 +31,7 @@ def running():
                 cr += 1
                 count -= 3
             #LoadingScreen.mainLoop()
-            current_room_cr = mymap.mainLoop()
+            current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
                 #encounter takes the screen and the current challange rating as input

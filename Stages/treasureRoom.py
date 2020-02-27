@@ -81,7 +81,7 @@ class TreasureRoom(BaseStage):
                     mainLoop = False
 
 
-pygame.init()
-baseStage = TreasureRoom(800, 600)
-baseStage.mainLoop()
-pygame.quit()
+# pygame.init()
+# baseStage = TreasureRoom(800, 600)
+# baseStage.mainLoop()
+# pygame.quit()
