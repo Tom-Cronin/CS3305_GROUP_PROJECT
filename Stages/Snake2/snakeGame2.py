@@ -17,15 +17,15 @@ class SnakeFood():
         self.setXY()
 
     def setXY(self):
-        self.y = random.randint(self.maze.x+10, self.maze.height+80)
-        self.x = random.randint(self.maze.y+10, self.maze.width +80)
+        self.x = random.randint(self.maze.x+10, self.maze.x + self.maze.width-20)
+        self.y = random.randint(self.maze.y +10, self.maze.y +self.maze.height - 20)
         self.Rect = Rect((self.x, self.y, self.size, self.size))
 
 class ScoreBox():
     def __init__(self, maze):
         self.score = 0
-        self.x = maze.y + maze.width - 20
-        self.y = maze.x+20
+        self.x = maze.x + maze.width-20
+        self.y = maze.y + 20
         self.size = 20
         self.scoreBox = Rect((self.x, self.y, self.size, self.size))
         self.font = 'Stages/media/Chapaza.ttf'
@@ -61,10 +61,11 @@ class SnakeGuy2(SnakeGuy):
 class Maze2(Maze):
     def __init__(self, screen_height, screen_width, display):
         super().__init__(screen_height, screen_width, display, 2)
-        self.y = 230
-        self.height = screen_height - 580
-        self.x = 230
-        self.width = screen_width - 260
+        self.height = 220
+        self.width = 340
+        self.x = round(screen_height/2 - self.height/2)
+        self.y = round(screen_width/2)
+        print(screen_height, self.height, self.y)
         self.mazeRect = Rect(self.x, self.y, self.width, self.height)
         self.walls = []
         self.generateMaze()

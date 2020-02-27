@@ -12,7 +12,6 @@ class Maze:
         self.mazeRect = Rect(self.x, self.y, self.width, self.height)
         self.display = display
         self.mazeNum = num  # Potential to make multiple mazes
-        print(self.mazeNum)
         self.walls = []
         self.exit = Walls(0, 0, 0)  # Destination
         self.generateMaze()
