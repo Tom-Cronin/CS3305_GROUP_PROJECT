@@ -17,7 +17,6 @@ class TreasureChestButton(StageButton): # Special button for the treasure box
         self.image = (pygame.image.load("Stages/media/treasure_chest.png").convert_alpha()) # loads the treasure box as a png
         self.treasureImage = pygame.transform.scale(self.image, (self.width, self.height))
 
-
     def displayButton(self, display):
         display.blit(self.treasureImage, (self.xLocation, self.yLocation))
 
@@ -45,7 +44,7 @@ class TreasureRoom(BaseStage):
         self.inactiveButtons = []
         self.selectedButtonName = None
 
-        self.enabled = True # allows the treasure chest button to be pressed
+        self.enabled = False  # allows the treasure chest button to be pressed
 
     def treasureLayer(self):
         self.treasureChest.displayButton(self.display)
@@ -113,8 +112,9 @@ class TreasureRoom(BaseStage):
                     mainLoop = False
 
 # Can be uncommented For testing purposes but must be comment to stop overriding of main:
-"""pygame.init()
+pygame.init()
 s = BaseStage(1300, 700)
 baseStage = TreasureRoom(s)
 baseStage.mainLoop()
-pygame.quit()"""
+pygame.quit()
+
