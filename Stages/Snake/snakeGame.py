@@ -2,6 +2,7 @@ from Stages.baseStageClass import BaseStage, StageButton
 from Stages.Snake.snakeMaze import Maze
 from Stages.Snake.snakeSnake import SnakeGuy
 import pygame
+from pygame.locals import *
 import time
 
 class SnakeGame(BaseStage):
@@ -46,7 +47,10 @@ class SnakeGame(BaseStage):
 
     def gameOver(self, win=False):  # ends the game when a win/failure occurs
         self.finished = True
-        self.maze.drawBackground()
+        updateRect = Rect((self.screen_height/4, self.screen_width/4, self.screen_height/2, self.screen_width/2))
+        pygame.draw.rect(self.display, self.okay.textColor, updateRect)  # border
+        pygame.draw.rect(self.display, self.textColor, (self.screen_height/4 + 5, self.screen_width/4 + 5,
+                                                   self.screen_height/2 - 10, self.screen_width/2 - 10))
         if win is False:
             message = "You lost!\nGame over"
         else:
@@ -55,12 +59,12 @@ class SnakeGame(BaseStage):
         self.activeButtons = [self.okay]
         self.okay.yLocation += 100
         self.okay.displayButton(self.display)
-        y = self.screen_width/2
+        y = self.screen_width/4 + 50
         for line in message.split('\n'):  # allows for multiple-line output
             font = pygame.font.Font(self.font, 40)
-            text = font.render(line, True, self.textColor)
+            text = font.render(line, True, (self.okay.textColor))
             textRect = text.get_rect()
-            textRect.center = (self.screen_height/2, y)
+            textRect.center = (self.maze.x + 100, y)
             y += 50
             self.display.blit(text, textRect)
             self.selectedButtonName = "ENDGAME"
@@ -122,7 +126,12 @@ class SnakeGame(BaseStage):
                         self.gameOver()
 
     def continueGame(self):
-        self.makeGreen()
+            green = (0, 255, 0)
+            self.display.fill(green)
+            pygame.display.update()
+            self.selectedButtonName = None
+            pygame.quit()
+            exit(0)
         # ToDo: return to map
 
     def howToPlay(self):
