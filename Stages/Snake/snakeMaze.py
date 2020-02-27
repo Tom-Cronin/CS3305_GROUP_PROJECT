@@ -3,10 +3,10 @@ from pygame.locals import *
 
 class Maze:
     def __init__(self, screen_height, screen_width, display, num=1):
-        self.y = 100
-        self.height = screen_height-320
-        self.x = 100
-        self.width = screen_width
+        self.height = 480
+        self.width = 600
+        self.x = screen_height/2 - self.height/2
+        self.y = screen_width/2 - self.width/2 + 100
         self.mazeColor = (34, 139, 34)  # forest green
         self.wallColor = (0, 0, 0)  # black
         self.mazeRect = Rect(self.x, self.y, self.width, self.height)

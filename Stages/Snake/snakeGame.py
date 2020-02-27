@@ -64,7 +64,7 @@ class SnakeGame(BaseStage):
             font = pygame.font.Font(self.font, 40)
             text = font.render(line, True, (self.okay.textColor))
             textRect = text.get_rect()
-            textRect.center = (self.maze.x + 100, y)
+            textRect.center = (self.screen_height/2, y)
             y += 50
             self.display.blit(text, textRect)
             self.selectedButtonName = "ENDGAME"
