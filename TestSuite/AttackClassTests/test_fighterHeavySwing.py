@@ -1,7 +1,11 @@
 from unittest import TestCase
 from Characters.attacks.playableCharacterAttacks.fighter.HeavySwingAttack import HeavySwing
+from Characters.playerClasses.fighter import Fighter
+
 class TestHeavySwingAttack(TestCase):
 
     def test_get_damage(self):
-        attack = HeavySwing()
-        self.assertEqual(7, attack.calcDamage())
+        person = Fighter()
+        attack = HeavySwing(person.strength)
+
+        self.assertEqual(11, attack.calcDamage())

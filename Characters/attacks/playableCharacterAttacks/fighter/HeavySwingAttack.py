@@ -6,7 +6,7 @@ class HeavySwing(BaseAttack):
         self.damageMod = calc_attribute_bonus(characterStrAtribute)
 
         self.audioPath = 'none yet'
-        self.baseDamage = 7
+        self.baseDamage = 8
 
         self.name = 'HeavySwing'
         self.description = '%s:\n you rise your sword higg in to the air and swing with unstoppable force.\n' \
