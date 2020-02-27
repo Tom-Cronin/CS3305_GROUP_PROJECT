@@ -9,17 +9,17 @@ from Stages.encounterStage import EncounterStage
 baseScreen = BaseStage(1300, 700)
 
 
-def running():
+def running(seed):
     pygame.init()
-    mainMenu = MainMenu(baseScreen)
+    mainMenu = MainMenu(baseScreen, seed)
     #map takes the screen and the map seed as input
-    mymap = Map(baseScreen, "Best seed")
     #loading screen takes the screen as input
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
-    if not loop:
+    mymap = Map(baseScreen, loop[1])
+    if not loop[0]:
         pygame.quit()
-    elif loop:
+    elif loop[0]:
         mymap.screen.bgImage = pygame.transform.scale(pygame.image.load('Map/media/paper.jpg').convert(),
                                                       (mymap.screen.screen_height - 550,
                                                        mymap.screen.screen_width))
@@ -58,10 +58,11 @@ def running():
                 #the mystery room takes the screen as input
                 print("It's a ? room and the current cr is " + str(cr))
             if current_room_cr == "m":
-                running()
+                running(loop[1])
                 pygame.quit()
             count += 1
 
 
 if __name__ == "__main__":
-    running()
+    seed = "Best seed"
+    running(seed)
