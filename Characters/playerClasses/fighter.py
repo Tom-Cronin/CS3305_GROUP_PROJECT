@@ -26,10 +26,13 @@ class Fighter(Character):
         self.attack_slot_3 = tempAttack()
         self.attack_slot_4 = tempAttack()
 
+        self.scale = (330, 330)
+
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
 
         self.name = "Fighter"
+        self.imagePath = 'assets/images/characters/Players/PNG_Images/Knight.png'
         self.description = "%s\n Health: %i\n Strength: %i\n Dexterity: %i\n Constitution: %i\n Intelligence: %i\n"
 
     def updateAttackBonuses(self):

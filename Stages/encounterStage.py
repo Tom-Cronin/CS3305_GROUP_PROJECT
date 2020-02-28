@@ -3,6 +3,7 @@ from pygame.locals import *
 from Stages.baseStageClass import BaseStage
 
 from Characters.playerClasses.warlock import Warlock
+from Characters.playerClasses.fighter import Fighter
 from CombatSystem.enemyMove import makeMove
 from Stages.baseStageClass import *
 from CombatSystem.combat import *
@@ -159,7 +160,7 @@ class EncounterStage():
                 self.displayHealth(character)
                 positionEnemy += 150
             else:
-                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(), (330, 330)), (positionAlly, 250))
+                self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(),  character.scale), (positionAlly, 250))
                 self.positionDict[character] = positionAlly
                 self.displayHealth(character)
                 positionAlly -= 150
@@ -257,5 +258,5 @@ if __name__ == "__main__":
     baseScreen = BaseStage(1300, 700)
     pygame.init()
     pygame.mixer.init()
-    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 7, [Warlock(), Warlock()])
+    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 7, [Fighter(), Warlock()])
     pygame.quit()
