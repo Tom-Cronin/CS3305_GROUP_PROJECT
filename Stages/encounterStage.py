@@ -102,9 +102,19 @@ class EncounterStage():
         }
         for attack in character.allAttacks:
 
-            button = StageButton(attack.name, "attack %i"% count, position[count][0], position[count][1])
-            button.height = 50
-            button.fontsize = 20
+            if attack.onCoolDown:
+                pygame.draw.rect(self.base.display, (0, 0, 0), (position[count][0], position[count][1], 200, 50))
+                pygame.draw.rect(self.base.display, (169,169,169), ( position[count][0] + 5, position[count][1] + 5, 190, 40))
+                font = pygame.font.Font(self.font, self.fontsize)
+
+                name = font.render("Cooldown %i Turn(s)" % attack.coolDownTimer, True, self.black)
+                self.base.display.blit(name, (position[count][0] + 10, position[count][1] + 15))
+            else:
+                button = StageButton(attack.name, "attack %i"% count, position[count][0], position[count][1])
+                button.height = 50
+                button.fontsize = 20
+
+
 
             count += 1
             self.allbuttons.append(button)
@@ -147,7 +157,7 @@ class EncounterStage():
 
     def displayCharacter(self):
         positionEnemy = 600
-        positionAlly = 370
+        positionAlly = -80
         for character in self.combat.turnOrder:
             if character.isEnemy:
                 character.CurrentBattlePos = positionEnemy + character.stagePositionX
@@ -163,7 +173,7 @@ class EncounterStage():
                 self.base.display.blit(pygame.transform.scale(pygame.image.load(character.imagePath).convert_alpha(),  character.scale), (positionAlly, 250))
                 self.positionDict[character] = positionAlly
                 self.displayHealth(character)
-                positionAlly -= 150
+                positionAlly += 150
         pygame.display.update()
 
     def listenMouse(self):
@@ -181,7 +191,6 @@ class EncounterStage():
             pygame.display.update(updateRect)
 
     def goThrougheachTurn(self, combatEncounterInstance, img):
-
         clicked = False
         while len(combatEncounterInstance.enemies) > 0 and len(combatEncounterInstance.allies) > 0:
             for character in combatEncounterInstance.turnOrder:
@@ -258,5 +267,5 @@ if __name__ == "__main__":
     baseScreen = BaseStage(1300, 700)
     pygame.init()
     pygame.mixer.init()
-    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 7, [Fighter(), Warlock()])
+    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 7, [Fighter(), Warlock(),Fighter(), Warlock()])
     pygame.quit()

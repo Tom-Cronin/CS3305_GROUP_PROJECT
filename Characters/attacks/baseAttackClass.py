@@ -20,7 +20,7 @@ class BaseAttack():
 
     def reduceCoolDown(self):
         self.coolDownTimer -= 1
-        if self.coolDown == 0:
+        if self.coolDownTimer <= 0:
             self.onCoolDown = False
 
     def calcDamage(self):
