@@ -11,7 +11,6 @@ class TreasureChestButton(StageButton): # Special button for the treasure box
         self.screen_height = screen_height
         self.height = 300
         self.width = 400
-        print(screen_width, screen_height)
         self.yLocation = ((screen_width - self.width) / 2) + 100
         self.xLocation = (screen_height - self.height) / 2
         self.image = (pygame.image.load("Stages/media/treasure_chest.png").convert_alpha()) # loads the treasure box as a png
@@ -63,6 +62,7 @@ class TreasureRoom(BaseStage):
                 self.exitStage()
             if self.selectedButtonName == "TREASURE":
                 self.openTreasure()
+                return 1
         elif button.buttonText == "MAYBE NOT":
             self.selectedButtonName = None
             self.enabled = False
@@ -74,7 +74,7 @@ class TreasureRoom(BaseStage):
         return "nothing"
 
     def openTreasure(self):
-        self.makeGreen()  # ToDo: exit map, give/save prize
+        return 1
 
     def treasureMessage(self):
         self.treasureChest.displayWarningMessage(self.display, self.screen_width, self.screen_height)
@@ -101,7 +101,8 @@ class TreasureRoom(BaseStage):
 
         while mainLoop:
             if self.enabled:
-                self.listenMouse()
+                if (self.listenMouse()):
+                    return 1
                 self.listenButton()
             else:
                 time.sleep(0.3)  # Delay before reactivating the treasure, to prevent accidental opening of chest

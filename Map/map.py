@@ -22,7 +22,7 @@ class Map(object):
         self.quitButton = StageButton("Quit", "", self.screen_width + 180, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
                                                                                                    self.screen_width))
-        self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/Treasure.png').convert_alpha(), (35, 35))
+        self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/treasure.png').convert_alpha(), (35, 35))
         self.mysteryImage = pygame.transform.scale(pygame.image.load('Map/media/Mystery.png').convert_alpha(), (35, 35))
         self.bossBattleImage = pygame.transform.scale(pygame.image.load('Map/media/BossSkull.png').convert_alpha(), (35, 35))
         self.battleImage = pygame.transform.scale(pygame.image.load('Map/media/NormalBattle.png').convert_alpha(), (35, 35))
