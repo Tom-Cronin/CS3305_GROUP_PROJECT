@@ -19,7 +19,7 @@ class Warlock(Character):
         self.ArmorClass = 11
         self.isEnemy = False
 
-        self.setHealth(200)
+        self.setHealth(35)
 
         self.attackSoundPath = "assets/sounds/Warlock/eldritchBlast.mp3"
         self.imagePath = 'assets/images/characters/Players/PNG_Images/W_Of_F.png'

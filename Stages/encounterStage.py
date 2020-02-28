@@ -80,8 +80,8 @@ class EncounterStage():
 
 
 
-        pygame.draw.rect(self.base.display, (0, 0, 0), (455, 592, 150, 50))
-        pygame.draw.rect(self.base.display, (255, 255, 255), (460, 597, 140, 40))
+        pygame.draw.rect(self.base.display, (0, 0, 0), (445, 592, 160, 50))
+        pygame.draw.rect(self.base.display, (255, 255, 255), (450, 597, 150, 40))
         self.base.display.blit(name, (490, 608))
 
         percentHealthDisplay = int(180 * (percentHealth))

@@ -17,7 +17,7 @@ def running():
     pygame.init()
     mainMenu = MainMenu(baseScreen)
     #map takes the screen and the map seed as input
-    mymap = Map(baseScreen, "Best seed")
+    mymap = Map(baseScreen, "Best seed 3")
     #loading screen takes the screen as input
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()

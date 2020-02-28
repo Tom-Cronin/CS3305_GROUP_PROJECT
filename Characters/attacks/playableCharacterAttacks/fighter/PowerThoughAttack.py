@@ -17,8 +17,7 @@ class PowerThough(BaseAttack):
 
 
 
-    def calcDamage(self):
-        return self.baseHeal
+
 
 
 
