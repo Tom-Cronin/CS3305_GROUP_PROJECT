@@ -6,17 +6,18 @@ from Stages.treasureRoom import TreasureRoom
 from Stages.encounterStage import EncounterStage
 
 from Characters.playerClasses.warlock import Warlock
+from Characters.playerClasses.fighter import Fighter
+from Characters.playerClasses.oldLady import OldLady
+from Characters.playerClasses.healer import Healer
 #from Stages.loadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
-team = [Warlock(), Warlock(), Warlock(), Warlock()]
+team = [Warlock(), Fighter(), OldLady(), Healer()]
 
 
 def running(seed):
     pygame.init()
     mainMenu = MainMenu(baseScreen, seed)
-    #map takes the screen and the map seed as input
-    #loading screen takes the screen as input
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
     mymap = Map(baseScreen, loop[1])
@@ -37,28 +38,19 @@ def running(seed):
             current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
-                #encounter takes the screen and the current challange rating as input
                 EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
-                #encounterStage.mainLoop()
-                pass
             elif current_room_cr[0] == "T":
                 #LoadingScreen.mainLoop()
-                #the treasure room takes the screen as input
                 treasureRoom = TreasureRoom(baseScreen)
                 treasureRoom.mainloop()
             elif current_room_cr[0] == "P":
                 #LoadingScreen.mainLoop()
-                #the puzzle room takes the screen as input
                 print("It's a puzzle room and the current cr is " + str(cr))
             elif current_room_cr[0] == "B":
                 #LoadingScreen.mainLoop()
-                #the boss encounter stage takes the base screen and the current
-                #challange rating as input
-                encounterStage = EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [Warlock()])
-                # encounterStage.mainLoop()
+                encounterStage = EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
             elif current_room_cr[0] == "?":
                 #LoadingScreen.mainLoop()
-                #the mystery room takes the screen as input
                 print("It's a ? room and the current cr is " + str(cr))
             if current_room_cr == "m":
                 running(loop[1])
