@@ -57,7 +57,6 @@ class SnakeGame(BaseStage):
             prize = self.generatePrize()
             message = "Congrats!\nYou win "+prize
         self.activeButtons = [self.okay]
-        self.okay.yLocation += 100
         self.okay.displayButton(self.display)
         y = self.screen_width/4 + 50
         for line in message.split('\n'):  # allows for multiple-line output
