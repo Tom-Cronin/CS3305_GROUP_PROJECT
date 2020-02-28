@@ -67,19 +67,16 @@ class MainMenu:
 
     def drawInputBox(self):
         textInput = TextInput()
-        #textInput.initial_string("Best Seed")
         clock = pygame.time.Clock()
         mod = True
         while mod:
             events = pygame.event.get()
-            #textInput.update(events)
-            self.baseScreen.display.blit(textInput.get_surface(), (10, 10))
+            self.seed = textInput.get_text()
+            self.seeddisplay.buttonText = self.seed
+            self.backgroundLayer()
             pygame.display.update()
             clock.tick(30)
             if textInput.update(events):
-                self.seed = textInput.get_text()
-                self.seeddisplay.buttonText = self.seed
-                self.backgroundLayer()
                 mod = False
 
 
