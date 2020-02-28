@@ -7,4 +7,4 @@ class TestPowerThoughAttack(TestCase):
         person = Fighter()
         heal = PowerThough(person.constitution)
 
-        self.assertEqual(-2, heal.calcDamage())
+        self.assertEqual(-5, heal.calcDamage())
