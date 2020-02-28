@@ -11,6 +11,7 @@ class BaseAttack():
         self.damageMod = 0
         self.coolDown = 0
         self.duration = 0
+        self.name = "Temp"
         self.onCoolDown = False
         self.coolDownTimer = 0
 

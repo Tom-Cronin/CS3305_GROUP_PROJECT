@@ -28,6 +28,7 @@ class Character:
         self.stagePositionX = 0
 
         self.CurrentBattlePos = 0
+        self.TurnOrderPosOfEnemys = 0
 
     def killCounter(self):
         self.totalKills += 1

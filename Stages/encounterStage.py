@@ -1,6 +1,7 @@
 import pygame, sys, os
 from pygame.locals import *
 from Stages.baseStageClass import BaseStage
+from time import sleep
 
 from Characters.playerClasses.warlock import Warlock
 from Characters.playerClasses.fighter import Fighter
@@ -129,8 +130,9 @@ class EncounterStage():
         }
 
         for enemy in self.combat.turnOrder:
+
             if enemy.isEnemy:
-                button = StageButton(enemy.name , "e %i" % count, position[count][0], position[count][1])
+                button = StageButton(enemy.name , "e %i" % enemy.TurnOrderPosOfEnemys, position[count][0], position[count][1])
                 button.height = 40
                 button.fontsize = 20
 
@@ -192,6 +194,7 @@ class EncounterStage():
 
     def goThrougheachTurn(self, combatEncounterInstance, img):
         clicked = False
+        death = False
         while len(combatEncounterInstance.enemies) > 0 and len(combatEncounterInstance.allies) > 0:
             for character in combatEncounterInstance.turnOrder:
                 if character.isEnemy:
@@ -204,6 +207,7 @@ class EncounterStage():
                     if len(combatEncounterInstance.enemies) > 0:
                         self.displayButtons(character)
                         self.displayHealth(character)
+
                         while not clicked:
 
                             for event in pygame.event.get():
@@ -214,9 +218,10 @@ class EncounterStage():
                                     clicked = True
                         self.selectedAttackButton = None
                         self.selectedEnemyButton = None
+
                         character.allAttacks[self.attack].startCooldown()
                         character.attackSound()
-                        death = combatEncounterInstance.calcDamage([character.allAttacks[self.attack].calcDamage(), combatEncounterInstance.enemies[self.enemy]], character)
+                        death = combatEncounterInstance.calcDamage([character.allAttacks[self.attack].calcDamage(), combatEncounterInstance.turnOrder[self.enemy]], character)
 
                         if death == True:
                             self.redraw(img)
@@ -226,6 +231,9 @@ class EncounterStage():
                         self.enemyToPick = False
                     else:
                         break
+                if death == True:
+                    for char in combatEncounterInstance.turnOrder:
+                        char.TurnOrderPosOfEnemys = self.turnOrder.index(char)
                 for attack in character.allAttacks:
                     attack.reduceCoolDown()
 

@@ -29,7 +29,7 @@ class Fighter(Character):
         self.scale = (330, 330)
 
 
-        self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
+        self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
 
         self.name = "Fighter"
         self.imagePath = 'assets/images/characters/Players/PNG_Images/Knight.png'
