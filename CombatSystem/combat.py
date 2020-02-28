@@ -33,6 +33,8 @@ class combatEncounter(object):
         self.turnOrder = self.allies + self.enemies
         self.allCharsInFight = self.turnOrder
         self.turnOrder = getTurnOrder(self.turnOrder)
+        for char in self.turnOrder:
+            char.TurnOrderPosOfEnemys = self.turnOrder.index(char)
 
 
 

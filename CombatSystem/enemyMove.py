@@ -1,3 +1,4 @@
+from time import sleep
 
 def getPlayersToAttack(listOfPlayers):
     playerWithMaxHealth = listOfPlayers[0]
@@ -15,6 +16,7 @@ def getPlayersToAttack(listOfPlayers):
     return playerWithLeastHealth, playerWithMaxHealth
 
 def getMaxDamageAttack(enemy):
+
     count = 0
     maxDamage = 0
     myAttack = 0
@@ -26,6 +28,7 @@ def getMaxDamageAttack(enemy):
     return myAttack, maxDamage
 
 def makeMove(enemy, listOfPlayers):
+    sleep(1)
     if len(listOfPlayers) > 0:
         playerWithLeastHealth, playerWithMaxHealth = getPlayersToAttack(listOfPlayers)
         myAttackIndex, maxDamage = getMaxDamageAttack(enemy)
@@ -33,4 +36,5 @@ def makeMove(enemy, listOfPlayers):
         if maxDamage >= playerWithLeastHealth.health:
             return [maxDamage, playerWithLeastHealth]
         return [maxDamage, playerWithMaxHealth]
+
     return [0, enemy]

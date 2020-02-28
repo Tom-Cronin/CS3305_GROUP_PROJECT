@@ -1,6 +1,8 @@
 from Characters.BaseClass.CharacterBaseClass import Character
-from Characters.attacks.playableCharacterAttacks.fighter.dragonBreathAttack import BreathAttack
-from Characters.attacks.baseAttackClass import BaseAttack as tempAttack
+from Characters.attacks.playableCharacterAttacks.fighter.AcidSplashAttack import AcidSplash
+from Characters.attacks.playableCharacterAttacks.fighter.DoubleSwingAttack import DoubleSwing
+from Characters.attacks.playableCharacterAttacks.fighter.HeavySwingAttack import HeavySwing
+from Characters.attacks.playableCharacterAttacks.fighter.PowerThoughAttack import PowerThough
 
 
  # will set level to 4 in dnd
@@ -21,15 +23,18 @@ class Fighter(Character):
 
         self.imagePath = None
 
-        self.attack_slot_1 = BreathAttack()
-        self.attack_slot_2 = tempAttack()
-        self.attack_slot_3 = tempAttack()
-        self.attack_slot_4 = tempAttack()
+        self.attack_slot_1 = AcidSplash()
+        self.attack_slot_2 = DoubleSwing(self.strength)
+        self.attack_slot_3 = HeavySwing(self.strength)
+        self.attack_slot_4 = PowerThough(self.constitution)
+
+        self.scale = (330, 330)
 
 
-        self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
+        self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
 
         self.name = "Fighter"
+        self.imagePath = 'assets/images/characters/Players/PNG_Images/Knight.png'
         self.description = "%s\n Health: %i\n Strength: %i\n Dexterity: %i\n Constitution: %i\n Intelligence: %i\n"
 
     def updateAttackBonuses(self):

@@ -4,6 +4,8 @@ import pygame
 from Map.map import Map
 from Stages.treasureRoom import TreasureRoom
 from Stages.encounterStage import EncounterStage
+
+from Characters.playerClasses.warlock import Warlock
 #from Stages.loadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
@@ -35,8 +37,12 @@ def running():
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
                 #encounter takes the screen and the current challange rating as input
+<<<<<<< HEAD
+                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [Warlock()])
+=======
 
                 #encounterStage = EncounterStage(baseScreen, cr)
+>>>>>>> 2501e0b89bb621e7f38bb0ecb71ace8f57b46978
                 #encounterStage.mainLoop()
                 pass
 
@@ -53,8 +59,8 @@ def running():
                 #LoadingScreen.mainLoop()
                 #the boss encounter stage takes the base screen and the current
                 #challange rating as input
-                encounterStage = EncounterStage(baseScreen, cr)
-                encounterStage.mainLoop()
+                encounterStage = EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [Warlock()])
+                # encounterStage.mainLoop()
             elif current_room_cr[0] == "?":
                 #LoadingScreen.mainLoop()
                 #the mystery room takes the screen as input

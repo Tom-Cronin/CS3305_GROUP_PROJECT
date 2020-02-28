@@ -14,6 +14,8 @@ class Hag(Character):
         self.intelligence = 10
         self.ArmorClass = 14
 
+        self.name = "Hag"
+
         self.setHealth(45)
 
         self.attack_slot_1 = lifeDrain.LifeDrain(self.intelligence)
@@ -23,4 +25,5 @@ class Hag(Character):
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2,self.attack_slot_3, self.attack_slot_4]
 
+        self.scale = (330, 330)
         self.imagePath = 'assets/images/characters/Enemies/PNG_Images/hag.png'

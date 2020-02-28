@@ -55,6 +55,13 @@ class StageButton:
             self.bgColour = self.defaultColour
             self.displayButton(display)
 
+    def selected(self, display, selected):
+        if selected is True:
+            self.bgColour = self.hovercolour
+            self.displayButton(display)
+        else:
+            self.bgColour = self.defaultColour
+            self.displayButton(display)
 
 class DisabledStageButton(StageButton):
 
