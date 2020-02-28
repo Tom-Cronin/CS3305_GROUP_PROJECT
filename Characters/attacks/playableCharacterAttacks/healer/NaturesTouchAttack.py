@@ -3,6 +3,7 @@ from Characters.sharedFunctions import calc_attribute_bonus
 class NaturesTouch(BaseAttack):
     def __init__(self, characterIntAtribute):
         super().__init__()
+
         self.damageMod = calc_attribute_bonus(characterIntAtribute)
         self.audioPath = 'none yet'
         self.baseDamage = 0
@@ -10,7 +11,7 @@ class NaturesTouch(BaseAttack):
 
         self.name = 'Natures Touch'
         self.description = '%s:\nyou feel nature grasp healing you and your allies  .\n' \
-                           ' On allies, healing you and allies for %i health.'
+                           'healing you and your allies for %i health.'
         self.cooldown = 2
 
 

@@ -9,13 +9,13 @@ from Characters.playerClasses.warlock import Warlock
 #from Stages.loadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
-
+myWarlock = Warlock()
 
 def running():
     pygame.init()
     mainMenu = MainMenu(baseScreen)
     #map takes the screen and the map seed as input
-    mymap = Map(baseScreen, "Best seed")
+    mymap = Map(baseScreen, "Best seed 2")
     #loading screen takes the screen as input
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
@@ -37,7 +37,7 @@ def running():
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
                 #encounter takes the screen and the current challange rating as input
-                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [Warlock()])
+                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [myWarlock])
                 #encounterStage.mainLoop()
                 pass
             elif current_room_cr[0] == "T":

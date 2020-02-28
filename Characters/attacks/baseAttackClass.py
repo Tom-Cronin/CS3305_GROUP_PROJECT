@@ -13,6 +13,8 @@ class BaseAttack():
         self.duration = 0
         self.name = "Temp"
         self.onCoolDown = False
+        self.isHeal = False
+        self.healType = "none"
         self.coolDownTimer = 0
 
     def startCooldown(self):

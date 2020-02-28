@@ -14,6 +14,8 @@ class Shadowling(Character):
         self.intelligence = 7
         self.ArmorClass = 12
 
+        self.name = "Shadowling"
+
         self.setHealth(22)
 
         self.attack_slot_1 = Bite(self.strength)
@@ -22,6 +24,6 @@ class Shadowling(Character):
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
 
-        self.scale = (30, 30)
-        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/rat.png'
+        self.scale = (220, 220)
+        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/ShadowLing.png'
         # self.imagePath = 'assets/images/characters/Enemies/PNG_Images/Shadowling.png'

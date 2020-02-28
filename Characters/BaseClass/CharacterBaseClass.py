@@ -78,6 +78,11 @@ class Character:
         #     sleep(attackSound.get_length())
         pass
 
+    def heal(self, ammount):
+        self.health += ammount
+        if self.health > self.maxHealth:
+            self.health = self.maxHealth
+
     def generateName(self):
 
         return RChoice(open('Characters/BaseClass/nameLists.txt').read().splitlines())

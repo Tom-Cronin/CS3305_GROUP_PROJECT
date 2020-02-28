@@ -102,7 +102,7 @@ class EncounterStage():
             3: [230, 647]
         }
         for attack in character.allAttacks:
-
+            button = None
             if attack.onCoolDown:
                 pygame.draw.rect(self.base.display, (0, 0, 0), (position[count][0], position[count][1], 200, 50))
                 pygame.draw.rect(self.base.display, (169,169,169), ( position[count][0] + 5, position[count][1] + 5, 190, 40))
@@ -111,14 +111,15 @@ class EncounterStage():
                 name = font.render("Cooldown %i Turn(s)" % attack.coolDownTimer, True, self.black)
                 self.base.display.blit(name, (position[count][0] + 10, position[count][1] + 15))
             else:
-                button = StageButton(attack.name, "attack %i"% count, position[count][0], position[count][1])
+                button = StageButton(attack.name, "attack %i %r %s"% (count, attack.isHeal, attack.healType), position[count][0], position[count][1])
                 button.height = 50
                 button.fontsize = 20
 
 
 
             count += 1
-            self.allbuttons.append(button)
+            if button:
+                self.allbuttons.append(button)
         self.displayHealth(character)
         count = 0
 
@@ -132,7 +133,7 @@ class EncounterStage():
         for enemy in self.combat.turnOrder:
 
             if enemy.isEnemy:
-                button = StageButton(enemy.name , "e %i" % enemy.TurnOrderPosOfEnemys, position[count][0], position[count][1])
+                button = StageButton(enemy.name , "e %i NA NA" % enemy.TurnOrderPosOfEnemys, position[count][0], position[count][1])
                 button.height = 40
                 button.fontsize = 20
 
@@ -224,7 +225,11 @@ class EncounterStage():
 
                         character.allAttacks[self.attack].startCooldown()
                         character.attackSound()
-                        death = combatEncounterInstance.calcDamage([character.allAttacks[self.attack].calcDamage(), combatEncounterInstance.turnOrder[self.enemy]], character)
+                        if self.enemy == "self" or "allies":
+                            combatEncounterInstance.calcDamage([character.allAttacks[self.attack], "self"],
+                                                               character)
+                        else:
+                            death = combatEncounterInstance.calcDamage([character.allAttacks[self.attack], combatEncounterInstance.turnOrder[self.enemy]], character)
 
                         if death == True:
                             self.redraw(img)
@@ -253,8 +258,14 @@ class EncounterStage():
         pygame.display.update()
 
     def mouseClick(self, button):
-        messageType, number = button.exitMessage.split()[0], button.exitMessage.split()[1]
+        messageType, number, heal, type = button.exitMessage.split()[0], \
+                                          button.exitMessage.split()[1], \
+                                          button.exitMessage.split()[2], \
+                                          button.exitMessage.split()[3]
         if messageType == "attack":
+            if heal == "True":
+                self.enemyToPick = True
+                self.enemy = type
             if self.selectedAttackButton != None:
                 self.selectedAttackButton.defaultColour = self.white
             button.defaultColour = self.selectColour

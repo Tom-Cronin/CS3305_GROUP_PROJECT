@@ -28,7 +28,7 @@ class Healer(Character):
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
 
-        self.name = "Healer"
+
         self.description = "%s\n Health: %i\n Strength: %i\n Dexterity: %i\n Constitution: %i\n Intelligence: %i\n"
 
     def updateAttackBonuses(self):

@@ -1,5 +1,5 @@
 from Characters.BaseClass.CharacterBaseClass import Character
-from Characters.attacks.playableCharacterAttacks.warlock.DevilishDefence import DevilishDefence
+from Characters.attacks.playableCharacterAttacks.warlock.FiendishVigor import Vigor
 from Characters.attacks.playableCharacterAttacks.warlock.burningSight import BurningSight
 from Characters.attacks.playableCharacterAttacks.warlock.eldritchBlast import EldritchBlast
 from Characters.attacks.playableCharacterAttacks.warlock.hellfireWhirlwind import HellfireWhirlwind
@@ -25,7 +25,7 @@ class Warlock(Character):
         self.imagePath = 'assets/images/characters/Players/PNG_Images/W_Of_F.png'
 
         self.attack_slot_1 = EldritchBlast(self.intelligence)
-        self.attack_slot_2 = DevilishDefence(self.intelligence)
+        self.attack_slot_2 = Vigor(self.intelligence)
         self.attack_slot_3 = BurningSight(self.intelligence)
         self.attack_slot_4 = HellfireWhirlwind(self.intelligence)
 
