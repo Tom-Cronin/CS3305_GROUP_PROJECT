@@ -162,7 +162,6 @@ class EncounterStage():
 
         # positionAlly = -80
         positionAlly = 520 - (len(self.combat.allies) * 150)
-        print(len(self.combat.allies))
         for character in self.combat.turnOrder:
             if character.isEnemy:
                 character.CurrentBattlePos = positionEnemy + character.stagePositionX
@@ -240,10 +239,6 @@ class EncounterStage():
                 for attack in character.allAttacks:
                     attack.reduceCoolDown()
 
-        if len(combatEncounterInstance.enemies) <= 0:
-            print("Allys won\n\n")
-        else:
-            print("Enemys won\n\n")
 
 
 

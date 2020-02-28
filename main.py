@@ -4,6 +4,7 @@ import pygame
 from Map.map import Map
 from Stages.treasureRoom import TreasureRoom
 from Stages.encounterStage import EncounterStage
+from Stages.Snake.snakeGame import SnakeGame
 
 from Characters.playerClasses.warlock import Warlock
 from Characters.playerClasses.fighter import Fighter
@@ -12,7 +13,7 @@ from Characters.playerClasses.healer import Healer
 #from Stages.loadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
-team = [Warlock(), Fighter(), OldLady(), Healer()]
+team = [Warlock()]#, Fighter(), OldLady(), Healer()]
 
 
 def running(seed):
@@ -32,29 +33,34 @@ def running(seed):
                                                           (mymap.screen.screen_height - 550,
                                                            mymap.screen.screen_width))
             if count >= 3:
-                cr += 1
+                if cr > 12:
+                    cr += 1
                 count -= 3
             #LoadingScreen.mainLoop()
             current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
-                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
+                #EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
+                pass
             elif current_room_cr[0] == "T":
                 #LoadingScreen.mainLoop()
                 treasureRoom = TreasureRoom(baseScreen)
-                treasureRoom.mainloop()
+                #treasureRoom.mainLoop()
             elif current_room_cr[0] == "P":
                 #LoadingScreen.mainLoop()
-                print("It's a puzzle room and the current cr is " + str(cr))
+                snake = SnakeGame(baseScreen, "")
+                snake.mainLoop()
+                pass
             elif current_room_cr[0] == "B":
                 #LoadingScreen.mainLoop()
                 encounterStage = EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
             elif current_room_cr[0] == "?":
                 #LoadingScreen.mainLoop()
-                print("It's a ? room and the current cr is " + str(cr))
+                pass
             if current_room_cr == "m":
                 running(loop[1])
                 pygame.quit()
+                exit(0)
             count += 1
 
 
