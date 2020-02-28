@@ -247,6 +247,9 @@ class EncounterStage():
 
         if len(combatEncounterInstance.enemies) <= 0:
             print("Allys won\n\n")
+            for ally in self.combat.allies:
+                for attack in ally.allAttacks:
+                    attack.resetCoolDown()
         else:
             print("Enemys won\n\n")
 

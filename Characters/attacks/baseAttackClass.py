@@ -26,6 +26,10 @@ class BaseAttack():
         if self.coolDownTimer <= 0:
             self.onCoolDown = False
 
+    def resetCoolDown(self):
+        self.coolDownTimer = 0
+        self.onCoolDown = False
+
     def calcDamage(self):
         return self.baseDamage + self.damageMod
 
