@@ -9,6 +9,7 @@ from Characters.playerClasses.warlock import Warlock
 #from Stages.loadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
+team = [Warlock(), Warlock(), Warlock(), Warlock()]
 
 
 def running(seed):
@@ -22,13 +23,13 @@ def running(seed):
     if not loop[0]:
         pygame.quit()
     elif loop[0]:
-        mymap.screen.bgImage = pygame.transform.scale(pygame.image.load('Map/media/paper.jpg').convert(),
-                                                      (mymap.screen.screen_height - 550,
-                                                       mymap.screen.screen_width))
         current_room_cr = "b"
         count = 0
         cr = 4
         while current_room_cr:
+            mymap.screen.bgImage = pygame.transform.scale(pygame.image.load('Map/media/paper.jpg').convert(),
+                                                          (mymap.screen.screen_height - 550,
+                                                           mymap.screen.screen_width))
             if count >= 3:
                 cr += 1
                 count -= 3
@@ -37,7 +38,7 @@ def running(seed):
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
                 #encounter takes the screen and the current challange rating as input
-                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [Warlock()])
+                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
                 #encounterStage.mainLoop()
                 pass
             elif current_room_cr[0] == "T":
