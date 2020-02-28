@@ -117,4 +117,3 @@ s = BaseStage(1300, 700)
 baseStage = TreasureRoom(s)
 baseStage.mainLoop()
 pygame.quit()"""
-

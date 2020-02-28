@@ -4,14 +4,16 @@ from pygame.locals import *
 class StageButton:
     def __init__(self, text, exitMessage, x, y):
         self.buttonText = text
+        # Note: all three colors below must be different for warningMessage() and hover() to work
         self.defaultColour = (255, 255, 255)  # white
+        self.textColor = (0, 255, 0)  # green
+        self.hovercolour = (0, 0, 0)  # black
+
         self.bgColour = self.defaultColour
         self.width = 200
         self.height = 50
         self.xLocation = x
         self.yLocation = y
-        self.textColor = (0, 255, 0)  # black
-        self.hovercolour = (0, 0, 0)  # black
         self.font = 'Stages/media/Chapaza.ttf'
         self.fontsize = 30
         self.exitMessage = exitMessage  # Message displayed when button is pressed
