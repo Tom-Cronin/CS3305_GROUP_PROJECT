@@ -225,7 +225,7 @@ class EncounterStage():
 
                         character.allAttacks[self.attack].startCooldown()
                         character.attackSound()
-                        if self.enemy == "self" or "allies":
+                        if self.enemy == "self" or self.enemy == "allies":
                             combatEncounterInstance.calcDamage([character.allAttacks[self.attack], "self"],
                                                                character)
                         else:

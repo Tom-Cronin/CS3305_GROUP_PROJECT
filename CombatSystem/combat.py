@@ -12,7 +12,6 @@ class combatEncounter(object):
         death = False
         attack = tupleOfdamgeAndChar[0]
         playerChar = char
-        print(attack)
         Damage = attack.calcDamage()
         charTakingDamage = tupleOfdamgeAndChar[1]
         if charTakingDamage == "self":
