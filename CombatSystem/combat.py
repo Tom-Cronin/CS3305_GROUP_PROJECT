@@ -17,7 +17,7 @@ class combatEncounter(object):
         if charTakingDamage == "self":
             playerChar.heal(Damage)
             return death
-        elif charTakingDamage == "allies":
+        elif charTakingDamage == "all":
             for char in self.allies:
                 char.heal(Damage)
             return death

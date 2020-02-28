@@ -6,16 +6,18 @@ from Stages.treasureRoom import TreasureRoom
 from Stages.encounterStage import EncounterStage
 
 from Characters.playerClasses.warlock import Warlock
+from Characters.playerClasses.oldLady import OldLady
+from Characters.playerClasses.fighter import Fighter
 #from Stages.loadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
-myWarlock = Warlock()
+team = [Warlock(), OldLady(), Fighter()]
 
 def running():
     pygame.init()
     mainMenu = MainMenu(baseScreen)
     #map takes the screen and the map seed as input
-    mymap = Map(baseScreen, "Best seed 2")
+    mymap = Map(baseScreen, "Best seed")
     #loading screen takes the screen as input
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
@@ -37,14 +39,20 @@ def running():
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
                 #encounter takes the screen and the current challange rating as input
-                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [myWarlock])
+
+                #EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [Warlock()])
+
+
+                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
+
                 #encounterStage.mainLoop()
                 pass
+
             elif current_room_cr[0] == "T":
                 #LoadingScreen.mainLoop()
                 #the treasure room takes the screen as input
                 treasureRoom = TreasureRoom(baseScreen)
-                treasureRoom.mainloop()
+                treasureRoom.mainLoop()
             elif current_room_cr[0] == "P":
                 #LoadingScreen.mainLoop()
                 #the puzzle room takes the screen as input

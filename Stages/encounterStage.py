@@ -225,8 +225,8 @@ class EncounterStage():
 
                         character.allAttacks[self.attack].startCooldown()
                         character.attackSound()
-                        if self.enemy == "self" or self.enemy == "allies":
-                            combatEncounterInstance.calcDamage([character.allAttacks[self.attack], "self"],
+                        if self.enemy == "self" or self.enemy == "all":
+                            combatEncounterInstance.calcDamage([character.allAttacks[self.attack], self.enemy],
                                                                character)
                         else:
                             death = combatEncounterInstance.calcDamage([character.allAttacks[self.attack], combatEncounterInstance.turnOrder[self.enemy]], character)

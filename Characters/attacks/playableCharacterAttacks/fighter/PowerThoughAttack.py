@@ -5,11 +5,12 @@ class PowerThough(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterConAtribute)
         self.audioPath = 'none yet'
-        self.baseDamage = 0
-        self.baseHeal = -5
+        self.baseDamage = 6
+        self.isHeal = True
+        self.healType = "self"
 
-        self.name = 'Power Though'
-        self.description = '%s:\nyou battle though the pain .\n' \
+        self.name = 'Power Through'
+        self.description = '%s:\nyou battle through the pain .\n' \
                            ' On self, healing your self for %i health.'
         self.cooldown = 3
 
