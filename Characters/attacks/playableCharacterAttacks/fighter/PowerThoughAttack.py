@@ -12,7 +12,7 @@ class PowerThough(BaseAttack):
         self.name = 'Power Through'
         self.description = '%s:\nyou battle through the pain .\n' \
                            ' On self, healing your self for %i health.'
-        self.cooldown = 3
+        self.coolDown = 3
 
 
 

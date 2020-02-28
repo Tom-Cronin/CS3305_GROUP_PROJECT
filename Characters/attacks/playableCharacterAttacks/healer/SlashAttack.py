@@ -11,7 +11,7 @@ class Slash(BaseAttack):
         self.name = 'Slash'
         self.description = '%s:\nyou lunge forwards slash your claw .\n' \
                            ' On target, dealing  %i physical damage.'
-        self.cooldown = 1
+        self.coolDown = 1
 
 
 

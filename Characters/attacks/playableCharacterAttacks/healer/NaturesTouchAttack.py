@@ -12,7 +12,7 @@ class NaturesTouch(BaseAttack):
         self.name = 'Natures Touch'
         self.description = '%s:\nyou feel nature grasp healing you and your allies  .\n' \
                            'healing you and your allies for %i health.'
-        self.cooldown = 2
+        self.coolDown = 2
 
 
 

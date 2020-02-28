@@ -11,7 +11,7 @@ class HeavySwing(BaseAttack):
         self.name = 'HeavySwing'
         self.description = '%s:\n you rise your sword higg in to the air and swing with unstoppable force.\n' \
                            ' On hit, the target takes %i physical damage.'
-        self.cooldown = 4
+        self.coolDown = 4
 
 
 

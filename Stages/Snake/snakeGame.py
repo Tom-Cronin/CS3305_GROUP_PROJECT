@@ -57,7 +57,6 @@ class SnakeGame(BaseStage):
             prize = self.generatePrize()
             message = "Congrats!\nYou win "+prize
         self.activeButtons = [self.okay]
-        self.okay.yLocation += 100
         self.okay.displayButton(self.display)
         y = self.screen_width/4 + 50
         for line in message.split('\n'):  # allows for multiple-line output
@@ -88,6 +87,7 @@ class SnakeGame(BaseStage):
                 self.exitStage()
             if self.selectedButtonName == "ENDGAME":
                 self.continueGame()
+                return 1
             if self.selectedButtonName == "HINT":
                 self.neverMind()
 
@@ -126,13 +126,7 @@ class SnakeGame(BaseStage):
                         self.gameOver()
 
     def continueGame(self):
-            green = (0, 255, 0)
-            self.display.fill(green)
-            pygame.display.update()
-            self.selectedButtonName = None
-            pygame.quit()
-            exit(0)
-        # ToDo: return to map
+            return 1
 
     def howToPlay(self):
         self.hint.displayWarningMessage(self.display, self.screen_width, self.screen_height)
@@ -155,7 +149,8 @@ class SnakeGame(BaseStage):
         mainLoop = True
 
         while mainLoop:
-            self.listenMouse()
+            if (self.listenMouse()):
+                return 1
             self.listenButton()
             if self.finished is False and self.disabled is False:
                 self.listenSnake()

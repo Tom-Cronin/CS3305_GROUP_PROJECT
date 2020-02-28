@@ -58,6 +58,34 @@ class EncounterStage():
         self.base.display.blit(name, (490, 608))
 
         pygame.display.update()
+
+    def drawRoundCount(self, roundCount):
+            self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
+                                                      (1300, 400))
+            self.base.display.blit(self.combatBoard, (0, 300))
+
+            font = pygame.font.Font(self.font, self.fontsize)
+            name = font.render("Round "+ str(roundCount), True, self.black)
+
+            pygame.draw.rect(self.base.display, (0, 0, 0), (455, 592, 250, 50))
+            pygame.draw.rect(self.base.display, (255, 255, 255), (460, 597, 240, 40))
+            self.base.display.blit(name, (490, 608))
+
+            pygame.display.update()
+
+    def playersDead(self):
+            self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
+                                                      (1300, 400))
+            self.base.display.blit(self.combatBoard, (0, 300))
+
+            font = pygame.font.Font(self.font, self.fontsize)
+            name = font.render("Game Over", True, self.black)
+
+            pygame.draw.rect(self.base.display, (0, 0, 0), (455, 592, 250, 50))
+            pygame.draw.rect(self.base.display, (255, 255, 255), (460, 597, 240, 40))
+            self.base.display.blit(name, (490, 608))
+
+            pygame.display.update()
     def drawBackground(self, img):
         self.base.bgImage = pygame.transform.scale(pygame.image.load(img).convert_alpha(),
                                                    (self.base.screen_height,self.base.screen_width))
@@ -165,6 +193,7 @@ class EncounterStage():
         positionAlly = 520 - (len(self.combat.allies) * 150)
         print(len(self.combat.allies))
         for character in self.combat.turnOrder:
+            print(self.combat.turnOrder)
             if character.isEnemy:
                 character.CurrentBattlePos = positionEnemy + character.stagePositionX
                 self.base.display.blit(
@@ -197,17 +226,28 @@ class EncounterStage():
             pygame.display.update(updateRect)
 
     def goThrougheachTurn(self, combatEncounterInstance, img):
+        counter = 1
         clicked = False
         death = False
+
         while len(combatEncounterInstance.enemies) > 0 and len(combatEncounterInstance.allies) > 0:
+            print(combatEncounterInstance.turnOrder)
+            self.drawRoundCount(counter)
+            sleep(1)
+            self.redrawAttackBar()
             for character in combatEncounterInstance.turnOrder:
-                if character.isEnemy:
-                    self.drawAttackBarEnemy(character)
-                    move = makeMove(character, combatEncounterInstance.allies)
-                    death = combatEncounterInstance.calcDamage(move)
-                    self.redrawAttackBar()
+
+                if character.isEnemy :
+                    if  len(combatEncounterInstance.allies) > 0:
+                        self.drawAttackBarEnemy(character)
+                        move = makeMove(character, combatEncounterInstance.allies)
+                        death = combatEncounterInstance.calcDamage(move)
+                        if death == True:
+                            self.redraw(img)
+                        self.redrawAttackBar()
 
                 else:
+                    sleep(.3)
                     if len(combatEncounterInstance.enemies) > 0:
                         self.displayButtons(character)
                         self.displayHealth(character)
@@ -244,13 +284,18 @@ class EncounterStage():
                         char.TurnOrderPosOfEnemys = self.turnOrder.index(char)
                 for attack in character.allAttacks:
                     attack.reduceCoolDown()
+            counter += 1
 
         if len(combatEncounterInstance.enemies) <= 0:
+            sleep(1)
             print("Allys won\n\n")
             for ally in self.combat.allies:
                 for attack in ally.allAttacks:
                     attack.resetCoolDown()
         else:
+            sleep(.5)
+            self.playersDead()
+            sleep(1)
             print("Enemys won\n\n")
 
 

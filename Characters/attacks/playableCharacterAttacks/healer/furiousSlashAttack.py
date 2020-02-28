@@ -11,7 +11,7 @@ class FuriousSlash(BaseAttack):
         self.name = 'Tending Wounds'
         self.description = '%s:\nyou swing with wild ferocity  .\n' \
                            ' On target,  you deal %i physical damage.'
-        self.cooldown = 3
+        self.coolDown = 3
 
 
 
