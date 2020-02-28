@@ -37,12 +37,12 @@ def running():
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
                 #encounter takes the screen and the current challange rating as input
-<<<<<<< HEAD
-                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [Warlock()])
-=======
+
+                #EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, [Warlock()])
+
 
                 #encounterStage = EncounterStage(baseScreen, cr)
->>>>>>> 2501e0b89bb621e7f38bb0ecb71ace8f57b46978
+
                 #encounterStage.mainLoop()
                 pass
 
