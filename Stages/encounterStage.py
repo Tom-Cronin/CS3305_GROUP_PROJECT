@@ -159,7 +159,10 @@ class EncounterStage():
 
     def displayCharacter(self):
         positionEnemy = 600
-        positionAlly = -80
+
+        # positionAlly = -80
+        positionAlly = 520 - (len(self.combat.allies) * 150)
+        print(len(self.combat.allies))
         for character in self.combat.turnOrder:
             if character.isEnemy:
                 character.CurrentBattlePos = positionEnemy + character.stagePositionX
@@ -275,5 +278,5 @@ if __name__ == "__main__":
     baseScreen = BaseStage(1300, 700)
     pygame.init()
     pygame.mixer.init()
-    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 7, [Fighter(), Warlock(),Fighter(), Warlock()])
+    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", 7, [Fighter(), Warlock(),Fighter()])
     pygame.quit()
