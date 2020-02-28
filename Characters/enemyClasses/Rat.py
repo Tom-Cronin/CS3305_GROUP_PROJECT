@@ -26,4 +26,10 @@ class Rat(Character):
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
 
+        self.scale = (155, 110)
+        self.stagePositionY = 370 + (220 - self.scale[1])
+        self.stagePositionX = 100
+
+        self.name = "Rat"
+
         self.imagePath = 'assets/images/characters/Enemies/PNG_Images/rat.png'

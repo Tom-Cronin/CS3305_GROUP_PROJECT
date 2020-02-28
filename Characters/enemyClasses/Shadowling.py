@@ -22,4 +22,6 @@ class Shadowling(Character):
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
 
-        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/Shadowling.png'
+        self.scale = (30, 30)
+        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/rat.png'
+        # self.imagePath = 'assets/images/characters/Enemies/PNG_Images/Shadowling.png'

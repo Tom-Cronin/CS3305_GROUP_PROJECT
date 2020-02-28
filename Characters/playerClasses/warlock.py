@@ -30,8 +30,8 @@ class Warlock(Character):
         self.attack_slot_4 = HellfireWhirlwind(self.intelligence)
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
+        self.scale = (300,300)
 
-        self.name = "Fiend Warlock"
         self.description = "%s\n Health: %i\n Strength: %i\n Dexterity: %i\n " \
                            "Constitution: %i\n Intelligence: %i\n Total Kills: %i\n"
 
