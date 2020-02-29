@@ -1,12 +1,18 @@
-from CombatSystem.MonsterDictionary import CR_MAX_VALUE as CR_Max,CR_MIN_VALUE as CR_Min, dictionaryOfMonsters as DM
+from CombatSystem.MonsterDictionary import CR_MAX_VALUE as CR_Max,CR_MIN_VALUE as CR_Min, dictionaryOfMonsters as DM, dictionaryOfBoss as DB
 from random import randint
 
 
 dictionaryOfMonsters = DM
+dictionaryOfBoss = DB
 CR_MAX_VALUE = CR_Max
 CR_MIN_VALUE = CR_Min
 
-def createEnemyInstances(enemyCROrder):
+def createEnemyInstances(enemyCROrder, Boss=False):
+    if Boss:
+        print("here")
+        boss = dictionaryOfBoss.get(1)[0]()
+        print(boss)
+        return [boss]
     enemies = []
     count = 1
     for enemyCR in enemyCROrder:
@@ -26,8 +32,10 @@ def minCRValue(crTotal, enemySpacesRemaining):
 
 
 # only works with CR's less than the max CR * 4
-def generateEnemies(totalChalenegeLevel):
+def generateEnemies(totalChalenegeLevel, Boss=False):
     spaces = 4
+    if Boss:
+        return createEnemyInstances([1], Boss)
     enemyCROrder = []
     while totalChalenegeLevel > 0:
         min = minCRValue(totalChalenegeLevel, spaces)

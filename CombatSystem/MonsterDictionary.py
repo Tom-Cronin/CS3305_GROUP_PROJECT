@@ -1,4 +1,4 @@
-from Characters.enemyClasses import Hag, Rat, ShadowJest, Shadowling
+from Characters.enemyClasses import Hag, Rat, ShadowJest, Shadowling, GateGuard
 
 CR_MAX_VALUE = 3
 CR_MIN_VALUE = 1
@@ -14,3 +14,7 @@ dictionaryOfMonsters = {
     2: [ShadowJest.ShadowJest],
     3: [Hag.Hag]
 }
+dictionaryOfBoss = {
+    1: [GateGuard.GateGuard]
+}
+

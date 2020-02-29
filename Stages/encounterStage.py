@@ -11,7 +11,9 @@ from CombatSystem.combat import *
 
 
 class EncounterStage():
-    def __init__(self, screen, levelImage, crLevel, listOfPlayers):
+    def __init__(self, screen, levelImage, crLevel, listOfPlayers, Boss=False):
+        print(Boss)
+
         self.defaultColour = (120, 120, 120)
         self.white = (255, 255, 255)
         self.black = (0, 0, 0)
@@ -30,7 +32,7 @@ class EncounterStage():
         self.selectColour = (152, 204, 148)
         self.drawBackground(levelImage)
         self.combat = combatEncounter()
-        self.combat.setUp(crLevel, listOfPlayers)
+        self.combat.setUp(crLevel, listOfPlayers, Boss)
         self.turnOrder = self.combat.turnOrder
         self.displayCharacter()
         self.mainLoop(levelImage)

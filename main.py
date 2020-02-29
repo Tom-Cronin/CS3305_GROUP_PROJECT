@@ -69,7 +69,8 @@ def running(seed):
             elif current_room_cr[0] == "B" and demoBoss:
                 demoBoss = False
                 #LoadingScreen.mainLoop()
-                encounterStage = EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
+                print("hi")
+                encounterStage = EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team, True)
             elif current_room_cr[0] == "?" and demoMystery:
                 demoMystery = False
                 #LoadingScreen.mainLoop()

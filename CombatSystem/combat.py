@@ -36,8 +36,8 @@ class combatEncounter(object):
         return death
 
 
-    def setUp(self, crChalengeLevel, listOfPlayers):
-        self.enemies = generateEnemies(crChalengeLevel)
+    def setUp(self, crChalengeLevel, listOfPlayers, Boss=False):
+        self.enemies = generateEnemies(crChalengeLevel, Boss)
         self.allies = listOfPlayers
         self.turnOrder = self.allies + self.enemies
         self.allCharsInFight = self.turnOrder
