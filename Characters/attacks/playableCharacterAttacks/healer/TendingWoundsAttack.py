@@ -9,9 +9,9 @@ class TendingWounds(BaseAttack):
         self.baseHeal = -7
 
         self.name = 'Tending Wounds'
-        self.description = '%s:\nyou treat your hurts .\n' \
+        self.description = '%s:\nyou treat your hurts.\n' \
                            ' On self, healing your self for %i health.'
-        self.cooldown = 2
+        self.coolDown = 2
 
 
 

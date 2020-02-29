@@ -11,7 +11,7 @@ class DoubleSwing(BaseAttack):
         self.name = 'DoubleStrike'
         self.description = '%s:\n you swing your sword twice in rapid succession.\n' \
                            ' On hit, the target takes %i physical damage.'
-        self.cooldown = 1
+        self.coolDown = 1
 
 
 

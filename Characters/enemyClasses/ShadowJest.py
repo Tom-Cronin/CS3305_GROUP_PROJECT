@@ -11,6 +11,8 @@ class ShadowJest(Character):
         self.constitution = 13
         self.intelligence = 5
         self.ArmorClass = 1
+        self.name = "Jest"
+
 
         self.setHealth(33)
 
@@ -18,6 +20,7 @@ class ShadowJest(Character):
 
         self.allAttacks = [self.attack_slot_1]
 
-        self.scale = (30, 30)
-        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/rat.png'
+        self.scale = (300, 330)
+
+        self.imagePath = 'assets/images/characters/Enemies/PNG_Images/ShadowJest.png'
         # self.imagePath = 'assets/images/characters/Enemies/PNG_Images/ShadowJest.png'

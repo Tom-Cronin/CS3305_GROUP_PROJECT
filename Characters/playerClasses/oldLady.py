@@ -2,7 +2,7 @@ from Characters.BaseClass.CharacterBaseClass import Character
 
 from Characters.attacks.playableCharacterAttacks.oldLady.BrollyBarrage import BrollyBarrage
 from Characters.attacks.playableCharacterAttacks.oldLady.UmbrellaSmash import UmbrellaSmash
-from Characters.attacks.playableCharacterAttacks.oldLady.RainshadeShield import RainshadeShield
+from Characters.attacks.playableCharacterAttacks.oldLady.RainshadeShield import GlorPres
 from Characters.attacks.playableCharacterAttacks.oldLady.ParasolParry import ParasolParry
 
 
@@ -18,18 +18,18 @@ class OldLady(Character):
         self.isEnemy = False
 
         self.setHealth(35)
-
-        self.imagePath = None
+        self.scale = (180, 330)
+        self.imagePath = "assets/images/characters/Players/PNG_Images/CrazyLady.png"
 
         self.attack_slot_1 = UmbrellaSmash(self.strength)
         self.attack_slot_2 = BrollyBarrage(self.strength)
         self.attack_slot_3 = ParasolParry(self.constitution)
-        self.attack_slot_4 = RainshadeShield(self.constitution)
+        self.attack_slot_4 = GlorPres(self.constitution)
 
 
-        self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
+        self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
 
-        self.name = "Oldlady"
+
         self.description = "%s\n Health: %i\n Strength: %i\n Dexterity: %i\n Constitution: %i\n Intelligence: %i\n"
 
     def updateAttackBonuses(self):

@@ -34,7 +34,7 @@ def makeMove(enemy, listOfPlayers):
         myAttackIndex, maxDamage = getMaxDamageAttack(enemy)
         enemy.allAttacks[myAttackIndex].startCooldown()
         if maxDamage >= playerWithLeastHealth.health:
-            return [maxDamage, playerWithLeastHealth]
-        return [maxDamage, playerWithMaxHealth]
+            return [enemy.allAttacks[myAttackIndex], playerWithLeastHealth]
+        return [enemy.allAttacks[myAttackIndex], playerWithMaxHealth]
 
     return [0, enemy]

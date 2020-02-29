@@ -13,7 +13,7 @@ from Characters.playerClasses.healer import Healer
 #from Stages.loadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
-team = [Warlock()]#, Fighter(), OldLady(), Healer()]
+
 
 
 def running(seed):
@@ -21,6 +21,8 @@ def running(seed):
     mainMenu = MainMenu(baseScreen, seed)
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
+    # team = [Warlock(), Fighter(), OldLady()]
+    team = [Warlock(), Fighter()]
     mymap = Map(baseScreen, loop[1])
     if not loop[0]:
         pygame.quit()
@@ -40,7 +42,7 @@ def running(seed):
             current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b":
                 #LoadingScreen.mainLoop()
-                #EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
+                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
                 pass
             elif current_room_cr[0] == "T":
                 #LoadingScreen.mainLoop()

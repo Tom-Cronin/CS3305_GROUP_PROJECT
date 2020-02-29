@@ -10,8 +10,17 @@ class combatEncounter(object):
 
     def calcDamage(self, tupleOfdamgeAndChar, char=None):
         death = False
-        Damage = tupleOfdamgeAndChar[0]
+        attack = tupleOfdamgeAndChar[0]
+        playerChar = char
+        Damage = attack.calcDamage()
         charTakingDamage = tupleOfdamgeAndChar[1]
+        if charTakingDamage == "self":
+            playerChar.heal(Damage)
+            return death
+        elif charTakingDamage == "all":
+            for char in self.allies:
+                char.heal(Damage)
+            return death
         global enemies, turnOrder, allies
         charTakingDamage.takeDamage(Damage)
         if charTakingDamage.health <= 0:
