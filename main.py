@@ -18,11 +18,18 @@ baseScreen = BaseStage(1300, 700)
 
 def running(seed):
     pygame.init()
+    pygame.display.set_caption('Traylian')
+    pygame.mouse.set_cursor(*pygame.cursors.tri_left)
     mainMenu = MainMenu(baseScreen, seed)
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
     # team = [Warlock(), Fighter(), OldLady()]
     team = [Warlock(), Fighter()]
+    demoBattle = True
+    demoTreasure = True
+    demoPuzzle = True
+    demoMystery = True
+    demoBoss = True
     mymap = Map(baseScreen, loop[1])
     if not loop[0]:
         pygame.quit()
@@ -40,23 +47,28 @@ def running(seed):
                 count -= 3
             #LoadingScreen.mainLoop()
             current_room_cr = mymap.mainloop()
-            if current_room_cr[0] == "b":
+            if current_room_cr[0] == "b" and demoBattle:
+                demoBattle = False
                 #LoadingScreen.mainLoop()
                 EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
                 pass
-            elif current_room_cr[0] == "T":
+            elif current_room_cr[0] == "T" and demoTreasure:
+                demoTreasure = False
                 #LoadingScreen.mainLoop()
                 treasureRoom = TreasureRoom(baseScreen)
                 #treasureRoom.mainLoop()
-            elif current_room_cr[0] == "P":
+            elif current_room_cr[0] == "P" and demoPuzzle:
+                demoPuzzle = False
                 #LoadingScreen.mainLoop()
                 snake = SnakeGame(baseScreen, "")
                 snake.mainLoop()
                 pass
-            elif current_room_cr[0] == "B":
+            elif current_room_cr[0] == "B" and demoBoss:
+                demoBoss = False
                 #LoadingScreen.mainLoop()
                 encounterStage = EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
-            elif current_room_cr[0] == "?":
+            elif current_room_cr[0] == "?" and demoMystery:
+                demoMystery = False
                 #LoadingScreen.mainLoop()
                 pass
             if current_room_cr == "m":

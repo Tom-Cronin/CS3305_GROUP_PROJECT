@@ -25,6 +25,10 @@ class OldLady(Character):
         self.attack_slot_2 = BrollyBarrage(self.strength)
         self.attack_slot_3 = ParasolParry(self.constitution)
         self.attack_slot_4 = GlorPres(self.constitution)
+        self.attack_slot_4.name = "Demo Kill"
+        self.attack_slot_4.baseDamage = 99999
+        self.attack_slot_4.coolDown = 0
+        self.attack_slot_4.isHeal = False
 
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]

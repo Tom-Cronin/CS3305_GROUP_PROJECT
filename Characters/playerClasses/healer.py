@@ -24,9 +24,13 @@ class Healer(Character):
         self.attack_slot_2 = FuriousSlash(self.strength)
         self.attack_slot_3 = NaturesTouch(self.intelligence)
         self.attack_slot_4 = TendingWounds(self.intelligence)
+        self.attack_slot_4.name = "Demo Kill"
+        self.attack_slot_4.baseDamage = 99999
+        self.attack_slot_4.coolDown = 0
+        self.attack_slot_4.isHeal = False
 
 
-        self.allAttacks = [self.attack_slot_1, self.attack_slot_2]
+        self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
 
 
         self.description = "%s\n Health: %i\n Strength: %i\n Dexterity: %i\n Constitution: %i\n Intelligence: %i\n"

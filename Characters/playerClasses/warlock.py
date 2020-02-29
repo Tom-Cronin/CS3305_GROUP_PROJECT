@@ -28,6 +28,9 @@ class Warlock(Character):
         self.attack_slot_2 = Vigor(self.intelligence)
         self.attack_slot_3 = BurningSight(self.intelligence)
         self.attack_slot_4 = HellfireWhirlwind(self.intelligence)
+        self.attack_slot_4.name = "Demo Kill"
+        self.attack_slot_4.baseDamage = 99999
+        self.attack_slot_4.coolDown = 0
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
         self.scale = (300,300)
