@@ -1,13 +1,18 @@
 from Stages.baseStageClass import BaseStage, StageButton
+from random import choice, randint
 from Stages.Snake.snakeMaze import Maze
 from Stages.Snake.snakeSnake import SnakeGuy
 import pygame
 from pygame.locals import *
+
 import time
+
 
 class SnakeGame(BaseStage):
 
-    def __init__(self, screen, hint):
+    def __init__(self, screen, hint, listOfPlayers):
+
+        self.listOfPlayers = listOfPlayers
         # init display screen
         self.screen_height = screen.screen_height
         self.screen_width = screen.screen_width
@@ -43,7 +48,14 @@ class SnakeGame(BaseStage):
         self.snake.draw()
 
     def generatePrize(self):  # ToDo: a general prize generator to be called by each room/stage?
-        return "nothing"
+        char = choice(self.listOfPlayers)
+        increaseAmount = randint(1, 4)
+        att = choice(["strength",
+                    "dexterity",
+                    "constitution",
+                    "intelligence"])
+        char.levelUp(att, increaseAmount)
+        return "%s's\n %s increased by %i" % (char.name, att, increaseAmount)
 
     def gameOver(self, win=False):  # ends the game when a win/failure occurs
         self.finished = True
@@ -55,7 +67,7 @@ class SnakeGame(BaseStage):
             message = "You lost!\nGame over"
         else:
             prize = self.generatePrize()
-            message = "Congrats!\nYou win "+prize
+            message = "Congrats!\n"+prize
         self.activeButtons = [self.okay]
         self.okay.displayButton(self.display)
         y = self.screen_width/4 + 50

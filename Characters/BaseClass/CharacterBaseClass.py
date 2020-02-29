@@ -56,18 +56,15 @@ class Character:
     def increaseInt(self, amount):
         self.intelligence += amount
 
-    def increaseAC(self, amount):
-        self.ArmorClass += amount
 
-    def levelUp(self, chosenAttribute):
+    def levelUp(self, chosenAttribute, ammount):
         attributeDict = {
-            "str": self.increaseStr,
-            "dex": self.increaseDex,
-            "con": self.increaseConst,
-            "int": self.increaseInt,
-            "ac": self.increaseAC
+            "strength": self.increaseStr,
+            "dexterity": self.increaseDex,
+            "constitution": self.increaseConst,
+            "intelligence": self.increaseInt
         }
-        attributeDict[chosenAttribute](1)
+        attributeDict[chosenAttribute](ammount)
 
     def attackSound(self):
         # if self.attackSoundPath != "blank":
@@ -84,5 +81,5 @@ class Character:
             self.health = self.maxHealth
 
     def generateName(self):
-
         return RChoice(open('Characters/BaseClass/nameLists.txt').read().splitlines())
+

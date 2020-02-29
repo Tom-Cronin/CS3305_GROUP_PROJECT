@@ -6,6 +6,9 @@ from Stages.treasureRoom import TreasureRoom
 from Stages.encounterStage import EncounterStage
 from Stages.Snake.snakeGame import SnakeGame
 
+import random
+import string
+
 from Characters.playerClasses.warlock import Warlock
 from Characters.playerClasses.fighter import Fighter
 from Characters.playerClasses.oldLady import OldLady
@@ -23,8 +26,8 @@ def running(seed):
     mainMenu = MainMenu(baseScreen, seed)
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
-    # team = [Warlock(), Fighter(), OldLady()]
-    team = [Warlock(), Fighter()]
+    team = [Warlock(), Fighter(), OldLady()]
+    # team = [Warlock(), Fighter()]
     demoBattle = True
     demoTreasure = True
     demoPuzzle = True
@@ -60,7 +63,7 @@ def running(seed):
             elif current_room_cr[0] == "P" and demoPuzzle:
                 demoPuzzle = False
                 #LoadingScreen.mainLoop()
-                snake = SnakeGame(baseScreen, "")
+                snake = SnakeGame(baseScreen, "", team)
                 snake.mainLoop()
                 pass
             elif current_room_cr[0] == "B" and demoBoss:
@@ -79,5 +82,6 @@ def running(seed):
 
 
 if __name__ == "__main__":
-    seed = "Best seed"
+    seed = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(16)])
+    # seed = "Best seed"
     running(seed)
