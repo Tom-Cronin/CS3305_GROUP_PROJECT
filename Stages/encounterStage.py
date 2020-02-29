@@ -108,8 +108,8 @@ class EncounterStage():
 
 
 
-        pygame.draw.rect(self.base.display, (0, 0, 0), (445, 592, 160, 50))
-        pygame.draw.rect(self.base.display, (255, 255, 255), (450, 597, 150, 40))
+        pygame.draw.rect(self.base.display, (0, 0, 0), (445, 592, 170, 50))
+        pygame.draw.rect(self.base.display, (255, 255, 255), (450, 597, 160, 40))
         self.base.display.blit(name, (490, 608))
 
         percentHealthDisplay = int(180 * (percentHealth))
@@ -191,9 +191,7 @@ class EncounterStage():
 
         # positionAlly = -80
         positionAlly = 520 - (len(self.combat.allies) * 150)
-        print(len(self.combat.allies))
         for character in self.combat.turnOrder:
-            print(self.combat.turnOrder)
             if character.isEnemy:
                 character.CurrentBattlePos = positionEnemy + character.stagePositionX
                 self.base.display.blit(
@@ -231,7 +229,6 @@ class EncounterStage():
         death = False
 
         while len(combatEncounterInstance.enemies) > 0 and len(combatEncounterInstance.allies) > 0:
-            print(combatEncounterInstance.turnOrder)
             self.drawRoundCount(counter)
             sleep(1)
             self.redrawAttackBar()
@@ -288,7 +285,6 @@ class EncounterStage():
 
         if len(combatEncounterInstance.enemies) <= 0:
             sleep(1)
-            print("Allys won\n\n")
             for ally in self.combat.allies:
                 for attack in ally.allAttacks:
                     attack.resetCoolDown()
@@ -296,7 +292,6 @@ class EncounterStage():
             sleep(.5)
             self.playersDead()
             sleep(1)
-            print("Enemys won\n\n")
 
 
 
