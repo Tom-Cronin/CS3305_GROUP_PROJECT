@@ -13,7 +13,7 @@ from CombatSystem.combat import *
 class EncounterStage():
     def __init__(self, screen, levelImage, crLevel, listOfPlayers, Boss=False):
         print(Boss)
-
+        self.levelImage = levelImage
         self.defaultColour = (120, 120, 120)
         self.white = (255, 255, 255)
         self.black = (0, 0, 0)
@@ -46,17 +46,17 @@ class EncounterStage():
         self.base.display.blit(self.combatBoard, (0, 300))
         pygame.display.update()
 
-    def drawAttackBarEnemy(self, enemy):
+    def drawAttackBarEnemy(self, enemy, attack, player):
         self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
                                                   (1300, 400))
         self.base.display.blit(self.combatBoard, (0, 300))
 
         font = pygame.font.Font(self.font, self.fontsize)
-        name = font.render("Its " + enemy.name+ " turn!", True, self.black)
+        name = font.render(enemy.name+ " used " + attack.name + " on " + player.name, True, self.black)
 
 
-        pygame.draw.rect(self.base.display, (0, 0, 0), (455, 592, 250, 50))
-        pygame.draw.rect(self.base.display, (255, 255, 255), (460, 597, 240, 40))
+        pygame.draw.rect(self.base.display, (0, 0, 0), (455, 592, 450, 50))
+        pygame.draw.rect(self.base.display, (255, 255, 255), (460, 597, 440, 40))
         self.base.display.blit(name, (490, 608))
 
         pygame.display.update()
@@ -88,13 +88,17 @@ class EncounterStage():
             self.base.display.blit(name, (490, 608))
 
             pygame.display.update()
-    def drawBackground(self, img):
+    def drawBackground(self, img, keepBoard=True):
         self.base.bgImage = pygame.transform.scale(pygame.image.load(img).convert_alpha(),
                                                    (self.base.screen_height,self.base.screen_width))
-        self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
-                                                  (1300, 400))
         self.base.display.blit(self.base.bgImage, (0, 0))
-        self.base.display.blit(self.combatBoard, (0, 300))
+        if keepBoard:
+            print("youch")
+
+            self.combatBoard = pygame.transform.scale(pygame.image.load("Stages/media/combatBoard.png").convert_alpha(),
+                                                  (1300, 400))
+
+            self.base.display.blit(self.combatBoard, (0, 300))
         pygame.display.update()
 
 
@@ -237,9 +241,10 @@ class EncounterStage():
             for character in combatEncounterInstance.turnOrder:
 
                 if character.isEnemy :
-                    if  len(combatEncounterInstance.allies) > 0:
-                        self.drawAttackBarEnemy(character)
+                    if len(combatEncounterInstance.allies) > 0:
                         move = makeMove(character, combatEncounterInstance.allies)
+                        self.drawAttackBarEnemy(character,move[0],move[1])
+                        sleep(2)
                         death = combatEncounterInstance.calcDamage(move)
                         if death == True:
                             self.redraw(img)
@@ -290,10 +295,15 @@ class EncounterStage():
             for ally in self.combat.allies:
                 for attack in ally.allAttacks:
                     attack.resetCoolDown()
+            self.drawBackground(self.levelImage, False)
         else:
             sleep(.5)
             self.playersDead()
             sleep(1)
+
+
+
+
 
 
 

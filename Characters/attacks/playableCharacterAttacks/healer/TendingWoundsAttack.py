@@ -5,8 +5,9 @@ class TendingWounds(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterIntAtribute)
         self.audioPath = 'none yet'
-        self.baseDamage = 0
-        self.baseHeal = -7
+        self.baseDamage = 7
+        self.isHeal = True
+        self.healType = "self"
 
         self.name = 'Tending Wounds'
         self.description = '%s:\nyou treat your hurts.\n' \
@@ -16,8 +17,6 @@ class TendingWounds(BaseAttack):
 
 
 
-    def calcDamage(self):
-        return self.baseHeal
 
 
     def __str__(self):

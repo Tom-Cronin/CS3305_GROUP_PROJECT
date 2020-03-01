@@ -6,19 +6,18 @@ class NaturesTouch(BaseAttack):
 
         self.damageMod = calc_attribute_bonus(characterIntAtribute)
         self.audioPath = 'none yet'
-        self.baseDamage = 0
-        self.baseHeal = -4
+        self.baseDamage = 8
+        self.isHeal = True
+        self.healType = "self"
 
         self.name = 'Natures Touch'
         self.description = '%s:\nyou feel nature grasp healing you and your allies  .\n' \
                            'healing you and your allies for %i health.'
-        self.coolDown = 2
+        self.coolDown = 3
 
 
 
 
-    def calcDamage(self):
-        return self.baseHeal
 
 
 

@@ -5,10 +5,10 @@ class FuriousSlash(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrAtribute)
         self.audioPath = 'none yet'
-        self.baseDamage = 5
+        self.baseDamage = 9
 
 
-        self.name = 'Tending Wounds'
+        self.name = 'Furious slash'
         self.description = '%s:\nyou swing with wild ferocity  .\n' \
                            ' On target,  you deal %i physical damage.'
         self.coolDown = 3

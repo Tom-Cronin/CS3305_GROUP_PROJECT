@@ -17,13 +17,15 @@ class Healer(Character):
         self.isEnemy = False
 
         self.setHealth(31)
+        self.scale = (180, 330)
 
-        self.imagePath = None
+        self.imagePath = "assets/images/characters/Players/PNG_Images/druid.png"
 
         self.attack_slot_1 = Slash(self.strength)
         self.attack_slot_2 = FuriousSlash(self.strength)
         self.attack_slot_3 = NaturesTouch(self.intelligence)
         self.attack_slot_4 = TendingWounds(self.intelligence)
+
         self.attack_slot_4.name = "Demo Kill"
         self.attack_slot_4.baseDamage = 99999
         self.attack_slot_4.coolDown = 0

@@ -26,7 +26,7 @@ def running(seed):
     mainMenu = MainMenu(baseScreen, seed)
     #loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
-    team = [Warlock(), Fighter(), OldLady()]
+    team = [Warlock(), Fighter(), OldLady(),Healer()]
     # team = [Warlock(), Fighter()]
     demoBattle = True
     demoTreasure = True
