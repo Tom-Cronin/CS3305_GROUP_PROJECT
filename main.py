@@ -1,22 +1,22 @@
-from Stages.baseStageClass import BaseStage
-from Stages.MainMenu import MainMenu
-import pygame
-from Map.map import Map
-from Stages.treasureRoom import TreasureRoom
-from Stages.encounterStage import EncounterStage
-from Stages.Snake.snakeGame import SnakeGame
-
 import random
 import string
 
-from Characters.playerClasses.warlock import Warlock
+import pygame
+
 from Characters.playerClasses.fighter import Fighter
-from Characters.playerClasses.oldLady import OldLady
 from Characters.playerClasses.healer import Healer
-#from Stages.loadingScreen import LoadingScreen
+from Characters.playerClasses.oldLady import OldLady
+from Characters.playerClasses.warlock import Warlock
+from Map.map import Map
+from Stages.MainMenu import MainMenu
+from Stages.Snake.snakeGame import SnakeGame
+from Stages.baseStageClass import BaseStage
+from Stages.encounterStage import EncounterStage
+from Stages.treasureRoom import TreasureRoom
+
+# from Stages.loadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
-
 
 
 def running(seed):
@@ -24,9 +24,9 @@ def running(seed):
     pygame.display.set_caption('Traylian')
     pygame.mouse.set_cursor(*pygame.cursors.tri_left)
     mainMenu = MainMenu(baseScreen, seed)
-    #loadingScreen = LoadingScreen(baseScreen)
+    # loadingScreen = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
-    team = [Warlock(), Fighter(), OldLady(),Healer()]
+    team = [Warlock(), Fighter(), OldLady(), Healer()]
     # team = [Warlock(), Fighter()]
     demoBattle = False
     demoTreasure = False
@@ -48,31 +48,33 @@ def running(seed):
                 if cr > 12:
                     cr += 1
                 count -= 3
-            #LoadingScreen.mainLoop()
+            # LoadingScreen.mainLoop()
             current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b" and demoBattle:
                 demoBattle = False
-                #LoadingScreen.mainLoop()
-                EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
+                # LoadingScreen.mainLoop()
+                EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", cr, team)
                 pass
             elif current_room_cr[0] == "T" and demoTreasure:
                 demoTreasure = False
-                #LoadingScreen.mainLoop()
+                # LoadingScreen.mainLoop()
                 treasureRoom = TreasureRoom(baseScreen)
-                #treasureRoom.mainLoop()
+                # treasureRoom.mainLoop()
             elif current_room_cr[0] == "P" and demoPuzzle:
                 demoPuzzle = False
-                #LoadingScreen.mainLoop()
+                # LoadingScreen.mainLoop()
                 snake = SnakeGame(baseScreen, "", team)
                 snake.mainLoop()
                 pass
             elif current_room_cr[0] == "B" and demoBoss:
                 demoBoss = False
-                #LoadingScreen.mainLoop()
-                encounterStage = EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
+                # LoadingScreen.mainLoop()
+                encounterStage = EncounterStage(baseScreen,
+                                                "assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",
+                                                cr, team, True)
             elif current_room_cr[0] == "?" and demoMystery:
                 demoMystery = False
-                #LoadingScreen.mainLoop()
+                # LoadingScreen.mainLoop()
                 pass
             if current_room_cr == "m":
                 running(loop[1])

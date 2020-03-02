@@ -23,7 +23,11 @@ class TestingCombat(unittest.TestCase):
         myCombat = combatEncounter()
         warlockTakingDamage = Warlock()
         baseHealth = warlockTakingDamage.health
-        didItDie = myCombat.calcDamage([1, warlockTakingDamage])
+        testAttack = Warlock()
+        testAttack.allAttacks = [testAttack.attack_slot_1]
+        testAttack.attack_slot_1.baseDamage = 1
+        testAttack.attack_slot_1.damageMod = 0
+        didItDie = myCombat.calcDamage([testAttack.attack_slot_1, warlockTakingDamage])
         self.assertFalse(didItDie)
         self.assertEqual(warlockTakingDamage.health, (baseHealth -1))
 
@@ -31,7 +35,11 @@ class TestingCombat(unittest.TestCase):
         myCombat = combatEncounter()
         warlockTakingDamage = Warlock()
         myCombat.setUp(12, [warlockTakingDamage])
-        didItDie = myCombat.calcDamage([999, warlockTakingDamage])
+        testAttack = Warlock()
+        testAttack.allAttacks = [testAttack.attack_slot_1]
+        testAttack.attack_slot_1.baseDamage = 999
+        testAttack.attack_slot_1.damageMod = 0
+        didItDie = myCombat.calcDamage([testAttack.attack_slot_1, warlockTakingDamage])
         self.assertTrue(didItDie)
 
 

@@ -2,6 +2,7 @@ import unittest
 
 from CombatSystem.enemyMove import getMaxDamageAttack, getPlayersToAttack, makeMove
 from Characters.playerClasses.warlock import Warlock
+from Characters.enemyClasses.Rat import Rat
 
 
 class TestEnemyMove(unittest.TestCase):
@@ -20,26 +21,22 @@ class TestEnemyMove(unittest.TestCase):
         myEnemy.attack_slot_3.baseDamage = 0
         myEnemy.attack_slot_4.baseDamage = 0
 
-        ChosenAttack, AttackDamage = getMaxDamageAttack(myEnemy)
+        ChosenAttack, AttackDamage = getMaxDamageAttack(myEnemy, 1)
 
         self.assertEqual(ChosenAttack, attackBeingChanged)
         self.assertEqual(myEnemy.allAttacks[ChosenAttack], myEnemy.attack_slot_2)
         self.assertEqual(AttackDamage, 20)
 
     def test_getMaxDamageReturnsTheFirstAttackIfAllTheAttacksHaveSameDamage(self):
-        myEnemy = Warlock()
+        myEnemy = Rat()
 
         myEnemy.attack_slot_1.damageMod = 0
         myEnemy.attack_slot_2.damageMod = 0
-        myEnemy.attack_slot_3.damageMod = 0
-        myEnemy.attack_slot_4.damageMod = 0
 
         myEnemy.attack_slot_1.baseDamage = 0
         myEnemy.attack_slot_2.baseDamage = 0
-        myEnemy.attack_slot_3.baseDamage = 0
-        myEnemy.attack_slot_4.baseDamage = 0
 
-        ChosenAttack, AttackDamage = getMaxDamageAttack(myEnemy)
+        ChosenAttack, AttackDamage = getMaxDamageAttack(myEnemy, 1)
 
         self.assertEqual(ChosenAttack, 0)
         self.assertEqual(myEnemy.allAttacks[ChosenAttack], myEnemy.attack_slot_1)
@@ -85,12 +82,12 @@ class TestEnemyMove(unittest.TestCase):
         Warlock2 = Warlock()
         Warlock2.health = 10
 
-        myEnemy = Warlock()
+        myEnemy = Rat()
 
         playerList = [Warlock1, MaxHPWarlock, MinHPWarlock, Warlock2]
         damage, PlayerToHit = makeMove(myEnemy, playerList)
         self.assertEqual(PlayerToHit, MinHPWarlock)
-        self.assertTrue(damage >= 1)
+        self.assertTrue(damage.calcDamage() >= 1)
 
     def test_makeMoveShouldPrioritiseDamagingTheHighestHealthPlayerIfItCantKillAPlayer(self):
         MaxHPWarlock = Warlock()
@@ -102,7 +99,7 @@ class TestEnemyMove(unittest.TestCase):
         Warlock2 = Warlock()
         Warlock2.health = 80
 
-        myEnemy = Warlock()
+        myEnemy = Rat()
 
         playerList = [Warlock1, MaxHPWarlock, MinHPWarlock, Warlock2]
         damage, PlayerToHit = makeMove(myEnemy, playerList)

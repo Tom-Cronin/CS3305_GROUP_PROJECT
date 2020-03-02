@@ -7,5 +7,5 @@ class TestFuriousSlashAttack(TestCase):
         person = Healer()
         hit = TendingWounds(person.intelligence)
 
-        self.assertEqual(-7, hit.calcDamage())
+        self.assertEqual(11, hit.calcDamage())
 
