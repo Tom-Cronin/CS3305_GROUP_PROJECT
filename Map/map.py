@@ -179,7 +179,7 @@ class Map(object):
     # display the map background image, current level, quit button etc
     def printBackground(self):
         pygame.font.init()
-        brown = (53, 36, 26)
+        brown = (55, 44, 38)
         grey = (51, 61, 51)
         black = (0, 0, 0)
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 37)
