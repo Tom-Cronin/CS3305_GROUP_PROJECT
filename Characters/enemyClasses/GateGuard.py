@@ -1,5 +1,5 @@
 from Characters.BaseClass.CharacterBaseClass import Character
-from Characters.attacks.enemyAttacks.gateGuardAttacks import Club,PoisonBreath,slam
+from Characters.attacks.enemyAttacks.gateGuardAttacks import Club,PoisonBreath,slam, ArcaneExplosion
 # for stats see night hag, flesh golem, zombie beholder, or a warlock of great old one dnd 5e
 
 #TODO get the stats and finalise it
@@ -20,6 +20,7 @@ class GateGuard(Character):
         self.attack_slot_1 = Club.Club(self.strength)
         self.attack_slot_2 = PoisonBreath.PoisonBreath(self.strength)
         self.attack_slot_3 = slam.Slam(self.strength)
+        self.attack_slot_4 = None
 
         self.stagePositionY = 85
         self.stagePositionX = 70
@@ -36,6 +37,8 @@ class GateGuard(Character):
                 return True
             elif  self.health <= (self.maxHealth//3):
                 self.imagePath = 'assets/images/characters/Players/PNG_Images/IronBoss/Golem3.png'
+                self.attack_slot_4 = ArcaneExplosion.ArcaneExplosion(10)
+                self.allAttacks.append(self.attack_slot_4)
                 return True
             return False
 

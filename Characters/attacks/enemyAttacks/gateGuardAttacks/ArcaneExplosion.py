@@ -2,17 +2,17 @@ from Characters.attacks.baseAttackClass import BaseAttack
 from Characters.sharedFunctions import calc_attribute_bonus
 
 
-class PoisonBreath(BaseAttack):
+class ArcaneExplosion(BaseAttack):
     def __init__(self, characterStrength):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrength)
         self.audioPath = 'none yet'
-        self.baseDamage = 10
+        self.baseDamage = 11
         self.isAOE = True
 
 
-        self.name = 'Poison Spray'
-        self.coolDown = 4
+        self.name = 'Arcane Explosion'
+        self.coolDown = 10
 
 
 
