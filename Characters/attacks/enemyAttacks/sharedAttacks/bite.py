@@ -11,5 +11,5 @@ class Bite(BaseAttack):
 
         self.name = 'Bite'
 
-        self.cooldown = 3
+        self.coolDown = 3
 

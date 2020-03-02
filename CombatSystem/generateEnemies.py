@@ -9,9 +9,7 @@ CR_MIN_VALUE = CR_Min
 
 def createEnemyInstances(enemyCROrder, Boss=False):
     if Boss:
-        print("here")
         boss = dictionaryOfBoss.get(1)[0]()
-        print(boss)
         return [boss]
     enemies = []
     count = 1

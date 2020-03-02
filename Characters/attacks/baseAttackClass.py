@@ -14,6 +14,7 @@ class BaseAttack():
         self.name = "Temp"
         self.onCoolDown = False
         self.isHeal = False
+        self.isAOE = False
         self.healType = "none"
         self.coolDownTimer = 0
 

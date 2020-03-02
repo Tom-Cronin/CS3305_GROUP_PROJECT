@@ -32,7 +32,8 @@ class Fighter(Character):
         self.attack_slot_4.coolDown = 0
         self.attack_slot_4.isHeal = False
 
-        self.scale = (330, 330)
+        self.scale = (220, 300)
+        self.stagePositionY = 280
 
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]

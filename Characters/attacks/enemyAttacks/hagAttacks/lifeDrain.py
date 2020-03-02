@@ -10,4 +10,4 @@ class LifeDrain(BaseAttack):
         self.baseDamage = 3
 
         self.name = 'Life Drain'
-        self.cooldown = 1
+        self.coolDown = 1

@@ -28,10 +28,10 @@ def running(seed):
     loop = mainMenu.mainLoop()
     team = [Warlock(), Fighter(), OldLady(),Healer()]
     # team = [Warlock(), Fighter()]
-    demoBattle = True
-    demoTreasure = True
-    demoPuzzle = True
-    demoMystery = True
+    demoBattle = False
+    demoTreasure = False
+    demoPuzzle = False
+    demoMystery = False
     demoBoss = True
     mymap = Map(baseScreen, loop[1])
     if not loop[0]:
@@ -69,8 +69,7 @@ def running(seed):
             elif current_room_cr[0] == "B" and demoBoss:
                 demoBoss = False
                 #LoadingScreen.mainLoop()
-                print("hi")
-                encounterStage = EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team, True)
+                encounterStage = EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
             elif current_room_cr[0] == "?" and demoMystery:
                 demoMystery = False
                 #LoadingScreen.mainLoop()

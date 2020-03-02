@@ -17,7 +17,8 @@ class Healer(Character):
         self.isEnemy = False
 
         self.setHealth(31)
-        self.scale = (180, 330)
+        self.scale = (180, 240)
+        self.stagePositionY = 340
 
         self.imagePath = "assets/images/characters/Players/PNG_Images/druid.png"
 

@@ -33,7 +33,9 @@ class Warlock(Character):
         self.attack_slot_4.coolDown = 0
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
-        self.scale = (300,300)
+        self.scale = (180, 240)
+        self.stagePositionY = 350
+
 
         self.description = "%s\n Health: %i\n Strength: %i\n Dexterity: %i\n " \
                            "Constitution: %i\n Intelligence: %i\n Total Kills: %i\n"

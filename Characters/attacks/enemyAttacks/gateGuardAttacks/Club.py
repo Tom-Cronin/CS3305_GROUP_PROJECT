@@ -2,13 +2,12 @@ from Characters.attacks.baseAttackClass import BaseAttack
 from Characters.sharedFunctions import calc_attribute_bonus
 
 
-class Claws(BaseAttack):
+class Club(BaseAttack):
     def __init__(self, characterStrength):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrength)
         self.audioPath = 'none yet'
-        self.baseDamage = 4
+        self.baseDamage = 12
 
-        self.name = 'Claws'
-
-        self.coolDown = 1
+        self.name = 'Club Swing'
+        self.coolDown = 3

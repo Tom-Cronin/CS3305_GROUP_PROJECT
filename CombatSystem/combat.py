@@ -8,12 +8,25 @@ class combatEncounter(object):
         self.turnOrder = []
         self.allCharsInFight = []
 
-    def calcDamage(self, tupleOfdamgeAndChar, char=None):
+    def calcDamage(self, tupleOfdamgeAndChar, char=None, boss=False):
         death = False
         attack = tupleOfdamgeAndChar[0]
         playerChar = char
         Damage = attack.calcDamage()
+        global enemies, turnOrder, allies
+        if attack.isAOE:
+            death = False
+            for char in self.allies:
+                char.takeDamage(Damage)
+                if char.health <= 0:
+                    death = True
+                    self.allies.remove(char)
+                    self.turnOrder.remove(char)
+                    self.allCharsInFight.remove(char)
+            return death
+
         charTakingDamage = tupleOfdamgeAndChar[1]
+
         if charTakingDamage == "self":
             playerChar.heal(Damage)
             return death
@@ -21,8 +34,11 @@ class combatEncounter(object):
             for char in self.allies:
                 char.heal(Damage)
             return death
-        global enemies, turnOrder, allies
+
         charTakingDamage.takeDamage(Damage)
+        if boss and charTakingDamage.health > 0:
+            redraw =  charTakingDamage.checkImageChange()
+            return redraw
         if charTakingDamage.health <= 0:
             death = True
             if charTakingDamage.isEnemy:

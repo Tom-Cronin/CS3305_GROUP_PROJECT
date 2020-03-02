@@ -18,7 +18,8 @@ class OldLady(Character):
         self.isEnemy = False
 
         self.setHealth(35)
-        self.scale = (180, 330)
+        self.scale = (110, 240)
+        self.stagePositionY = 360
         self.imagePath = "assets/images/characters/Players/PNG_Images/CrazyLady.png"
 
         self.attack_slot_1 = UmbrellaSmash(self.strength)
