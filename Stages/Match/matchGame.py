@@ -8,7 +8,6 @@ from random import randint, choice
 class MatchScoreBox(ScoreBox): # keeps track of the score and prints it to the screen
     def __init__(self, screen):
         self.score = 0
-        print(screen.screen_width)
         self.x = screen.screen_height-50
         self.y = 30
         self.size = 40
@@ -63,21 +62,20 @@ class Rock(StageButton):  # Special button for the rocks covering the hidden ima
 
 class MatchGame(BaseStage):
     def __init__(self, screen, team):
+        # init display screen
+        self.display = screen.display
         self.screen_height = screen.screen_height
         self.screen_width = screen.screen_width
         self.screen = screen
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(),
+                                              (self.screen_height, self.screen_width))
 
         #Generate prize
         self.team = team
         self.prize = self.generatePrize()
 
-
-        self.score = MatchScoreBox(screen) # keeps track of score and prints to screen
+        self.score = MatchScoreBox(screen)  # keeps track of score and prints to screen
         self.difficulty = 12  # num of matches = difficulty
-
-        # init display screen
-        self.display = screen.display
-        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(), (self.screen_height, self.screen_width))
 
         # Buttons
         self.quitGame = screen.quitGame
@@ -101,20 +99,20 @@ class MatchGame(BaseStage):
 
         self.hiddenImages = ["ts1.png", "ts2.png", "ts3.png", "ts4.png", "ts5.png", "ts6.png",
                              "ts7.png", "ts8.png", "ts9.png", "ts11.png", "ts12.png",
-                             "ts13.png", "ts14.png"]  # potential images to be found under a rock, used to initilize game
-        self.rockImage = (pygame.image.load("Stages/media/rockImage.png").convert_alpha()) # loads the rock image as a png, ensure image is only loaded once
+                             "ts13.png", "ts14.png"]  # images to be found under a rock
+        # loads the rock image as a png, ensure image is only loaded once
+        self.rockImage = (pygame.image.load("Stages/media/rockImage.png").convert_alpha())
 
         self.finished = False
 
-        self.xyList = []  # to prevent overlap of rocks
+        self.xyList = []  # to prevent overlap of rock placement
 
     def checkRockLocation(self, x, y):  # detects if rock is generated on top of existing rock: return True if so
-        # ToDo: debug
-        if [x,y] in self.xyList:
+        if [x, y] in self.xyList:
             return True
         return False
 
-    def generateXY(self): # gets a random location on the screen to place a rock
+    def generateXY(self):  # gets a random location on the screen to place a rock
         unsuitable = True
         while unsuitable is True:
             x = (randint(1, 12)*100) - 10
@@ -123,7 +121,7 @@ class MatchGame(BaseStage):
                 self.xyList.append([x,y])
                 return x, y
 
-    def getRock(self, name):
+    def getRock(self, name): # gets rock by name
         for rock in self.rocks:
             if rock.buttonText == name:
                 return rock
@@ -145,9 +143,7 @@ class MatchGame(BaseStage):
             for match in range(2):
                 x, y = self.generateXY()
                 newRock = Rock(self.screen, matchID+match, x, y, underImage, matchID, self.rockImage)
-                # print(num, match)
                 self.rocks.append(newRock)
-                print(newRock.buttonText)
                 self.rockNames.append(newRock.buttonText)
                 self.activeButtons.append(newRock)
             matchID += 2
@@ -158,25 +154,21 @@ class MatchGame(BaseStage):
         self.hiddenImages.remove(image)
         return image
 
-
-    def lookUnder(self, rockName): # reveales image under rock
+    def lookUnder(self, rockName):  # reveals image under rock
         rock = self.getRock(rockName)
         if rock.looking is False:
             rock.lookUnder()
             self.resetLayers()
-            print("pressed:"+str(rock.buttonText))
             self.choosenRocks.append(rock)
-            print("len:", len(self.choosenRocks))
             self.selectedButtonNames.append(rock.buttonText)
             if len(self.choosenRocks) == 2:
                 self.checkMatching()
 
-
-    def replaceRocks(self):
+    def replaceRocks(self): # puts the rocks back over the images
         self.choosenRocks[0].replaceRock()
         self.choosenRocks[1].replaceRock()
 
-    def matching(self):
+    def matching(self):  # handles event where two images match
         self.closedRocks += [self.choosenRocks[0].buttonText, self.choosenRocks[1].buttonText]
         self.choosenRocks[0].removeRock()
         self.choosenRocks[1].removeRock()
@@ -184,38 +176,34 @@ class MatchGame(BaseStage):
         if self.score.score == self.difficulty:
             return self.gameOver()
 
-
-    def checkMatching(self):
+    def checkMatching(self): # checks if the two images uncovered match
         self.selectedButtonName = None
         self.selectedButtonNames = []
         if self.choosenRocks[0] == self.choosenRocks[1]:
-            print("Match")
             self.matching()
         else:
-            print("No match")
             self.replaceRocks()
         self.choosenRocks = []
         time.sleep(0.3)
         if self.finished is not True:
             self.resetLayers()
 
-    def rockLayer(self):
+    def rockLayer(self): #draws rocks/underlying images
         for rock in self.rocks:
             if rock.buttonText not in self.closedRocks:
                 rock.displayButton(self.display)
 
-    def howToPlay(self):
+    def howToPlay(self): # draws hint message to screen
         self.hint.displayWarningMessage(self.display, self.screen_width, self.screen_height)
         self.displayButton(self.okay)
         time.sleep(0.3)
         self.activeButtons = [self.okay]  # deactivates the main menu and treasure box, activates ok option
         return self.hint.buttonText
 
-    def resetLayers(self):
+    def resetLayers(self): # draws everything to screen
         self.backgroundLayer()
         self.rockLayer()
         self.score.printScore()
-
 
     def gameOver(self):  # ends the game when a win/failure occurs
         self.finished = True
@@ -239,13 +227,11 @@ class MatchGame(BaseStage):
             self.selectedButtonName = "ENDGAME"
         pygame.display.update()
 
-
     def mouseClick(self, button):  # event handler for button press
-        if button.buttonText in ["QUIT", "SKIP", "BACK"]:
+        if button.buttonText in ["QUIT"]:
             self.selectedButtonName = self.warningMessage(button)
         elif button.buttonText in self.rockNames:
             if button.buttonText not in (self.selectedButtonNames and self.closedRocks):
-                #self.selectedButtonName = button.buttonText  # ToDo: recheck this
                 self.lookUnder(button.buttonText)
         elif button.buttonText == "OK":
             if self.selectedButtonName in ["QUIT", "ENDGAME"]:
@@ -264,11 +250,6 @@ class MatchGame(BaseStage):
         self.activeButtons = [self.quitGame, self.hint] + self.rocks
         self.backgroundLayer()
         self.rockLayer()
-
-    def choosePrize(self):
-        # Todo: choose an attribute to increase, increase it, return prize name as string, chosen at random?
-        return "nothing"
-
 
     def mainLoop(self):  # listens for events
         self.generateRocks()
@@ -289,7 +270,7 @@ class MatchGame(BaseStage):
                     mainLoop = False
 
 # Can be uncommented For testing purposes but must be commented to stop overriding of main:
-pygame.init()
+"""pygame.init()
 s = BaseStage(1300, 700)
 from Characters.playerClasses.warlock import Warlock
 from Characters.playerClasses.fighter import Fighter
@@ -298,4 +279,4 @@ from Characters.playerClasses.healer import Healer
 team = [Warlock(), Fighter(), OldLady(), Healer()]
 baseStage = MatchGame(s, team)
 baseStage.mainLoop()
-pygame.quit()
+pygame.quit()"""
