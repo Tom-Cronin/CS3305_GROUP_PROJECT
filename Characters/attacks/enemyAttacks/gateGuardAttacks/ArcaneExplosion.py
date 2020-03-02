@@ -7,11 +7,11 @@ class ArcaneExplosion(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrength)
         self.audioPath = 'none yet'
-        self.baseDamage = 11
+        self.baseDamage = 20
         self.isAOE = True
 
 
-        self.name = 'Arcane Explosion'
+        self.name = 'Arcane Blast'
         self.coolDown = 10
 
 

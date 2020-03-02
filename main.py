@@ -20,6 +20,7 @@ baseScreen = BaseStage(1300, 700)
 
 
 def running(seed):
+    seed = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(16)])
     pygame.init()
     pygame.display.set_caption('Traylian')
     pygame.mouse.set_cursor(*pygame.cursors.tri_left)
@@ -28,11 +29,11 @@ def running(seed):
     loop = mainMenu.mainLoop()
     team = [Warlock(), Fighter(), OldLady(),Healer()]
     # team = [Warlock(), Fighter()]
-    demoBattle = False
-    demoTreasure = False
-    demoPuzzle = False
-    demoMystery = False
-    demoBoss = True
+    # demoBattle = False
+    # demoTreasure = False
+    # demoPuzzle = False
+    # demoMystery = False
+    # demoBoss = True
     mymap = Map(baseScreen, loop[1])
     if not loop[0]:
         pygame.quit()
@@ -50,27 +51,35 @@ def running(seed):
                 count -= 3
             #LoadingScreen.mainLoop()
             current_room_cr = mymap.mainloop()
-            if current_room_cr[0] == "b" and demoBattle:
+            if current_room_cr[0] == "b":
                 demoBattle = False
                 #LoadingScreen.mainLoop()
                 EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
                 pass
-            elif current_room_cr[0] == "T" and demoTreasure:
+            elif current_room_cr[0] == "T":
                 demoTreasure = False
                 #LoadingScreen.mainLoop()
                 treasureRoom = TreasureRoom(baseScreen)
                 #treasureRoom.mainLoop()
-            elif current_room_cr[0] == "P" and demoPuzzle:
+
+            elif current_room_cr[0] == "H":
+                # ToDo implement room for healing
+                # Only quick logic
+                for ally in team:
+                    ally.health = ally.maxHealth
+
+            elif current_room_cr[0] == "P":
                 demoPuzzle = False
                 #LoadingScreen.mainLoop()
                 snake = SnakeGame(baseScreen, "", team)
                 snake.mainLoop()
                 pass
-            elif current_room_cr[0] == "B" and demoBoss:
+            elif current_room_cr[0] == "B":
                 demoBoss = False
                 #LoadingScreen.mainLoop()
-                encounterStage = EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
-            elif current_room_cr[0] == "?" and demoMystery:
+                EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
+            elif current_room_cr[0] == "?":
+
                 demoMystery = False
                 #LoadingScreen.mainLoop()
                 pass

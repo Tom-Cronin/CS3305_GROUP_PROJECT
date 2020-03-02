@@ -7,7 +7,7 @@ class Club(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrength)
         self.audioPath = 'none yet'
-        self.baseDamage = 12
+        self.baseDamage = 18
 
         self.name = 'Club Swing'
         self.coolDown = 3

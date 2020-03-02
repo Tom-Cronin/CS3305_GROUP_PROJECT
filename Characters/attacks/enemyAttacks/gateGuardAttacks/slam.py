@@ -7,7 +7,7 @@ class Slam(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrength)
         self.audioPath = 'none yet'
-        self.baseDamage = 12
+        self.baseDamage = 16
 
         self.name = 'Slam'
         self.coolDown = 2

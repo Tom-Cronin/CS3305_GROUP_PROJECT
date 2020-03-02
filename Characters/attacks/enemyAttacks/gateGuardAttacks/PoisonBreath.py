@@ -7,7 +7,7 @@ class PoisonBreath(BaseAttack):
         super().__init__()
         self.damageMod = calc_attribute_bonus(characterStrength)
         self.audioPath = 'none yet'
-        self.baseDamage = 10
+        self.baseDamage = 14
         self.isAOE = True
 
 

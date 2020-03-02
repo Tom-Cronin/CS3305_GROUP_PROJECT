@@ -24,17 +24,20 @@ def generate_nodes_and_keys(number_of_levels):
             elif level_index == number_of_levels - 1:
                 node_key = "B"
             elif level_index == number_of_levels - 2:
-                node_key = "T"
+                node_key = "H"
             else:
-                rand = random.randint(1, 10)
+                rand = random.randint(1, 11)
                 if rand in [1, 2, 3, 4]:
                     node_key = "b"
                 elif rand in [5, 6, 7]:
                     node_key = "?"
                 elif rand in [8, 9]:
                     node_key = "P"
-                else:
+                elif rand in [10]:
                     node_key = "T"
+                else:
+                    node_key = "H"
+
             list_of_levels[level_index].append([node_index, node_key, []])
             node_index += 1
     return list_of_levels

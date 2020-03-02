@@ -26,7 +26,7 @@ class SnakeGame(BaseStage):
         self.inactiveButtons = []  # buttons that are visible but deactivated
         self.selectedButtonName = None
 
-        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(),
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground2.png').convert(),
                                               (self.screen_height, self.screen_width))
 
         self.disabled = False  # snake movement is disabled while message is displayed
