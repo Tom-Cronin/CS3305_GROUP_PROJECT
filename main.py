@@ -5,6 +5,7 @@ from Map.map import Map
 
 from Stages.treasureRoom import TreasureRoom
 from Stages.encounterStage import EncounterStage
+from Stages.healingRoom import HealStage
 from Stages.Snake.snakeGame import SnakeGame
 
 import random
@@ -58,28 +59,32 @@ def running(seed):
                 EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
                 pass
             elif current_room_cr[0] == "T":
-                demoTreasure = False
                 load.mainloop()
-                treasureRoom = TreasureRoom(baseScreen)
-                #treasureRoom.mainloop()
+                treasureRoom = TreasureRoom(baseScreen, team)
+                treasureRoom.mainLoop()
 
             elif current_room_cr[0] == "H":
-                # ToDo implement room for healing
-                # Only quick logic
-                for ally in team:
-                    ally.health = ally.maxHealth
+                myHealStage = HealStage(baseScreen,team)
+                myHealStage.mainLoop()
 
             elif current_room_cr[0] == "P":
-                demoPuzzle = False
                 load.mainloop()
                 snake = SnakeGame(baseScreen, "", team)
                 snake.mainLoop()
                 pass
             elif current_room_cr[0] == "B":
-                demoBoss = False
                 load.mainloop()
                 EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
             elif current_room_cr[0] == "?":
+                room = random.choice(["b", "p", "H"])
+                if room == "H":
+                    myHealStage = HealStage(baseScreen, team)
+                    myHealStage.mainLoop()
+                elif room == "p":
+                    snake = SnakeGame(baseScreen, "", team)
+                    snake.mainLoop()
+                else:
+                    EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", cr, team)
 
                 demoMystery = False
                 load.mainloop()
