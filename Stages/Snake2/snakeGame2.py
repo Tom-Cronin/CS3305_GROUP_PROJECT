@@ -171,8 +171,8 @@ class SnakeGame2(SnakeGame):
                     mainLoop = False
 
 # Can be uncommented For testing purposes but must be commented to stop overriding of main:
-# pygame.init()
-# s = BaseStage(1300, 700)
-# puzzle = SnakeGame2(s, [Fighter()])
-# puzzle.mainLoop()
-# pygame.quit()
+pygame.init()
+s = BaseStage(1300, 700)
+puzzle = SnakeGame2(s, [Fighter()])
+puzzle.mainLoop()
+pygame.quit()

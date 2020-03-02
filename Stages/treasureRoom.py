@@ -36,7 +36,7 @@ class TreasureRoom(BaseStage):
         # Buttons
         self.quitGame = screen.quitGame
         self.treasureChest = TreasureChestButton("You found a twisted charm, " + self.prize + ".", self.screen_width,
-                                                 self.screen_height, self.bgImage)
+                                                 self.screen_height)
         self.okay = StageButton("OK", "", self.screen_height/2 - (self.quitGame.width + 50), self.screen_width/2)
         self.nevermind = StageButton("MAYBE NOT", "", self.screen_height/2 +50, self.screen_width/2)
 
@@ -121,6 +121,11 @@ class TreasureRoom(BaseStage):
 # Can be uncommented For testing purposes but must be commented to stop overriding of main:
 """pygame.init()
 s = BaseStage(1300, 700)
-baseStage = TreasureRoom(s)
+from Characters.playerClasses.warlock import Warlock
+from Characters.playerClasses.fighter import Fighter
+from Characters.playerClasses.oldLady import OldLady
+from Characters.playerClasses.healer import Healer
+team = [Warlock(), Fighter(), OldLady(), Healer()]
+baseStage = TreasureRoom(s, team)
 baseStage.mainLoop()
 pygame.quit()"""
