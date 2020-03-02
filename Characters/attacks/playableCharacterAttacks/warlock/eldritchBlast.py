@@ -19,10 +19,8 @@ class EldritchBlast(BaseAttack):
     def calcDamage(self):
         return self.baseDamage + self.damageMod
 
-    def attack(self):
-        self.playAttackSound(self.audioPath)
-        print(self.getDamage())
+
 
     def __str__(self):
-        return self.description % (self.name, self.getDamage())
+        return self.description % (self.name, self.calcDamage())
 

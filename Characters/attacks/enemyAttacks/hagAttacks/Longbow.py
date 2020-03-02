@@ -10,13 +10,4 @@ class Longbow(BaseAttack):
         self.baseDamage = 4
 
         self.name = 'Longbow'
-        self.cooldown = 3
-
-
-
-    def calcDamage(self):
-        return self.baseDamage + self.damageMod
-
-    def attack(self):
-        #self.playAttackSound(self.audioPath)
-        print(self.getDamage())
+        self.coolDown = 3

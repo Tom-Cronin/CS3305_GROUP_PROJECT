@@ -11,11 +11,5 @@ class Bite(BaseAttack):
 
         self.name = 'Bite'
 
-        self.cooldown = 1
+        self.coolDown = 3
 
-    def calcDamage(self):
-        return self.baseDamage + self.damageMod
-
-    def attack(self):
-        #self.playAttackSound(self.audioPath)
-        print(self.getDamage())

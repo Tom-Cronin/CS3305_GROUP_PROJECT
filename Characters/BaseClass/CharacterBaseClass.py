@@ -1,4 +1,4 @@
-from random import randint
+from random import randint, choice as RChoice
 import pygame
 from Characters.sharedFunctions import calc_attribute_bonus
 from time import sleep
@@ -8,6 +8,7 @@ class Character:
     def __init__(self):
         self.maxHealth = 0
         self.health = self.maxHealth
+        self.name = self.generateName()
 
         self.constitution = 0 # health
         self.dexterity = 0 # ranged / dagger damage
@@ -22,6 +23,13 @@ class Character:
         self.combatPos = 0
 
         self.attackSoundPath = "blank"
+        self.scale = (0,0)
+        self.stagePositionY = 250
+        self.stagePositionX = 0
+
+        self.CurrentBattlePos = 0
+        self.TurnOrderPosOfEnemys = 0
+
     def killCounter(self):
         self.totalKills += 1
 
@@ -48,38 +56,30 @@ class Character:
     def increaseInt(self, amount):
         self.intelligence += amount
 
-    def increaseAC(self, amount):
-        self.ArmorClass += amount
 
-    def decreaseStr(self, amount):
-        self.strength -= amount
-
-    def decreaseDex(self, amount):
-        self.dexterity -= amount
-
-    def decreaseConst(self, amount):
-        self.constitution -= amount
-
-    def decreaseInt(self, amount):
-        self.intelligence -= amount
-
-    def decreaseAC(self, amount):
-        self.ArmorClass -= amount
-
-    def levelUp(self, chosenAttribute):
+    def levelUp(self, chosenAttribute, ammount):
         attributeDict = {
-            "str": self.increaseStr,
-            "dex": self.increaseDex,
-            "con": self.increaseConst,
-            "int": self.increaseInt,
-            "ac": self.increaseAC
+            "strength": self.increaseStr,
+            "dexterity": self.increaseDex,
+            "constitution": self.increaseConst,
+            "intelligence": self.increaseInt
         }
-        attributeDict[chosenAttribute](1)
+        attributeDict[chosenAttribute](ammount)
 
     def attackSound(self):
-        if self.attackSoundPath != "black":
-            pygame.mixer.init()
-            attackSound = pygame.mixer.Sound(self.attackSoundPath)
-            attackSound.set_volume(0.025)
-            attackSound.play()
-            sleep(attackSound.get_length())
+        # if self.attackSoundPath != "blank":
+        #     pygame.mixer.init()
+        #     attackSound = pygame.mixer.Sound(self.attackSoundPath)
+        #     attackSound.set_volume(0.025)
+        #     attackSound.play()
+        #     sleep(attackSound.get_length())
+        pass
+
+    def heal(self, ammount):
+        self.health += ammount
+        if self.health > self.maxHealth:
+            self.health = self.maxHealth
+
+    def generateName(self):
+        return RChoice(open('Characters/BaseClass/nameLists.txt').read().splitlines())
+

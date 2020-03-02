@@ -1,18 +1,16 @@
-from Characters.enemyClasses import Hag, Rat, ShadowJest, Shadowling
+from CombatSystem.MonsterDictionary import CR_MAX_VALUE as CR_Max,CR_MIN_VALUE as CR_Min, dictionaryOfMonsters as DM, dictionaryOfBoss as DB
 from random import randint
 
-# currently highest cr implemented monster is CR 3
-# lowest ranking is cr 1
-CR_MAX_VALUE = 3
-CR_MIN_VALUE = 1
 
-dictionaryOfMonsters = {
-    1: [Shadowling.Shadowling, Rat.Rat],
-    2: [ShadowJest.ShadowJest],
-    3: [Hag.Hag]
-}
+dictionaryOfMonsters = DM
+dictionaryOfBoss = DB
+CR_MAX_VALUE = CR_Max
+CR_MIN_VALUE = CR_Min
 
-def createEnemyInstances(enemyCROrder):
+def createEnemyInstances(enemyCROrder, Boss=False):
+    if Boss:
+        boss = dictionaryOfBoss.get(1)[0]()
+        return [boss]
     enemies = []
     count = 1
     for enemyCR in enemyCROrder:
@@ -21,8 +19,8 @@ def createEnemyInstances(enemyCROrder):
         enemy.combatPos = count
         count += 1
         enemies.append(enemy)
-
     return enemies
+
 
 def minCRValue(crTotal, enemySpacesRemaining):
     minCRVal = CR_MIN_VALUE
@@ -30,9 +28,12 @@ def minCRValue(crTotal, enemySpacesRemaining):
         minCRVal += 1
     return minCRVal
 
+
 # only works with CR's less than the max CR * 4
-def generateEnemies(totalChalenegeLevel):
+def generateEnemies(totalChalenegeLevel, Boss=False):
     spaces = 4
+    if Boss:
+        return createEnemyInstances([1], Boss)
     enemyCROrder = []
     while totalChalenegeLevel > 0:
         min = minCRValue(totalChalenegeLevel, spaces)

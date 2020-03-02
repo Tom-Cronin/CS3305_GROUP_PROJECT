@@ -1,23 +1,43 @@
-from Stages.baseStageClass import BaseStage
+from Stages.baseStageClass import BaseStage, StageButton
+from random import choice, randint
 from Stages.Snake.snakeMaze import Maze
 from Stages.Snake.snakeSnake import SnakeGuy
 import pygame
-import time
+from pygame.locals import *
 
+import time
 
 class SnakeGame(BaseStage):
 
-    def __init__(self, screen_height, screen_width):
+    def __init__(self, screen, hint, listOfPlayers):
 
-        super().__init__(screen_height, screen_width)
-        self.activeButtons = [self.quitGame]
+        self.listOfPlayers = listOfPlayers
+        # init display screen
+        self.screen_height = screen.screen_height
+        self.screen_width = screen.screen_width
+        self.display = screen.display
+
+        # Buttons
+        self.quitGame = screen.quitGame
+        self.okay = screen.okay
+        self.nevermind = screen.nevermind
+
+        self.inactiveButtons = []  # buttons that are visible but deactivated
+        self.selectedButtonName = None
+
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground2.png').convert(),
+                                              (self.screen_height, self.screen_width))
+
+        self.disabled = False  # snake movement is disabled while message is displayed
         self.snakeColor = (0, 0, 0)  # black
         self.wallColor = (0, 0, 0)  # black
         self.textColor = (0, 0, 0)
         self.font = 'Stages/media/Chapaza.ttf'
-        self.maze = Maze(screen_height, screen_width, self.display)
-        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze.mazeRect)
+        self.maze = Maze(self.screen_height, self.screen_width, self.display)
+        self.snake = SnakeGuy(self.display, self.snakeColor, self.maze)
         self.finished = False
+        self.hint = StageButton("HINT", hint, screen.goBack.xLocation, screen.goBack.yLocation)
+        self.activeButtons = [self.quitGame, self.hint]
 
 
     def mazeLayer(self):
@@ -27,23 +47,32 @@ class SnakeGame(BaseStage):
         self.snake.draw()
 
     def generatePrize(self):  # ToDo: a general prize generator to be called by each room/stage?
-        return "nothing"
+        char = choice(self.listOfPlayers)
+        increaseAmount = randint(1, 4)
+        att = choice(["strength",
+                    "dexterity",
+                    "constitution",
+                    "intelligence"])
+        char.levelUp(att, increaseAmount)
+        return "%s's\n %s increased by %i" % (char.name, att, increaseAmount)
 
     def gameOver(self, win=False):  # ends the game when a win/failure occurs
         self.finished = True
-        self.maze.drawBackground()
+        updateRect = Rect((self.screen_height/4, self.screen_width/4, self.screen_height/2, self.screen_width/2))
+        pygame.draw.rect(self.display, self.okay.textColor, updateRect)  # border
+        pygame.draw.rect(self.display, self.textColor, (self.screen_height/4 + 5, self.screen_width/4 + 5,
+                                                   self.screen_height/2 - 10, self.screen_width/2 - 10))
         if win is False:
             message = "You lost!\nGame over"
         else:
             prize = self.generatePrize()
-            message = "Congrats!\nYou win "+prize
+            message = "Congrats!\n"+prize
         self.activeButtons = [self.okay]
-        self.okay.yLocation += 100
         self.okay.displayButton(self.display)
-        y = self.screen_width/2
+        y = self.screen_width/4 + 50
         for line in message.split('\n'):  # allows for multiple-line output
             font = pygame.font.Font(self.font, 40)
-            text = font.render(line, True, self.textColor)
+            text = font.render(line, True, (self.okay.textColor))
             textRect = text.get_rect()
             textRect.center = (self.screen_height/2, y)
             y += 50
@@ -52,8 +81,12 @@ class SnakeGame(BaseStage):
         pygame.display.update()
 
     def mouseClick(self, button):  # event handler for button press
+        self.disabled = True
         if button.buttonText in ["QUIT", "SKIP", "BACK"]:
             self.selectedButtonName = self.warningMessage(button)
+        if button.buttonText == "HINT":
+            self.howToPlay()
+            self.selectedButtonName = "HINT"
         if button.buttonText == "MAYBE NOT":
             self.neverMind()
         if button.buttonText == "OK":
@@ -65,23 +98,30 @@ class SnakeGame(BaseStage):
                 self.exitStage()
             if self.selectedButtonName == "ENDGAME":
                 self.continueGame()
+                return 1
+            if self.selectedButtonName == "HINT":
+                self.neverMind()
+
+    def neverMind(self):  # Resets the basic Stage background
+        self.disabled = False
+        self.activeButtons = [self.quitGame, self.hint]
+        self.selectedButtonName = None
+        self.mainLoop()
 
     def listenSnake(self):
         # Checks if snake should move:
         key = pygame.key.get_pressed()
         if key[pygame.K_UP]:
-            #ToDo: if in limits...
-            self.snake.move("Up")
+            self.snake.move("U")
             self.checkLocation()
         elif key[pygame.K_DOWN]:
-            self.snake.move("Down")
+            self.snake.move("D")
             self.checkLocation()
         elif key[pygame.K_RIGHT]:
-            self.snake.move("Right")
+            self.snake.move("R")
             self.checkLocation()
-
         elif key[pygame.K_LEFT]:
-            self.snake.move("Left")
+            self.snake.move("L")
             self.checkLocation()
 
         time.sleep(0.1)
@@ -97,8 +137,14 @@ class SnakeGame(BaseStage):
                         self.gameOver()
 
     def continueGame(self):
-        self.makeGreen()
-        # ToDo: return to map
+            return 1
+
+    def howToPlay(self):
+        self.hint.displayWarningMessage(self.display, self.screen_width, self.screen_height)
+        self.displayButton(self.okay)
+        time.sleep(0.3)
+        self.activeButtons = [self.okay]  # deactivates the main menu and treasure box, activates ok option
+        return self.hint.buttonText
 
 
     def mainLoop(self):  # listens for events
@@ -106,27 +152,20 @@ class SnakeGame(BaseStage):
         self.backgroundLayer()
         self.mazeLayer()
         self.snakeLayer()
-        #self.gameOver(True)
+
+
 
         pygame.display.update()
-        #time.sleep(5)
 
         mainLoop = True
 
         while mainLoop:
-            self.listenMouse()
+            if (self.listenMouse()):
+                return 1
             self.listenButton()
-            if self.finished is False:
+            if self.finished is False and self.disabled is False:
                 self.listenSnake()
-
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     mainLoop = False
-
-
-
-pygame.init()
-puzzle = SnakeGame(800, 600)
-puzzle.mainLoop()
-pygame.quit()
