@@ -3,7 +3,7 @@ from pygame.locals import *
 import time
 from Stages.baseStageClass import BaseStage, StageButton
 from Stages.Snake2.snakeGame2 import ScoreBox
-import random
+from random import randint, choice
 
 class MatchScoreBox(ScoreBox): # keeps track of the score and prints it to the screen
     def __init__(self, screen):
@@ -62,13 +62,15 @@ class Rock(StageButton):  # Special button for the rocks covering the hidden ima
 
 
 class MatchGame(BaseStage):
-    def __init__(self, screen):
+    def __init__(self, screen, team):
         self.screen_height = screen.screen_height
         self.screen_width = screen.screen_width
         self.screen = screen
 
         #Generate prize
-        self.prize = self.choosePrize()
+        self.team = team
+        self.prize = self.generatePrize()
+
 
         self.score = MatchScoreBox(screen) # keeps track of score and prints to screen
         self.difficulty = 12  # num of matches = difficulty
@@ -115,17 +117,26 @@ class MatchGame(BaseStage):
     def generateXY(self): # gets a random location on the screen to place a rock
         unsuitable = True
         while unsuitable is True:
-            x = (random.randint(1, 12)*100) - 10
-            y = (random.randint(2, 6)*100) - 10
+            x = (randint(1, 12)*100) - 10
+            y = (randint(2, 6)*100) - 10
             if self.checkRockLocation(x, y) is False:
                 self.xyList.append([x,y])
                 return x, y
-                unsuitable = False
 
     def getRock(self, name):
         for rock in self.rocks:
             if rock.buttonText == name:
                 return rock
+
+    def generatePrize(self):  # ToDo: a general prize generator to be called by each room/stage?
+        char = choice(self.team)
+        increaseAmount = randint(1, 4)
+        att = choice(["strength",
+                      "dexterity",
+                      "constitution",
+                      "intelligence"])
+        char.levelUp(att, increaseAmount)
+        return "%s's\n %s increased by %i" % (char.name, att, increaseAmount)
 
     def generateRocks(self):  # generates random positioning of rocks and images underneath.
         matchID = 0
@@ -142,7 +153,7 @@ class MatchGame(BaseStage):
             matchID += 2
 
     def getNewUnderImage(self):
-        num = random.randint(0, len(self.hiddenImages)-1)
+        num = randint(0, len(self.hiddenImages)-1)
         image = self.hiddenImages[num]
         self.hiddenImages.remove(image)
         return image
@@ -213,7 +224,7 @@ class MatchGame(BaseStage):
         pygame.draw.rect(self.display, self.okay.hovercolour, (self.screen_height/4 + 5, self.screen_width/4 + 5,
                                                    self.screen_height/2 - 10, self.screen_width/2 - 10))
 
-        message = "Congrats!\nYou win "+self.prize
+        message = "Congrats!\n"+self.prize
         self.activeButtons = [self.okay]
         self.okay.yLocation += 100
         self.okay.displayButton(self.display)
@@ -277,9 +288,14 @@ class MatchGame(BaseStage):
                 if event.type == pygame.QUIT:
                     mainLoop = False
 
-"""# Can be uncommented For testing purposes but must be commented to stop overriding of main:
+# Can be uncommented For testing purposes but must be commented to stop overriding of main:
 pygame.init()
 s = BaseStage(1300, 700)
-baseStage = MatchGame(s)
+from Characters.playerClasses.warlock import Warlock
+from Characters.playerClasses.fighter import Fighter
+from Characters.playerClasses.oldLady import OldLady
+from Characters.playerClasses.healer import Healer
+team = [Warlock(), Fighter(), OldLady(), Healer()]
+baseStage = MatchGame(s, team)
 baseStage.mainLoop()
-pygame.quit()"""
+pygame.quit()
