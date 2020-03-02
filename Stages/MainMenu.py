@@ -10,7 +10,7 @@ class MainMenu:
     def __init__(self, screen, seed):
         self.baseScreen = screen
         self.seed = seed
-        self.baseScreen.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground.png').convert(),
+        self.baseScreen.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground2.png').convert(),
                                                          (self.baseScreen.screen_height, self.baseScreen.screen_width))
 
         #buttons
