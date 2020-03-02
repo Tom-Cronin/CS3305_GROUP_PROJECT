@@ -25,10 +25,11 @@ def running(seed):
     pygame.display.set_caption('Traylian')
     pygame.mouse.set_cursor(*pygame.cursors.tri_left)
     mainMenu = MainMenu(baseScreen, seed)
-    load = LoadingScreen(baseScreen)
+    team = [Warlock(), Fighter(), OldLady(), Healer()]
+    load = LoadingScreen(baseScreen, team)
     loop = mainMenu.mainLoop()
 
-    team = [Warlock(), Fighter(), OldLady(),Healer()]
+
     # team = [Warlock(), Fighter()]
     # demoBattle = False
     # demoTreasure = False
@@ -52,6 +53,7 @@ def running(seed):
                 count -= 3
 
             load.mainloop()
+            load.cleanUp()
             current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b":
                 demoBattle = False

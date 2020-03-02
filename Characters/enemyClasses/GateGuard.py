@@ -14,7 +14,7 @@ class GateGuard(Character):
         self.constitution = 18
         self.intelligence = 3
         self.ArmorClass = 12
-
+        self.isEnemy =True
         self.setHealth(110)
 
         self.attack_slot_1 = Club.Club(self.strength)
