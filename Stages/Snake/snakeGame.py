@@ -7,7 +7,6 @@ from pygame.locals import *
 
 import time
 
-
 class SnakeGame(BaseStage):
 
     def __init__(self, screen, hint, listOfPlayers):
