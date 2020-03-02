@@ -45,6 +45,7 @@ class Maze:
         self.walls.append(Walls(self.x+self.width-10, self.y, self.height))  # right border
         self.walls.append(Walls(self.x, self.y+self.height-10, self.width, "h"))  # bottom border
         if self.mazeNum == 1:
+            # ToDo: generate walls randomly each time
             # Destination:
             self.exit = Walls(self.x + self.width - 10, self.y + 10, 30)  # Destination
             # Horizontal maze walls:
@@ -139,6 +140,7 @@ class Maze:
 
             self.constructWallV(51, 38, 5)
             self.constructWallV(55, 34, 9)
+
 
 class Walls:
     def __init__(self, x, y,  length, orientation="v"):

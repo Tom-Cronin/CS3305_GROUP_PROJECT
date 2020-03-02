@@ -4,14 +4,12 @@ import time
 from Stages.baseStageClass import BaseStage, StageButton
 
 class TreasureChestButton(StageButton): # Special button for the treasure box
-    def __init__(self, announcement, screen_width, screen_height, bg_image):
+    def __init__(self, announcement, screen_width, screen_height):
         super().__init__("TREASURE", announcement, 0, 0)
-        self.bgImage = bg_image
         self.screen_width = screen_width
         self.screen_height = screen_height
         self.height = 300
         self.width = 400
-        print(screen_width, screen_height)
         self.yLocation = ((screen_width - self.width) / 2) + 100
         self.xLocation = (screen_height - self.height) / 2
         self.image = (pygame.image.load("Stages/media/treasure_chest.png").convert_alpha()) # loads the treasure box as a png
@@ -36,7 +34,7 @@ class TreasureRoom(BaseStage):
         # Buttons
         self.quitGame = screen.quitGame
         self.treasureChest = TreasureChestButton("You have won " + self.prize + ".", self.screen_width,
-                                                 self.screen_height, self.bgImage)
+                                                 self.screen_height)
         self.okay = StageButton("OK", "", self.screen_height/2 - (self.quitGame.width + 50), self.screen_width/2)
         self.nevermind = StageButton("MAYBE NOT", "", self.screen_height/2 +50, self.screen_width/2)
 

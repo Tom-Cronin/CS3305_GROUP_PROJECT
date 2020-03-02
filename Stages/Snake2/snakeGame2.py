@@ -31,9 +31,10 @@ class ScoreBox():
         self.font = 'Stages/media/Chapaza.ttf'
         self.color = (255, 255, 255)  # white
         self.display = maze.display
+        self.fontSize = 20
 
     def printScore(self):
-        font = pygame.font.Font(self.font, 20)
+        font = pygame.font.Font(self.font, self.fontSize)
         text = font.render(str(self.score), True, self.color)
         textRect = self.scoreBox
         textRect.center = (self.x, self.y)

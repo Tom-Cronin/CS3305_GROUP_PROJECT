@@ -63,7 +63,8 @@ class StageButton:
             self.bgColour = self.defaultColour
             self.displayButton(display)
 
-class DisabledStageButton(StageButton):
+
+class DisabledStageButton(StageButton):  # ToDo: Remove?
 
     def __init__(self, text, exitMessage, x, y):
         super().__init__(text, exitMessage, x, y)
@@ -189,11 +190,11 @@ class BaseStage:
         self.mainLoop()
 
     def makeGreen(self):  # A filler function to end the stage
-        green = (0, 255, 0)
-        self.display.fill(green)
+        #green = (0, 255, 0)
+        #self.display.fill(green)
         pygame.display.update()
-        self.activeButtons = [self.quitGame, self.goBack, self.skip]
-        self.selectedButtonName = None
+        #self.activeButtons = [self.quitGame, self.goBack, self.skip]
+        #self.selectedButtonName = None
         pygame.quit()
         exit(0)
 
