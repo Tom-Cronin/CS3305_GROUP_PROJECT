@@ -111,7 +111,7 @@ class BaseStage:
         self.inactiveButtons = []  # buttons that are visible but deactivated
         self.selectedButtonName = None
 
-        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(), (self.screen_height, self.screen_width))
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground.png').convert(), (self.screen_height, self.screen_width))
     
     def displayButton(self, button):
         button.displayButton(self.display)
