@@ -1,6 +1,7 @@
 import pygame
 from pygame.locals import *
 import time
+from random import choice,randint
 from Stages.baseStageClass import BaseStage, StageButton
 
 class TreasureChestButton(StageButton): # Special button for the treasure box
@@ -20,21 +21,22 @@ class TreasureChestButton(StageButton): # Special button for the treasure box
 
 
 class TreasureRoom(BaseStage):
-    def __init__(self, screen):
+    def __init__(self, screen, team):
         self.screen_height = screen.screen_height
         self.screen_width = screen.screen_width
-
+        self.team = team
         #Generate prize
-        self.prize = self.choosePrize()
+        self.prize = self.generatePrize()
+
 
         # init display screen
         self.display = screen.display
-        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(), (self.screen_height, self.screen_width))
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground.png').convert(), (self.screen_height, self.screen_width))
 
         # Buttons
         self.quitGame = screen.quitGame
-        self.treasureChest = TreasureChestButton("You have won " + self.prize + ".", self.screen_width,
-                                                 self.screen_height)
+        self.treasureChest = TreasureChestButton("You found a twisted charm, " + self.prize + ".", self.screen_width,
+                                                 self.screen_height, self.bgImage)
         self.okay = StageButton("OK", "", self.screen_height/2 - (self.quitGame.width + 50), self.screen_width/2)
         self.nevermind = StageButton("MAYBE NOT", "", self.screen_height/2 +50, self.screen_width/2)
 
@@ -67,12 +69,18 @@ class TreasureRoom(BaseStage):
             self.activeButtons = [self.quitGame, self.treasureChest]
             self.mainLoop()
 
-    def choosePrize(self):
-        # Todo: choose an attribute to increase, increase it, return prize name as string, chosen at random?
-        return "nothing"
+    def generatePrize(self):  # ToDo: a general prize generator to be called by each room/stage?
+        char = choice(self.team)
+        increaseAmount = randint(1, 4)
+        att = choice(["strength",
+                      "dexterity",
+                      "constitution",
+                      "intelligence"])
+        char.levelUp(att, increaseAmount)
+        return "%s's\n %s increased by %i" % (char.name, att, increaseAmount)
 
     def openTreasure(self):
-        self.makeGreen()  # ToDo: exit map, give/save prize
+        return 1
 
     def treasureMessage(self):
         self.treasureChest.displayWarningMessage(self.display, self.screen_width, self.screen_height)
@@ -99,7 +107,8 @@ class TreasureRoom(BaseStage):
 
         while mainLoop:
             if self.enabled:
-                self.listenMouse()
+                if (self.listenMouse()):
+                    return 1
                 self.listenButton()
             else:
                 time.sleep(0.3)  # Delay before reactivating the treasure, to prevent accidental opening of chest

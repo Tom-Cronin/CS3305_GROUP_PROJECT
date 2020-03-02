@@ -11,4 +11,4 @@ class Claws(BaseAttack):
 
         self.name = 'Claws'
 
-        self.cooldown = 1
+        self.coolDown = 1

@@ -2,6 +2,7 @@ from Stages.baseStageClass import BaseStage, StageButton
 from Stages.Snake.snakeMaze import Maze
 from Stages.Snake.snakeSnake import SnakeGuy, SnakeSquares
 from Stages.Snake.snakeGame import SnakeGame
+from Characters.playerClasses.fighter import Fighter
 import pygame
 import time
 from pygame.locals import *
@@ -66,17 +67,16 @@ class Maze2(Maze):
         self.width = 340
         self.x = round(screen_height/2 - self.height/2)
         self.y = round(screen_width/2)
-        print(screen_height, self.height, self.y)
         self.mazeRect = Rect(self.x, self.y, self.width, self.height)
         self.walls = []
         self.generateMaze()
 
 class SnakeGame2(SnakeGame):
 
-    def __init__(self, screen):
+    def __init__(self, screen, team):
         gameHint = "Eat 10 squares\nUse the arrow keys to move\nIf you eat yourself, you will die\n" \
                    "If you hit a wall you will die"
-        super().__init__(screen, gameHint)
+        super().__init__(screen, gameHint, team)
         self.maze = Maze2(screen.screen_height, screen.screen_width, self.display)
         self.snake = SnakeGuy2(self.display, self.snakeColor, self.maze)
         self.food = SnakeFood(self.maze)
@@ -171,8 +171,8 @@ class SnakeGame2(SnakeGame):
                     mainLoop = False
 
 # Can be uncommented For testing purposes but must be commented to stop overriding of main:
-"""pygame.init()
-s = BaseStage(1300, 700)
-puzzle = SnakeGame2(s)
-puzzle.mainLoop()
-pygame.quit()"""
+# pygame.init()
+# s = BaseStage(1300, 700)
+# puzzle = SnakeGame2(s, [Fighter()])
+# puzzle.mainLoop()
+# pygame.quit()

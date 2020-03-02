@@ -27,13 +27,18 @@ class Fighter(Character):
         self.attack_slot_2 = DoubleSwing(self.strength)
         self.attack_slot_3 = HeavySwing(self.strength)
         self.attack_slot_4 = PowerThough(self.constitution)
+        self.attack_slot_4.name = "Demo Kill"
+        self.attack_slot_4.baseDamage = 99999
+        self.attack_slot_4.coolDown = 0
+        self.attack_slot_4.isHeal = False
 
-        self.scale = (330, 330)
+        self.scale = (220, 300)
+        self.stagePositionY = 280
 
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
 
-        self.name = "Fighter"
+
         self.imagePath = 'assets/images/characters/Players/PNG_Images/Knight.png'
         self.description = "%s\n Health: %i\n Strength: %i\n Dexterity: %i\n Constitution: %i\n Intelligence: %i\n"
 

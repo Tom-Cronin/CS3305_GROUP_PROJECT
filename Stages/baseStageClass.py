@@ -5,9 +5,9 @@ class StageButton:
     def __init__(self, text, exitMessage, x, y):
         self.buttonText = text
         # Note: all three colors below must be different for warningMessage() and hover() to work
-        self.defaultColour = (255, 255, 255)  # white
-        self.textColor = (0, 255, 0)  # green
-        self.hovercolour = (0, 0, 0)  # black
+        self.defaultColour = (0,0,0)  # white
+        self.textColor = (255,255,255)  # green
+        self.hovercolour = (120,120,120)  # black
 
         self.bgColour = self.defaultColour
         self.width = 200
@@ -112,7 +112,7 @@ class BaseStage:
         self.inactiveButtons = []  # buttons that are visible but deactivated
         self.selectedButtonName = None
 
-        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(), (self.screen_height, self.screen_width))
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground.png').convert(), (self.screen_height, self.screen_width))
     
     def displayButton(self, button):
         button.displayButton(self.display)
@@ -135,7 +135,8 @@ class BaseStage:
                 button.hover(self.display, True)
                 if button not in self.inactiveButtons:
                     if click[0] == 1:
-                        self.mouseClick(button)
+                        if (self.mouseClick(button)):
+                            return 1
             else:
                 if button.hovering is True:
                     button.hover(self.display, False)

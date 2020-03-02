@@ -10,4 +10,4 @@ class Longbow(BaseAttack):
         self.baseDamage = 4
 
         self.name = 'Longbow'
-        self.cooldown = 3
+        self.coolDown = 3
