@@ -50,18 +50,18 @@ def running(seed):
                     cr += 1
                 count -= 3
 
-            load.mainLoop()
+            load.mainloop()
             current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b":
                 demoBattle = False
-                load.mainLoop()
+                load.mainloop()
                 EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
                 pass
             elif current_room_cr[0] == "T":
                 demoTreasure = False
-                load.mainLoop()
+                load.mainloop()
                 treasureRoom = TreasureRoom(baseScreen)
-                #treasureRoom.mainLoop()
+                #treasureRoom.mainloop()
 
             elif current_room_cr[0] == "H":
                 # ToDo implement room for healing
@@ -71,18 +71,18 @@ def running(seed):
 
             elif current_room_cr[0] == "P":
                 demoPuzzle = False
-                load.mainLoop()
+                load.mainloop()
                 snake = SnakeGame(baseScreen, "", team)
                 snake.mainLoop()
                 pass
             elif current_room_cr[0] == "B":
                 demoBoss = False
-                load.mainLoop()
+                load.mainloop()
                 EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
             elif current_room_cr[0] == "?":
 
                 demoMystery = False
-                load.mainLoop()
+                load.mainloop()
                 pass
             if current_room_cr == "m":
                 running(loop[1])
