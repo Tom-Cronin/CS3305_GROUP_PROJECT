@@ -14,11 +14,9 @@ from Characters.playerClasses.warlock import Warlock
 from Characters.playerClasses.fighter import Fighter
 from Characters.playerClasses.oldLady import OldLady
 from Characters.playerClasses.healer import Healer
-#from Stages.loadingScreen import LoadingScreen
+from Stages.LoadingScreen import LoadingScreen
 
 baseScreen = BaseStage(1300, 700)
-
-
 
 def running(seed):
     seed = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(16)])
@@ -26,7 +24,7 @@ def running(seed):
     pygame.display.set_caption('Traylian')
     pygame.mouse.set_cursor(*pygame.cursors.tri_left)
     mainMenu = MainMenu(baseScreen, seed)
-    #loadingScreen = LoadingScreen(baseScreen)
+    load = LoadingScreen(baseScreen)
     loop = mainMenu.mainLoop()
 
     team = [Warlock(), Fighter(), OldLady(),Healer()]
@@ -52,16 +50,16 @@ def running(seed):
                     cr += 1
                 count -= 3
 
-            #LoadingScreen.mainLoop()
+            load.mainLoop()
             current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b":
                 demoBattle = False
-                #LoadingScreen.mainLoop()
+                load.mainLoop()
                 EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
                 pass
             elif current_room_cr[0] == "T":
                 demoTreasure = False
-                #LoadingScreen.mainLoop()
+                load.mainLoop()
                 treasureRoom = TreasureRoom(baseScreen)
                 #treasureRoom.mainLoop()
 
@@ -73,18 +71,18 @@ def running(seed):
 
             elif current_room_cr[0] == "P":
                 demoPuzzle = False
-                #LoadingScreen.mainLoop()
+                load.mainLoop()
                 snake = SnakeGame(baseScreen, "", team)
                 snake.mainLoop()
                 pass
             elif current_room_cr[0] == "B":
                 demoBoss = False
-                #LoadingScreen.mainLoop()
+                load.mainLoop()
                 EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
             elif current_room_cr[0] == "?":
 
                 demoMystery = False
-                #LoadingScreen.mainLoop()
+                load.mainLoop()
                 pass
             if current_room_cr == "m":
                 running(loop[1])
