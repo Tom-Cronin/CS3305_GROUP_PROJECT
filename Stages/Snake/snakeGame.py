@@ -4,6 +4,7 @@ from Stages.Snake.snakeSnake import SnakeGuy
 import pygame
 import time
 
+
 class SnakeGame(BaseStage):
 
     def __init__(self, screen_height, screen_width):

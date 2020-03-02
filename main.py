@@ -10,6 +10,8 @@ def running():
     mainMenu = MainMenu(baseScreen)
     mymap = Map(baseScreen, "Best seed")
     loop = mainMenu.mainLoop()
+    load = LoadingScreen(baseScreen)
+
     if not loop:
         pygame.quit()
     elif loop:
@@ -24,22 +26,28 @@ def running():
                 cr += 1
                 count -= 3
             print("Loading screen")
+            load.mainloop()
             print("map")
             current_room_cr = mymap.mainLoop()
             if current_room_cr[0] == "b":
                 print("Loading screen")
+                load.mainloop()
                 print("It's a battle room and the current cr is " + str(cr))
             elif current_room_cr[0] == "T":
                 print("Loading screen")
+                load.mainloop()
                 print("It's a treasure room and the current cr is " + str(cr))
             elif current_room_cr[0] == "P":
                 print("Loading screen")
+                load.mainloop()
                 print("It's a puzzle room and the current cr is " + str(cr))
             elif current_room_cr[0] == "B":
                 print("Loading screen")
+                load.mainloop()
                 print("It's a Boss room and the current cr is " + str(cr))
             elif current_room_cr[0] == "?":
                 print("Loading screen")
+                load.mainloop()
                 print("It's a ? room and the current cr is " + str(cr))
             if current_room_cr[0] == "m":
                 running()
