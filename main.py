@@ -52,11 +52,9 @@ def running(seed):
                     cr += 1
                 count -= 3
 
-            load.mainloop()
             load.cleanUp()
             current_room_cr = mymap.mainloop()
             if current_room_cr[0] == "b":
-                demoBattle = False
                 load.mainloop()
                 EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
                 pass
@@ -88,7 +86,6 @@ def running(seed):
                 else:
                     EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", cr, team)
 
-                demoMystery = False
                 load.mainloop()
                 pass
             if current_room_cr == "m":
