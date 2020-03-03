@@ -67,7 +67,7 @@ class MatchGame(BaseStage):
         self.screen_height = screen.screen_height
         self.screen_width = screen.screen_width
         self.screen = screen
-        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/trees.png').convert(),
+        self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground2.png').convert(),
                                               (self.screen_height, self.screen_width))
 
         #Generate prize
@@ -98,8 +98,8 @@ class MatchGame(BaseStage):
         self.selectedButtonNames = []  # names of selected rocks
 
         self.hiddenImages = ["ts1.png", "ts2.png", "ts3.png", "ts4.png", "ts5.png", "ts6.png",
-                             "ts7.png", "ts8.png", "ts9.png", "ts11.png", "ts12.png",
-                             "ts13.png", "ts14.png"]  # images to be found under a rock
+                             "ts7.png", "ts8.png", "ts9.png", "ts10.png","ts11.png", "ts12.png",
+                             "ts13.png", "ts14.png", "ts15.png"]  # images to be found under a rock
         # loads the rock image as a png, ensure image is only loaded once
         self.rockImage = (pygame.image.load("Stages/media/rockImage.png").convert_alpha())
 
