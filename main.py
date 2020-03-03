@@ -7,6 +7,9 @@ from Stages.treasureRoom import TreasureRoom
 from Stages.encounterStage import EncounterStage
 from Stages.healingRoom import HealStage
 from Stages.Snake.snakeGame import SnakeGame
+from Stages.Snake1.SnakeGame1 import SnakeGame1
+from Stages.Snake2.snakeGame2 import SnakeGame2
+from Stages.Match.matchGame import MatchGame
 
 import random
 import string
@@ -20,7 +23,6 @@ from Stages.LoadingScreen import LoadingScreen
 baseScreen = BaseStage(1300, 700)
 
 def running(seed):
-    seed = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(16)])
     pygame.init()
     pygame.display.set_caption('Traylian')
     pygame.mouse.set_cursor(*pygame.cursors.tri_left)
@@ -28,14 +30,6 @@ def running(seed):
     team = [Warlock(), Fighter(), OldLady(), Healer()]
     load = LoadingScreen(baseScreen, team)
     loop = mainMenu.mainLoop()
-
-
-    # team = [Warlock(), Fighter()]
-    # demoBattle = False
-    # demoTreasure = False
-    # demoPuzzle = False
-    # demoMystery = False
-    # demoBoss = True
     mymap = Map(baseScreen, loop[1])
     if not loop[0]:
         pygame.quit()
@@ -69,9 +63,16 @@ def running(seed):
 
             elif current_room_cr[0] == "P":
                 load.mainloop()
-                snake = SnakeGame(baseScreen, "", team)
-                snake.mainLoop()
-                pass
+                puzzle = random.choice([0,1,2])
+                if puzzle == 0:
+                    snake = SnakeGame1(baseScreen)
+                    snake.mainLoop()
+                elif puzzle == 1:
+                    snake1 = SnakeGame2(baseScreen, team)
+                    snake1.mainLoop()
+                elif puzzle == 2:
+                    match = MatchGame(baseScreen, team, cr)
+                    match.mainLoop()
             elif current_room_cr[0] == "B":
                 load.mainloop()
                 EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
@@ -97,5 +98,4 @@ def running(seed):
 
 if __name__ == "__main__":
     seed = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(16)])
-    # seed = "Best seed"
     running(seed)

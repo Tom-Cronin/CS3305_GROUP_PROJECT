@@ -91,7 +91,7 @@ class SnakeGame(BaseStage):
             self.neverMind()
         if button.buttonText == "OK":
             if self.selectedButtonName == "QUIT":
-                self.exitGame()
+                return 1
             if self.selectedButtonName == "SKIP":
                 self.skipStage()
             if self.selectedButtonName == "BACK":

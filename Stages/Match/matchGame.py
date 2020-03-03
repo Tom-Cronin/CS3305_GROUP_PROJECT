@@ -61,7 +61,7 @@ class Rock(StageButton):  # Special button for the rocks covering the hidden ima
 
 
 class MatchGame(BaseStage):
-    def __init__(self, screen, team):
+    def __init__(self, screen, team, cr):
         # init display screen
         self.display = screen.display
         self.screen_height = screen.screen_height
@@ -75,7 +75,7 @@ class MatchGame(BaseStage):
         self.prize = self.generatePrize()
 
         self.score = MatchScoreBox(screen)  # keeps track of score and prints to screen
-        self.difficulty = 12  # num of matches = difficulty
+        self.difficulty = cr+3  # num of matches = difficulty
 
         # Buttons
         self.quitGame = screen.quitGame
@@ -235,7 +235,7 @@ class MatchGame(BaseStage):
                 self.lookUnder(button.buttonText)
         elif button.buttonText == "OK":
             if self.selectedButtonName in ["QUIT", "ENDGAME"]:
-                self.exitGame()
+                return 1
             elif self.selectedButtonName in ["HINT"]:
                 self.maybeNot()
         elif button.buttonText == "MAYBE NOT":
@@ -259,7 +259,8 @@ class MatchGame(BaseStage):
 
         while mainLoop:
             if self.enabled:
-                self.listenMouse()
+                if self.listenMouse():
+                    return 1
                 self.listenButton()
             else:
                 time.sleep(0.3)  # Delay before reactivating the treasure, to prevent accidental opening of chest

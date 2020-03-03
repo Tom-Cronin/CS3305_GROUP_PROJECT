@@ -56,13 +56,14 @@ class TreasureRoom(BaseStage):
             self.selectedButtonName = self.treasureMessage()
         elif button.buttonText == "OK":
             if self.selectedButtonName == "QUIT":
-                self.exitGame()
+                return 1
             if self.selectedButtonName == "SKIP":
                 self.skipStage()
             if self.selectedButtonName == "BACK":
                 self.exitStage()
             if self.selectedButtonName == "TREASURE":
                 self.openTreasure()
+                return 1
         elif button.buttonText == "MAYBE NOT":
             self.selectedButtonName = None
             self.enabled = False

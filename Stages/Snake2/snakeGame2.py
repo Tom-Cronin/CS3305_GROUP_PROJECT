@@ -159,7 +159,8 @@ class SnakeGame2(SnakeGame):
         mainLoop = True
 
         while mainLoop:
-            self.listenMouse()
+            if (self.listenMouse()):
+                 return 1
             self.listenButton()
             if self.finished is False and self.disabled is False:
                 self.listenSnake()

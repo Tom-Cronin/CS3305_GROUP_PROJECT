@@ -170,11 +170,11 @@ class BaseStage:
             self.neverMind()
         if button.buttonText == "OK":
             if self.selectedButtonName == "QUIT":
-                self.exitGame()
+                return 1
             if self.selectedButtonName == "SKIP":
-                self.skipStage()
+                return 1
             if self.selectedButtonName == "BACK":
-                self.exitStage()
+                return 1
 
     def exitGame(self):  # ToDo: Exit to main menu
         self.makeGreen()
