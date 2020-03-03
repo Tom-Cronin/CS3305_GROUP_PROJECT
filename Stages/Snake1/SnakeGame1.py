@@ -8,10 +8,10 @@ from Characters.playerClasses.fighter import Fighter
 
 class SnakeGame1(SnakeGame):
 
-    def __init__(self, screen):
+    def __init__(self, screen, team):
         gameHint = "Try and get the snake to the end of the maze\nUse the arrow keys to move\n" \
                    "If you hit a wall, you will die"
-        super().__init__(screen, gameHint, [Fighter()])
+        super().__init__(screen, gameHint, team)
         self.maze = Maze(screen.screen_height, screen.screen_width, self.display)
         self.snake = SnakeGuy(self.display, self.snakeColor, self.maze)
         self.snake.move("R")

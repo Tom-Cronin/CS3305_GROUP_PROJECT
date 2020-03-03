@@ -28,6 +28,8 @@ class Warlock(Character):
         self.attack_slot_2 = Vigor(self.intelligence)
         self.attack_slot_3 = BurningSight(self.intelligence)
         self.attack_slot_4 = HellfireWhirlwind(self.intelligence)
+        self.nonInitAttacks = [EldritchBlast,Vigor,BurningSight,HellfireWhirlwind]
+        self.attackBonus = (self.intelligence, self.intelligence,self.intelligence,self.intelligence)
 
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
@@ -41,6 +43,9 @@ class Warlock(Character):
     def updateAttackBonuses(self):
         for attack in self.allAttacks:
             attack.updateDamageMod(self.intelligence)
+
+    def updateBonusList(self):
+        self.attackBonus = (self.intelligence, self.intelligence, self.intelligence, self.intelligence)
 
     def __str__(self):
         return self.description % (self.name, self.health, self.strength,

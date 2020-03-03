@@ -2,7 +2,7 @@ from Characters.attacks.baseAttackClass import BaseAttack
 
 
 class AcidSplash(BaseAttack):
-    def __init__(self):
+    def __init__(self, optional=None):
         super().__init__()
         self.damageMod = 0
         self.audioPath = 'none yet'
