@@ -19,8 +19,8 @@ class SnakeGame1(SnakeGame):
         self.snake.move("R")  # This technically solves the moving/snake image break at the start of the game
 
 # Can be uncommented For testing purposes but must be commented to stop overriding of main:
-pygame.init()
+"""pygame.init()
 s = BaseStage(1300, 700)
 puzzle = SnakeGame1(s)
 puzzle.mainLoop()
-pygame.quit()
+pygame.quit()"""

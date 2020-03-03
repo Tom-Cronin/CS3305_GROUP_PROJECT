@@ -5,9 +5,8 @@ from random import choice,randint
 from Stages.baseStageClass import BaseStage, StageButton
 
 class TreasureChestButton(StageButton): # Special button for the treasure box
-    def __init__(self, announcement, screen_width, screen_height, bg_image):
+    def __init__(self, announcement, screen_width, screen_height):
         super().__init__("TREASURE", announcement, 0, 0)
-        self.bgImage = bg_image
         self.screen_width = screen_width
         self.screen_height = screen_height
         self.height = 300
@@ -37,7 +36,7 @@ class TreasureRoom(BaseStage):
         # Buttons
         self.quitGame = screen.quitGame
         self.treasureChest = TreasureChestButton("You found a twisted charm, " + self.prize + ".", self.screen_width,
-                                                 self.screen_height, self.bgImage)
+                                                 self.screen_height)
         self.okay = StageButton("OK", "", self.screen_height/2 - (self.quitGame.width + 50), self.screen_width/2)
         self.nevermind = StageButton("MAYBE NOT", "", self.screen_height/2 +50, self.screen_width/2)
 
@@ -57,7 +56,7 @@ class TreasureRoom(BaseStage):
             self.selectedButtonName = self.treasureMessage()
         elif button.buttonText == "OK":
             if self.selectedButtonName == "QUIT":
-                self.exitGame()
+                return 1
             if self.selectedButtonName == "SKIP":
                 self.skipStage()
             if self.selectedButtonName == "BACK":
@@ -123,6 +122,11 @@ class TreasureRoom(BaseStage):
 # Can be uncommented For testing purposes but must be commented to stop overriding of main:
 """pygame.init()
 s = BaseStage(1300, 700)
-baseStage = TreasureRoom(s)
+from Characters.playerClasses.warlock import Warlock
+from Characters.playerClasses.fighter import Fighter
+from Characters.playerClasses.oldLady import OldLady
+from Characters.playerClasses.healer import Healer
+team = [Warlock(), Fighter(), OldLady(), Healer()]
+baseStage = TreasureRoom(s, team)
 baseStage.mainLoop()
 pygame.quit()"""

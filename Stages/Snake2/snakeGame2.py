@@ -32,9 +32,10 @@ class ScoreBox():
         self.font = 'Stages/media/Chapaza.ttf'
         self.color = (255, 255, 255)  # white
         self.display = maze.display
+        self.fontSize = 20
 
     def printScore(self):
-        font = pygame.font.Font(self.font, 20)
+        font = pygame.font.Font(self.font, self.fontSize)
         text = font.render(str(self.score), True, self.color)
         textRect = self.scoreBox
         textRect.center = (self.x, self.y)
@@ -158,7 +159,8 @@ class SnakeGame2(SnakeGame):
         mainLoop = True
 
         while mainLoop:
-            self.listenMouse()
+            if (self.listenMouse()):
+                 return 1
             self.listenButton()
             if self.finished is False and self.disabled is False:
                 self.listenSnake()
@@ -170,8 +172,8 @@ class SnakeGame2(SnakeGame):
                     mainLoop = False
 
 # Can be uncommented For testing purposes but must be commented to stop overriding of main:
-# pygame.init()
-# s = BaseStage(1300, 700)
-# puzzle = SnakeGame2(s, [Fighter()])
-# puzzle.mainLoop()
-# pygame.quit()
+"""pygame.init()
+s = BaseStage(1300, 700)
+puzzle = SnakeGame2(s, [Fighter()])
+puzzle.mainLoop()
+pygame.quit()"""
