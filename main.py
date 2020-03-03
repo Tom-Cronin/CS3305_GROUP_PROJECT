@@ -82,8 +82,16 @@ def running(seed):
                     myHealStage = HealStage(baseScreen, team)
                     myHealStage.mainLoop()
                 elif room == "p":
-                    snake = SnakeGame(baseScreen, "", team)
-                    snake.mainLoop()
+                    puzzle = random.choice([0, 1, 2])
+                    if puzzle == 0:
+                        snake = SnakeGame1(baseScreen)
+                        snake.mainLoop()
+                    elif puzzle == 1:
+                        snake1 = SnakeGame2(baseScreen, team)
+                        snake1.mainLoop()
+                    elif puzzle == 2:
+                        match = MatchGame(baseScreen, team, cr)
+                        match.mainLoop()
                 else:
                     EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", cr, team)
 
