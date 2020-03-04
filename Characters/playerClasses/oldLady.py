@@ -26,6 +26,8 @@ class OldLady(Character):
         self.attack_slot_2 = BrollyBarrage(self.strength)
         self.attack_slot_3 = ParasolParry(self.constitution)
         self.attack_slot_4 = GlorPres(self.constitution)
+        self.nonInitAttacks = [UmbrellaSmash,BrollyBarrage,ParasolParry,GlorPres]
+        self.attackBonus = [self.strength, self.strength, self.constitution, self.constitution]
 
 
         self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
@@ -36,6 +38,9 @@ class OldLady(Character):
     def updateAttackBonuses(self):
         for attack in self.allAttacks:
             attack.updateDamageMod(self.intelligence)
+
+    def updateBonusList(self):
+        self.attackBonus = [self.strength, self.strength, self.constitution, self.constitution]
 
     def __str__(self):
         return self.description % (self.name, self.health, self.strength,

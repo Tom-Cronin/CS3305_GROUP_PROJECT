@@ -27,6 +27,10 @@ class Healer(Character):
         self.attack_slot_3 = NaturesTouch(self.intelligence)
         self.attack_slot_4 = TendingWounds(self.intelligence)
 
+        self.nonInitAttacks = [Slash,FuriousSlash,NaturesTouch,TendingWounds]
+
+        self.attackBonus = [self.strength,self.strength, self.intelligence, self.intelligence]
+
 
 
 
@@ -38,6 +42,9 @@ class Healer(Character):
     def updateAttackBonuses(self):
         for attack in self.allAttacks:
             attack.updateDamageMod(self.intelligence)
+
+    def updateBonusList(self):
+        self.attackBonus = [self.strength,self.strength, self.intelligence, self.intelligence]
 
     def __str__(self):
         return self.description % (self.name, self.health, self.strength,

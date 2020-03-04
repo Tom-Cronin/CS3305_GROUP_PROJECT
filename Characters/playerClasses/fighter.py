@@ -28,6 +28,10 @@ class Fighter(Character):
         self.attack_slot_3 = HeavySwing(self.strength)
         self.attack_slot_4 = PowerThough(self.constitution)
 
+        self.nonInitAttacks = [AcidSplash,DoubleSwing,HeavySwing,PowerThough]
+
+        self.attackBonus = ["optional", self.strength, self.strength,self.constitution]
+
         self.scale = (220, 300)
         self.stagePositionY = 280
 
@@ -41,6 +45,9 @@ class Fighter(Character):
     def updateAttackBonuses(self):
         for attack in self.allAttacks:
             attack.updateDamageMod(self.strength)
+
+    def updateBonusList(self):
+        self.attackBonus = ["optional", self.strength, self.strength,self.constitution]
 
     def __str__(self):
         return self.description % (self.name, self.health, self.strength,

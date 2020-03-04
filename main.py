@@ -42,7 +42,7 @@ def running(seed):
                                                           (mymap.screen.screen_height - 550,
                                                            mymap.screen.screen_width))
             if count >= 3:
-                if cr > 12:
+                if cr < 12:
                     cr += 1
                 count -= 3
 
@@ -51,7 +51,7 @@ def running(seed):
             if current_room_cr[0] == "b":
                 load.mainloop()
                 EncounterStage(baseScreen,"Stages/media/MainMenueBackground2.png",cr, team)
-                pass
+
             elif current_room_cr[0] == "T":
                 load.mainloop()
                 treasureRoom = TreasureRoom(baseScreen, team)
@@ -65,7 +65,7 @@ def running(seed):
                 load.mainloop()
                 puzzle = random.choice([0,1,2])
                 if puzzle == 0:
-                    snake = SnakeGame1(baseScreen)
+                    snake = SnakeGame1(baseScreen, team)
                     snake.mainLoop()
                 elif puzzle == 1:
                     snake1 = SnakeGame2(baseScreen, team)
@@ -76,14 +76,24 @@ def running(seed):
             elif current_room_cr[0] == "B":
                 load.mainloop()
                 EncounterStage(baseScreen,"assets/images/characters/Players/PNG_Images/IronBoss/BG_Castle.png",cr, team, True)
+                for char in team:
+                    char.charFullLevelUp()
             elif current_room_cr[0] == "?":
                 room = random.choice(["b", "p", "H"])
                 if room == "H":
                     myHealStage = HealStage(baseScreen, team)
                     myHealStage.mainLoop()
                 elif room == "p":
-                    snake = SnakeGame(baseScreen, "", team)
-                    snake.mainLoop()
+                    puzzle = random.choice([0, 1, 2])
+                    if puzzle == 0:
+                        snake = SnakeGame1(baseScreen, team)
+                        snake.mainLoop()
+                    elif puzzle == 1:
+                        snake1 = SnakeGame2(baseScreen, team)
+                        snake1.mainLoop()
+                    elif puzzle == 2:
+                        match = MatchGame(baseScreen, team, cr)
+                        match.mainLoop()
                 else:
                     EncounterStage(baseScreen, "Stages/media/MainMenueBackground2.png", cr, team)
 
@@ -93,6 +103,8 @@ def running(seed):
                 running(loop[1])
                 pygame.quit()
                 exit(0)
+            if len(team) <= 0:
+                running(seed)
             count += 1
 
 
