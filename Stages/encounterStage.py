@@ -168,7 +168,8 @@ class EncounterStage():
                 character.CurrentBattlePos = positionEnemy + character.stagePositionX
                 self.base.display.blit(
                     pygame.transform.scale(
-                        pygame.image.load(character.imagePath).convert_alpha(), character.scale),
+                        pygame.image.load(character
+                                          .imagePath).convert_alpha(), character.scale),
                     (character.CurrentBattlePos, character.stagePositionY)
                 )
                 self.positionDict[character] = positionEnemy
