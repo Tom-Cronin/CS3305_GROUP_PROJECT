@@ -7,5 +7,5 @@ class TestFuriousSlashAttack(TestCase):
         person = OldLady()
         hit = GlorPres(person.constitution)
 
-        self.assertEqual(3, hit.calcDamage())
+        self.assertEqual(23, hit.calcDamage())
 
