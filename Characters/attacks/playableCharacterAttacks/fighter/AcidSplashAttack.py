@@ -2,7 +2,7 @@ from Characters.attacks.baseAttackClass import BaseAttack
 
 
 class AcidSplash(BaseAttack):
-    def __init__(self):
+    def __init__(self, optional=None):
         super().__init__()
         self.damageMod = 0
         self.audioPath = 'none yet'
@@ -11,9 +11,7 @@ class AcidSplash(BaseAttack):
         self.name = 'Acid Splash'
         self.description = '%s:\n You throw a acid flash at the enemy.\n' \
                            ' On hit, the target takes %i acid damage.'
-        self.cooldown = 3
-
-
+        self.coolDown = 3
 
     def calcDamage(self):
         return self.baseDamage + self.damageMod

@@ -22,12 +22,15 @@ class Map(object):
         self.quitButton = StageButton("Quit", "", self.screen_width + 180, 10)
         self.bgImage = pygame.transform.scale(pygame.image.load('Map/media/trees.jpg').convert(), (self.screen_height,
                                                                                                    self.screen_width))
-        self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/Treasure.png').convert_alpha(), (35, 35))
+        self.heal = pygame.transform.scale(pygame.image.load('Map/media/healthRoom.png').convert_alpha(), (35, 35))
+        self.treasureImage = pygame.transform.scale(pygame.image.load('Map/media/treasure.png').convert_alpha(), (35, 35))
         self.mysteryImage = pygame.transform.scale(pygame.image.load('Map/media/Mystery.png').convert_alpha(), (35, 35))
         self.bossBattleImage = pygame.transform.scale(pygame.image.load('Map/media/BossSkull.png').convert_alpha(), (35, 35))
         self.battleImage = pygame.transform.scale(pygame.image.load('Map/media/NormalBattle.png').convert_alpha(), (35, 35))
         self.puzzleImage = pygame.transform.scale(pygame.image.load('Map/media/Puzzle.png').convert_alpha(), (35, 35))
 
+        self.currentNode = ""
+        self.mysteryUpdate=""
     # generates map data --> how many nodes, what room they represent, how they're connected
     # using functions in generate_map_data file
     def generate_map_data(self):
@@ -129,6 +132,10 @@ class Map(object):
                     self.screen.display.blit(self.treasureImage, (int(node_x * (i + 1) - (node_x / 2)) - 18+200,
                                                                   int(self.screen_height - node_height * (
                                                                           level_index + 1) + 20) - 18))
+                elif node_key == "H":
+                    self.screen.display.blit(self.heal, (int(node_x * (i + 1) - (node_x / 2)) - 18+200,
+                                                                  int(self.screen_height - node_height * (
+                                                                          level_index + 1) + 20) - 18))
                 elif node_key == "?":
                     self.screen.display.blit(self.mysteryImage, (int(node_x * (i + 1) - (node_x / 2)) - 18+200,
                                                                  int(self.screen_height - node_height * (
@@ -172,7 +179,7 @@ class Map(object):
     # display the map background image, current level, quit button etc
     def printBackground(self):
         pygame.font.init()
-        brown = (53, 36, 26)
+        brown = (55, 44, 38)
         grey = (51, 61, 51)
         black = (0, 0, 0)
         myfont = pygame.font.SysFont('media/Chapaza.ttf', 37)

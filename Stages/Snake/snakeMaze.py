@@ -2,18 +2,18 @@ import pygame
 from pygame.locals import *
 
 class Maze:
-    def __init__(self, screen_height, screen_width, display, num = 1):
-        self.y = 100
-        self.height = screen_height-320
-        self.x = 100
-        self.width = screen_width
+    def __init__(self, screen_height, screen_width, display, num=1):
+        self.height = 480
+        self.width = 600
+        self.x = screen_height/2 - self.height/2
+        self.y = screen_width/2 - self.width/2 + 100
         self.mazeColor = (34, 139, 34)  # forest green
         self.wallColor = (0, 0, 0)  # black
         self.mazeRect = Rect(self.x, self.y, self.width, self.height)
         self.display = display
         self.mazeNum = num  # Potential to make multiple mazes
         self.walls = []
-        self.exit = None
+        self.exit = Walls(0, 0, 0)  # Destination
         self.generateMaze()
 
     def draw(self):
@@ -24,10 +24,12 @@ class Maze:
         pygame.draw.rect(self.display, self.mazeColor, self.mazeRect)
 
     def drawWalls(self):
-        for wall in self.walls:
-            pygame.draw.rect(self.display, self.wallColor, wall.Rect)
-        # draw entry and exit spots
-        pygame.draw.rect(self.display, self.mazeColor, self.exit.Rect)
+        if len(self.walls) > 0:
+            for wall in self.walls:
+                pygame.draw.rect(self.display, self.wallColor, wall.Rect)
+            # draw entry and exit spots
+            if self.exit:
+                pygame.draw.rect(self.display, self.mazeColor, self.exit.Rect)
 
     def constructWallH(self, x, y, len):
         # (x location on drawing, y location on drawing, x1 - x2 on drawing)
@@ -43,6 +45,7 @@ class Maze:
         self.walls.append(Walls(self.x+self.width-10, self.y, self.height))  # right border
         self.walls.append(Walls(self.x, self.y+self.height-10, self.width, "h"))  # bottom border
         if self.mazeNum == 1:
+            # ToDo: generate walls randomly each time
             # Destination:
             self.exit = Walls(self.x + self.width - 10, self.y + 10, 30)  # Destination
             # Horizontal maze walls:
@@ -137,6 +140,7 @@ class Maze:
 
             self.constructWallV(51, 38, 5)
             self.constructWallV(55, 34, 9)
+
 
 class Walls:
     def __init__(self, x, y,  length, orientation="v"):

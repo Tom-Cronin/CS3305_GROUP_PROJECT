@@ -2,6 +2,7 @@ from random import randint, choice as RChoice
 import pygame
 from Characters.sharedFunctions import calc_attribute_bonus
 from time import sleep
+from Characters.attacks.baseAttackClass import BaseAttack
 
 
 class Character:
@@ -30,6 +31,16 @@ class Character:
         self.CurrentBattlePos = 0
         self.TurnOrderPosOfEnemys = 0
 
+        self.attack_slot_1 = BaseAttack()
+        self.attack_slot_2 = BaseAttack()
+        self.attack_slot_3 = BaseAttack()
+        self.attack_slot_4 = BaseAttack()
+
+        self.attackBonus = []
+        self.nonInitAttacks= []
+
+        self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
+
     def killCounter(self):
         self.totalKills += 1
 
@@ -56,18 +67,39 @@ class Character:
     def increaseInt(self, amount):
         self.intelligence += amount
 
-    def increaseAC(self, amount):
-        self.ArmorClass += amount
+    def charFullLevelUp(self, stattAmmoun=10):
+        listOfAllAtts = ["strength", "dexterity", "constitution", "intelligence"]
+        for att in listOfAllAtts:
+            self.levelUp(att, stattAmmoun)
 
-    def levelUp(self, chosenAttribute):
+    def updateBonusList(self):
+        self.attackBonus = []
+
+    def levelUp(self, chosenAttribute, ammount):
         attributeDict = {
-            "str": self.increaseStr,
-            "dex": self.increaseDex,
-            "con": self.increaseConst,
-            "int": self.increaseInt,
-            "ac": self.increaseAC
+            "strength": self.increaseStr,
+            "dexterity": self.increaseDex,
+            "constitution": self.increaseConst,
+            "intelligence": self.increaseInt
         }
-        attributeDict[chosenAttribute](1)
+        attributeDict[chosenAttribute](ammount)
+        self.updateBonusList()
+
+        self.selfUpdate()
+
+    def selfUpdate(self):
+        count = 0
+        for bonus in self.attackBonus:
+            if count == 0:
+                self.attack_slot_1 =self.nonInitAttacks[count](bonus)
+            elif count == 1:
+                self.attack_slot_2 = self.nonInitAttacks[count](bonus)
+            elif count == 2:
+                self.attack_slot_3 = self.nonInitAttacks[count](bonus)
+            elif count == 3:
+                self.attack_slot_4 = self.nonInitAttacks[count](bonus)
+            count +=1
+        self.allAttacks = [self.attack_slot_1, self.attack_slot_2, self.attack_slot_3, self.attack_slot_4]
 
     def attackSound(self):
         # if self.attackSoundPath != "blank":
@@ -78,6 +110,11 @@ class Character:
         #     sleep(attackSound.get_length())
         pass
 
-    def generateName(self):
+    def heal(self, ammount):
+        self.health += ammount
+        if self.health > self.maxHealth:
+            self.health = self.maxHealth
 
+    def generateName(self):
         return RChoice(open('Characters/BaseClass/nameLists.txt').read().splitlines())
+

@@ -10,7 +10,7 @@ class twoHanded(BaseAttack):
         self.baseDamage = 5
 
         self.name = 'Longsword two handed strike'
-        self.cooldown = 4
+        self.coolDown = 4
 
 
     def calcDamage(self):
@@ -25,6 +25,6 @@ class oneHanded(BaseAttack):
         self.baseDamage = 4
 
         self.name = 'Longsword one handed strike'
-        self.cooldown = 3
+        self.coolDown = 3
 
 
