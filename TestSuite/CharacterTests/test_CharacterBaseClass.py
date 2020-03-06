@@ -27,7 +27,7 @@ class TestCharacter(TestCase):
     def test_levelUpShouldIncreaseSelectedAttribute(self):
         self.char = Character()
         self.assertEqual(0, self.char.intelligence)
-        self.char.levelUp("int")
+        self.char.levelUp("intelligence", 1)
         self.assertEqual(1, self.char.intelligence)
 
 

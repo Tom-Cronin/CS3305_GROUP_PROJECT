@@ -7,5 +7,5 @@ class TestFuriousSlashAttack(TestCase):
         person = Healer()
         hit = NaturesTouch(person.intelligence)
 
-        self.assertEqual(-4, hit.calcDamage())
+        self.assertEqual(12, hit.calcDamage())
 
