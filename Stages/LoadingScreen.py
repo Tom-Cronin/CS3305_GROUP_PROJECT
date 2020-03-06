@@ -3,8 +3,11 @@ import time
 from random import choice,randint
 
 from Characters.enemyClasses import GateGuard,Hag,ShadowJest,Rat,Shadowling
+
 class LoadingScreen:
+
     def __init__(self, screen,allies):
+        # initializes the loading screen, as well as characters in the game for display purposes.
         self.baseScreen = screen
         self.font = 'Stages/media/Chapaza.ttf'
         self.fontsize = 20
@@ -38,6 +41,8 @@ class LoadingScreen:
         pygame.display.update()
 
     def drawInfo(self):
+        # draws to the screen info about characters as well as the characters themselves
+
         self.baseScreen.display.blit(self.baseScreen.default, (0, 0))
         pygame.display.update()
         character = choice(self.all)
@@ -77,8 +82,6 @@ class LoadingScreen:
         pygame.draw.rect(self.baseScreen.display, (0, 0, 0), (900, 52, 280, 75))
         pygame.draw.rect(self.baseScreen.display, (255, 255, 255), (905, 57, 270, 65))
         self.baseScreen.display.blit(name, (945, 68))
-        # text = font.render("Everyone heals fully", True, (0, 0, 0))
-        # self.baseScreen.display.blit(text, (540, 98))
         font = pygame.font.Font(self.font, self.fontsize- 4)
         for attack in char.allAttacks:
             name = font.render("%s" % (attack.name), True, (0, 0, 0))
@@ -93,9 +96,11 @@ class LoadingScreen:
 
 
         pygame.display.update()
+
     def cleanUp(self):
         self.baseScreen.display.blit(self.baseScreen.end, (0, 0))
         pygame.display.update()
+
     def mainloop(self):
         self.drawInfo()
         self.backgroundLayer()

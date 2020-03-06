@@ -23,6 +23,8 @@ from Stages.LoadingScreen import LoadingScreen
 baseScreen = BaseStage(1300, 700)
 
 def running(seed):
+    # runs main program, initalizing pygame.
+    # this program runs the whole game, calling all the relevant programs such as map, treasure room, combat, etc.
     pygame.init()
     pygame.display.set_caption('Traylian')
     pygame.mouse.set_cursor(*pygame.cursors.tri_left)

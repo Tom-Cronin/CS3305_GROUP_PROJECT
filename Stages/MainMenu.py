@@ -8,6 +8,7 @@ from textInput import  TextInput
 class MainMenu:
 
     def __init__(self, screen, seed):
+        # initializes screen and buttons
         self.baseScreen = screen
         self.seed = seed
         self.baseScreen.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground2.png').convert(),
@@ -41,12 +42,14 @@ class MainMenu:
         self.seeddisplay.hovercolour = self.seeddisplay.defaultColour
 
     def backgroundLayer(self):
+        # displays background image.
         self.baseScreen.display.blit(self.baseScreen.bgImage, (0, 0))
         for button in self.activeButtons:
             self.baseScreen.displayButton(button)
         pygame.display.update()
 
     def mouseClick(self, button):
+        # if the mouse clicks on any of these 5 buttons does what it should
         if button.buttonText == "Quit Game":
             self.quitting()
         if button.buttonText == "Quit":
@@ -61,11 +64,13 @@ class MainMenu:
 
 
     def quitting(self):
+        # displays these buttons upon quitting
         self.baseScreen.displayButton(self.leaveButton)
         self.baseScreen.displayButton(self.noButton)
         self.activeButtons = [self.leaveButton, self.noButton]
 
     def drawInputBox(self):
+        # draws input box (seed) to the screen
         textInput = TextInput()
         clock = pygame.time.Clock()
         mod = True

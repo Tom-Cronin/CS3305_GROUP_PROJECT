@@ -18,11 +18,10 @@ class StageButton:
         self.fontsize = 30
         self.exitMessage = exitMessage  # Message displayed when button is pressed
         self.hovering = False
-        # self.buttonImage = pygame.transform.scale(pygame.image.load(buttonImage).convert(),
-        #                                               (self.height, self.width))
 
 
     def displayButton(self, display):
+        # displays button to the screen, utilizing all the correct fonts and texts.
         pygame.draw.rect(display, self.textColor, (self.xLocation, self.yLocation, self.width, self.height))  # border
         pygame.draw.rect(display, self.bgColour, (self.xLocation+5, self.yLocation+5, self.width-10, self.height-10))
         text = self.buttonText
@@ -33,6 +32,7 @@ class StageButton:
         display.blit(text, textRect)
 
     def displayWarningMessage(self, display, height, width):
+        # displays the warning message to the screen, asking user.
         updateRect = Rect((width/4, height/4, width/2, height/2))
         pygame.draw.rect(display, self.textColor, updateRect)  # border
         pygame.draw.rect(display, self.bgColour, ((width/4)+5, (height/4)+5, (width/2)-10, (height/2)-10))
@@ -47,6 +47,7 @@ class StageButton:
         pygame.display.update(updateRect)
 
     def hover(self, display, hover):
+        # hovering function, changes colour of button upon hovering.
         self.hovering = hover
         if hover is True:
             self.bgColour = self.hovercolour
@@ -56,6 +57,7 @@ class StageButton:
             self.displayButton(display)
 
     def selected(self, display, selected):
+        # selected function, changes color upon click
         if selected is True:
             self.bgColour = self.hovercolour
             self.displayButton(display)
@@ -115,6 +117,7 @@ class BaseStage:
         self.bgImage = pygame.transform.scale(pygame.image.load('Stages/media/MainMenueBackground.png').convert(), (self.screen_height, self.screen_width))
     
     def displayButton(self, button):
+        # displays button to screen.
         button.displayButton(self.display)
 
     def warningMessage(self, button):
@@ -191,11 +194,7 @@ class BaseStage:
         self.mainLoop()
 
     def makeGreen(self):  # A filler function to end the stage
-        #green = (0, 255, 0)
-        #self.display.fill(green)
         pygame.display.update()
-        #self.activeButtons = [self.quitGame, self.goBack, self.skip]
-        #self.selectedButtonName = None
         pygame.quit()
         exit(0)
 
@@ -213,8 +212,8 @@ class BaseStage:
         mainLoop = True
 
         while mainLoop:
-            self.listenMouse()
-            self.listenButton()
+            self.listenMouse()  # listens for mouse click
+            self.listenButton()  # listens for button click
 
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
