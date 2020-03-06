@@ -27,15 +27,9 @@ class TestCharacter(TestCase):
     def test_levelUpShouldIncreaseSelectedAttribute(self):
         self.char = Character()
         self.assertEqual(0, self.char.intelligence)
-        self.char.levelUp("int")
+        self.char.levelUp("intelligence", 1)
         self.assertEqual(1, self.char.intelligence)
 
-    def test_reduceSelectedAttributeBySpecificAmount(self):
-        self.char = Character()
-        self.char.strength = 10
-        self.assertEqual(10, self.char.strength)
-        self.char.decreaseStr(5)
-        self.assertEqual(5, self.char.strength)
 
     def test_characterShouldTakeDamage(self):
         self.char = Character()

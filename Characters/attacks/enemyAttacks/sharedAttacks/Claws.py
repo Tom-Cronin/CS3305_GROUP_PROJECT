@@ -11,13 +11,4 @@ class Claws(BaseAttack):
 
         self.name = 'Claws'
 
-        self.cooldown = 1
-
-
-
-    def calcDamage(self):
-        return self.baseDamage + self.damageMod
-
-    def attack(self):
-        #self.playAttackSound(self.audioPath)
-        print(self.getDamage())
+        self.coolDown = 1

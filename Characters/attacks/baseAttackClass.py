@@ -11,7 +11,11 @@ class BaseAttack():
         self.damageMod = 0
         self.coolDown = 0
         self.duration = 0
+        self.name = "Temp"
         self.onCoolDown = False
+        self.isHeal = False
+        self.isAOE = False
+        self.healType = "none"
         self.coolDownTimer = 0
 
     def startCooldown(self):
@@ -20,10 +24,14 @@ class BaseAttack():
 
     def reduceCoolDown(self):
         self.coolDownTimer -= 1
-        if self.coolDown == 0:
+        if self.coolDownTimer <= 0:
             self.onCoolDown = False
 
-    def getDamage(self):
+    def resetCoolDown(self):
+        self.coolDownTimer = 0
+        self.onCoolDown = False
+
+    def calcDamage(self):
         return self.baseDamage + self.damageMod
 
     def updateDamageMod(self, newDamageModAttribute):
