@@ -1,4 +1,4 @@
-# CS3306_GROUP_PROJECT
+# CS3305 GROUP PROJECT
 
 This game requires Pygame dev version 2.0.0.6
 
